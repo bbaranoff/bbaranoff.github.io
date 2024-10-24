@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Local Development Index Page
+title: Resume
 nav_order: 1
 ---
 

@@ -2,9 +2,11 @@
 layout: home
 title: About
 permalink: /about/
+nav_order: 2
 ---
 
 ## Profile information
+
     - name: Bastien Baranoff
     - tagline: Cybersecurity in Software Defined Radio
     - email: bastienbaranoff@gmail.com
@@ -13,7 +15,7 @@ permalink: /about/
     - linkedin: Bastien Baranoff
     - github: bbaranoff
     - twitter: '@bastienbaranoff'
-    
+
 ## Languages:
 
       info:
@@ -24,10 +26,12 @@ permalink: /about/
           level: Professional
 
 ## Career Profile:
+
     summary: |
       Physics -> Electronics -> Computer -> Embedded -> Software Defined Radio
 
 ## Education:
+
     info:
       - degree: MSc in Electronics Computers 
         university: University of Perpignan via Domitia
@@ -54,8 +58,11 @@ permalink: /about/
         details: LoRa(WAN) connection testing
 
 ## Projects:
+
     intro: Intrigate by A5/1 in the 2010s I searched around the internet and found a lot of interesting resources
 
 ## Oss:
+
     title: OSS Contributions
+
     intro: I was quoted two times at MyriadRF blog for Osmocom conection on RaspberryPi
