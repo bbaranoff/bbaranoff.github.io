@@ -29,13 +29,13 @@ nav_order: 1
 
 ---
 
-## Quoted :
+## Quoted
 
-Second Time :  
+Second Time  
 
 [![](https://github.com/bbaranoff/bbaranoff.github.io/blob/main/assets/myriad.png?raw=true)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
 
-First TIme :  
+First TIme   
 
 [![image](https://github.com/bbaranoff/bbaranoff.github.io/blob/main/assets/?raw=myriad2.png)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
 

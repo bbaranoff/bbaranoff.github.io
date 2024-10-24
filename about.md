@@ -35,7 +35,7 @@ nav_order: 2
     summary: |
       Physics -> Electronics -> Computer -> Embedded -> Software Defined Radio
 
-## Education:
+## Education
 
       - degree: MSc in Electronics Computers 
           university: University of Perpignan via Domitia
@@ -64,11 +64,11 @@ nav_order: 2
         time: 2017
         cmopany: Lycée Déodat de Séverac Céret
         
-## Projects:
+## Projects
 
     > intro: Intrigate by A5/1 in the 2010s I searched around the internet and found a lot of interesting resources
 
-## Oss:
+## Oss
 
     title: OSS Contributions
 
