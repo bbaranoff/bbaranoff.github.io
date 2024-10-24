@@ -33,11 +33,11 @@ nav_order: 1
 
 Second Time :  
 
-[![](_assets/myriad.png)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
+[![](https://github.com/bbaranoff/bbaranoff.github.io/blob/main/_assets/myriad.png?raw=true)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
 
 First TIme :  
 
-[![image](_assets/myriad2.png)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
+[![image](https://github.com/bbaranoff/bbaranoff.github.io/blob/main/_assets/?raw=myriad2.png)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
 
 ---
 
