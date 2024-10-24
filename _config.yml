@@ -30,6 +30,17 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Specific to this theme
+site_author: Bastien Baranoff
+sticky_navigation: true
+prev_next_buttons_location: None
+prev_next_buttons_location: top
+prev_next_buttons_location: bottom
+prev_next_buttons_location: both
+search_enabled: true
+# The highlight.js library provides 79 different colours for their syntax highlighting. The default is github-gist.
+hljs_style: github-gist
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
