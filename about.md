@@ -9,7 +9,7 @@ nav_order: 2
 
   info:
 
-    |----------|------------------------------------------|
+    +----------+------------------------------------------+
     | name     | Bastien Baranoff                         |
     | tagline  | Cybersecurity in Software Defined Radio  |
     | email    | bastienbaranoff@gmail.com                |
@@ -18,7 +18,7 @@ nav_order: 2
     | linkedin | Bastien Baranoff                         |
     | github   | bbaranoff                                |
     | twitter  | '@bastienbaranoff'                       |
-    |----------|------------------------------------------|
+    +----------+------------------------------------------+
 
 ## Languages:
       info:
