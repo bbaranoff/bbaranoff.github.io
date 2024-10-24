@@ -5,9 +5,11 @@ permalink: /about/
 nav_order: 2
 ---
 
-## Profile information
+# Profile information
 
-  info:
+[TOC]
+
+## Basic information
 
     +----------+------------------------------------------+
     | name     | Bastien Baranoff                         |
@@ -20,33 +22,31 @@ nav_order: 2
     | twitter  | '@bastienbaranoff'                       |
     +----------+------------------------------------------+
 
-## Languages:
-      info:
-        - idiom: French
-          level: Native
+## Languages
+  
+  - idiom: French
+      level: Native
 
-        - idiom: English
-          level: Professional
+  - idiom: English
+      level: Professional
 
-## Career Profile:
+## Career Profile
 
     summary: |
       Physics -> Electronics -> Computer -> Embedded -> Software Defined Radio
 
 ## Education:
 
-    info:
       - degree: MSc in Electronics Computers 
-        university: University of Perpignan via Domitia
-        time: 2011 - 2013
+          university: University of Perpignan via Domitia
+          time: 2011 - 2013
 
       - degree: Licence In Computer Science
-        university: University of Perpignan via Domitia
-        time: 2020-2021
+          university: University of Perpignan via Domitia
+          time: 2020-2021
 
-## Experience:
+## Experience
 
-    info:
       - role: CyberSecurity Research
         time: 2024
         company: Penthertz
@@ -60,9 +60,13 @@ nav_order: 2
         company: PROMES-CNRS
         details: LoRa(WAN) connection testing
 
+      - role: Former
+        time: 2017
+        cmopany: Lycée Déodat de Séverac Céret
+        
 ## Projects:
 
-    intro: Intrigate by A5/1 in the 2010s I searched around the internet and found a lot of interesting resources
+    > intro: Intrigate by A5/1 in the 2010s I searched around the internet and found a lot of interesting resources
 
 ## Oss:
 
