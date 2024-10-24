@@ -47,6 +47,6 @@ First TIme :
 
 ## Stuff
 
-[![](https://github.com/bbaranoff/bbaranoff.github.io/blob/main/output.gif?raw=true)](https://x.com/i/status/1763577169865826734)
+[![](https://github.com/bbaranoff/bbaranoff.github.io/blob/main/assets/output.gif?raw=true)](https://x.com/i/status/1763577169865826734)
 
 ---
