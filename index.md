@@ -15,15 +15,15 @@ nav_order: 1
 
 ### Developer  
 
-<img src="https://github.com/bbaranoff/bbaranoff.github.io/blob/main/assets/tata.png?raw=true" style="display: center" alt="drawing0" width="280"/>  
+<img src="https://github.com/bbaranoff/bbaranoff.github.io/blob/main/_assets/tata.png?raw=true" style="display: center" alt="drawing0" width="280"/>  
 
 ### Junior Researcher 
   
-<img src="https://github.com/bbaranoff/bbaranoff.github.io/blob/main/assets/cropped-PROMES-LONG-petit-pour-web.jpg?raw=true" style="display: center" alt="drawing1" width="280"/>  
+<img src="https://github.com/bbaranoff/bbaranoff.github.io/blob/main/_assets/cropped-PROMES-LONG-petit-pour-web.jpg?raw=true" style="display: center" alt="drawing1" width="280"/>  
 
 ### CyberSecurity Analyst  
   
-<img src="https://github.com/bbaranoff/bbaranoff.github.io/blob/main/assets/Penthertz_logo.png?raw=true" style="display: center" alt="drawing2" width="280"/>  
+<img src="https://github.com/bbaranoff/bbaranoff.github.io/blob/main/_assets/Penthertz_logo.png?raw=true" style="display: center" alt="drawing2" width="280"/>  
   
 ---
 
@@ -33,11 +33,11 @@ nav_order: 1
 
 Second Time :  
 
-[![](assets/myriad.png)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
+[![](_assets/myriad.png)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
 
 First TIme :  
 
-[![image](assets/myriad2.png)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
+[![image](_assets/myriad2.png)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
 
 ---
 
@@ -45,6 +45,6 @@ First TIme :
 
 ## Stuff
 
-[![](https://github.com/bbaranoff/bbaranoff.github.io/blob/main/assets/output.gif?raw=true)](https://x.com/i/status/1763577169865826734)
+[![](https://github.com/bbaranoff/bbaranoff.github.io/blob/main/_assets/output.gif?raw=true)](https://x.com/i/status/1763577169865826734)
 
 ---
