@@ -7,17 +7,18 @@ nav_order: 2
 
 ## Profile information
 
-    - name: Bastien Baranoff
-    - tagline: Cybersecurity in Software Defined Radio
-    - email: bastienbaranoff@gmail.com
-    - timezone: Paris/France
-    - website: https://bbaranoff.github.io/
-    - linkedin: Bastien Baranoff
-    - github: bbaranoff
-    - twitter: '@bastienbaranoff'
+  info:
+
+    | name | Bastien Baranoff
+    | tagline | Cybersecurity in Software Defined Radio
+    | email | bastienbaranoff@gmail.com
+    | timezone | Paris/France
+    | website | https://bbaranoff.github.io/
+    | linkedin | Bastien Baranoff
+    | github | bbaranoff
+    | twitter | '@bastienbaranoff'
 
 ## Languages:
-
       info:
         - idiom: French
           level: Native
