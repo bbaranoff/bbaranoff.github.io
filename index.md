@@ -32,7 +32,9 @@ twitter | '@bastienbaranoff'
 ## Career Profile:
 
 ```warning
+
       Physics -> Electronics -> Computer -> Embedded -> Software Defined Radio
+
 ```
 
 
