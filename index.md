@@ -33,7 +33,7 @@ twitter | '@bastienbaranoff'
 
 ```warning
 
-      Physics -> Electronics -> Computer -> Embedded -> Software Defined Radio
+  Physics -> Electronics -> Computer -> Embedded -> Software Defined Radio
 
 ```
 
@@ -130,7 +130,7 @@ First TIme :
 
 ```danger
 
-    intro: Intrigate by A5/1 in the 2010s I searched around the internet and found a lot of interesting resources
+  intro: Intrigate by A5/1 in the 2010s I searched around the internet and found a lot of interesting resources
 
 ```
 
