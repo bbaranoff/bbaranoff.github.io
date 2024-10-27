@@ -722,3 +722,93 @@ Explication du Diagramme :
 
 
 Ce diagramme montre les relations et les interactions entre les différents acteurs et services lorsqu'un emprunteur effectue une opération d'emprunt dans le système de gestion de bibliothèque.
+
+
+#### Diagramme d'Activité
+
+Introduction
+
+Le diagramme d'activité est un outil essentiel dans le domaine de la modélisation des systèmes, en particulier dans le cadre de l'analyse et du design de systèmes logiciels. Il permet de représenter les flux de contrôle et d'information au sein d'un système à travers une série d'activités et de décisions. Ce type de diagramme est souvent utilisé pour modéliser des processus métier, des algorithmes, et des workflows, fournissant ainsi une vue claire et structurée des interactions au sein d'un système.
+
+Définition et Objectifs
+
+Un diagramme d'activité est une représentation graphique qui décrit le déroulement d'un processus ou d'une activité en utilisant des éléments visuels standardisés. Les objectifs principaux de ce type de diagramme incluent :
+
+1. **Visualisation des processus** : Permet de visualiser le flux d'activités, facilitant la compréhension des interactions entre les différentes parties du système.
+2. **Identification des étapes** : Aide à identifier les différentes étapes d'un processus, y compris les points de décision et les activités parallèles.
+3. **Facilitation de la communication** : Sert de langage commun entre les différentes parties prenantes d'un projet, incluant les développeurs, les analystes métier et les clients.
+4. **Documentation des processus** : Fournit une documentation claire et précise des processus d'affaires ou des algorithmes, utile pour les audits et les améliorations continues.
+
+Éléments du Diagramme d'Activité
+
+Les diagrammes d'activité utilisent plusieurs symboles pour représenter les différentes composantes d'un processus. Voici les éléments clés :
+
+1. **Activité** : Représentée par un rectangle arrondi, elle décrit une tâche ou une action à réaliser dans le processus.
+   
+2. **Flèche de contrôle** : Indique le flux d'exécution entre les activités. Les flèches montrent la direction du flux de travail.
+
+3. **Point de décision** : Représenté par un losange, il indique un point où le flux peut se diviser en plusieurs chemins en fonction d'une condition.
+
+4. **État initial** : Symbolisé par un cercle noir, il marque le début du processus.
+
+5. **État final** : Représenté par un cercle avec un cercle concentrique, il indique la fin du processus.
+
+6. **Activités parallèles** : Représentées par des barres de synchronisation, elles indiquent des activités qui peuvent être exécutées simultanément.
+
+7. **Sous-activités** : Un diagramme d'activité peut inclure d'autres diagrammes d'activité, permettant de décomposer des processus complexes en parties plus simples.
+
+Exemple d'un Diagramme d'Activité
+
+Prenons l'exemple d'un processus d'emprunt de livre dans une bibliothèque. Un diagramme d'activité typique pourrait inclure les étapes suivantes :
+
+1. **État Initial** : L'emprunteur se connecte à l'interface utilisateur.
+2. **Activité 1** : Rechercher un livre.
+3. **Décision** : Le livre est-il disponible ?
+   - **Oui** : L'emprunteur peut procéder à l'emprunt.
+   - **Non** : Afficher un message indiquant que le livre n'est pas disponible.
+4. **Activité 2** : L'emprunteur choisit d'emprunter le livre.
+5. **Activité 3** : Confirmer l'emprunt et mettre à jour la base de données.
+6. **État Final** : Un message de confirmation est envoyé à l'emprunteur.
+
+Le diagramme illustrerait visuellement ces étapes, facilitant ainsi la compréhension du processus par toutes les parties prenantes.
+
+Utilisation et Avantages
+
+Les diagrammes d'activité sont particulièrement utiles dans les phases d'analyse et de conception d'un projet. Ils permettent de :
+
+- **Clarifier les exigences** : En visualisant le processus, les équipes peuvent mieux comprendre et définir les exigences du système.
+- **Identifier les goulets d'étranglement** : En analysant le flux d'activités, il est possible d'identifier les points de friction ou d'inefficacité dans un processus.
+- **Faciliter l'automatisation** : Un diagramme d'activité bien conçu peut servir de guide pour l'automatisation des processus métier.
+
+Voici un exemple de diagramme d'activité représentant le processus d'emprunt d'un livre dans une bibliothèque, écrit en syntaxe Mermaid :
+
+```mermaid
+flowchart TD
+    A[État Initial: Se connecter à l'interface utilisateur] --> B[Rechercher un livre]
+    B --> C{Le livre est-il disponible ?}
+    C -->|Oui| D[Procéder à l'emprunt]
+    C -->|Non| E[Afficher message: Livre non disponible]
+    D --> F[Confirmer l'emprunt]
+    F --> G[Mise à jour de la base de données]
+    G --> H[État Final: Message de confirmation à l'emprunteur]
+```
+
+### Explication du Diagramme
+
+1. **État Initial** : L'emprunteur se connecte à l'interface utilisateur.
+2. **Recherche** : L'emprunteur effectue une recherche pour un livre.
+3. **Décision** : Vérifie la disponibilité du livre.
+   - Si le livre est **disponible**, il passe à l'étape d'emprunt.
+   - Si le livre n'est **pas disponible**, un message est affiché.
+4. **Confirmer l'emprunt** : Si l'emprunteur choisit d'emprunter le livre, le système confirme l'emprunt.
+5. **Mise à jour** : La base de données est mise à jour avec les informations d'emprunt.
+6. **État Final** : Un message de confirmation est envoyé à l'emprunteur.
+
+### Utilisation
+
+Pour afficher ce diagramme, vous pouvez le copier et le coller dans un éditeur compatible avec Mermaid, tel que :
+
+- **Mermaid Live Editor** : [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor)
+- **Markdown** : Si vous utilisez un système de documentation qui prend en charge Mermaid, comme GitHub, GitLab ou certains générateurs de documentation, vous pouvez simplement l'intégrer dans votre fichier Markdown.
+
+N'hésitez pas à adapter le diagramme selon vos besoins spécifiques ou à ajouter d'autres activités et décisions pour refléter un processus plus complexe !
