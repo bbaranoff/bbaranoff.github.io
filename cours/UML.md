@@ -410,31 +410,37 @@ Le diagramme de déploiement montre la manière dont les composants logiciels so
 #### Représentation du Diagramme de Déploiement en UML :
 
 ```mermaid
-deploymentDiagram
-  node ServeurWeb {
-    component SystèmeGestionBibliothèque
-  }
 
-  node ServeurApplication {
-    component ServiceEmprunt
-    component ServiceLivres
-    component ServiceAuteurs
-    component ServiceEmprunteurs
-  }
+flowchart TD
+  subgraph ClientWeb ["Client Web"]
+    IU[Interface Utilisateur]
+  end
 
-  node ServeurBaseDeDonnées {
-    database BaseDeDonnées
-  }
+  subgraph Internet ["Internet"]
+  end
 
-  SystèmeGestionBibliothèque --> ServiceEmprunt : Requête emprunt
-  SystèmeGestionBibliothèque --> ServiceLivres : Requête livres
-  SystèmeGestionBibliothèque --> ServiceAuteurs : Requête auteurs
-  SystèmeGestionBibliothèque --> ServiceEmprunteurs : Requête emprunteurs
-  
-  ServiceEmprunt --> BaseDeDonnées : Accès données emprunt
-  ServiceLivres --> BaseDeDonnées : Accès données livres
-  ServiceAuteurs --> BaseDeDonnées : Accès données auteurs
-  ServiceEmprunteurs --> BaseDeDonnées : Accès données emprunteurs
+  subgraph ServeurApplication ["Serveur Application"]
+    SE[Service Emprunt]
+    SL[Service Livres]
+    SA[Service Auteurs]
+    SEmp[Service Emprunteurs]
+  end
+
+  subgraph ServeurBaseDeDonnées ["Serveur Base de Données"]
+    DB[Base De Données]
+  end
+
+  IU -->|Connexion via HTTP/HTTPS| Internet
+  Internet -->|Transfert de requêtes utilisateur| ServeurApplication
+  ServeurApplication -->|Accès et manipulation des données| ServeurBaseDeDonnées
+
+  IU --> SE["Utilise pour gérer les emprunts"]
+  IU --> SL["Utilise pour gérer et rechercher les livres"]
+  IU --> SA["Utilise pour rechercher et ajouter des auteurs"]
+  IU --> SEmp["Utilise pour enregistrer et rechercher les emprunteurs"]
+
+  SE
+
 
 ```
 
