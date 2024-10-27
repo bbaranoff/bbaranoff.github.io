@@ -246,38 +246,37 @@ Relations :
 Représentation du Diagramme d'Objets en UML :  
   
 ```mermaid
-%% Object Diagram in Mermaid.js
-
 classDiagram
     class Livre {
-        +String titre
-        +String isbn
-        +int annéePublication
+        + titre: String
+        + isbn: String
+        + annéePublication: Int
     }
 
     class Auteur {
-        +String nom
-        +Date dateNaissance
+        + nom: String
+        + dateNaissance: Date
     }
 
     class Emprunteur {
-        +String nom
-        +String numéroEmprunteur
+        + nom: String
+        + numéroEmprunteur: String
     }
 
-    Livre <|-- livre1
-    Livre <|-- livre2
-    
-    Auteur <|-- auteur1
-    Auteur <|-- auteur2 
-    
-    Emprunteur <|-- emprunteur1
-    Emprunteur <|-- emprunteur2
+    %% Objets
+    Livre <|-- livre1: "Les Misérables\nISBN: 978-2-07-040933-1\nAnnée: 1862"
+    Livre <|-- livre2: "1984\nISBN: 978-0-452-28423-4\nAnnée: 1949"
+    Auteur <|-- auteur1: "Victor Hugo\nDate de Naissance: 1802-02-26"
+    Auteur <|-- auteur2: "George Orwell\nDate de Naissance: 1903-06-25"
+    Emprunteur <|-- emprunteur1: "Jean Dupont\nNuméro: E1234"
+    Emprunteur <|-- emprunteur2: "Marie Curie\nNuméro: E5678"
 
+    %% Relations
     livre1 --> auteur1 : "écrit par"
     livre2 --> auteur2 : "écrit par"
-    emprunteur1 --> livre1 : "emprunte"
-    emprunteur2 --> livre2 : "emprunte"
+    emprunteur1 --> livre1 : "a emprunté"
+    emprunteur2 --> livre2 : "a emprunté"
+
 ```
 
 Ce diagramme montre des objets particuliers (les instances `livre1`, `livre2`, etc.) avec leurs relations concrètes, tels que l'emprunt de livres par des emprunteurs et les liens entre auteurs et livres.
