@@ -19,10 +19,10 @@ Ensuite vous devez créer un dépot (repository) sur ce même compte que vous no
 - Appuyer sur New sur github et nommez le repository mon_projet vous y ajouterez la License MIT
 
 
----
+
 
 ![Mon Prjet](images/mon_projet.png)
----
+
 
 ![Mon Projet](images/mit.png)
 ![Mon Projet](images/mit_lic.png)
@@ -38,27 +38,27 @@ cd mon_projet
 nano mon_projet
 # Mon Projet  
 ```
----
+
 
 Comment puis je récupérer mon token ?  
 
 - Aller sur votre profil -> settings -> Developper Settings -> Personnal access tokens -> Token Classic  
 
 ![Token](images/tok_1.png)
----
+
 
 
 ![Token](images/tok_2.png)
 
----
+
 
 ![Token](images/tok_3.png)
----
+
 
 ![Token](images/tok_5.png)
 
 ![Token](images/tok_6.png)
----
+
 
 Pourquoi puis-je cloner mon dépot sans l'utilisation du token et ne puis pas faire un push sans ?  
 
@@ -74,7 +74,7 @@ git commit -m "Ajout de hello world au README"
 git push https://api_key@github.com/mon_user/mon_projet  
 ```
 
----
+
 
 Maintenant si je rajoute Hello World directement sur le README.md sur github on reçoit l'erreur suivante lors d'un push en local :
 ![push](images/push_fail.png)
@@ -85,11 +85,11 @@ puis-je pousser mes dépots locaux sur github.
 
 Mise à jour du dépot local pour intégrer les modifications distantes  
 
----
+
 
 ![pull then push](images/pull_n_push.png)
 
----
+
 
 Ou on peut ignorer le commit distant pour l'écraser avec le commit local où la modification n'a pas eu lieu
 
@@ -101,10 +101,10 @@ Si on veut faire une branche ou à la place de Hello World on ait Hello Earth co
 - git checkout -b ma_branche  
 - sed -i -e 's/World/Earth/g' README.md  
 
----
+
 
 ![Ma Branche](images/ma_branche.png)
----
+
 
 On veut enfin que Hello Earth soit sur la branche main que faut t'il faire ?  
 
@@ -117,16 +117,16 @@ remote: Create a pull request for 'ma_branche' on GitHub by visiting:
 remote:      https://github.com/bbaranoff/mon_projet/pull/new/ma_branche  
 
 et enfin suivre les instructions sur github  
----  
+  
 
 ![Branche](images/branch1.png)
----  
+  
 
 ![Branche](images/branch2.png)
 
----  
+  
 
 ![Branche](images/branch3.png)
----  
+  
 
 ![Branche](images/branch4.png)

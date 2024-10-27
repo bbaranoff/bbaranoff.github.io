@@ -193,7 +193,7 @@ Pour créer un diagramme d'objets à partir du diagramme de classes fourni, nous
 
 Voici comment cela peut être traduit :
 
----  
+  
    
 ### Exemple de Diagramme d'Objets  
   
@@ -282,11 +282,11 @@ classDiagram
 
 Ce diagramme montre des objets particuliers (les instances `livre1`, `livre2`, etc.) avec leurs relations concrètes, tels que l'emprunt de livres par des emprunteurs et les liens entre auteurs et livres.
 
----
+
 
 Pour créer le diagramme de composants correspondant, nous allons représenter les différents composants logiciels impliqués dans le système de gestion de bibliothèque et leurs interactions. Un diagramme de composants en UML décrit la structure physique d'un système, y compris les fichiers, bibliothèques ou services que le système utilise.
 
----
+
   
 ### Description des Composants :  
   
@@ -301,7 +301,7 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
 
    - Gestion des opérations liées à l'emprunt et au retour de livres.
 
----
+
 
 4. **Composant "Service Livres"** :  
 
@@ -315,7 +315,7 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
 
    - Gestion des informations liées aux emprunteurs (enregistrement et gestion des emprunts).  
 
----
+
   
 #### Représentation du Diagramme de Composants en UML :  
 
@@ -336,7 +336,7 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
 ]
 ```  
 
----  
+  
   
 ```mermaid  
 
@@ -361,7 +361,7 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
 ]
 ```
 
----  
+  
 
 ```mermaid  
   
@@ -377,7 +377,7 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
 
 ```
 
----  
+  
 
 ### Explication du Diagramme :  
   
@@ -395,11 +395,11 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
 
 Ce diagramme montre comment les différents composants logiciels interagissent pour fournir les fonctionnalités nécessaires au système de gestion de bibliothèque.
 
----
+
 
 Le diagramme de déploiement montre la manière dont les composants logiciels sont déployés sur l'infrastructure physique, c'est-à-dire sur des nœuds matériels comme des serveurs, des bases de données, ou encore des machines clientes. Cela inclut les relations entre les différents nœuds (physiques ou virtuels) et la manière dont les composants sont distribués.
 
----  
+  
   
 ### Diagramme de Déploiement pour le Système de Gestion de Bibliothèque
   
@@ -417,7 +417,7 @@ Le diagramme de déploiement montre la manière dont les composants logiciels so
 4. **Internet** :  
    - Sert de réseau de communication entre les clients et les serveurs.
   
----  
+  
 
 #### Représentation du Diagramme de Déploiement en UML :
 
@@ -445,7 +445,7 @@ Le diagramme de déploiement montre la manière dont les composants logiciels so
 [ServeurApplication] --> [ServeurBaseDeDonnées]
 ```
 
----
+
 
 ### Explication du Diagramme :
 
@@ -461,7 +461,7 @@ Le diagramme de déploiement montre la manière dont les composants logiciels so
 
 4. **Serveur de Base de Données** : Ce nœud contient le composant **Base de Données**, qui stocke toutes les informations du système (livres, auteurs, emprunteurs, emprunts).
 
----
+
 
 ### Scénario :
 
@@ -470,11 +470,11 @@ Le diagramme de déploiement montre la manière dont les composants logiciels so
 
 Ce diagramme de déploiement montre comment les composants sont distribués entre différents nœuds matériels et logiciels, illustrant leur communication et leur interconnexion dans l'infrastructure du système de gestion de bibliothèque.
 
----
+
 
 ## Diagramme comportementaux
 
----
+
 
 ### Diagramme de cas d'utilisation
 
@@ -488,7 +488,7 @@ Le diagramme de cas d'utilisation représente les interactions entre les acteurs
 
 3. **Système de Paiement** (acteur externe) : Gère les paiements pour les amendes ou les retards d'emprunt.  
   
----
+
 
 ### Cas d'utilisation principaux :  
 
@@ -501,7 +501,7 @@ Le diagramme de cas d'utilisation représente les interactions entre les acteurs
 
 5. **Gérer les Emprunteurs** : Le bibliothécaire peut enregistrer un nouvel emprunteur ou mettre à jour les informations d'un emprunteur.  
 
----  
+  
 
 6. **Gérer les Auteurs** : Le bibliothécaire peut ajouter ou mettre à jour les informations sur un auteur.  
 
@@ -513,7 +513,7 @@ Le diagramme de cas d'utilisation représente les interactions entre les acteurs
 
   
   
----
+
 
 ### Explication du Diagramme :
 
@@ -528,7 +528,7 @@ Le diagramme de cas d'utilisation représente les interactions entre les acteurs
    - Peut **Gérer les Emprunteurs** : Ajouter de nouveaux emprunteurs ou modifier leurs informations.
    - Peut **Gérer les Auteurs** : Ajouter ou mettre à jour des informations sur les auteurs.
 
----
+
 
 3. **Système de Paiement** : C'est un système externe utilisé pour gérer les paiements effectués par les emprunteurs lorsqu'ils paient une amende.
 
@@ -540,13 +540,13 @@ Le diagramme de cas d'utilisation représente les interactions entre les acteurs
 
 Ce diagramme de cas d'utilisation montre les principales fonctionnalités du système de gestion de bibliothèque et les interactions entre les acteurs et le système. Il aide à visualiser les tâches possibles et les relations entre les différents utilisateurs et les services fournis par le système.
 
----  
+  
 
 ## Diagramme de séquence  
 
 Le diagramme de séquence montre les interactions entre les objets ou composants du système sous forme de messages échangés dans le temps. Il met en lumière l'ordre d'exécution des opérations et la manière dont les différents acteurs interagissent avec le système.
 
----
+
 
 ### Scénario du Diagramme de Séquence :
 Prenons le cas d'un **Emprunteur** qui souhaite **emprunter un livre**.
@@ -559,7 +559,7 @@ Prenons le cas d'un **Emprunteur** qui souhaite **emprunter un livre**.
 5. **Service Emprunt** : Service qui gère les emprunts et les retours de livres.
 6. **Base de Données** : Système de stockage d'informations sur les livres et emprunteurs.
 
----  
+  
 
 ### Scénario :
 1. L'**Emprunteur** cherche un livre à emprunter en passant par l'**Interface Utilisateur**.
@@ -570,7 +570,7 @@ Prenons le cas d'un **Emprunteur** qui souhaite **emprunter un livre**.
 6. Le **Service Emprunt** met à jour la **Base de Données** avec les informations sur l'emprunt.
 7. Un message de confirmation est renvoyé à l'**Emprunteur** via l'**Interface Utilisateur**.
 
----  
+  
 
 #### Représentation du Diagramme de Séquence en UML :
 
@@ -587,7 +587,7 @@ Prenons le cas d'un **Emprunteur** qui souhaite **emprunter un livre**.
    - Le **Système de Gestion** demande au **Service Livres** de rechercher le livre dans la **Base de Données**.
    - Une fois le livre trouvé, cette information est transmise de retour à l'interface utilisateur, qui l'affiche à l'emprunteur.
 
----  
+  
 
 3. **Emprunt du livre** :
    - L'emprunteur choisit d'emprunter le livre. L'interface utilisateur envoie cette demande au **Système de Gestion**.
@@ -599,7 +599,7 @@ Prenons le cas d'un **Emprunteur** qui souhaite **emprunter un livre**.
 
 Ce diagramme de séquence illustre le flux des messages entre les différents acteurs et composants lors de la réalisation d'un emprunt de livre. Il met en avant la chronologie des événements et les interactions entre le front-end, le back-end, et la base de données du système.
 
----
+
 
 ### Diagramme de Collaboration (UML)  
 
@@ -617,7 +617,7 @@ Le **diagramme de collaboration** (ou **diagramme de communication**) montre les
 
 ![](images/collaboration.png)        
 
---- 
+ 
 
 ### Explication du Diagramme :
 
@@ -627,6 +627,6 @@ Le **diagramme de collaboration** (ou **diagramme de communication**) montre les
 - **Service Livres** : Vérifie la disponibilité du livre en consultant la **Base de Données**.
 - **Service Emprunt** : Crée un nouvel emprunt pour l'utilisateur et met à jour la **Base de Données** avec les informations de l'emprunt.
 
----
+
 
 Ce diagramme montre les relations et les interactions entre les différents acteurs et services lorsqu'un emprunteur effectue une opération d'emprunt dans le système de gestion de bibliothèque.

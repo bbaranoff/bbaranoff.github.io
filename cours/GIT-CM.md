@@ -1,10 +1,6 @@
 # Git cours Magistral
 
-
-
 ![GitHub](https://www.ifourtechnolab.com/pics/All_about_Version_ControlGit.webp)  
-
-
 
 ### whoami
 
@@ -17,8 +13,6 @@ Voici une brève description des principaux fournisseurs Git ainsi que leurs car
 ### 1. **GitHub**
 
 ![](https://pngimg.com/uploads/github/github_PNG23.png)
-
-
 
    - **Description** : GitHub est l'une des plateformes Git les plus populaires, largement utilisée pour héberger des projets open source et collaboratifs.
 
