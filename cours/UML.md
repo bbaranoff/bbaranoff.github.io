@@ -165,6 +165,7 @@ Imaginons un système de gestion de bibliothèque avec les classes suivantes : *
   - Méthodes :
     - `demanderLivre(livre: Livre): void`
     - `retournerLivre(livre: Livre): void`
+
 ---
 
 #### Relations :  
@@ -199,9 +200,6 @@ class Emprunteur {
   +demanderLivre(livre: Livre): void
   +retournerLivre(livre: Livre): void
 }
-
-Livre *-- Auteur : écrit par
-Emprunteur *-- Livre : emprunte
 
 ```
 
@@ -285,78 +283,39 @@ Voici comment cela peut être traduit :
 #### Représentation du Diagramme d'Objets en UML :  
   
 ```mermaid
+%% Object Diagram in Mermaid.js
 
-#direction: center
-#font: 14px
-#stroke: #333
-#fill: #f9f9f9
+classDiagram
+    class Livre {
+        +String titre
+        +String isbn
+        +int annéePublication
+    }
 
-[livre1: Livre|
-  titre = "Les Misérables"
-  isbn = "978-2-07-040933-1"
-  annéePublication = 1862
-]
+    class Auteur {
+        +String nom
+        +Date dateNaissance
+    }
 
-[livre2: Livre|
-  titre = "1984"
-  isbn = "978-0-452-28423-4"
-  annéePublication = 1949
-]
+    class Emprunteur {
+        +String nom
+        +String numéroEmprunteur
+    }
 
+    Livre <|-- livre1
+    Livre <|-- livre2
+    
+    Auteur <|-- auteur1
+    Auteur <|-- auteur2 
+    
+    Emprunteur <|-- emprunteur1
+    Emprunteur <|-- emprunteur2
+
+    livre1 --> auteur1 : "écrit par"
+    livre2 --> auteur2 : "écrit par"
+    emprunteur1 --> livre1 : "emprunte"
+    emprunteur2 --> livre2 : "emprunte"
 ```
----
-
-```mermaid
-
-#direction: center
-#font: 14px
-
-
-[auteur1: Auteur| 
-  nom = "Victor Hugo"
-  dateNaissance = 1802-02-26
-]
-
-[auteur2: Auteur| 
-  nom = "George Orwell"
-  dateNaissance = 1903-06-25
-]
-```
-
----
-
-```mermaid
-
-#direction: center
-#font: 14px
-
-
-[emprunteur1: Emprunteur| 
-  nom = "Jean Dupont"
-  numéroEmprunteur = "E1234"
-]
-
-[emprunteur2: Emprunteur| 
-  nom = "Marie Curie"
-  numéroEmprunteur = "E5678"
-]
-```
-
----
-
-```mermaid
-
-#direction: center
-#font: 14px
-
-
-[livre1] -- [auteur1]
-[livre2] -- [auteur2]
-[emprunteur1] -- [livre1]
-[emprunteur2] -- [livre2]
-```
-
----
 
 Ce diagramme montre des objets particuliers (les instances `livre1`, `livre2`, etc.) avec leurs relations concrètes, tels que l'emprunt de livres par des emprunteurs et les liens entre auteurs et livres.
 
