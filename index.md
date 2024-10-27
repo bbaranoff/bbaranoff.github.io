@@ -6,11 +6,11 @@ The quieter you become the most you are able to hear
 
 ```
 
----
+
 
 ## Profile information
     
----|---
+|
 name | Bastien Baranoff
 tagline | Cybersecurity in Software Defined Radio
 email | bastienbaranoff@gmail.com
@@ -42,12 +42,12 @@ Physics -> Electronics -> Computer -> Embedded -> Software Defined Radio
 
 ## Education:
 
----|---
+|
 degree |  MSc in Electronics Computers 
 university | University of Perpignan via Domitia
 time | 2011 - 2013
 
----|---
+|
 degree | Licence In Computer Science
 university | University of Perpignan via Domitia
 time | 2020-2021
@@ -102,9 +102,9 @@ time | 2020-2021
 <a href="https://www.education.gouv.fr/"><img src="https://bigbluebutton.org/wp-content/uploads/2022/11/france-copy.jpg"  alt="drawing2" width="360"></a>
 
 
----
 
----
+
+
 
 ## Quoted :
 
@@ -116,9 +116,9 @@ First TIme :
 
 [![image](assets/myriad2.png)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
 
----
 
----
+
+
 
 ## Stuff
 
