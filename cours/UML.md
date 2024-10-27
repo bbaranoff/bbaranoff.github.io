@@ -76,7 +76,7 @@ Enfin, UML offre une documentation standardisée qui peut être utilisée tout a
   
 Les diagrammes structurels jouent un rôle fondamental dans la modélisation d'un système en mettant l'accent sur sa structure statique. Contrairement aux diagrammes comportementaux qui se concentrent sur les interactions et les dynamiques, les diagrammes structurels se focalisent sur les composants et leurs relations à un moment donné.   
   
-#### Principales caractéristiques des diagrammes structurels :
+#### Principales caractéristiques des diagrammes structurels
   
 1. **Représentation des composants :** Ils permettent de visualiser les différents composants d'un système, tels que les classes, les objets, les modules, et comment ils s'assemblent.  
    
@@ -312,7 +312,7 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
 
 
   
-#### Diagramme de Composants :  
+#### Diagramme de Composants
   
 1. **Système de gestion de bibliothèque** : 
    - Principal composant qui orchestre les opérations du système.
@@ -404,27 +404,40 @@ Explication du Diagramme :
 
 Ce diagramme montre comment les différents composants logiciels interagissent pour fournir les fonctionnalités nécessaires au système de gestion de bibliothèque.
 
+
+  
 #### Diagramme de deploiement
+Voici une reformulation de l'explication du diagramme de déploiement pour le système de gestion de bibliothèque :
 
-Le diagramme de déploiement montre la manière dont les composants logiciels sont déployés sur l'infrastructure physique, c'est-à-dire sur des nœuds matériels comme des serveurs, des bases de données, ou encore des machines clientes. Cela inclut les relations entre les différents nœuds (physiques ou virtuels) et la manière dont les composants sont distribués.
+Explication du Diagramme de Déploiement
 
-Noeuds :
+1. **Client Web** : 
+   - Représente un utilisateur qui accède au système de gestion de bibliothèque via un navigateur web ou une application mobile. 
+   - Il interagit avec le système à travers une **interface utilisateur**.
 
-1. **Serveur d'Application** :  
-   - Héberge les services comme le **Service Emprunt**, **Service Livres**, **Service Auteurs**, et **Service Emprunteurs**.
-  
-2. **Serveur de Base de Données** :  
-   - Héberge la **Base de Données** utilisée pour stocker les informations sur les livres, les auteurs, et les emprunteurs.
-  
-3. **Client Web** (ou Application) :  
-   - Accède au système via une interface utilisateur, comme un navigateur ou une application dédiée.
-  
-4. **Internet** :  
-   - Sert de réseau de communication entre les clients et les serveurs.
-  
-  
+2. **Internet** : 
+   - Symbolise le réseau qui permet la communication entre le client web et le serveur d'application. 
+   - C'est le canal par lequel les données transitent.
 
-#### Représentation du Diagramme de Déploiement en UML :
+3. **Serveur d'Application** : 
+   - Héberge les divers composants du système, y compris :
+     - **Service Emprunt** : Gère les emprunts et retours de livres.
+     - **Service Livres** : Responsable de la gestion et de la recherche de livres.
+     - **Service Auteurs** : S'occupe des informations relatives aux auteurs.
+     - **Service Emprunteurs** : Gère les emprunteurs et leurs demandes.
+
+4. **Serveur de Base de Données** : 
+   - Contient le composant **Base de Données**, qui stocke toutes les informations du système, y compris les livres, les auteurs, les emprunteurs et les emprunts.
+
+Scénario de Fonctionnement
+
+- Les utilisateurs interagissent avec le système via le **Client Web**. Les requêtes sont transmises à travers le **réseau Internet** pour atteindre le **Serveur d'Application**, où se trouvent les services métiers comme le **Service Emprunt** et le **Service Livres**.
+
+- Le **Serveur d'Application** traite ces requêtes et les envoie au **Serveur de Base de Données**, qui renvoie les informations demandées (telles que les livres disponibles et les détails des emprunteurs) à l'application.
+
+Conclusion
+
+Ce diagramme de déploiement illustre comment les composants du système de gestion de bibliothèque sont répartis entre différents nœuds matériels et logiciels. Il met en évidence leur communication et leur interconnexion au sein de l'infrastructure, offrant une vue d'ensemble de la manière dont le système fonctionne.
 
 ```mermaid
 
@@ -458,38 +471,16 @@ flowchart TD
 
   SE
 
-
 ```
 
-Explication du Diagramme :
+#### Diagramme de packages
 
-1. **Client Web** : Représente un client qui accède au système de gestion de bibliothèque, par exemple via un navigateur web ou une application mobile. Il interagit avec le système via une **interface utilisateur**.
-   
-2. **Internet** : Représente le réseau qui permet la communication entre le client web et le serveur d'application. C'est le réseau où les données transitent.
-   
-3. **Serveur d'Application** : Ce nœud héberge les différents composants du système, à savoir :
-   - **Service Emprunt** : Gère les emprunts et retours de livres.
-   - **Service Livres** : Gère la gestion et la recherche de livres.
-   - **Service Auteurs** : Gère les informations sur les auteurs.
-   - **Service Emprunteurs** : Gère les emprunteurs et leurs demandes.
-
-4. **Serveur de Base de Données** : Ce nœud contient le composant **Base de Données**, qui stocke toutes les informations du système (livres, auteurs, emprunteurs, emprunts).
-
-Scénario :
-
-- Les utilisateurs interagissent avec le système via le **Client Web**. Les requêtes passent par le **réseau Internet** pour atteindre le **Serveur d'Application**, où sont déployés les services métiers comme le **Service Emprunt** et le **Service Livres**.
-- Le **Serveur d'Application** envoie les requêtes de données au **Serveur de Base de Données**, qui renvoie les informations demandées (livres disponibles, informations d'emprunteurs, etc.) à l'application.
-
-Ce diagramme de déploiement montre comment les composants sont distribués entre différents nœuds matériels et logiciels, illustrant leur communication et leur interconnexion dans l'infrastructure du système de gestion de bibliothèque.
-
-
-
-#### Diagramme de Packages
 
 Voici un exemple de code Mermaid pour le système de gestion d'une bibliothèque que nous avons décrit précédemment :
 
+
 ```mermaid
-%%{init: {'theme': 'default'}}%%
+
 graph TD;
     subgraph Bibliothèque
         A[GestionLivres]
@@ -501,18 +492,73 @@ graph TD;
     C -->|dépend de| B
 ```
 
+
 Explication du Code
 
-- **`graph TD`** : Indique que le diagramme est orienté de haut en bas (Top Down).
-- **`subgraph Bibliothèque`** : Crée un sous-graph qui représente le package principal "Bibliothèque".
-- **`A[GestionLivres]`, `B[GestionMembres]`, `C[GestionEmprunts]`** : Représentent les différents packages au sein du sous-graph.
-- **`C -->|dépend de| A`** : Indique une dépendance du package "GestionEmprunts" vers "GestionLivres".
-- **`C -->|dépend de| B`** : Indique une dépendance du package "GestionEmprunts" vers "GestionMembres".
+- **graph TD** : Indique que le diagramme est orienté de haut en bas (Top Down).
+- **subgraph Bibliothèque** : Crée un sous-graph qui représente le package principal "Bibliothèque".
+- **A[GestionLivres], B[GestionMembres], C[GestionEmprunts]** : Représentent les différents packages au sein du sous-graph.
+- `C -->|dépend de| A` : Indique une dépendance du package "GestionEmprunts" vers "GestionLivres".
+- `C -->|dépend de| B` : Indique une dépendance du package "GestionEmprunts" vers "GestionMembres".
 
 
+
+
+### Diagramme de Profil
+
+```mermaid
+%%{init: {'theme': 'default'}}%%
+classDiagram
+    class Bibliothèque {
+        +String nom
+        +String adresse
+    }
+
+    class Utilisateur {
+        +String nom
+        +String email
+    }
+
+    class Livre {
+        +String titre
+        +String auteur
+        +String isbn
+    }
+
+    class Emprunt {
+        +Date dateEmprunt
+        +Date dateRetour
+    }
+
+    class Stereotypes {
+        <<BibliothèqueProfile>>
+        <<UtilisateurProfile>>
+        <<LivreProfile>>
+        <<EmpruntProfile>>
+    }
+
+    Bibliothèque <|-- Stereotypes
+    Utilisateur <|-- Stereotypes
+    Livre <|-- Stereotypes
+    Emprunt <|-- Stereotypes
+```
+
+Explication du Diagramme
+
+1. **Classes** :
+   - **Bibliothèque** : Représente la bibliothèque avec des attributs comme `nom` et `adresse`.
+   - **Utilisateur** : Représente les utilisateurs du système avec des attributs tels que `nom` et `email`.
+   - **Livre** : Contient des informations sur les livres, avec des attributs comme `titre`, `auteur`, et `isbn`.
+   - **Emprunt** : Représente les emprunts de livres avec des attributs comme `dateEmprunt` et `dateRetour`.
+
+2. **Stereotypes** :
+   - Des stéréotypes comme `<<BibliothèqueProfile>>`, `<<UtilisateurProfile>>`, `<<LivreProfile>>`, et `<<EmpruntProfile>>` sont ajoutés pour chaque classe afin de montrer qu'elles font partie d'un profil spécifique à ce système.
+
+3. **Relations** :
+   - Les flèches indiquent que chaque classe est associée au diagramme de profil, montrant que ces classes peuvent être stéréotypées pour le système de gestion de bibliothèque.
+
+  
 ### Diagramme comportementaux
-
-
 
 #### Diagramme de cas d'utilisation
 
