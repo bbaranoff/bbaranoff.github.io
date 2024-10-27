@@ -1,188 +1,114 @@
-/**
- * @author Nicholas C.Zakas
- * @book Professional JavaScript for Web Developers, 3rd Edition
- * @chapter 9 Client Detection
- * @download link http://www.wrox.com/WileyCDA/WroxTitle/Professional-JavaScript-for-Web-Developers-3rd-Edition.productCd-1118026691,descCd-DOWNLOAD.html
- * if this code violate copy right problem, please connect me 
- */
-var client = function(){
+import assert from 'assert';
 
-    //rendering engines
-    var engine = {            
-        ie: 0,
-        gecko: 0,
-        webkit: 0,
-        khtml: 0,
-        opera: 0,
+import { UserAgent } from '../src/user-agent.ts';
 
-        //complete version
-        ver: null  
-    };
-    
-    //browsers
-    var browser = {
-        
-        //browsers
-        ie: 0,
-        firefox: 0,
-        safari: 0,
-        konq: 0,
-        opera: 0,
-        chrome: 0,
+// The randomization tests will be repeated once for each element in the range.
+// We should add a more sophisticated RNG with seeding support for additional testing.
+const range = Array(1000).fill();
 
-        //specific version
-        ver: null
-    };
+describe('UserAgent', () => {
+  describe('filtering', () => {
+    it('support object properties', () => {
+      const userAgent = new UserAgent({ deviceCategory: 'tablet' });
+      range.forEach(() => {
+        assert(userAgent().deviceCategory === 'tablet');
+      });
+    });
 
-    
-    //platform/device/OS
-    var system = {
-        win: false,
-        mac: false,
-        x11: false,
-        
-        //mobile devices
-        iphone: false,
-        ipod: false,
-        ipad: false,
-        ios: false,
-        android: false,
-        nokiaN: false,
-        winMobile: false,
-        
-        //game systems
-        wii: false,
-        ps: false 
-    };    
+    it('support nested object properties', () => {
+      const userAgent = new UserAgent({ connection: { effectiveType: '4g' } });
+      range.forEach(() => {
+        assert(userAgent().connection.effectiveType === '4g');
+      });
+    });
 
-    //detect rendering engines/browsers
-    var ua = navigator.userAgent;    
-    if (window.opera){
-        engine.ver = browser.ver = window.opera.version();
-        engine.opera = browser.opera = parseFloat(engine.ver);
-    } else if (/AppleWebKit\/(\S+)/.test(ua)){
-        engine.ver = RegExp["$1"];
-        engine.webkit = parseFloat(engine.ver);
-        
-        //figure out if it's Chrome or Safari
-        if (/Chrome\/(\S+)/.test(ua)){
-            browser.ver = RegExp["$1"];
-            browser.chrome = parseFloat(browser.ver);
-        } else if (/Version\/(\S+)/.test(ua)){
-            browser.ver = RegExp["$1"];
-            browser.safari = parseFloat(browser.ver);
-        } else {
-            //approximate version
-            var safariVersion = 1;
-            if (engine.webkit < 100){
-                safariVersion = 1;
-            } else if (engine.webkit < 312){
-                safariVersion = 1.2;
-            } else if (engine.webkit < 412){
-                safariVersion = 1.3;
-            } else {
-                safariVersion = 2;
-            }   
-            
-            browser.safari = browser.ver = safariVersion;        
-        }
-    } else if (/KHTML\/(\S+)/.test(ua) || /Konqueror\/([^;]+)/.test(ua)){
-        engine.ver = browser.ver = RegExp["$1"];
-        engine.khtml = browser.konq = parseFloat(engine.ver);
-    } else if (/rv:([^\)]+)\) Gecko\/\d{8}/.test(ua)){    
-        engine.ver = RegExp["$1"];
-        engine.gecko = parseFloat(engine.ver);
-        
-        //determine if it's Firefox
-        if (/Firefox\/(\S+)/.test(ua)){
-            browser.ver = RegExp["$1"];
-            browser.firefox = parseFloat(browser.ver);
-        }
-    } else if (/MSIE ([^;]+)/.test(ua)){    
-        engine.ver = browser.ver = RegExp["$1"];
-        engine.ie = browser.ie = parseFloat(engine.ver);
-    }
-    
-    //detect browsers
-    browser.ie = engine.ie;
-    browser.opera = engine.opera;
-    
+    it('support multiple object properties', () => {
+      const userAgent = new UserAgent({ deviceCategory: 'mobile', pluginsLength: 0 });
+      range.forEach(() => {
+        const { deviceCategory, pluginsLength } = userAgent();
+        assert(deviceCategory === 'mobile');
+        assert(pluginsLength === 0);
+      });
+    });
 
-    //detect platform
-    var p = navigator.platform;
-    system.win = p.indexOf("Win") == 0;
-    system.mac = p.indexOf("Mac") == 0;
-    system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+    it('support top-level regular expressions', () => {
+      const userAgent = new UserAgent(/Safari/);
+      range.forEach(() => {
+        assert(/Safari/.test(userAgent()));
+      });
+    });
 
-    //detect windows operating systems
-    if (system.win){
-        if (/Win(?:dows )?([^do]{2})\s?(\d+\.\d+)?/.test(ua)){
-            if (RegExp["$1"] == "NT"){
-                switch(RegExp["$2"]){
-                    case "5.0":
-                        system.win = "2000";
-                        break;
-                    case "5.1":
-                        system.win = "XP";
-                        break;
-                    case "6.0":
-                        system.win = "Vista";
-                        break;
-                    case "6.1":
-                        system.win = "7";
-                        break;
-                    default:
-                        system.win = "NT";
-                        break;                
-                }                            
-            } else if (RegExp["$1"] == "9x"){
-                system.win = "ME";
-            } else {
-                system.win = RegExp["$1"];
-            }
-        }
-    }
-    
-    //mobile devices
-    system.iphone = ua.indexOf("iPhone") > -1;
-    system.ipod = ua.indexOf("iPod") > -1;
-    system.ipad = ua.indexOf("iPad") > -1;
-    system.nokiaN = ua.indexOf("NokiaN") > -1;
-    
-    //windows mobile
-    if (system.win == "CE"){
-        system.winMobile = system.win;
-    } else if (system.win == "Ph"){
-        if(/Windows Phone OS (\d+.\d+)/.test(ua)){;
-            system.win = "Phone";
-            system.winMobile = parseFloat(RegExp["$1"]);
-        }
-    }
-    
-    
-    //determine iOS version
-    if (system.mac && ua.indexOf("Mobile") > -1){
-        if (/CPU (?:iPhone )?OS (\d+_\d+)/.test(ua)){
-            system.ios = parseFloat(RegExp.$1.replace("_", "."));
-        } else {
-            system.ios = 2;  //can't really detect - so guess
-        }
-    }
-    
-    //determine Android version
-    if (/Android (\d+\.\d+)/.test(ua)){
-        system.android = parseFloat(RegExp.$1);
-    }
-    
-    //gaming systems
-    system.wii = ua.indexOf("Wii") > -1;
-    system.ps = /playstation/i.test(ua);
-    
-    //return it
-    return {
-        engine:     engine,
-        browser:    browser,
-        system:     system        
-    };
+    it('support object property regular expressions', () => {
+      const userAgent = new UserAgent({ userAgent: /Safari/ });
+      range.forEach(() => {
+        assert(/Safari/.test(userAgent()));
+      });
+    });
 
-}();
+    it('support top-level arrays', () => {
+      const userAgent = new UserAgent([/Android/, /Linux/]);
+      range.forEach(() => {
+        const randomUserAgent = userAgent();
+        assert(/Android/.test(randomUserAgent) && /Linux/.test(randomUserAgent));
+      });
+    });
+
+    it('support object property arrays', () => {
+      const userAgent = new UserAgent({ deviceCategory: [/(tablet|mobile)/, 'mobile'] });
+      range.forEach(() => {
+        const { deviceCategory } = userAgent();
+        assert(deviceCategory === 'mobile');
+      });
+    });
+  });
+
+  describe('constructor', () => {
+    it('throw an error when no filters match', () => {
+      let storedError;
+      try {
+        const userAgent = new UserAgent({ deviceCategory: 'fake-no-matches' });
+      } catch (error) {
+        storedError = error;
+      }
+      assert(storedError);
+    });
+  });
+
+  describe('static random()', () => {
+    it('return null when no filters match', () => {
+      const userAgent = UserAgent.random({ deviceCategory: 'fake-no-matches' });
+      assert(userAgent === null);
+    });
+
+    it('return a valid user agent when a filter matches', () => {
+      const userAgent = UserAgent.random({ userAgent: /Chrome/ });
+      assert(userAgent.toString().includes('Chrome'));
+      assert(/Chrome/.test(userAgent));
+    });
+  });
+
+  describe('call handler', () => {
+    it('produce new user agents that pass the same filters', () => {
+      const userAgent = UserAgent.random({ userAgent: /Chrome/ });
+      range.forEach(() => {
+        assert(/Chrome/.test(userAgent()));
+      });
+    });
+  });
+
+  describe('cumulativeWeightIndexPairs', () => {
+    it('have a length greater than 100', () => {
+      const userAgent = new UserAgent();
+      assert(userAgent.cumulativeWeightIndexPairs.length > 100);
+    });
+
+    it('have a shorter length when a filter is applied', () => {
+      const userAgent = new UserAgent();
+      const filteredUserAgent = new UserAgent({ deviceCategory: 'mobile' });
+      assert(
+        userAgent.cumulativeWeightIndexPairs.length >
+          filteredUserAgent.cumulativeWeightIndexPairs.length,
+      );
+    });
+  });
+});
