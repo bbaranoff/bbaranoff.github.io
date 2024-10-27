@@ -36,7 +36,7 @@ UML fournit également un moyen précis de définir les composants d'un système
   
 Enfin, UML offre une documentation standardisée qui peut être utilisée tout au long du cycle de vie du développement. Cette documentation facilite la maintenance et l'évolution des systèmes logiciels.
 
-### Types de diagrammes UML  
+## Types de diagrammes UML  
 
 **Présentation des 14 types de diagrammes**  
 
@@ -70,13 +70,13 @@ Enfin, UML offre une documentation standardisée qui peut être utilisée tout a
   
   Ces diagrammes offrent différentes perspectives sur le système et sont utilisés en fonction des besoins spécifiques du projet.  
 
-## Diagrammes structurels  
+### Diagrammes structurels  
   
-### Description générale des diagrammes structurels  
+#### Description générale des diagrammes structurels  
   
 Les diagrammes structurels jouent un rôle fondamental dans la modélisation d'un système en mettant l'accent sur sa structure statique. Contrairement aux diagrammes comportementaux qui se concentrent sur les interactions et les dynamiques, les diagrammes structurels se focalisent sur les composants et leurs relations à un moment donné.   
   
-### Principales caractéristiques des diagrammes structurels :
+#### Principales caractéristiques des diagrammes structurels :
   
 1. **Représentation des composants :** Ils permettent de visualiser les différents composants d'un système, tels que les classes, les objets, les modules, et comment ils s'assemblent.  
    
@@ -86,7 +86,7 @@ Les diagrammes structurels jouent un rôle fondamental dans la modélisation d'u
   
 4. **Architecture du système :** Les diagrammes structurels aident à décrire l'architecture d'un système, en mettant en lumière la disposition physique des objets et leur organisation.  
 
-## Types de diagrammes structurels  
+#### Types de diagrammes structurels  
   
 Les diagrammes structurels comprennent principalement :  
   
@@ -98,7 +98,7 @@ Les diagrammes structurels comprennent principalement :
   
   - **Diagrammes de déploiement :** Dépeignent l'architecture physique d'un système, y compris le matériel et les logiciels.  
   
-### Diagramme de Classes
+#### Diagramme de Classes
 
 Description du Diagramme
 
@@ -195,7 +195,7 @@ Voici comment cela peut être traduit :
 
   
    
-### Exemple de Diagramme d'Objets  
+#### Diagramme d'Objets  
   
 Instances (Objets) :  
 
@@ -312,7 +312,7 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
 
 
   
-### Description des Composants :  
+#### Diagramme de Composants :  
   
 1. **Système de gestion de bibliothèque** : 
    - Principal composant qui orchestre les opérations du système.
@@ -341,7 +341,6 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
 
 
   
-#### Représentation du Diagramme de Composants en UML :  
 
 ```mermaid  
 classDiagram
@@ -389,9 +388,7 @@ classDiagram
 
 ```
 
-  
-
-### Explication du Diagramme :  
+Explication du Diagramme :  
   
 - **SystèmeGestionBibliothèque** : C'est le composant principal qui gère les différentes fonctionnalités de la bibliothèque.  
 
@@ -407,15 +404,11 @@ classDiagram
 
 Ce diagramme montre comment les différents composants logiciels interagissent pour fournir les fonctionnalités nécessaires au système de gestion de bibliothèque.
 
-
+#### Diagramme de deploiement
 
 Le diagramme de déploiement montre la manière dont les composants logiciels sont déployés sur l'infrastructure physique, c'est-à-dire sur des nœuds matériels comme des serveurs, des bases de données, ou encore des machines clientes. Cela inclut les relations entre les différents nœuds (physiques ou virtuels) et la manière dont les composants sont distribués.
 
-  
-  
-### Diagramme de Déploiement pour le Système de Gestion de Bibliothèque
-  
-#### Nœuds (Matériels et Logiciels) :  
+Noeuds :
 
 1. **Serveur d'Application** :  
    - Héberge les services comme le **Service Emprunt**, **Service Livres**, **Service Auteurs**, et **Service Emprunteurs**.
@@ -468,9 +461,7 @@ flowchart TD
 
 ```
 
-
-
-### Explication du Diagramme :
+Explication du Diagramme :
 
 1. **Client Web** : Représente un client qui accède au système de gestion de bibliothèque, par exemple via un navigateur web ou une application mobile. Il interagit avec le système via une **interface utilisateur**.
    
@@ -484,9 +475,7 @@ flowchart TD
 
 4. **Serveur de Base de Données** : Ce nœud contient le composant **Base de Données**, qui stocke toutes les informations du système (livres, auteurs, emprunteurs, emprunts).
 
-
-
-### Scénario :
+Scénario :
 
 - Les utilisateurs interagissent avec le système via le **Client Web**. Les requêtes passent par le **réseau Internet** pour atteindre le **Serveur d'Application**, où sont déployés les services métiers comme le **Service Emprunt** et le **Service Livres**.
 - Le **Serveur d'Application** envoie les requêtes de données au **Serveur de Base de Données**, qui renvoie les informations demandées (livres disponibles, informations d'emprunteurs, etc.) à l'application.
@@ -495,15 +484,15 @@ Ce diagramme de déploiement montre comment les composants sont distribués entr
 
 
 
-## Diagramme comportementaux
+### Diagramme comportementaux
 
 
 
-### Diagramme de cas d'utilisation
+#### Diagramme de cas d'utilisation
 
 Le diagramme de cas d'utilisation représente les interactions entre les acteurs (utilisateurs ou systèmes externes) et le système de gestion de bibliothèque. Il décrit les fonctionnalités principales du système sous forme de cas d'utilisation, illustrant ce que les utilisateurs peuvent faire dans le système.
 
-### Acteurs dans le Système :  
+Acteurs dans le Système :  
   
 1. **Emprunteur** : Représente une personne qui peut emprunter ou retourner des livres.  
 
@@ -512,25 +501,21 @@ Le diagramme de cas d'utilisation représente les interactions entre les acteurs
 3. **Système de Paiement** (acteur externe) : Gère les paiements pour les amendes ou les retards d'emprunt.  
   
 
-
-### Cas d'utilisation principaux :  
+Cas d'utilisation principaux :  
 
 1. **Emprunter un Livre** : L'emprunteur peut emprunter un livre disponible.  
 
 2. **Retourner un Livre** : L'emprunteur peut retourner un livre emprunté. 
+
 3. **Rechercher un Livre** : L'emprunteur peut rechercher un livre dans la bibliothèque.  
 
 4. **Gérer les Livres** : Le bibliothécaire peut ajouter, supprimer, ou modifier des informations sur les livres.  
 
 5. **Gérer les Emprunteurs** : Le bibliothécaire peut enregistrer un nouvel emprunteur ou mettre à jour les informations d'un emprunteur.  
 
-  
-
 6. **Gérer les Auteurs** : Le bibliothécaire peut ajouter ou mettre à jour les informations sur un auteur.  
 
 7. **Payer une Amende** : L'emprunteur peut payer une amende via un système de paiement externe.  
-
-#### Représentation du Diagramme de Cas d’Utilisation en UML :
 
 ```mermaid
 flowchart TD
@@ -566,7 +551,7 @@ flowchart TD
 
 ```
 
-### Explication du Diagramme :
+Explication du Diagramme :
 
 1. **Emprunteur** :
    - Peut **Emprunter un Livre** : L'utilisateur doit d'abord **Rechercher un Livre** avant de l'emprunter.
@@ -583,7 +568,7 @@ flowchart TD
 
 3. **Système de Paiement** : C'est un système externe utilisé pour gérer les paiements effectués par les emprunteurs lorsqu'ils paient une amende.
 
-### Scénarios :
+Scénarios :
 
 - Un **Emprunteur** peut rechercher un livre, puis l'emprunter s'il est disponible. Il doit le retourner avant une date limite pour éviter une amende.
 - Le **Bibliothécaire** gère les opérations de gestion des livres, des auteurs, et des emprunteurs dans le système.
@@ -593,16 +578,16 @@ Ce diagramme de cas d'utilisation montre les principales fonctionnalités du sys
 
   
 
-## Diagramme de séquence  
+#### Diagramme de séquence  
 
 Le diagramme de séquence montre les interactions entre les objets ou composants du système sous forme de messages échangés dans le temps. Il met en lumière l'ordre d'exécution des opérations et la manière dont les différents acteurs interagissent avec le système.
 
+Scénario du Diagramme de Séquence :
 
-
-### Scénario du Diagramme de Séquence :
 Prenons le cas d'un **Emprunteur** qui souhaite **emprunter un livre**.
 
-#### Acteurs et Objets :
+Acteurs et Objets :
+
 1. **Emprunteur** : L'utilisateur du système.
 2. **Interface Utilisateur** : Le front-end ou l'interface avec laquelle interagit l'emprunteur.
 3. **Système de Gestion de Bibliothèque** : Le système principal qui orchestre les actions.
@@ -612,7 +597,8 @@ Prenons le cas d'un **Emprunteur** qui souhaite **emprunter un livre**.
 
   
 
-### Scénario :
+Scénario :
+
 1. L'**Emprunteur** cherche un livre à emprunter en passant par l'**Interface Utilisateur**.
 2. L'interface demande au **Système de Gestion de Bibliothèque** de rechercher le livre.
 3. Le **Système de Gestion** interroge le **Service Livres**, qui va chercher le livre dans la **Base de Données**.
@@ -621,9 +607,8 @@ Prenons le cas d'un **Emprunteur** qui souhaite **emprunter un livre**.
 6. Le **Service Emprunt** met à jour la **Base de Données** avec les informations sur l'emprunt.
 7. Un message de confirmation est renvoyé à l'**Emprunteur** via l'**Interface Utilisateur**.
 
-  
 
-#### Représentation du Diagramme de Séquence en UML :
+Représentation du Diagramme de Séquence en UML :
 
 ```mermaid
 sequenceDiagram
@@ -653,8 +638,7 @@ sequenceDiagram
   IU-->>E: Message de confirmation de l'emprunt
 ```
 
-
-### Explication du Diagramme de Séquence :
+Explication du Diagramme de Séquence :
 
 1. **Interaction entre l'Emprunteur et l'Interface Utilisateur** :
    - L'emprunteur recherche un livre via l'interface utilisateur. Cette demande est transmise au **Système de Gestion de Bibliothèque**.
@@ -677,18 +661,18 @@ Ce diagramme de séquence illustre le flux des messages entre les différents ac
 
 
 
-### Diagramme de Collaboration (UML)  
+#### Diagramme de Collaboration (UML)  
 
 Le **diagramme de collaboration** (ou **diagramme de communication**) montre les relations et les connexions entre les objets ou acteurs impliqués dans un scénario. Contrairement au diagramme de séquence, il ne met pas l'accent sur la chronologie des événements, mais sur **les liens entre les objets**.  
   
-#### Scénario : **Emprunter un Livre**  
+Scénario : **Emprunter un Livre**  
 
 1. **Emprunteur** interagit avec **InterfaceUtilisateur** pour rechercher et emprunter un livre.
 2. **InterfaceUtilisateur** communique avec le **SystèmeGestion** pour rechercher et emprunter un livre.
 3. **SystèmeGestion** demande des informations au **ServiceLivres** et au **ServiceEmprunt** pour gérer le processus.
 4. Le **ServiceEmprunt** met à jour la **BaseDeDonnées**.
   
-#### Représentation en UML pour le Diagramme de Collaboration :
+Représentation en UML pour le Diagramme de Collaboration :
 
 ```mermaid
 classDiagram
@@ -727,9 +711,7 @@ classDiagram
   ServiceEmprunt --> BaseDeDonnées : mettreAJour
 ```
 
- 
-
-### Explication du Diagramme :
+Explication du Diagramme :
 
 - **Emprunteur** : Initie la recherche et l'emprunt d'un livre en interagissant avec l'**Interface Utilisateur**.
 - **Interface Utilisateur** : Transmet les requêtes de l'emprunteur au **Système de Gestion**, qui est responsable de coordonner les différents services.
