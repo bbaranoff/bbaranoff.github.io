@@ -1,2 +1,3 @@
-# Games
-![](games.html)
+# Diablo
+
+![](diablo.html)

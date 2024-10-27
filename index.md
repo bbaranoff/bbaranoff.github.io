@@ -24,7 +24,7 @@ twitter | '@bastienbaranoff'
 
 ```note
 
-French: Native |  English: Professional
+  French: Native |  English: Professional
 
 ```
 
@@ -32,9 +32,7 @@ French: Native |  English: Professional
 ## Career Profile:
 
 ```warning
-
-Physics -> Electronics -> Computer -> Embedded -> Software Defined Radio
-
+      Physics -> Electronics -> Computer -> Embedded -> Software Defined Radio
 ```
 
 
@@ -130,17 +128,7 @@ First TIme :
 
 ```danger
 
-intro: Intrigate by A5/1 in the 2010s I searched around the internet and found a lot of interesting resources
+    intro: Intrigate by A5/1 in the 2010s I searched around the internet and found a lot of interesting resources
 
 ```
 
-
-# Games
-<script>
-const button = document.querySelector("button");
-
-button.addEventListener("click", (event) => {
-  button.innerHTML = `window.open(../test.html)`
-});
-</script>
-<button>Cliquer ici</button>
