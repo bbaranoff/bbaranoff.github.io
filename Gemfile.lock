@@ -281,6 +281,7 @@ DEPENDENCIES
   jekyll (~> 3.10.0)
   jekyll-avatar (~> 0.8.0)
   jekyll-feed (~> 0.17.0)
+  jekyll-github-metadata
   jekyll-mentions (~> 1.6.0)
   jemoji (~> 0.13.0)
   kramdown-parser-gfm
