@@ -882,3 +882,54 @@ Explication du Diagramme
    - Le système de gestion crée l'emprunt en interrogeant le service d'emprunt, qui enregistre les informations d'emprunt dans la base de données.
    - Une fois l'enregistrement effectué, une confirmation est renvoyée à l'emprunteur via l'interface utilisateur.
 
+
+#### Diagramme d'Interaction
+
+```mermaid
+sequenceDiagram
+    participant Emprunteur
+    participant InterfaceUtilisateur
+    participant SystemeGestion
+    participant ServiceLivres
+    participant ServiceEmprunt
+    participant BaseDeDonnees
+
+    %% Interaction pour rechercher un livre
+    Emprunteur->>InterfaceUtilisateur: Rechercher un livre
+    InterfaceUtilisateur->>SystemeGestion: Demande de recherche
+    SystemeGestion->>ServiceLivres: Rechercher livre
+    ServiceLivres->>BaseDeDonnees: Interroger livres
+    BaseDeDonnees-->>ServiceLivres: Résultats de la recherche
+    ServiceLivres-->>SystemeGestion: Livres trouvés
+    SystemeGestion-->>InterfaceUtilisateur: Afficher résultats
+    InterfaceUtilisateur-->>Emprunteur: Résultats affichés
+
+    %% Interaction pour emprunter un livre
+    Emprunteur->>InterfaceUtilisateur: Emprunter un livre
+    InterfaceUtilisateur->>SystemeGestion: Demande d'emprunt
+    SystemeGestion->>ServiceEmprunt: Créer emprunt
+    ServiceEmprunt->>BaseDeDonnees: Enregistrer emprunt
+    BaseDeDonnees-->>ServiceEmprunt: Confirmation d'enregistrement
+    ServiceEmprunt-->>SystemeGestion: Confirmation de l'emprunt
+    SystemeGestion-->>InterfaceUtilisateur: Emprunt confirmé
+    InterfaceUtilisateur-->>Emprunteur: Confirmation de l'emprunt
+```
+
+### Explication du Diagramme
+
+1. **Participants** :
+   - **Emprunteur** : L'utilisateur qui souhaite emprunter un livre.
+   - **Interface Utilisateur** : L'interface par laquelle l'emprunteur interagit avec le système.
+   - **Système de Gestion** : Le système principal qui gère les demandes et les opérations.
+   - **Service Livres** : Le service qui gère les livres disponibles.
+   - **Service Emprunt** : Le service responsable de la gestion des emprunts.
+   - **Base de Données** : Le système de stockage où les informations sur les livres et les emprunteurs sont conservées.
+
+2. **Flux d'Interactions** :
+   - L'emprunteur effectue une recherche de livre via l'interface utilisateur.
+   - La demande est transmise au système de gestion, qui interroge le service des livres.
+   - Le service des livres interroge la base de données pour récupérer les informations sur les livres.
+   - Une fois les résultats trouvés, ils sont renvoyés à l'emprunteur via l'interface.
+   - Si l'emprunteur souhaite emprunter un livre, une nouvelle demande est envoyée au système de gestion.
+   - Le service d'emprunt enregistre l'emprunt dans la base de données et renvoie une confirmation à l'emprunteur.
+
