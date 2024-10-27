@@ -845,13 +845,12 @@ Voici un exemple de diagramme de timing illustrant le processus d'emprunt d'un l
 
 ```mermaid
 %% Diagramme de Timing pour le Processus d'Emprunt d'un Livre
-%% La syntaxe Mermaid pour un diagramme de timing
 
-%% Timeline
+%% Début du diagramme de timing
 timingDiagram
     title Processus d'Emprunt d'un Livre
 
-    %% Temps
+    %% Participants
     participant Emprunteur
     participant InterfaceUtilisateur
     participant SystemeGestion
@@ -859,39 +858,25 @@ timingDiagram
     participant ServiceEmprunt
     participant BaseDeDonnees
 
-    Emprunteur->>InterfaceUtilisateur: Rechercher un livre
-    activate InterfaceUtilisateur
-    InterfaceUtilisateur->>SystemeGestion: Demande de recherche
-    activate SystemeGestion
-    SystemeGestion->>ServiceLivres: Rechercher livre
-    activate ServiceLivres
-    ServiceLivres->>BaseDeDonnees: Interroger livres
-    activate BaseDeDonnees
-    BaseDeDonnees-->>ServiceLivres: Résultats de la recherche
-    deactivate BaseDeDonnees
-    ServiceLivres-->>SystemeGestion: Livres trouvés
-    deactivate ServiceLivres
-    SystemeGestion-->>InterfaceUtilisateur: Afficher résultats
-    deactivate SystemeGestion
-    InterfaceUtilisateur-->>Emprunteur: Résultats affichés
-    deactivate InterfaceUtilisateur
+    %% Événements
+    Emprunteur ->> InterfaceUtilisateur: Rechercher un livre
+    InterfaceUtilisateur ->> SystemeGestion: Demande de recherche
+    SystemeGestion ->> ServiceLivres: Rechercher livre
+    ServiceLivres ->> BaseDeDonnees: Interroger livres
+    BaseDeDonnees -->> ServiceLivres: Résultats de la recherche
+    ServiceLivres -->> SystemeGestion: Livres trouvés
+    SystemeGestion -->> InterfaceUtilisateur: Afficher résultats
+    InterfaceUtilisateur -->> Emprunteur: Résultats affichés
 
-    Emprunteur->>InterfaceUtilisateur: Emprunter un livre
-    activate InterfaceUtilisateur
-    InterfaceUtilisateur->>SystemeGestion: Demande d'emprunt
-    activate SystemeGestion
-    SystemeGestion->>ServiceEmprunt: Créer emprunt
-    activate ServiceEmprunt
-    ServiceEmprunt->>BaseDeDonnees: Enregistrer emprunt
-    activate BaseDeDonnees
-    BaseDeDonnees-->>ServiceEmprunt: Confirmation d'enregistrement
-    deactivate BaseDeDonnees
-    ServiceEmprunt-->>SystemeGestion: Confirmation de l'emprunt
-    deactivate ServiceEmprunt
-    SystemeGestion-->>InterfaceUtilisateur: Emprunt confirmé
-    deactivate SystemeGestion
-    InterfaceUtilisateur-->>Emprunteur: Confirmation de l'emprunt
-    deactivate InterfaceUtilisateur
+    Emprunteur ->> InterfaceUtilisateur: Emprunter un livre
+    InterfaceUtilisateur ->> SystemeGestion: Demande d'emprunt
+    SystemeGestion ->> ServiceEmprunt: Créer emprunt
+    ServiceEmprunt ->> BaseDeDonnees: Enregistrer emprunt
+    BaseDeDonnees -->> ServiceEmprunt: Confirmation d'enregistrement
+    ServiceEmprunt -->> SystemeGestion: Confirmation de l'emprunt
+    SystemeGestion -->> InterfaceUtilisateur: Emprunt confirmé
+    InterfaceUtilisateur -->> Emprunteur: Confirmation de l'emprunt
+
 ```
 
 Explication du Diagramme
