@@ -846,36 +846,25 @@ Voici un exemple de diagramme de timing illustrant le processus d'emprunt d'un l
 ```mermaid
 %% Diagramme de Timing pour le Processus d'Emprunt d'un Livre
 
-%% Début du diagramme de timing
-timingDiagram
-    title Processus d'Emprunt d'un Livre
+graph TD
+    A[Emprunteur] -->|Rechercher un livre| B[Interface Utilisateur]
+    B -->|Demande de recherche| C[Système de Gestion]
+    C -->|Rechercher livre| D[Service Livres]
+    D -->|Interroger livres| E[Base de Données]
+    E -->|Résultats de la recherche| D
+    D -->|Livres trouvés| C
+    C -->|Afficher résultats| B
+    B -->|Résultats affichés| A
 
-    %% Participants
-    participant Emprunteur
-    participant InterfaceUtilisateur
-    participant SystemeGestion
-    participant ServiceLivres
-    participant ServiceEmprunt
-    participant BaseDeDonnees
+    A -->|Emprunter un livre| B
+    B -->|Demande d'emprunt| C
+    C -->|Créer emprunt| F[Service Emprunt]
+    F -->|Enregistrer emprunt| E
+    E -->|Confirmation d'enregistrement| F
+    F -->|Confirmation de l'emprunt| C
+    C -->|Emprunt confirmé| B
+    B -->|Confirmation de l'emprunt| A
 
-    %% Événements
-    Emprunteur ->> InterfaceUtilisateur: Rechercher un livre
-    InterfaceUtilisateur ->> SystemeGestion: Demande de recherche
-    SystemeGestion ->> ServiceLivres: Rechercher livre
-    ServiceLivres ->> BaseDeDonnees: Interroger livres
-    BaseDeDonnees -->> ServiceLivres: Résultats de la recherche
-    ServiceLivres -->> SystemeGestion: Livres trouvés
-    SystemeGestion -->> InterfaceUtilisateur: Afficher résultats
-    InterfaceUtilisateur -->> Emprunteur: Résultats affichés
-
-    Emprunteur ->> InterfaceUtilisateur: Emprunter un livre
-    InterfaceUtilisateur ->> SystemeGestion: Demande d'emprunt
-    SystemeGestion ->> ServiceEmprunt: Créer emprunt
-    ServiceEmprunt ->> BaseDeDonnees: Enregistrer emprunt
-    BaseDeDonnees -->> ServiceEmprunt: Confirmation d'enregistrement
-    ServiceEmprunt -->> SystemeGestion: Confirmation de l'emprunt
-    SystemeGestion -->> InterfaceUtilisateur: Emprunt confirmé
-    InterfaceUtilisateur -->> Emprunteur: Confirmation de l'emprunt
 
 ```
 
