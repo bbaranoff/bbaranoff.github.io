@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+# Matrix
 <html>
     <head>
         <meta charset="utf-8" />
@@ -8,7 +8,7 @@
         </style>
     </head>
     <body>
-        <canvas width="1920" height="900" id="matrixCodeSpace"> </canvas><hr/>
+        <canvas height=360 id="matrixCodeSpace"> </canvas><hr/>
         <script type="text/javascript" src="efectoMatrix.js"></script>
     </body>
 </html>
