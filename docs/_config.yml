@@ -1,35 +1,17 @@
-title: Bastien Baranoff
-description: Resources
+title: Cookie Consent Banner
+sass:
+  sass_dir: assets/css
+  style:    compressed
 
-theme: null
+url: "https://karstenj.github.io"
+baseurl: "/cookie-consent-banner"
 
-readme_index:
-  with_frontmatter: true
-
-plugins:
-  - jemoji
-  - jekyll-avatar
-  - jekyll-mentions
-  - jekyll-github-metadata
+include:
+  - _pages
 exclude:
-  - .bash
-  - .github
-  - .vscode
-  - .yarn
-  - CNAME
+  - images
   - Gemfile
   - Gemfile.lock
-  - jekyll-theme-read-the-docs.gemspec
-  - LICENSE
-  - Makefile
-  - node_modules
-  - package-lock.json
-  - package.json
-  - Pipfile
-  - Pipfile.lock
-  - requirements.txt
-  - webpack.config.js
-  - yarn.lock
 cookieconsent:
   style: "dark"
   notificationHead: "This web site uses cookies"
@@ -65,3 +47,4 @@ cookieconsent:
       expirydays: 365
       disabled: false
       allowed: false
+
