@@ -666,8 +666,42 @@ Le **diagramme de collaboration** (ou **diagramme de communication**) montre les
   
 #### Représentation en UML pour le Diagramme de Collaboration :
 
+```mermaid
+classDiagram
+  class Emprunteur {
+    + rechercherLivre()
+    + emprunterLivre()
+  }
 
-![](images/collaboration.png)        
+  class InterfaceUtilisateur {
+    + afficherLivre()
+    + demanderEmprunt()
+  }
+
+  class SystèmeGestion {
+    + rechercherLivre()
+    + emprunterLivre()
+  }
+
+  class ServiceLivres {
+    + fournirInfoLivre()
+  }
+
+  class ServiceEmprunt {
+    + créerEmprunt()
+  }
+
+  class BaseDeDonnées {
+    + mettreAJour()
+  }
+
+  %% Relations
+  Emprunteur --> InterfaceUtilisateur : interagir
+  InterfaceUtilisateur --> SystèmeGestion : communiquer
+  SystèmeGestion --> ServiceLivres : demanderInfo
+  SystèmeGestion --> ServiceEmprunt : demanderEmprunt
+  ServiceEmprunt --> BaseDeDonnées : mettreAJour
+```
 
  
 
