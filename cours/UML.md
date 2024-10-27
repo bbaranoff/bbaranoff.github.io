@@ -410,27 +410,32 @@ Le diagramme de déploiement montre la manière dont les composants logiciels so
 #### Représentation du Diagramme de Déploiement en UML :
 
 ```mermaid
+deploymentDiagram
+  node ServeurWeb {
+    component SystèmeGestionBibliothèque
+  }
 
-[<abstract>Node ClientWeb|
-  + InterfaceUtilisateur
-]
+  node ServeurApplication {
+    component ServiceEmprunt
+    component ServiceLivres
+    component ServiceAuteurs
+    component ServiceEmprunteurs
+  }
 
-[<abstract>Node Internet]
+  node ServeurBaseDeDonnées {
+    database BaseDeDonnées
+  }
 
-[<abstract>Node ServeurApplication|
-  Composant ServiceEmprunt
-  Composant ServiceLivres
-  Composant ServiceAuteurs
-  Composant ServiceEmprunteurs
-]
+  SystèmeGestionBibliothèque --> ServiceEmprunt : Requête emprunt
+  SystèmeGestionBibliothèque --> ServiceLivres : Requête livres
+  SystèmeGestionBibliothèque --> ServiceAuteurs : Requête auteurs
+  SystèmeGestionBibliothèque --> ServiceEmprunteurs : Requête emprunteurs
+  
+  ServiceEmprunt --> BaseDeDonnées : Accès données emprunt
+  ServiceLivres --> BaseDeDonnées : Accès données livres
+  ServiceAuteurs --> BaseDeDonnées : Accès données auteurs
+  ServiceEmprunteurs --> BaseDeDonnées : Accès données emprunteurs
 
-[<abstract>Node ServeurBaseDeDonnées|
-  Composant BaseDeDonnées
-]
-
-[ClientWeb] --> [Internet]
-[Internet] --> [ServeurApplication]
-[ServeurApplication] --> [ServeurBaseDeDonnées]
 ```
 
 
