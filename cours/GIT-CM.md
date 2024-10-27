@@ -1,10 +1,10 @@
 # Git cours Magistral
 
----
+
 
 ![GitHub](https://www.ifourtechnolab.com/pics/All_about_Version_ControlGit.webp)  
 
----
+
 
 ### whoami
 
@@ -442,7 +442,7 @@ Pour les images, ajoutez un point d’exclamation `!` avant le lien.
 
 ![Alt text de l'image](images/fsociety.png)
 
----
+
 
 ### 5. **Blocs de code**  
 
@@ -466,7 +466,7 @@ Les tableaux sont créés en utilisant des barres verticales `|` et des tirets `
 
 
 | Colonne 1 | Colonne 2 |
-|-----------|-----------|
+|--|--|
 | Contenu 1 | Contenu 2 |
 
 ### 8. **Listes de tâches (Task lists)**  
@@ -510,7 +510,7 @@ Le Markdown est simple, mais très puissant pour formater du texte. Il est large
 
 Votre dépôt GitHub est maintenant créé, et vous pouvez commencer à y ajouter des fichiers et des projets ! Si vous avez besoin d'aide pour pousser des fichiers vers votre dépôt, n'hésitez pas à demander.
 
----
+
 
 Pour récupérer votre clé API GitHub (ou plutôt votre token d'accès personnel), suivez ces étapes :
 
@@ -522,7 +522,7 @@ Pour récupérer votre clé API GitHub (ou plutôt votre token d'accès personne
 
 4. **Générez un nouveau token** : Sélectionnez **"Personal access tokens"** (Jetons d'accès personnel), puis cliquez sur **"Generate new token"** (Générer un nouveau jeton).
 
----
+
 
 5. **Configurez votre token** :
    - Donnez un **nom** à votre token pour le reconnaître plus tard.
@@ -535,7 +535,7 @@ Pour récupérer votre clé API GitHub (ou plutôt votre token d'accès personne
 
 N'oubliez pas de garder ce token secret et de ne pas le partager, car il donne accès à votre compte GitHub selon les permissions que vous avez définies.
 
----
+
 
 
 
@@ -557,7 +557,7 @@ git add .
 git commit -m "Premier commit"
 ```
 
----
+
 
 
 ### 3. Pousser le repository local vers GitHub
@@ -575,13 +575,13 @@ Note : Selon la configuration de votre repo, la branche par défaut peut être a
 Après avoir poussé, vous pourrez voir votre code sur GitHub en visitant votre repository en ligne.
 
 
----
+
 
 ## Schéma logique de fonctionnement d'un dépot :  
 
 ![GitHub](https://www.ifourtechnolab.com/pics/All_about_Version_ControlGit.webp)  
 
----
+
 
 1. **Fork** : 
    - **Définition** : C'est une copie d'un dépôt de code source. Lorsque vous fork un projet, vous créez une version indépendante de ce dépôt sur votre propre compte ou espace. Cela vous permet de faire des modifications sans affecter l'original.
@@ -591,7 +591,7 @@ Après avoir poussé, vous pourrez voir votre code sur GitHub en visitant votre 
    - **Définition** : Cette commande envoie les modifications locales de votre dépôt (ou branche) vers un dépôt distant (comme GitHub, GitLab, etc.).
    - **Utilisation** : Après avoir commis vos changements localement, vous utilisez `git push` pour les envoyer vers le dépôt distant afin que les autres puissent voir et récupérer vos modifications.
 
----
+
 
 3. **Merge** :
    - **Définition** : C'est le processus d'intégration des changements d'une branche dans une autre. Cela peut se faire automatiquement si les changements ne sont pas en conflit, ou manuellement si des conflits doivent être résolus.
@@ -601,7 +601,7 @@ Après avoir poussé, vous pourrez voir votre code sur GitHub en visitant votre 
    - **Définition** : C'est une opération qui enregistre les modifications dans l'historique du dépôt. Un commit est un instantané de votre projet à un moment donné.
    - **Utilisation** : Avant de pousser vos changements vers un dépôt distant, vous devez d'abord commettre ces changements localement pour les sauvegarder et les organiser.
 
----
+
 
 5. **Pull** :
    - **Définition** : Cette commande récupère les dernières modifications du dépôt distant et les fusionne avec votre dépôt local.
@@ -612,23 +612,23 @@ Après avoir poussé, vous pourrez voir votre code sur GitHub en visitant votre 
 
 
 
----
 
 
----
+
+
 
 
 **GitHub Pages** est un service de GitHub qui permet d’héberger des sites web directement à partir d'un dépôt GitHub. Il est souvent utilisé pour créer des sites personnels, des blogs ou des pages de documentation pour des projets open-source. Ces sites sont servis via l'URL `username.github.io` ou `username.github.io/repository`, et peuvent être configurés pour utiliser des noms de domaine personnalisés.
 
 Voici un aperçu de son fonctionnement et comment l'utiliser pour héberger votre site web.
----
+
 
 ## 1. **Fonctionnement de GitHub Pages**
 GitHub Pages fonctionne en récupérant des fichiers statiques (HTML, CSS, JavaScript) directement à partir d’un dépôt GitHub public ou privé, puis en les publiant sous forme d’un site web. Les utilisateurs peuvent héberger des pages pour eux-mêmes, des organisations ou des projets spécifiques.
 
 - **Sites utilisateur ou organisation** : Hébergés sous `username.github.io` (ou `organization.github.io`). Ce type de site utilise un dépôt spécifique nommé `username.github.io` ou `organization.github.io`.
 - **Sites de projet** : Hébergés sous `username.github.io/nom-du-repository`. Chaque dépôt GitHub peut avoir une page GitHub dédiée à un projet spécifique.
----
+
 
 ## 2. **Créer un site GitHub Pages**
 ### Étape 1 : Créer un dépôt
@@ -647,7 +647,7 @@ index.html
 style.css
 script.js
 ```
----
+
 
 ### Étape 3 : Configurer GitHub Pages
 1. **Accédez aux paramètres du dépôt** :
@@ -662,18 +662,18 @@ script.js
 
 4. **Enregistrer les modifications** :
    - Après avoir configuré la source, GitHub génère et héberge automatiquement le site.
----
+
 
 ### Étape 4 : Accéder à votre site
 Une fois que GitHub Pages a terminé le déploiement de votre site (ce qui prend généralement quelques minutes), vous pouvez y accéder via l'URL `https://username.github.io` pour un site utilisateur ou `https://username.github.io/nom-du-repository` pour un site de projet.
----
+
 
 
 
 ## 1. **GitHub Student Developer Pack**
 Le **GitHub Student Developer Pack** est une collection de logiciels et de services gratuits ou à prix réduit fournis par GitHub et ses partenaires, exclusivement pour les étudiants. Il inclut des offres pour des outils de développement, d'hébergement, d'analyse de code, d'apprentissage, et même des services de marketing ou de design.
 
----
+
 
 
 ### Principaux avantages du Pack :
@@ -683,7 +683,7 @@ Le **GitHub Student Developer Pack** est une collection de logiciels et de servi
 - **Outils de développement gratuits** :
   - Des outils comme **JetBrains** (pour IntelliJ IDEA, PyCharm, etc.) qui offrent des licences d'accès à leur suite complète d'IDEs.
   - **Visual Studio Code** et des crédits Azure via **Microsoft Azure for Students** pour héberger des applications cloud.
----
+
 
 
 - **Hébergement et services cloud** :
@@ -694,7 +694,7 @@ Le **GitHub Student Developer Pack** est une collection de logiciels et de servi
   - Accès à des outils de création et de design tels que **Canva Pro** pour la création graphique.
   - **Bootstrap Studio** et **Figma** pour la conception de sites web et d’interfaces utilisateurs.
 
----
+
 
 
 - **Outils d’apprentissage et de gestion de projet** :
@@ -703,7 +703,7 @@ Le **GitHub Student Developer Pack** est une collection de logiciels et de servi
   
 - **Autres outils** : Par exemple, **Namecheap** offre des domaines gratuits pour l'hébergement de sites web.
 
----
+
 
 ### Exemples d'outils et services inclus :
 - **DigitalOcean** : 100$ de crédits pour l'hébergement cloud.
@@ -717,14 +717,14 @@ Le **GitHub Student Developer Pack** est une collection de logiciels et de servi
 - **Educative.io** : Cours interactifs gratuits sur des sujets technologiques.
 - **Notion** : Outil de productivité gratuit pour les étudiants.
 
----
+
 
 ## 2. **Accès à GitHub Pro**
 Le programme permet aux étudiants de bénéficier d’un abonnement gratuit à **GitHub Pro**. Les fonctionnalités incluent :
 - **Dépôts privés illimités** : En tant qu'étudiant, vous pouvez créer autant de dépôts privés que vous le souhaitez pour travailler sur vos projets personnels ou universitaires.
 - **Outils de gestion de projet avancés** : Suivez vos tâches, gérez des équipes, et obtenez des statistiques sur vos contributions grâce aux outils GitHub Pro.
 - **Accès à GitHub Actions et Packages** : Utilisation de GitHub Actions pour automatiser vos workflows de CI/CD, et GitHub Packages pour héberger des packages privés.
----
+
 
 ## 3. **Ressources d'apprentissage et de développement**
 Le GitHub Student Developer Pack est un excellent moyen de **développer des compétences** en utilisant des outils de développement et des environnements de production professionnels. Voici quelques ressources d'apprentissage intégrées dans le Pack :
@@ -732,21 +732,21 @@ Le GitHub Student Developer Pack est un excellent moyen de **développer des com
 - **Cours interactifs et certifications** : Grâce à des plateformes comme **Educative**, **Datacamp**, et **Codecademy**, les étudiants peuvent suivre des cours sur des sujets variés comme le développement web, les algorithmes, la science des données, etc.
 - **Apprentissage du cloud** : Avec des crédits AWS, Google Cloud et Azure, les étudiants peuvent apprendre à déployer des applications cloud, configurer des services d'hébergement et acquérir des compétences recherchées dans le monde professionnel.
 - **Participation à des communautés open-source** : Les étudiants peuvent contribuer à des projets open-source directement via GitHub, développer leur portfolio et leur visibilité dans la communauté de développeurs.
----
+
 
 ## 4. **Développement de portfolio professionnel**
 Un autre avantage majeur du programme GitHub pour les étudiants est la possibilité de développer et d’héberger un **portfolio professionnel** avec GitHub Pages. Cela permet aux étudiants de :
 - **Créer un site web personnel** pour montrer leurs projets.
 - **Mettre en avant des contributions open-source**.
 - **Partager des projets professionnels et académiques** avec des employeurs potentiels ou des mentors.
----
+
 
 ## 5. **Accès aux outils de collaboration et de gestion**
 Pour les projets d’équipe, GitHub facilite la collaboration à travers des outils comme **GitHub Classroom** et **GitHub Projects**. Ces outils permettent aux étudiants de travailler sur des projets de groupe, de suivre des tâches, de gérer le versioning de code, et d'intégrer des workflows CI/CD.
 
 ### GitHub Classroom :
 GitHub Classroom est particulièrement utile pour les enseignants et les étudiants dans le cadre de projets académiques. Il permet aux enseignants de créer des **devoirs basés sur des dépôts GitHub** et d'évaluer les projets des étudiants facilement.
----
+
 
 ## 6. **Éligibilité et inscription**
 ### Conditions d’éligibilité :
@@ -760,7 +760,7 @@ Pour bénéficier de ces avantages, les étudiants doivent répondre à certaine
 3. Vérifiez votre statut étudiant en fournissant une **adresse e-mail académique** ou une **preuve d'inscription** (une photo de votre carte d'étudiant par exemple).
 4. Une fois validé, vous aurez accès aux outils et services inclus dans le Pack.
 
----
+
 
 
 ## 7. **Pourquoi utiliser GitHub Student Developer Pack ?**
@@ -772,14 +772,14 @@ Le GitHub Student Developer Pack est une excellente opportunité pour :
 
 Ce pack offre une **valeur considérable** aux étudiants, en rendant accessibles des outils et services normalement payants, tout en les aidant à développer des compétences pratiques et à s’immerger dans le monde du développement logiciel.
 
----
+
 
 
 
 Lorsque vous effectuez un **push** sur un dépôt GitHub, plusieurs scénarios peuvent survenir en fonction de l'état de votre dépôt local par rapport au dépôt distant. Voici les scénarios principaux, en fonction de si votre dépôt est **à jour**, **en avance** ou **en retard** par rapport au dépôt distant.
 
 
----
+
 
 ### 1. **Scénario 1 : Votre dépôt local est à jour avec le dépôt distant**
 Dans ce cas, les branches locales et distantes sont synchronisées, c'est-à-dire qu'elles contiennent les mêmes commits. Le `push` se déroule alors sans problème, car il n'y a pas de divergence entre le dépôt local et le dépôt distant.
@@ -788,7 +788,7 @@ Dans ce cas, les branches locales et distantes sont synchronisées, c'est-à-dir
 ```bash
 git push origin <nom-branche>
 ```
----
+
 
 ### 2. **Scénario 2 : Votre dépôt local est en avance sur le dépôt distant**
 Cela signifie que vous avez effectué des **commits** localement, mais que ces commits n'existent pas encore sur le dépôt distant. Dans ce cas, votre dépôt local a de nouvelles modifications que le dépôt distant n'a pas.
@@ -798,7 +798,7 @@ Cela signifie que vous avez effectué des **commits** localement, mais que ces c
 
 #### Cas où le dépôt distant a changé :
 - **Problème potentiel** : Si des changements ont été apportés au dépôt distant, il est possible que Git refuse le `push`, car il y aurait un **conflit** entre les deux versions (locale et distante).
----
+
 
 **Message d'erreur typique :**
 ```bash
@@ -813,7 +813,7 @@ git pull --rebase origin <nom-branche>
 # Résolvez les conflits s'il y en a
 git push origin <nom-branche>
 ```
----
+
 
 ### 3. **Scénario 3 : Votre dépôt local est en retard par rapport au dépôt distant**
 Votre dépôt local est "en retard" lorsqu'il manque des commits qui ont été ajoutés au dépôt distant par d'autres collaborateurs. Cela signifie que des modifications ont été faites sur le dépôt distant que vous n'avez pas encore récupérées.
@@ -825,7 +825,7 @@ Votre dépôt local est "en retard" lorsqu'il manque des commits qui ont été a
 ```bash
 git pull origin <nom-branche>
 ```
----
+
 
 #### Cas où vous avez des commits locaux (en avance et en retard à la fois) :
 - **Problème** : Vous ne pouvez pas effectuer de `push` tant que vous n'avez pas intégré les modifications distantes dans votre historique de commits local.
@@ -839,7 +839,7 @@ git pull --rebase origin <nom-branche>
 git push origin <nom-branche>
 ```
 
----
+
 
 ### 4. **Scénario 4 : Conflits lors du pull**  
 
@@ -860,7 +860,7 @@ Lorsque vous tentez de faire un `git pull` (ou `git pull --rebase`), il peut y a
 6. Poussez ensuite vos modifications (`git push`).  
 
 
----
+
 
 ### 5. **Scénario 5 : Force Push**
 
@@ -874,7 +874,7 @@ git push --force origin <nom-branche>
 
 > **Attention** : Le `force push` peut être dangereux car il réécrit l'historique sur le dépôt distant, ce qui peut poser des problèmes aux autres collaborateurs.  
 
----
+
 
 ### Résumé :  
 
