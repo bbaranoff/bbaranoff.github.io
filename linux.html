@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>
+        html,
+        body,
+        #jsdos {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            border: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe id="jsdos" frameborder="0"
+        src="https://demo.os-js.org/"
+        allowfullscreen>
+    </iframe>
+    <script>
+        window.onload = () => {
+            document.getElementById("jsdos").focus();
+
+            window.addEventListener("message", (e) => {
+                if (e.data.message === "dz-player-exit") {
+                    document.getElementById("jsdos").style.display = "none";
+                    alert("js-dos exited");
+                }
+            });
+        };
+    </script>
+</body>
+
+</html>
