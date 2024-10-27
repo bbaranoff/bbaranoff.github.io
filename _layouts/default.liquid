@@ -25,8 +25,9 @@ layout: tasks/compress
     </script>
     <script src="/assets/js/jquery-3.3.1.min.js"></script>
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
-    {% include cookieconsent.bootstrap.html %}
+    {% include cookie-consent.html %}
     <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"></script>
+    <link rel="stylesheet" href="/assets/css/cookieconsent.bootstrap.css">
   </head>
   <body class="container">
     {%- include templates/sidebar.liquid -%}
@@ -38,6 +39,5 @@ layout: tasks/compress
     {%- include common/mathjax.liquid -%}
     {%- include common/google_adsense_gtag.liquid -%}
     {%- include common/analytics_gdpr_compliant.liquid -%}
-    {% include cookie-consent.html %}
   </body>
 </html>
