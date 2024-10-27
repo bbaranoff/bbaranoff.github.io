@@ -23,11 +23,13 @@ layout: tasks/compress
           mermaid.initialize({ startOnLoad: true });
         });
     </script>
-    <script src="/assets/js/jquery-3.3.1.min.js"></script>
-    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    if(readCookie('cookie-notice-dismissed')=='true') {
+       const js = '<script src="chatbutton.js"></script>'
+       document.body.appendChild(js)
+    }
+
+
     {% include cookie-consent.html %}
-    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"></script>
-    <link rel="stylesheet" href="/assets/css/cookieconsent.bootstrap.css">
   </head>
   <body class="container">
     {%- include templates/sidebar.liquid -%}
