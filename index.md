@@ -1,5 +1,4 @@
-
-# My resume
+# Resume
 
 ```tip
 
