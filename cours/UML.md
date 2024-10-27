@@ -793,7 +793,7 @@ flowchart TD
     G --> H[État Final: Message de confirmation à l'emprunteur]
 ```
 
-### Explication du Diagramme
+Explication du Diagramme
 
 1. **État Initial** : L'emprunteur se connecte à l'interface utilisateur.
 2. **Recherche** : L'emprunteur effectue une recherche pour un livre.
@@ -804,11 +804,3 @@ flowchart TD
 5. **Mise à jour** : La base de données est mise à jour avec les informations d'emprunt.
 6. **État Final** : Un message de confirmation est envoyé à l'emprunteur.
 
-### Utilisation
-
-Pour afficher ce diagramme, vous pouvez le copier et le coller dans un éditeur compatible avec Mermaid, tel que :
-
-- **Mermaid Live Editor** : [Mermaid Live Editor](https://mermaid-js.github.io/mermaid-live-editor)
-- **Markdown** : Si vous utilisez un système de documentation qui prend en charge Mermaid, comme GitHub, GitLab ou certains générateurs de documentation, vous pouvez simplement l'intégrer dans votre fichier Markdown.
-
-N'hésitez pas à adapter le diagramme selon vos besoins spécifiques ou à ajouter d'autres activités et décisions pour refléter un processus plus complexe !
