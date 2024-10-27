@@ -320,60 +320,48 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
 #### Représentation du Diagramme de Composants en UML :  
 
 ```mermaid  
+classDiagram
+  class SystèmeGestionBibliothèque {
+    + gérerEmprunt()
+    + gérerLivres()
+    + gérerAuteurs()
+    + gérerEmprunteurs()
+  }
 
-#direction: right
-#font: 14px
-[<abstract>Component SystèmeGestionBibliothèque|
-  + gérerEmprunt()
-  + gérerLivres()
-  + gérerAuteurs()
-  + gérerEmprunteurs()
-]
+  class ServiceEmprunt {
+    + emprunterLivre()
+    + retournerLivre()
+  }
 
-[<abstract>Component ServiceEmprunt|
-  + emprunterLivre()
-  + retournerLivre()
-]
-```  
+  class ServiceLivres {
+    + rechercherLivre()
+    + ajouterLivre()
+  }
 
-  
-  
-```mermaid  
+  class ServiceAuteurs {
+    + rechercherAuteur()
+    + ajouterAuteur()
+  }
 
-[<abstract>Component ServiceLivres|
-  + rechercherLivre()
-  + ajouterLivre()
-]
+  class ServiceEmprunteurs {
+    + rechercherEmprunteur()
+    + enregistrerEmprunteur()
+  }
 
-[<abstract>Component ServiceAuteurs|
-  + rechercherAuteur()
-  + ajouterAuteur()
-]
+  class BaseDeDonnées {
+    + stockerDonnées()
+    + récupérerDonnées()
+  }
 
-[<abstract>Component ServiceEmprunteurs|
-  + rechercherEmprunteur()
-  + enregistrerEmprunteur()
-]
+  SystèmeGestionBibliothèque --> ServiceEmprunt
+  SystèmeGestionBibliothèque --> ServiceLivres
+  SystèmeGestionBibliothèque --> ServiceAuteurs
+  SystèmeGestionBibliothèque --> ServiceEmprunteurs
 
-[<abstract>Component BaseDeDonnées|
-  + stockerDonnées()
-  + récupérerDonnées()
-]
-```
-
-  
-
-```mermaid  
-  
-[SystèmeGestionBibliothèque] --> [ServiceEmprunt]
-[SystèmeGestionBibliothèque] --> [ServiceLivres]
-[SystèmeGestionBibliothèque] --> [ServiceAuteurs]
-[SystèmeGestionBibliothèque] --> [ServiceEmprunteurs]
-
-[ServiceEmprunt] --> [BaseDeDonnées]
-[ServiceLivres] --> [BaseDeDonnées]
-[ServiceAuteurs] --> [BaseDeDonnées]
-[ServiceEmprunteurs] --> [BaseDeDonnées]
+  ServiceEmprunt --> BaseDeDonnées
+  ServiceLivres --> BaseDeDonnées
+  ServiceAuteurs --> BaseDeDonnées
+  ServiceEmprunteurs --> BaseDeDonnées
 
 ```
 
