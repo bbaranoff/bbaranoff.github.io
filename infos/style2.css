@@ -1,19 +1,3 @@
-.test {
-  background-color: black;
-  color: #55ff55;
-  font-family: monospace;
-  font-size:26px;
-
-}
-.output {
-display:none;
-}
-.active:after {
-  content: '|';
-}
-
-
-
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 *,
 *:before,
