@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem "jekyll-mentions", "~> 1.6.0"
   gem "jemoji", "~> 0.13.0"
 end
+gem "liquid"
 gem "jekyll-github-metadata"
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

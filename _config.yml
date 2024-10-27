@@ -12,7 +12,9 @@ plugins:
   - jekyll-mentions
   - jekyll-github-metadata
   - jekyll-cookies
+
 google_analytics: G-464931235
+
 exclude:
   - .bash
   - .github
