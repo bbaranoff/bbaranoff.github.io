@@ -51,7 +51,11 @@ Enfin, UML offre une documentation standardisée qui peut être utilisée tout a
   - Diagramme de composants  
   
   - Diagramme de déploiement  
+
+  - Diagramme de package
   
+  - Diagramme de profil
+
 - **Diagrammes comportementaux** :
   
   - Diagramme de cas d'utilisation
@@ -67,6 +71,8 @@ Enfin, UML offre une documentation standardisée qui peut être utilisée tout a
   - Diagramme de timing
   
   - Diagramme d'interaction
+
+  - Diagramme d'interaction générale
   
   Ces diagrammes offrent différentes perspectives sur le système et sont utilisés en fonction des besoins spécifiques du projet.  
 
