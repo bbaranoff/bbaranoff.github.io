@@ -86,7 +86,7 @@ Les diagrammes structurels jouent un rôle fondamental dans la modélisation d'u
   
 4. **Architecture du système :** Les diagrammes structurels aident à décrire l'architecture d'un système, en mettant en lumière la disposition physique des objets et leur organisation.  
 
-### Types de diagrammes structurels  
+## Types de diagrammes structurels  
   
 Les diagrammes structurels comprennent principalement :  
   
@@ -98,7 +98,7 @@ Les diagrammes structurels comprennent principalement :
   
   - **Diagrammes de déploiement :** Dépeignent l'architecture physique d'un système, y compris le matériel et les logiciels.  
   
-#### Diagramme de Classes
+### Diagramme de Classes
 
 Description du Diagramme
 
