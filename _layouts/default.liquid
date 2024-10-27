@@ -17,6 +17,13 @@ layout: tasks/compress
     {%- include rest/styles.liquid -%}
     {%- include common/script.liquid -%}
     {%- include extra/head.html -%}
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          mermaid.initialize({ startOnLoad: true });
+        });
+    </script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs"></script>
   </head>
   <body class="container">
     {%- include templates/sidebar.liquid -%}

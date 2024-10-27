@@ -176,36 +176,33 @@ Imaginons un système de gestion de bibliothèque avec les classes suivantes : *
 
 ### Représentation en UML
 
-```{nomnoml}
+```mermaid
+classDiagram
 
-#direction: right
-#font: 14px
-#stroke: #333
-#fill: #f9f9f9
-
-[Livre|
-  +titre: String
-  +isbn: String
-  +annéePublication: int
+class Livre {
+  +String titre
+  +String isbn
+  +int annéePublication
   +emprunter(emprunteur: Emprunteur): void
   +retourner(): void
-]
+}
 
-[Auteur| 
-  +nom: String
-  +dateNaissance: Date
+class Auteur {
+  +String nom
+  +Date dateNaissance
   +écrireLivre(titre: String): Livre
-]
+}
 
-[Emprunteur| 
-  +nom: String
-  +numéroEmprunteur: String
+class Emprunteur {
+  +String nom
+  +String numéroEmprunteur
   +demanderLivre(livre: Livre): void
   +retournerLivre(livre: Livre): void
-]
+}
 
-[Livre] *-- [Auteur]
-[Emprunteur] *-- [Livre]
+Livre *-- Auteur : écrit par
+Emprunteur *-- Livre : emprunte
+
 ```
 
 ---
@@ -287,7 +284,7 @@ Voici comment cela peut être traduit :
 
 #### Représentation du Diagramme d'Objets en UML :  
   
-```{nomnoml}
+```mermaid
 
 #direction: center
 #font: 14px
@@ -309,7 +306,7 @@ Voici comment cela peut être traduit :
 ```
 ---
 
-```{nomnoml}
+```mermaid
 
 #direction: center
 #font: 14px
@@ -328,7 +325,7 @@ Voici comment cela peut être traduit :
 
 ---
 
-```{nomnoml}
+```mermaid
 
 #direction: center
 #font: 14px
@@ -347,7 +344,7 @@ Voici comment cela peut être traduit :
 
 ---
 
-```{nomnoml}
+```mermaid
 
 #direction: center
 #font: 14px
@@ -400,7 +397,7 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
   
 #### Représentation du Diagramme de Composants en UML :  
 
-```{nomnoml}  
+```mermaid  
 
 #direction: right
 #font: 14px
@@ -419,7 +416,7 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
 
 ---  
   
-```{nomnoml}  
+```mermaid  
 
 [<abstract>Component ServiceLivres|
   + rechercherLivre()
@@ -444,7 +441,7 @@ Pour créer le diagramme de composants correspondant, nous allons représenter l
 
 ---  
 
-```{nomnoml}  
+```mermaid  
   
 [SystèmeGestionBibliothèque] --> [ServiceEmprunt]
 [SystèmeGestionBibliothèque] --> [ServiceLivres]
@@ -502,7 +499,7 @@ Le diagramme de déploiement montre la manière dont les composants logiciels so
 
 #### Représentation du Diagramme de Déploiement en UML :
 
-```{nomnoml}
+```mermaid
 
 [<abstract>Node ClientWeb|
   + InterfaceUtilisateur
