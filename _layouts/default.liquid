@@ -23,13 +23,7 @@ layout: tasks/compress
           mermaid.initialize({ startOnLoad: true });
         });
     </script>
-    if(readCookie('cookie-notice-dismissed')=='true') {
-       const js = '<script src="chatbutton.js"></script>'
-       document.body.appendChild(js)
-    }
 
-
-    {% include cookie-consent.html %}
   </head>
   <body class="container">
     {%- include templates/sidebar.liquid -%}
@@ -41,5 +35,7 @@ layout: tasks/compress
     {%- include common/mathjax.liquid -%}
     {%- include common/google_adsense_gtag.liquid -%}
     {%- include common/analytics_gdpr_compliant.liquid -%}
+    {% include cookie-consent.html %}
+
   </body>
 </html>
