@@ -42,5 +42,4 @@ var terminal = function() {
 
   typeLine();
 }
-
 terminal();
