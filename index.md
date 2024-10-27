@@ -25,7 +25,7 @@ twitter | '@bastienbaranoff'
 
 ```note
 
-  French: Native |  English: Professional
+French: Native |  English: Professional
 
 ```
 
@@ -33,7 +33,9 @@ twitter | '@bastienbaranoff'
 ## Career Profile:
 
 ```warning
-      Physics -> Electronics -> Computer -> Embedded -> Software Defined Radio
+
+Physics -> Electronics -> Computer -> Embedded -> Software Defined Radio
+
 ```
 
 
@@ -129,7 +131,7 @@ First TIme :
 
 ```danger
 
-    intro: Intrigate by A5/1 in the 2010s I searched around the internet and found a lot of interesting resources
+Curious about A5/1 in the 2010s I searched around the internet and found a lot of interesting resources
 
 ```
 
