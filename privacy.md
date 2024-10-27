@@ -1,3 +1,5 @@
+# Privacy
+
 <body class="wy-body-for-nav">
                 <h2>Définitions</h2>
                 <p><b>Client :</b> tout professionnel ou personne physique capable au sens des articles 1123 et suivants du Code civil, ou personne morale, qui visite le Site objet des présentes conditions générales.<br>
