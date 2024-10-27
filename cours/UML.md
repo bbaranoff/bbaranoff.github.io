@@ -484,6 +484,32 @@ Ce diagramme de déploiement montre comment les composants sont distribués entr
 
 
 
+#### Diagramme de Packages
+
+Voici un exemple de code Mermaid pour le système de gestion d'une bibliothèque que nous avons décrit précédemment :
+
+```mermaid
+%%{init: {'theme': 'default'}}%%
+graph TD;
+    subgraph Bibliothèque
+        A[GestionLivres]
+        B[GestionMembres]
+        C[GestionEmprunts]
+    end
+
+    C -->|dépend de| A
+    C -->|dépend de| B
+```
+
+Explication du Code
+
+- **`graph TD`** : Indique que le diagramme est orienté de haut en bas (Top Down).
+- **`subgraph Bibliothèque`** : Crée un sous-graph qui représente le package principal "Bibliothèque".
+- **`A[GestionLivres]`, `B[GestionMembres]`, `C[GestionEmprunts]`** : Représentent les différents packages au sein du sous-graph.
+- **`C -->|dépend de| A`** : Indique une dépendance du package "GestionEmprunts" vers "GestionLivres".
+- **`C -->|dépend de| B`** : Indique une dépendance du package "GestionEmprunts" vers "GestionMembres".
+
+
 ### Diagramme comportementaux
 
 
