@@ -837,3 +837,74 @@ Explication des États et Transitions
 5. **Retourné** : L'état après qu'un livre a été retourné par l'emprunteur, où il doit être mis à jour dans le système.
    - **Transition "Mettre à jour la disponibilité"** : Après le traitement du retour, le livre revient à l'état "Disponible".
 
+Le diagramme de timing est un type de diagramme de séquence qui se concentre sur le timing des événements au fil du temps. Il montre les interactions entre les objets, ainsi que le moment précis où ces interactions se produisent. Ce type de diagramme est particulièrement utile pour représenter les systèmes réactifs où le timing des messages est crucial.
+
+#### Diagramme de Timing pour le Processus d'Emprunt d'un Livre
+
+Voici un exemple de diagramme de timing illustrant le processus d'emprunt d'un livre dans un système de gestion de bibliothèque.
+
+```mermaid
+%% Diagramme de Timing pour le Processus d'Emprunt d'un Livre
+%% La syntaxe Mermaid pour un diagramme de timing
+
+%% Timeline
+timingDiagram
+    title Processus d'Emprunt d'un Livre
+
+    %% Temps
+    participant Emprunteur
+    participant InterfaceUtilisateur
+    participant SystemeGestion
+    participant ServiceLivres
+    participant ServiceEmprunt
+    participant BaseDeDonnees
+
+    Emprunteur->>InterfaceUtilisateur: Rechercher un livre
+    activate InterfaceUtilisateur
+    InterfaceUtilisateur->>SystemeGestion: Demande de recherche
+    activate SystemeGestion
+    SystemeGestion->>ServiceLivres: Rechercher livre
+    activate ServiceLivres
+    ServiceLivres->>BaseDeDonnees: Interroger livres
+    activate BaseDeDonnees
+    BaseDeDonnees-->>ServiceLivres: Résultats de la recherche
+    deactivate BaseDeDonnees
+    ServiceLivres-->>SystemeGestion: Livres trouvés
+    deactivate ServiceLivres
+    SystemeGestion-->>InterfaceUtilisateur: Afficher résultats
+    deactivate SystemeGestion
+    InterfaceUtilisateur-->>Emprunteur: Résultats affichés
+    deactivate InterfaceUtilisateur
+
+    Emprunteur->>InterfaceUtilisateur: Emprunter un livre
+    activate InterfaceUtilisateur
+    InterfaceUtilisateur->>SystemeGestion: Demande d'emprunt
+    activate SystemeGestion
+    SystemeGestion->>ServiceEmprunt: Créer emprunt
+    activate ServiceEmprunt
+    ServiceEmprunt->>BaseDeDonnees: Enregistrer emprunt
+    activate BaseDeDonnees
+    BaseDeDonnees-->>ServiceEmprunt: Confirmation d'enregistrement
+    deactivate BaseDeDonnees
+    ServiceEmprunt-->>SystemeGestion: Confirmation de l'emprunt
+    deactivate ServiceEmprunt
+    SystemeGestion-->>InterfaceUtilisateur: Emprunt confirmé
+    deactivate SystemeGestion
+    InterfaceUtilisateur-->>Emprunteur: Confirmation de l'emprunt
+    deactivate InterfaceUtilisateur
+```
+
+Explication du Diagramme
+
+1. **Acteurs** : Le diagramme représente plusieurs participants dans le processus : l'Emprunteur, l'Interface Utilisateur, le Système de Gestion, le Service des Livres, le Service d'Emprunt et la Base de Données.
+   
+2. **Événements Chronologiques** :
+   - **Recherche d'un livre** : L'emprunteur initie une recherche via l'interface utilisateur, qui transmet la demande au système de gestion.
+   - **Interrogation de la Base de Données** : Le système de gestion interroge le service des livres, qui à son tour interroge la base de données pour obtenir des résultats.
+   - **Affichage des Résultats** : Les résultats sont retournés à l'interface utilisateur et affichés à l'emprunteur.
+
+3. **Emprunt d'un Livre** :
+   - L'emprunteur sélectionne un livre à emprunter et envoie une demande via l'interface utilisateur.
+   - Le système de gestion crée l'emprunt en interrogeant le service d'emprunt, qui enregistre les informations d'emprunt dans la base de données.
+   - Une fois l'enregistrement effectué, une confirmation est renvoyée à l'emprunteur via l'interface utilisateur.
+
