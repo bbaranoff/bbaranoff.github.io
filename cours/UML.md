@@ -504,7 +504,7 @@ Explication du Code
 
 
 
-### Diagramme de Profil
+#### Diagramme de Profil
 
 ```mermaid
 %%{init: {'theme': 'default'}}%%
@@ -1004,4 +1004,41 @@ sequenceDiagram
    - Une fois les résultats trouvés, ils sont renvoyés à l'emprunteur via l'interface.
    - Si l'emprunteur souhaite emprunter un livre, une nouvelle demande est envoyée au système de gestion.
    - Le service d'emprunt enregistre l'emprunt dans la base de données et renvoie une confirmation à l'emprunteur.
+
+
+#### Diagramme d'Interaction Générale
+
+Voici un exemple d'un diagramme d'interaction générale utilisant Mermaid pour le système de gestion d'une bibliothèque :
+
+```mermaid
+%%{init: {'theme': 'default'}}%%
+sequenceDiagram
+    participant Utilisateur
+    participant ClientWeb
+    participant ServeurApplication
+    participant ServeurBaseDeDonnées
+
+    Utilisateur->>ClientWeb: Se connecte
+    ClientWeb->>ServeurApplication: Envoie requête de recherche de livres
+    ServeurApplication->>ServeurBaseDeDonnées: Récupère liste des livres
+    ServeurBaseDeDonnées-->>ServeurApplication: Renvoie liste des livres
+    ServeurApplication-->>ClientWeb: Affiche liste des livres
+    ClientWeb-->>Utilisateur: Montre résultats de recherche
+```
+
+### Explication du Diagramme
+
+1. **Participants** :
+   - **Utilisateur** : L'utilisateur du système qui effectue des actions.
+   - **ClientWeb** : L'interface à partir de laquelle l'utilisateur interagit avec le système.
+   - **ServeurApplication** : Le serveur qui traite les requêtes de l'utilisateur et gère la logique métier.
+   - **ServeurBaseDeDonnées** : Le serveur qui stocke les données et les informations de la bibliothèque.
+
+2. **Flux d'Interactions** :
+   - **Se connecte** : L'utilisateur se connecte via le client web.
+   - **Envoie requête de recherche de livres** : Le client web envoie une requête au serveur d'application pour rechercher des livres.
+   - **Récupère liste des livres** : Le serveur d'application demande la liste des livres au serveur de base de données.
+   - **Renvoie liste des livres** : Le serveur de base de données renvoie la liste des livres au serveur d'application.
+   - **Affiche liste des livres** : Le serveur d'application envoie la liste des livres au client web pour affichage.
+   - **Montre résultats de recherche** : Le client web montre les résultats à l'utilisateur.
 
