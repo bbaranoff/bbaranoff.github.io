@@ -508,11 +508,39 @@ Le diagramme de cas d'utilisation représente les interactions entre les acteurs
 
 #### Représentation du Diagramme de Cas d’Utilisation en UML :
 
-![](images/use_case.webp)  
+```mermaid
+flowchart TD
 
-  
-  
+  %% Acteurs
+  Emprunteur([Emprunteur])
+  Bibliothecaire([Bibliothécaire])
+  SystemePaiement(["Système de Paiement"])
 
+  %% Cas d'utilisation
+  EmprunterLivre[[Emprunter un Livre]]
+  RetournerLivre[[Retourner un Livre]]
+  RechercherLivre[[Rechercher un Livre]]
+  PayerAmende[[Payer une Amende]]
+  GererLivres[[Gérer les Livres]]
+  GererEmprunteurs[[Gérer les Emprunteurs]]
+  GererAuteurs[[Gérer les Auteurs]]
+
+  %% Relations entre acteurs et cas d'utilisation
+  Emprunteur --> EmprunterLivre
+  Emprunteur --> RetournerLivre
+  Emprunteur --> RechercherLivre
+  Emprunteur --> PayerAmende
+  PayerAmende --> SystemePaiement
+
+  Bibliothecaire --> GererLivres
+  Bibliothecaire --> GererEmprunteurs
+  Bibliothecaire --> GererAuteurs
+
+  %% Relations include
+  EmprunterLivre -.-> RechercherLivre
+  RetournerLivre -.-> RechercherLivre
+
+```
 
 ### Explication du Diagramme :
 
