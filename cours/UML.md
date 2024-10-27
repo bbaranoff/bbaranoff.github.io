@@ -993,7 +993,7 @@ sequenceDiagram
     InterfaceUtilisateur-->>Emprunteur: Confirmation de l'emprunt
 ```
 
-### Explication du Diagramme
+Explication du Diagramme
 
 1. **Participants** :
    - **Emprunteur** : L'utilisateur qui souhaite emprunter un livre.
@@ -1032,7 +1032,7 @@ sequenceDiagram
     ClientWeb-->>Utilisateur: Montre résultats de recherche
 ```
 
-### Explication du Diagramme
+Explication du Diagramme
 
 1. **Participants** :
    - **Utilisateur** : L'utilisateur du système qui effectue des actions.
