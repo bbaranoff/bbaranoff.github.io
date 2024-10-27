@@ -601,8 +601,33 @@ Prenons le cas d'un **Emprunteur** qui souhaite **emprunter un livre**.
 
 #### Représentation du Diagramme de Séquence en UML :
 
-![Diagramme de séquence](images/seq_diag.png)
+```mermaid
+sequenceDiagram
+  participant E as Emprunteur
+  participant IU as Interface Utilisateur
+  participant SGB as Système de Gestion de Bibliothèque
+  participant SL as Service Livres
+  participant SE as Service Emprunt
+  participant DB as Base de Données
 
+  %% Scénario d'emprunt d'un livre
+  E->>IU: Cherche un livre à emprunter
+  IU->>SGB: Demande de recherche du livre
+  SGB->>SL: Rechercher le livre
+  SL->>DB: Interroger la base de données
+  DB-->>SL: Retourne le livre trouvé
+  SL-->>SGB: Livre trouvé
+  SGB->>E: Affiche le livre à l'emprunteur
+
+  E->>IU: Choisit d'emprunter le livre
+  IU->>SGB: Demande d'emprunt
+  SGB->>SE: Créer l'emprunt pour l'utilisateur
+  SE->>DB: Mettre à jour les informations sur l'emprunt
+  DB-->>SE: Confirmation de mise à jour
+  SE-->>SGB: Confirmation de l'emprunt créé
+  SGB->>IU: Envoi de la confirmation à l'Emprunteur
+  IU-->>E: Message de confirmation de l'emprunt
+```
 
 
 ### Explication du Diagramme de Séquence :
