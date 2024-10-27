@@ -263,13 +263,38 @@ classDiagram
         + numéroEmprunteur: String
     }
 
-    %% Objets
-    Livre <|-- livre1: "Les Misérables\nISBN: 978-2-07-040933-1\nAnnée: 1862"
-    Livre <|-- livre2: "1984\nISBN: 978-0-452-28423-4\nAnnée: 1949"
-    Auteur <|-- auteur1: "Victor Hugo\nDate de Naissance: 1802-02-26"
-    Auteur <|-- auteur2: "George Orwell\nDate de Naissance: 1903-06-25"
-    Emprunteur <|-- emprunteur1: "Jean Dupont\nNuméro: E1234"
-    Emprunteur <|-- emprunteur2: "Marie Curie\nNuméro: E5678"
+    %% Instances (Objects)
+    class livre1 {
+        + titre: "Les Misérables"
+        + isbn: "978-2-07-040933-1"
+        + annéePublication: 1862
+    }
+
+    class livre2 {
+        + titre: "1984"
+        + isbn: "978-0-452-28423-4"
+        + annéePublication: 1949
+    }
+
+    class auteur1 {
+        + nom: "Victor Hugo"
+        + dateNaissance: "1802-02-26"
+    }
+
+    class auteur2 {
+        + nom: "George Orwell"
+        + dateNaissance: "1903-06-25"
+    }
+
+    class emprunteur1 {
+        + nom: "Jean Dupont"
+        + numéroEmprunteur: "E1234"
+    }
+
+    class emprunteur2 {
+        + nom: "Marie Curie"
+        + numéroEmprunteur: "E5678"
+    }
 
     %% Relations
     livre1 --> auteur1 : "écrit par"
