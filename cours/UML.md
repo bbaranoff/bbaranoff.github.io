@@ -804,3 +804,36 @@ Explication du Diagramme
 5. **Mise à jour** : La base de données est mise à jour avec les informations d'emprunt.
 6. **État Final** : Un message de confirmation est envoyé à l'emprunteur.
 
+Un diagramme d'états (ou diagramme d'état-transitions) est utilisé pour représenter les différents états d'un objet dans un système et les transitions entre ces états. Il est particulièrement utile pour modéliser des comportements dynamiques où les objets changent d'état en réponse à des événements.
+
+#### Diagramme d'États pour un Emprunt de Livre
+
+Voici un exemple de diagramme d'états représentant le cycle de vie d'un livre dans un système de gestion de bibliothèque, incluant des états comme "Disponible", "Emprunté", "Réservé", et "Retourné".
+
+```mermaid
+stateDiagram-v2
+    [*] --> Disponible
+    Disponible --> Emprunté : Emprunter
+    Disponible --> Réservé : Réserver
+    Emprunté --> Retourné : Retourner
+    Emprunté --> Réservé : Réserver
+    Réservé --> Emprunté : Emprunter
+    Réservé --> Disponible : Annuler la réservation
+    Retourné --> Disponible : Mettre à jour la disponibilité
+```
+
+Explication des États et Transitions
+
+1. **[Initial State]** : Représente l'état initial avant qu'un livre ne soit disponible.
+2. **Disponible** : L'état où le livre est prêt à être emprunté ou réservé.
+   - **Transition "Emprunter"** : Un emprunteur peut emprunter le livre, ce qui le déplace à l'état "Emprunté".
+   - **Transition "Réserver"** : Un emprunteur peut également réserver le livre s'il est disponible.
+3. **Emprunté** : L'état où le livre est actuellement emprunté par un emprunteur.
+   - **Transition "Retourner"** : L'emprunteur retourne le livre, ce qui le ramène à l'état "Retourné".
+   - **Transition "Réserver"** : Pendant qu'il est emprunté, un autre utilisateur peut réserver le livre, en attendant son retour.
+4. **Réservé** : L'état où le livre est réservé par un emprunteur.
+   - **Transition "Emprunter"** : Une fois que le livre est retourné, l'emprunteur peut l'emprunter.
+   - **Transition "Annuler la réservation"** : Si l'emprunteur décide de ne plus vouloir le livre, la réservation peut être annulée, et le livre redevient "Disponible".
+5. **Retourné** : L'état après qu'un livre a été retourné par l'emprunteur, où il doit être mis à jour dans le système.
+   - **Transition "Mettre à jour la disponibilité"** : Après le traitement du retour, le livre revient à l'état "Disponible".
+
