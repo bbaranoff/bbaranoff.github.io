@@ -1,4 +1,4 @@
-# Git cours Magistral
+# GIT (cours)
 
 ![GitHub](https://www.ifourtechnolab.com/pics/All_about_Version_ControlGit.webp)  
 
