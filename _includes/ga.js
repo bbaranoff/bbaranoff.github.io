@@ -8,12 +8,10 @@ function loadScriptAsync(scriptSrc, callback) {
     document.head.appendChild(script);
 }
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VYSL22WMS1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+loadScriptAsync('https://www.googletagmanager.com/gtag/js?id=G-464931235', function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-VYSL22WMS1', { 'anonymize_ip': true });
+})
 
-  gtag('config', 'G-VYSL22WMS1');
-</script>
