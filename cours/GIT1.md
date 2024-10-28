@@ -1,4 +1,4 @@
-# GIT (cours)
+# Introduction à GIT
 
 ![GitHub](https://www.ifourtechnolab.com/pics/All_about_Version_ControlGit.webp)  
 

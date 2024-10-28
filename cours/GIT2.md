@@ -1,4 +1,4 @@
-# TP Git
+# Git Travaux Pratiques
 
 Vous avez un projet de développement logiciel avec votre entreprise :
 Pour ce faire vous devez créer un compte github à votre nom avant de passer
