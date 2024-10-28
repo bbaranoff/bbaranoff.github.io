@@ -13,7 +13,7 @@ plugins:
   - jekyll-github-metadata
   - jekyll-cookies
 
-google_analytics: G-464931235
+google_analytics: G-VYSL22WMS1
 
 exclude:
   - .bash
