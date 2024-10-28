@@ -310,3 +310,92 @@ Vous pouvez également créer un fichier `_includes/analytics.html` pour conteni
 
 Ces options vous permettent de mettre en place une bannière de consentement aux cookies simple et efficace pour votre site Jekyll.
 
+**Tag Assistant** est une extension Chrome gratuite de Google qui vous aide à vérifier et à déboguer les balises (tags) de votre site, y compris celles de Google Analytics, Google Tag Manager, et d’autres produits Google. Avec Tag Assistant, vous pouvez voir si les balises sont correctement implémentées et si elles transmettent les données comme prévu.
+
+### Installation et utilisation de Tag Assistant pour vérifier Google Tag Manager
+
+#### 1. Installer Tag Assistant
+
+1. Accédez au [Chrome Web Store pour Tag Assistant](https://chrome.google.com/webstore/detail/tag-assistant-legacy-by-go/glpanaoknnpdlnopknkgmdbnndkdgkdd).
+2. Cliquez sur "Ajouter à Chrome" et confirmez l'installation.
+
+#### 2. Activer et utiliser Tag Assistant pour tester votre site
+
+1. **Activer l'extension** : Après l'installation, activez Tag Assistant dans la barre d'extensions de votre navigateur.
+2. **Accéder à votre site Jekyll** : Rendez-vous sur l'URL de votre site (par exemple, `https://<votre-utilisateur>.github.io`).
+3. **Démarrer l'analyse** : Cliquez sur l’icône Tag Assistant, puis sur "Activer" pour activer le suivi sur la page.
+4. **Recharger la page** : Rechargez la page pour permettre à Tag Assistant de détecter les balises actives.
+5. **Vérifier les balises détectées** :
+   - Tag Assistant listera toutes les balises trouvées, en incluant celles de Google Tag Manager.
+   - Chaque balise sera accompagnée d'un indicateur de statut : vert (OK), jaune (avertissement), ou rouge (erreur).
+   - Cliquez sur chaque balise pour voir les détails et identifier les éventuelles erreurs ou avertissements.
+
+#### 3. Déboguer et corriger les problèmes
+
+Si une balise est incorrectement configurée, Tag Assistant fournira des informations sur le problème pour aider à la corriger. Par exemple, il pourrait indiquer une mauvaise ID de conteneur ou des problèmes de chargement. 
+
+Tag Assistant est particulièrement utile pour les sites Jekyll sur GitHub Pages, car il vous permet de tester et vérifier vos balises sans avoir accès à un débogueur plus complexe.
+
+Pour configurer Google Tag Manager (GTM) sur un site Jekyll hébergé sur GitHub Pages, suivez ces étapes :
+
+### 1. Créer un compte et un conteneur Google Tag Manager
+
+1. Rendez-vous sur [Google Tag Manager](https://tagmanager.google.com/) et connectez-vous avec votre compte Google.
+2. Cliquez sur "Créer un compte" et suivez les étapes pour créer un compte et un conteneur pour votre site (nom du site et URL).
+3. Une fois le conteneur créé, vous recevrez deux extraits de code Tag Manager : un pour le `<head>` et un autre pour le `<body>`.
+
+### 2. Ajouter le code Google Tag Manager dans Jekyll
+
+Pour installer GTM dans un site Jekyll, insérez le code dans les sections `<head>` et `<body>` de votre layout principal, généralement dans `_layouts/default.html`.
+
+1. **Ouvrez `_layouts/default.html`** (ou le fichier principal qui structure vos pages).
+2. **Ajoutez le premier extrait de code GTM dans le `<head>`** :
+   Placez le premier code JavaScript immédiatement après l’ouverture de la balise `<head>`.
+
+   ```html
+   <!-- Google Tag Manager - code pour le <head> -->
+   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXXX"></script>
+   <script>
+     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+     var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+     j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f);
+     })(window,document,'script','dataLayer','GTM-XXXXXXX');
+   </script>
+   ```
+
+   Remplacez `GTM-XXXXXXX` par votre identifiant de conteneur.
+
+3. **Ajoutez le deuxième extrait de code dans le `<body>`** :
+   Placez le deuxième code immédiatement après l'ouverture de la balise `<body>`.
+
+   ```html
+   <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   ```
+
+   Remplacez également `GTM-XXXXXXX` par votre identifiant.
+
+### 3. Pousser le code sur GitHub
+
+1. Enregistrez les modifications et poussez-les sur votre dépôt GitHub Pages pour les déployer :
+
+   ```bash
+   git add .
+   git commit -m "Ajout de Google Tag Manager"
+   git push origin main
+   ```
+
+2. Une fois que GitHub Pages a déployé votre site, Google Tag Manager commencera à être actif sur toutes les pages.
+
+### 4. Vérifier le fonctionnement avec Tag Assistant
+
+Pour vous assurer que GTM est correctement configuré :
+
+1. Installez l’extension [Tag Assistant](https://chrome.google.com/webstore/detail/tag-assistant-legacy-by-go/glpanaoknnpdlnopknkgmdbnndkdgkdd) dans Chrome.
+2. Accédez à votre site et activez Tag Assistant pour voir si votre conteneur GTM est détecté.
+3. Vous devriez voir votre conteneur avec un indicateur vert si tout fonctionne correctement.
+
+### 5. Ajouter des balises dans Google Tag Manager
+
+Maintenant que GTM est installé, vous pouvez ajouter des balises (comme Google Analytics, Facebook Pixel, ou des événements de conversion) directement dans le tableau de bord GTM sans avoir à modifier le code de votre site.
