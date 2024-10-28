@@ -1,11 +1,50 @@
 # 2G IMSI Catcher
 
-(Fooling MS : Mobile Station, the 2G phone) The MS doesn’t ask authentication from BTS (Base Transceiver Station, the relay antenna).
+**Radio-Telephony**
+
+- **Example of SFR:**
+
+**Article 1**
+
+– The French Radiotelephone Company ("Société Française de Radiotéléphonie") is authorized to use, in the 900 and 1800 MHz bands,
+the frequencies allocated to it in Article 2 of this decision to establish and operate a radio network open to the public in metropolitan
+France. For this, it complies with the provisions of the specifications located in appendix 2 of this decision.
+
+**Article 2**
+
+– The GSM channels allocated to the French Radiotelephone Company are,
+in accordance with the definitions in appendix 1:
+
+-   in the 900 MHz band, throughout mainland France: channels 75 to 124;
+-   in the 900 MHz band, only in very dense areas: channels 63 to 74;
+-   in the 1800 MHz band, throughout mainland France: channels 512 to
+525 and 647 to 751
+
+For others Operator (GSM)
+
+ Operator GSM900  | DCS1800
+Orange   1→62 | 527→646
+SFR  63-74 & 75-124 | 512→525 & 647→751
+Bouygues 975-1023 | 752-885
+
+Free = ? (Free didn’t invest much in 2G antenna since 2G will die in 2025 in France they use Orange roaming)
+
+## Hacking 2G (Fooling MS : Mobile Station, the 2G phone)
+
+Easy ! The MS doesn’t ask authentication from BTS (Base Transceiver Station, the relay antenna). So what to do to intercept ? Be a BTS… and
+that’s all just spoof the public values of the BTS (mcc,mnc exemple 208,15 for FreeMobile 208,01 for Orange, etc) and broadcast a stronger
+signal and it is done. How the implement a 2G BTS ? there are open-sourced projects like
+
+[![](https://umtrx.org/wp/wp-content/uploads/2013/11/osmocom_logo.png)](https://github.com/osmocom) (OpenBSC Osmo-Trx Osmo-Bts… EOL but usefull) or (Network in the Box Updated)
+
+[![](https://avatars.githubusercontent.com/u/6938234)](https://github.com/RangeNetworks/openbts) 
+
+[![](https://i0.wp.com/yatebts.com/wp-content/uploads/2018/11/500px-YateBTS_Linux_Yate_2015-12-08.png)](https://github.com/vir/yate)
+
+To install it I have scripted it for example for
+
 So what to do to intercept ? Be a BTS… and that’s all just spoof the public values of the BTS (mcc,mnc exemple 208,15 for FreeMobile 208,01
-for Orange, etc) and broadcast a stronger signal and it is done. How the implement a 2G BTS ? there are open sourced implementation on github.  
-<https://github.com/osmocom> (OpenBSC Osmo-Trx Osmo-Bts… EOL but usefull) or (Network in the Box Updated)  
-<https://github.com/RangeNetworks/openbts> <https://github.com/vir/yate>
-To install it I have scripted it for example for OpenBSC :
+for Orange, etc) and broadcast a stronger signal and it is done. How the implement a 2G BTS ? there are open sourced implementation on github. 
 
 ``` bash
 #!/bin/bash
