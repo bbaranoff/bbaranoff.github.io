@@ -48,22 +48,6 @@
 00:01:19,913 --> 00:01:21,039
 - Bugs!
 
-# Hacking the Telcos...
-
-## Hacking 2G (Fooling MS : Mobile Station, the 2G phone)
-
-Easy ! The MS doesn’t ask authentication from BTS (Base Transceiver Station, the relay antenna). So what to do to intercept ? Be a BTS… and
-that’s all just spoof the public values of the BTS (mcc,mnc exemple 208,15 for FreeMobile 208,01 for Orange, etc) and broadcast a stronger
-signal and it is done. How the implement a 2G BTS ? there are open-sourced projects like
-
-[![](https://umtrx.org/wp/wp-content/uploads/2013/11/osmocom_logo.png)](https://github.com/osmocom) (OpenBSC Osmo-Trx Osmo-Bts… EOL but usefull) or (Network in the Box Updated)
-
-[![](https://avatars.githubusercontent.com/u/6938234)](https://github.com/RangeNetworks/openbts) 
-
-[![](https://i0.wp.com/yatebts.com/wp-content/uploads/2018/11/500px-YateBTS_Linux_Yate_2015-12-08.png)](https://github.com/vir/yate)
-
-To install it I have scripted it for example for OpenBSC : 
-
 **Radio-Frequencies Protocols :**
 
 A protocol is for computing (quoted from Oxford langage):  
