@@ -283,7 +283,7 @@ Pour connecter une balise *gtag* (Google Analytics) à votre site Jekyll, suivez
 
 ### 2. Ajouter la balise *gtag* dans le site Jekyll
 
-1. **Ouvrez le fichier `_layouts/default.html`** (ou le fichier principal qui définit l'en-tête de votre site, souvent `default.html`).
+1. **Ouvrez le fichier _layouts/default.html** (ou le fichier principal qui définit l'en-tête de votre site, souvent `default.html`).
 2. **Ajoutez le script de Google Analytics** dans la balise `<head>` pour qu'il se charge sur toutes les pages de votre site. Utilisez le code suivant, en remplaçant `G-XXXXXXXXXX` par votre identifiant de suivi :
 
     ```html
@@ -304,7 +304,7 @@ Pour connecter une balise *gtag* (Google Analytics) à votre site Jekyll, suivez
 
 ### Note
 
-Vous pouvez également créer un fichier `_includes/analytics.html` pour contenir le code *gtag* et inclure ce fichier dans le `<head>` avec `{% include analytics.html %}`, ce qui permet de centraliser les scripts de suivi pour une gestion plus simple.
+Vous pouvez également créer un fichier _includes/analytics.html pour contenir le code *gtag* et inclure ce fichier dans le `<head>` avec % include analytics.html %, ce qui permet de centraliser les scripts de suivi pour une gestion plus simple.
 
 5. **Styliser la bannière** : Ajoutez vos propres styles CSS pour personnaliser la bannière en fonction du design de votre site.
 
