@@ -63,7 +63,7 @@ Download Raspi-Imager from <https://www.raspberrypi.com/software/>
 To install it on Ubuntu \> 20.04 you just have to do (Ctrl-Alt-t) and
 type
 
-```
+``` sourceCode
 sudo snap install rpi-imager
 ```
 
@@ -82,37 +82,37 @@ raspberry and monitor it via HDMI. Or if you don't have HDMI hardware
 you can access through SSH. For example if the local network is
 192.168.1.0/24 youinstall.packages(‘readr’) can do (on the host)
 
-```
+``` sourceCode
 nmap 192.168.1.1-254 -p 22
 ```
 
 to know RPi IP adress or you can try
 
-```
+``` sourceCode
 sudo arp -a
 ```
 
 Then to spawn a shell on the RPi
 
-```
+``` sourceCode
 ssh pi@ip_found_previously
 ```
 
 or
 
-```
+``` sourceCode
 ssh pi@raspberrypi.local
 ```
 
 Then on the shell
 
-```
+``` sourceCode
 sudo apt update && sudo apt upgrade
 ```
 
 Now we install necessary packages
 
-```
+``` sourceCode
 sudo apt install git device-tree-compiler git python3-crypto python3-nmea2 python3-rpi.gpio python3-serial python3-spidev python3-configobj gpsd libgps-dev gpsd-clients python3-pip
 pip3 install simplecayennelpp
 git clone https://github.com/bbaranoff/libgps
@@ -123,9 +123,11 @@ sudo ldconfig
 nano /etc/default/gpsd
 ```
 
-Default settings for the gpsd init script and the hotplug wrapper.
-```
+\`\`\` {.sourceCode .} \# Default settings for the gpsd init script and
+the hotplug wrapper.
+
 # Start the gpsd daemon automatically at boot time
+
 START_DAEMON=“true”
 
 # Use USB hotplugging to add new USB devices automatically to the daemon
@@ -141,22 +143,18 @@ DEVICES=“/dev/ttyAMA0”
 # Other options you want to pass to gpsd
 
 GPSD_OPTIONS=“-n”
-```
 
 
 Now we add to /boot/config.txt those lines at the end
 
-```
+``` {.sourceCode .}
 enable_uart=1
 dtoverlay=miniuart-bt
 dtoverlay=spi-gpio-cs
-```
 
 We modify /boot/cmdline.txt to make it looks like
 
-```
-dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait`
-```
+`{.sourceCode .} dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait`
 
 Then /home/pi
 
@@ -170,7 +168,7 @@ sudo reboot
 
 Then in /home/pi we create gpscron like :
 
-```
+``` sourceCode
 #!/bin/bash
 sudo python3 /home/pi/dragino/test_cayenne.py
 ```
@@ -180,7 +178,7 @@ avoid privilege escalation)
 
 Then we write in /home/pi/dragino : test_cayenne.py like
 
-```py
+``` sourceCode
 #!/usr/bin/env python3
 """
 Test harness for dragino module - sends hello world out over LoRaWAN 5 times
@@ -230,8 +228,7 @@ sleep(1)
 We take now /home/pi/dragino/dragino.ini.default to rewrite it to
 /home/pi/dragino/dragino.ini like
 
-```
-gps_baud_rate = 9600 gps_serial_port = /dev/ttyS0
+\`\`\` {.sourceCode .} gps_baud_rate = 9600 gps_serial_port = /dev/ttyS0
 gps_serial_timeout = 1 gps_wait_period = 10
 
 #LoRaWAN configuration spreading_factor = 7 max_power = 0x0F
@@ -246,22 +243,19 @@ auth_mode = otaa deveui = 0xFF, 0xFE, 0xFD, 0xFC, 0xFC, 0xFD, 0xFE, 0xFF
 appeui = 0x70, 0xB3, 0xD5, 0x00, 0x00, 0xD5, 0xB3, 0x70 appkey = 0x3D,
 0x83, 0xC3, 0x16, 0x2C, 0xAD, 0x44, 0xB7, 0xB0, 0x50, 0x6C, 0x3C, 0xA1,
 0x54, 0x36, 0xB7
-```
+
 
 By choosing DevEUI, AppEUI (unique on TTN), and AppKey with enough
 entropy that it can\'t be cracked (beware of MSB, LSB writing between
 dragin\_cayenne.py and TTN) Enfin pour executer le script python toutes
 les minutes :
 
-```
+``` {.sourceCode .bash}
 sudo crontab -e
-```
 
 We select our favorite editor to add
 
-```
-* * * * * /home/pi/gpscron`
-```
+`{.sourceCode .} * * * * * /home/pi/gpscron`
 
 at the endfile. For the raspberry we are now ready to go. Lets see from
 the network side
@@ -277,9 +271,7 @@ Then with previous parameters set on the RPi (AppEUI, DevEUI, AppKey) in
 
 So in this study example :
 
-```
-deveui = 0xFF, 0xFE, 0xFD, 0xFC, 0xFC, 0xFD, 0xFE, 0xFF appeui = 0x70, 0xB3, 0xD5, 0x00, 0x00, 0xD5, 0xB3, 0x70 appkey = 0x3D, 0x83, 0xC3, 0x16, 0x2C, 0xAD, 0x44, 0xB7, 0xB0, 0x50, 0x6C, 0x3C, 0xA1, 0x54, 0x36, 0xB7`
-```
+`{.sourceCode .} deveui = 0xFF, 0xFE, 0xFD, 0xFC, 0xFC, 0xFD, 0xFE, 0xFF appeui = 0x70, 0xB3, 0xD5, 0x00, 0x00, 0xD5, 0xB3, 0x70 appkey = 0x3D, 0x83, 0xC3, 0x16, 0x2C, 0xAD, 0x44, 0xB7, 0xB0, 0x50, 0x6C, 0x3C, 0xA1, 0x54, 0x36, 0xB7`
 
 [![register_enddevice](assets/register_enddevice.png)](assets/register_enddevice.png)
 
@@ -287,7 +279,7 @@ Power On the Pi (Trick to make GPS work (on RPi) !!!!!)
 
 Sur le shell du pi :
 
-```
+``` sourceCode
 sudo ntpdate fr.pool.ntp.org
 ```
 
@@ -325,3 +317,25 @@ Sélection Dragino RPi Hat et mettre le DevEUI
 
 Live Data from GPS tracker !
 
+newpage
+
+# **ADSB**
+
+Automatic Dependent Surveillance Broadcast (ADS-B)
+
+Definition
+
+A means by which aircraft, aerodrome vehicles and other objects can
+automatically transmit and/or receive data such as identification,
+position and additional data, as appropriate, in a broadcast mode via a
+data link.
+
+<https://github.com/antirez/dump1090>
+
+To run the program in interactive mode, with networking support, and
+connect with your browser to <http://localhost:8080> to see live
+traffic:
+
+./dump1090 --interactive --net
+
+[![avion](assets/avion.png)](assets/avion.png)
