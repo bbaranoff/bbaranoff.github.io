@@ -354,11 +354,11 @@ Voici quelques-unes des licences open-source les plus courantes :
 
 Comment ajouter une licence sur GitHub :  
 
-1. Lorsque vous créez un nouveau dépôt sur GitHub, il vous est proposé d’ajouter une licence.  
+	1. Lorsque vous créez un nouveau dépôt sur GitHub, il vous est proposé d’ajouter une licence.  
 
-2. Si vous avez déjà un dépôt sans licence, vous pouvez ajouter un fichier nommé `LICENSE` dans le répertoire racine du dépôt.  
+	2. Si vous avez déjà un dépôt sans licence, vous pouvez ajouter un fichier nommé `LICENSE` dans le répertoire racine du dépôt.  
 
-3. Utilisez l’outil **Choose a License** de GitHub ([chooselicense.com](https://choosealicense.com)) pour vous aider à sélectionner la licence qui correspond le mieux à vos besoins.  
+	3. Utilisez l’outil **Choose a License** de GitHub ([chooselicense.com](https://choosealicense.com)) pour vous aider à sélectionner la licence qui correspond le mieux à vos besoins.  
 
 Il est important de comprendre que la licence que vous choisissez affectera la manière dont les autres peuvent interagir avec votre projet, et cela peut avoir des implications juridiques, donc choisissez avec soin.  
 
@@ -419,13 +419,13 @@ Listes ordonnées
 
 Utilisez des chiffres suivis d’un point.
 
-1. Élément 1  
+	1. Élément 1  
 
-2. Élément 2  
+	2. Élément 2  
 
-   1. Sous-élément 2.1  
+	   1. Sous-élément 2.1  
 
-   2. Sous-élément 2.2  
+	   2. Sous-élément 2.2  
   
 4. **Liens et images**  
 
