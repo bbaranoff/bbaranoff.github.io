@@ -273,7 +273,40 @@ Voici comment procéder :
 
 3. **Ajouter une page de politique de confidentialité** : Comme dans la première option, créez une page de politique de confidentialité pour donner aux utilisateurs des informations détaillées sur l’utilisation des cookies.
 
-4. **Styliser la bannière** : Ajoutez vos propres styles CSS pour personnaliser la bannière en fonction du design de votre site.
+
+Pour connecter une balise *gtag* (Google Analytics) à votre site Jekyll, suivez ces étapes :
+
+### 1. Créer un compte Google Analytics (si ce n’est pas déjà fait)
+
+1. Allez sur [Google Analytics](https://analytics.google.com/) et connectez-vous avec votre compte Google.
+2. Créez une nouvelle propriété en suivant les instructions et notez l'identifiant de suivi, qui est au format `G-XXXXXXXXXX`.
+
+### 2. Ajouter la balise *gtag* dans le site Jekyll
+
+1. **Ouvrez le fichier `_layouts/default.html`** (ou le fichier principal qui définit l'en-tête de votre site, souvent `default.html`).
+2. **Ajoutez le script de Google Analytics** dans la balise `<head>` pour qu'il se charge sur toutes les pages de votre site. Utilisez le code suivant, en remplaçant `G-XXXXXXXXXX` par votre identifiant de suivi :
+
+    ```html
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    ```
+
+3. **Sauvegardez et testez le suivi** :
+   - Après avoir ajouté ce code, poussez vos modifications sur GitHub pour les déployer sur GitHub Pages.
+   - Pour vérifier que la balise fonctionne, rendez-vous dans votre tableau de bord Google Analytics, sous "Temps réel", puis ouvrez votre site pour voir si les données de visite sont enregistrées.
+
+### Note
+
+Vous pouvez également créer un fichier `_includes/analytics.html` pour contenir le code *gtag* et inclure ce fichier dans le `<head>` avec `{% include analytics.html %}`, ce qui permet de centraliser les scripts de suivi pour une gestion plus simple.
+
+5. **Styliser la bannière** : Ajoutez vos propres styles CSS pour personnaliser la bannière en fonction du design de votre site.
 
 Ces options vous permettent de mettre en place une bannière de consentement aux cookies simple et efficace pour votre site Jekyll.
 
