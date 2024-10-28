@@ -8,42 +8,70 @@ Les méthodes agiles sont des approches de gestion de projet et de développemen
    - Rôles spécifiques : **Product Owner** (priorise les tâches), **Scrum Master** (facilite le processus) et **Équipe de développement**.
    - Réunions clés : **Daily Stand-up** (réunion quotidienne), **Sprint Planning**, **Sprint Review**, et **Sprint Retrospective**.
 
+![Scrum](https://www.scrum.org/uploads/2021/09/Framework_Scrum.png)
+[Source: Scrum.org](https://www.scrum.org/resources/what-is-scrum)
+
+
 2. **Kanban**
    - Inspiré des méthodes de production Toyota, il est visuel et permet une **gestion des tâches en continu**.
    - Utilisation d'un **tableau Kanban** avec des colonnes représentant les étapes (ex. : À faire, En cours, Terminé).
    - Pas de sprints fixes : les équipes travaillent de manière fluide et font progresser les tâches selon leur disponibilité.
    - Idéal pour des projets sans planning rigide et avec un flux de travail continu.
+![Kanban](https://miro.medium.com/v2/resize:fit:1400/1*_9RKN8ZyA2kHdeW4U0ZfWg.png)
+[Source: Medium](https://medium.com/@andrewschott/kanban-agile-methodology-5ca8a38c7c94)
+
 
 3. **Extreme Programming (XP)**
    - Conçu pour les **développeurs logiciels**, XP met l’accent sur des pratiques techniques rigoureuses comme le **développement piloté par les tests (TDD)**, la **programmation en binôme** et les **révisions fréquentes du code**.
    - Livraisons fréquentes pour réduire les risques et obtenir des retours rapides des clients.
    - XP favorise une forte collaboration avec le client et des ajustements fréquents en fonction de ses besoins.
+![Extreme Programming](https://cdn-images-1.medium.com/max/1200/1*1t1vZ__qAYuUe2rsO7cRMQ.jpeg)
+[Source: Medium](https://medium.com/@jasonfarrell/the-three-rules-of-extreme-programming-9ab0e6f6b80a)
+
 
 4. **Lean**
    - Méthode dérivée du Lean Manufacturing qui vise à **minimiser les gaspillages** et à optimiser la valeur pour le client.
    - Mise en œuvre d'un flux de travail qui réduit les étapes inutiles et se concentre sur les activités à forte valeur ajoutée.
    - **Optimisation continue** et amélioration constante des processus.
    - Souvent associée à Kanban dans la gestion de projet.
+![Lean](https://miro.medium.com/v2/resize:fit:1000/format:webp/1*cW_L7IuP8WwVpBuLU93EBg.png)
+[Source: Medium](https://medium.com/@tom.peters/the-lean-startup-30176a5f4095)
+
 
 5. **Crystal**
    - Ensemble de méthodologies ajustables (Crystal Clear, Crystal Yellow, Crystal Orange, etc.), chacune adaptée en fonction de la taille de l'équipe et de la criticité du projet.
    - Favorise la **communication et la simplicité**, en adaptant la rigueur des processus selon les besoins du projet.
    - Encouragement de la collaboration, tout en maintenant une certaine flexibilité dans l'application des processus agiles.
 
+![Feature Driven Development](https://www.agilealliance.org/wp-content/uploads/2019/06/Feature-Driven-Development-FDD.png)
+[Source: Agile Alliance](https://www.agilealliance.org/agile101/feature-driven-development-fdd/)
+
 6. **Feature-Driven Development (FDD)**
    - Méthode centrée sur le développement de **fonctionnalités spécifiques**.
    - Les projets sont divisés en **petites fonctionnalités** développées rapidement pour obtenir des livraisons fréquentes.
    - Idéal pour des projets nécessitant un cadre structuré et des développements incrémentaux.
+![DSDM](https://www.dsdm.org/wp-content/uploads/2021/03/dsdm-ice-10-steps.png)
+[Source: DSDM.org](https://www.dsdm.org/)
+
 
 7. **Disciplined Agile (DA)**
    - Un **cadre méthodologique hybride** qui combine plusieurs approches agiles (Scrum, Kanban, Lean, etc.).
    - Offre un ensemble d’outils pour aider les équipes à choisir les meilleures pratiques en fonction du contexte spécifique du projet.
    - DA se concentre sur l’agilité à l’échelle et sur l’alignement avec les stratégies de l’entreprise.
 
+![Disciplined Agile](https://www.agilealliance.org/wp-content/uploads/2021/06/Disciplined-Agile-Framework-1.jpg)
+[Source: Agile Alliance](https://www.agilealliance.org/agile101/disciplined-agile/)
+
 8. **SAFe (Scaled Agile Framework)**
    - Conçu pour **appliquer l'agilité à grande échelle**, dans les grandes organisations avec plusieurs équipes.
    - Structure de gestion incluant plusieurs niveaux (équipe, programme, grande solution et portfolio) pour aligner l’ensemble des équipes sur des objectifs stratégiques communs.
    - Facilite la coordination entre différentes équipes Scrum ou Kanban, pour des projets complexes et à grande échelle.
+Voici un lien vers une image illustrant la méthode **SAFe (Scaled Agile Framework)**, ainsi que des informations sur la source :
+
+![SAFe Framework](https://www.scaledagileframework.com/wp-content/uploads/2021/03/SAFe-5.0-Overview-Page-Image.png)
+[Source: Scaled Agile Framework](https://www.scaledagileframework.com/)
+
+## Principes
 
 **Principes communs aux méthodes agiles**
    - **Interaction et collaboration** entre les membres de l’équipe et avec les parties prenantes.
