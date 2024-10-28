@@ -115,7 +115,6 @@ in accordance with the definitions in appendix 1:
 For others Operator (GSM)
 
  Operator GSM900  | DCS1800
----------------------------
 Orange   1→62 | 527→646
 SFR  63-74 & 75-124 | 512→525 & 647→751
 Bouygues 975-1023 | 752-885
