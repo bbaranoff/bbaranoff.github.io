@@ -8,7 +8,7 @@ function loadScriptAsync(scriptSrc, callback) {
     document.head.appendChild(script);
 }
 
-loadScriptAsync('https://www.googletagmanager.com/gtag/js?id=G-464931235', function () {
+loadScriptAsync('https://www.googletagmanager.com/gtag/js?id=G-VYSL22WMS1', function () {
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
