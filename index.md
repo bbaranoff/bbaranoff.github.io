@@ -10,6 +10,7 @@ The quieter you become the most you are able to hear
 
 ## Profile information
     
+|
 name | Bastien Baranoff
 tagline | Cybersecurity in Software Defined Radio
 email | bastienbaranoff@gmail.com

