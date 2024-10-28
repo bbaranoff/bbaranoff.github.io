@@ -1,4 +1,4 @@
-## Hacking 2G
+# 2G IMSI Catcher
 
 (Fooling MS : Mobile Station, the 2G phone) The MS doesn’t ask authentication from BTS (Base Transceiver Station, the relay antenna).
 So what to do to intercept ? Be a BTS… and that’s all just spoof the public values of the BTS (mcc,mnc exemple 208,15 for FreeMobile 208,01
