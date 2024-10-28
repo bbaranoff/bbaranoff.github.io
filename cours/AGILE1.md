@@ -22,7 +22,8 @@ Les méthodes agiles sont des approches de gestion de projet et de développemen
 3. **Extreme Programming (XP)**
    - Conçu pour les **développeurs logiciels**, XP met l’accent sur des pratiques techniques rigoureuses comme le **développement piloté par les tests (TDD)**, la **programmation en binôme** et les **révisions fréquentes du code**.
    - Livraisons fréquentes pour réduire les risques et obtenir des retours rapides des clients.
-   - XP favorise une forte collaboration avec le client et des ajustements fréquents en fonction de ses besoins.
+   - XP favorise une forte collaboration avec le client et des ajustements fréquents en fonction de ses besoins.  
+
 [![Extreme Programming](https://www.synergeek.fr/wp-content/uploads/2011/02/Extreme-Programming-381x330.gif)](https://www.planzone.fr/blog/quest-ce-que-la-methodologie-extreme-programming)
 
 
@@ -30,7 +31,8 @@ Les méthodes agiles sont des approches de gestion de projet et de développemen
    - Méthode dérivée du Lean Manufacturing qui vise à **minimiser les gaspillages** et à optimiser la valeur pour le client.
    - Mise en œuvre d'un flux de travail qui réduit les étapes inutiles et se concentre sur les activités à forte valeur ajoutée.
    - **Optimisation continue** et amélioration constante des processus.
-   - Souvent associée à Kanban dans la gestion de projet.
+   - Souvent associée à Kanban dans la gestion de projet.  
+
 [![Lean](https://www.my-clic.fr/wp-content/uploads/2023/06/lean-management.png)](https://www.my-clic.fr/guide-complet-sur-le-lean-management/)
 
 
