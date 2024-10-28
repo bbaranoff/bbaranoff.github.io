@@ -2,15 +2,17 @@
 
 ![GitHub](https://www.ifourtechnolab.com/pics/All_about_Version_ControlGit.webp)  
 
-### whoami
+## whoami
 
 ![](images/me.jpg)
 
 ![Git Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/512px-Git-logo.svg.png)
 
+## Fournisseur GIT :
+
 Voici une brève description des principaux fournisseurs Git ainsi que leurs caractéristiques distinctives, ces fournisseurs se distinguent principalement par leurs niveaux d'intégration dans les workflows DevOps, leurs outils de CI/CD, et leurs écosystèmes (par exemple, GitHub avec sa communauté open source, GitLab avec ses pipelines DevOps intégrés, ou Bitbucket avec l'intégration de Jira).
 
-### 1. **GitHub**
+1. **GitHub**
 
 ![](https://pngimg.com/uploads/github/github_PNG23.png)
 
@@ -30,7 +32,7 @@ Voici une brève description des principaux fournisseurs Git ainsi que leurs car
 
      - Hébergement gratuit pour les projets publics et offres premium pour les projets privés.
 
-### 2. **GitLab**
+2. **GitLab**
 
 ![](https://res.cloudinary.com/forest2/image/fetch/w_1300,f_auto/https://images.ctfassets.net/18a90cmjmaj9/5cg25LlXj7xzL6wLD7DbmW/e17b24e91db969662283e5a80ca5208c/cover.png)
 
@@ -49,7 +51,7 @@ Voici une brève description des principaux fournisseurs Git ainsi que leurs car
 
      - Interface pour la gestion des **merge requests** et des revues de code.
 
-### 3. **Bitbucket**
+3. **Bitbucket**
 
 ![](https://upload.wikimedia.org/wikipedia/commons/3/32/Atlassian_Bitbucket_Logo.png)
   
@@ -69,7 +71,7 @@ Voici une brève description des principaux fournisseurs Git ainsi que leurs car
 
      - Options de déploiement auto-hébergé via **Bitbucket Server** (anciennement Stash).
 
-### 4. **SourceForge**
+4. **SourceForge**
 
 ![](https://upload.wikimedia.org/wikipedia/commons/8/8f/SourceForge_logo_transparent.svg)  
   
@@ -85,7 +87,7 @@ Voici une brève description des principaux fournisseurs Git ainsi que leurs car
 
      - Moins d’intégrations modernes que ses concurrents (CI/CD, etc.).
 
-### 5. **Azure Repos (Azure DevOps)**
+5. **Azure Repos (Azure DevOps)**
 
 ![](images/azure.webp)  
 
@@ -106,7 +108,9 @@ Voici une brève description des principaux fournisseurs Git ainsi que leurs car
 
 Il existe plusieurs façons d’installer Git sur Windows. Voici les méthodes les plus courantes, ainsi que des instructions détaillées pour chacune d'elles :
 
-### 1. **Installation de Git via Git for Windows**
+## Installation de Git
+
+1. **Installation de Git via Git for Windows**
 
    **Étapes d'installation :**
 
@@ -129,9 +133,9 @@ Il existe plusieurs façons d’installer Git sur Windows. Voici les méthodes l
      - **Emulation Unix Git bash** : Vous pouvez choisir l'intégration avec Git Bash, CMD ou les deux.  
 
 
-### 2. **Installation via Chocolatey (gestionnaire de paquets)**
+2. **Installation via Chocolatey (gestionnaire de paquets)**
 
-### Étapes d'installation de Chocolatey :  
+Étapes d'installation de Chocolatey :  
 
   - **Ouvrez PowerShell en tant qu'administrateur :**  
 
@@ -169,7 +173,7 @@ Il existe plusieurs façons d’installer Git sur Windows. Voici les méthodes l
      choco install git
      ```
 
-### 3. **Installation via Scoop (gestionnaire de paquets)**  
+3. **Installation via Scoop (gestionnaire de paquets)**  
 
    **Scoop** est un autre gestionnaire de paquets pour Windows qui permet d’installer des applications via des commandes simples.  
 
@@ -190,7 +194,7 @@ Il existe plusieurs façons d’installer Git sur Windows. Voici les méthodes l
 
    - Scoop téléchargera et installera automatiquement la version la plus récente de Git.  
 
-### 4. **Installation via Winget (gestionnaire de paquets natif de Windows)**  
+4. **Installation via Winget (gestionnaire de paquets natif de Windows)**  
 
    Windows dispose de son propre gestionnaire de paquets appelé **Winget**. Cela vous permet de rechercher et d’installer des logiciels depuis la ligne de commande.  
 
@@ -206,7 +210,7 @@ Il existe plusieurs façons d’installer Git sur Windows. Voici les méthodes l
      
    - Suivez les instructions à l'écran pour compléter l'installation.  
 
-### 5. **Installation via Visual Studio Installer**  
+5. **Installation via Visual Studio Installer**  
 
    Si vous avez déjà **Visual Studio** installé sur votre machine, vous pouvez installer Git en l’ajoutant via le programme d'installation de Visual Studio.  
    
@@ -222,7 +226,7 @@ Il existe plusieurs façons d’installer Git sur Windows. Voici les méthodes l
    - Cherchez et cochez l’option **Git for Windows**.  
 
 
-### Vérification de l'installation de Git  
+## Vérification de l'installation de Git  
 
 Une fois l'installation terminée avec l'une des méthodes ci-dessus, vous pouvez vérifier que Git est bien installé en ouvrant un terminal (Git Bash, CMD, ou PowerShell) et en exécutant la commande suivante :  
 
@@ -236,7 +240,7 @@ Ces méthodes couvrent la plupart des besoins pour installer et utiliser Git sur
 
 Un dépôt Git (ou **repository** en anglais) est une structure utilisée par Git pour stocker l'historique des versions d'un projet, que ce soit du code source, des fichiers texte, ou tout autre type de fichier. Il s'agit d'une collection de fichiers, de leur historique de modifications, ainsi que de métadonnées utilisées par Git pour suivre ces modifications.  
 
-### Décomposition d'un dépôt Git :  
+## Décomposition d'un dépôt Git :  
 
 1. **Espace de travail (Working Directory)** : Il s'agit de la copie locale des fichiers du projet que vous modifiez directement sur votre machine.  
 
@@ -248,7 +252,7 @@ Un dépôt Git (ou **repository** en anglais) est une structure utilisée par Gi
 
 5. **Remotes** : Ce sont des dépôts distants (comme GitHub, GitLab ou Bitbucket), où vous pouvez synchroniser vos modifications avec d'autres utilisateurs. Un dépôt distant permet de collaborer avec d'autres développeurs en envoyant et en récupérant des modifications à partir d'un serveur.  
 
-### Fonctionnalités clés d'un dépôt Git :  
+## Fonctionnalités clés d'un dépôt Git :  
 
 - **Suivi des versions** : Git permet de suivre chaque changement apporté aux fichiers du projet, ce qui permet de revenir à des versions antérieures si nécessaire.  
 
@@ -264,15 +268,15 @@ En résumé, un dépôt Git est l'endroit où vous stockez et gérez l'historiqu
 
 > La création d'un compte GitHub est simple et rapide. Voici les étapes pour créer un compte GitHub :
 
-### 1. Accédez au site GitHub
+1. Accédez au site GitHub
 
 - Ouvrez votre navigateur web et allez sur le site officiel de GitHub : [https://github.com](https://github.com).
 
-### 2. Créez un compte
+2. Créez un compte
 
 - Cliquez sur le bouton **Sign up** (S'inscrire) dans le coin supérieur droit de la page d'accueil.
 
-### 3. Renseignez vos informations
+3. Renseignez vos informations
 
 - Vous serez redirigé vers une page de création de compte. Remplissez les champs demandés :
 
@@ -282,7 +286,7 @@ En résumé, un dépôt Git est l'endroit où vous stockez et gérez l'historiqu
 
   - **Password** : Choisissez un mot de passe sécurisé.
 
-### 4. Paramètres supplémentaires (facultatif)
+4. Paramètres supplémentaires (facultatif)
 
 - Vous pouvez être invité à répondre à des questions pour personnaliser votre expérience GitHub. Par exemple :
 
@@ -290,23 +294,23 @@ En résumé, un dépôt Git est l'endroit où vous stockez et gérez l'historiqu
 
   - Choisissez votre niveau d'expérience avec Git.
 
-### 5. Vérification
+5. Vérification
 
 - Il se peut que vous deviez résoudre un captcha pour vérifier que vous n'êtes pas un robot.
 
 - GitHub peut également vous envoyer un e-mail de vérification. Ouvrez votre boîte mail et cliquez sur le lien de confirmation.
 
-### 6. Choisir un plan
+6. Choisir un plan
 
 - GitHub propose un plan gratuit et plusieurs plans payants. Le plan gratuit est suffisant pour la majorité des projets, et vous permet de créer un nombre illimité de dépôts publics et privés.
 
   - Choisissez **Free** pour commencer avec le plan gratuit.
 
-### 7. Finaliser l'inscription
+7. Finaliser l'inscription
 
 - Une fois les étapes terminées, votre compte GitHub est créé et vous pouvez commencer à utiliser GitHub pour héberger des dépôts, collaborer sur des projets, et plus encore.
 
-### 8. Configuration de Git (facultatif)
+8. Configuration de Git (facultatif)
 
 Si vous voulez commencer à utiliser Git en local avec votre compte GitHub, il est recommandé de configurer Git sur votre machine :
 
@@ -319,9 +323,9 @@ Si vous voulez commencer à utiliser Git en local avec votre compte GitHub, il e
   git config --global user.email "VotreEmail"
   ```
 
-### Voilà ! 🎉 Vous avez maintenant un compte GitHub, prêt à être utilisé pour vos projets.
+Voilà ! 🎉 Vous avez maintenant un compte GitHub, prêt à être utilisé pour vos projets.
 
-### Choisir une licence sur GitHub :
+## Choisir une licence sur GitHub :
 
 ```tip
 GitHub propose plusieurs options pour la gestion des licences de vos projets, qui définissent comment les autres peuvent utiliser, modifier et distribuer votre code. Pour vous aider à choisir la licence adaptée à votre projet, GitHub propose un outil appelé **Choose a License** (Choisissez une licence), qui recommande des licences populaires selon le niveau d’ouverture que vous souhaitez.
@@ -348,7 +352,7 @@ Voici quelques-unes des licences open-source les plus courantes :
 
 4. **Creative Commons (CC)** : Utilisée principalement pour des contenus autres que du code, comme des documents, des images ou des tutoriels.  
 
-### Comment ajouter une licence sur GitHub :  
+Comment ajouter une licence sur GitHub :  
 
 1. Lorsque vous créez un nouveau dépôt sur GitHub, il vous est proposé d’ajouter une licence.  
 
@@ -368,7 +372,8 @@ https://www.arthurperret.fr/tutomd/
 
 Le **Markdown** est un langage de balisage léger qui permet de formater du texte de manière simple. Il est souvent utilisé pour la documentation, les README sur GitHub, ou les blogs. Voici une explication de la syntaxe Markdown la plus courante.  
 
-### 1. **Titres (Headings)**  
+1. **Titres (Headings)**  
+
 Vous pouvez créer des titres en utilisant des `#`. Plus vous ajoutez de `#`, plus le niveau du titre est bas.
 
 ```
@@ -396,9 +401,9 @@ Vous pouvez créer des titres en utilisant des `#`. Plus vous ajoutez de `#`, pl
 *Texte en italique*  
 ***Texte en gras et italique***  
 
-### 3. **Listes**  
+3. **Listes**  
 
-#### Listes non ordonnées  
+Listes non ordonnées  
 
 Utilisez des tirets `-`, des astérisques `*`, ou des plus `+` pour créer une liste à puces.  
 
@@ -410,7 +415,7 @@ Utilisez des tirets `-`, des astérisques `*`, ou des plus `+` pour créer une l
 
   - Élément 2.2  
 
-#### Listes ordonnées
+Listes ordonnées
 
 Utilisez des chiffres suivis d’un point.
 
@@ -422,15 +427,15 @@ Utilisez des chiffres suivis d’un point.
 
    2. Sous-élément 2.2  
   
-### 4. **Liens et images**  
+4. **Liens et images**  
 
-#### Liens  
+Liens  
 
 Le texte du lien est placé entre crochets `[ ]`, suivi de l'URL entre parenthèses `( )`.  
 
 [GitHub](https://github.com)  
 
-#### Images  
+Images  
 
 Pour les images, ajoutez un point d’exclamation `!` avant le lien.  
 
@@ -438,7 +443,7 @@ Pour les images, ajoutez un point d’exclamation `!` avant le lien.
 
 
 
-### 5. **Blocs de code**  
+5. **Blocs de code**  
 
 Pour insérer un bloc de code, utilisez trois accents graves au début et à la fin, et précisez éventuellement le langage pour la coloration syntaxique.  
 
@@ -448,13 +453,13 @@ def bonjour():
     print("Bonjour le monde !")
 ```
 
-### 6. **Citation**  
+6. **Citation**  
 
 Utilisez le signe `>` pour créer une citation.  
 
 > Ceci est une citation.  
 
-### 7. **Tableaux**  
+7. **Tableaux**  
 
 Les tableaux sont créés en utilisant des barres verticales `|` et des tirets `-` pour délimiter les colonnes.  
 
@@ -463,7 +468,7 @@ Les tableaux sont créés en utilisant des barres verticales `|` et des tirets `
 |--|--|
 | Contenu 1 | Contenu 2 |
 
-### 8. **Listes de tâches (Task lists)**  
+8. **Listes de tâches (Task lists)**  
 
 Ajoutez des cases à cocher avec des crochets `[ ]` pour les tâches non complétées, et `[x]` pour celles complétées.  
 
@@ -471,7 +476,7 @@ Ajoutez des cases à cocher avec des crochets `[ ]` pour les tâches non complé
 
 - [ ] Tâche 2 non terminée  
 
-### 9. **Liens vers sections**  
+9. **Liens vers sections**  
 
 Si vous souhaitez lier une section d’un document à une autre, vous pouvez le faire en ajoutant un lien vers l’ancre. Par exemple, pour lier à un titre de section :  
 
@@ -487,7 +492,7 @@ Le Markdown est simple, mais très puissant pour formater du texte. Il est large
 
    - Ou bien, utilisez le lien direct : [Créer un nouveau dépôt](https://github.com/new).  
 
-### 1. **Configurer le dépôt**  
+1. **Configurer le dépôt**  
 
    - **Nom du dépôt** : Entrez un nom pour votre dépôt. Ce nom doit être unique dans votre compte.  
 
@@ -495,16 +500,16 @@ Le Markdown est simple, mais très puissant pour formater du texte. Il est large
 
    - **Public/Private** : Choisissez si votre dépôt sera public (visible par tout le monde) ou privé (visible uniquement par vous et ceux à qui vous donnerez accès).  
 
-### 2. **Initialisation du dépôt**
+2. **Initialisation du dépôt**
    - Vous pouvez cocher l'option **"Initialize this repository with a README"** si vous souhaitez ajouter un fichier README dès le départ.
    - Vous pouvez également ajouter un fichier `.gitignore` ou une licence si nécessaire.
 
-### 3. **Finaliser la création**
+3. **Finaliser la création**
    - Une fois les informations saisies, cliquez sur **"Create repository"** pour finaliser.
 
 Votre dépôt GitHub est maintenant créé, et vous pouvez commencer à y ajouter des fichiers et des projets ! Si vous avez besoin d'aide pour pousser des fichiers vers votre dépôt, n'hésitez pas à demander.
 
-
+## Clef API
 
 Pour récupérer votre clé API GitHub (ou plutôt votre token d'accès personnel), suivez ces étapes :
 
@@ -515,8 +520,6 @@ Pour récupérer votre clé API GitHub (ou plutôt votre token d'accès personne
 3. **Allez dans les paramètres des développeurs** : Dans le menu de gauche, cliquez sur **"Developer settings"** (Paramètres du développeur).
 
 4. **Générez un nouveau token** : Sélectionnez **"Personal access tokens"** (Jetons d'accès personnel), puis cliquez sur **"Generate new token"** (Générer un nouveau jeton).
-
-
 
 5. **Configurez votre token** :
    - Donnez un **nom** à votre token pour le reconnaître plus tard.
@@ -531,16 +534,17 @@ N'oubliez pas de garder ce token secret et de ne pas le partager, car il donne a
 
 
 
-
-
 ## Pousser un repertoire (push a repo)
+
 Voici les étapes pour pousser un repository (repo) sur GitHub. Cela suppose que vous avez déjà installé Git sur votre machine et que vous avez un compte GitHub.
 
-### 1. Cloner en local
+1. Cloner en local
+
 ```bash
 git clone https://github.com/monuser/monrepo
 ```
-### 2. Ajouter des fichiers et valider des changements
+
+2. Ajouter des fichiers et valider des changements
 Faites les modifications souhaitées et faites un commit pour enregistrer les changements.
 
 ```bash
@@ -554,7 +558,7 @@ git commit -m "Premier commit"
 
 
 
-### 3. Pousser le repository local vers GitHub
+3. Pousser le repository local vers GitHub
 Vous devez maintenant connecter votre repo local avec le repository GitHub.
 
 ```bash
@@ -565,7 +569,7 @@ git push https://monuser_apikey@github.com/monuser/monrepo
 
 Note : Selon la configuration de votre repo, la branche par défaut peut être appelée `main` au lieu de `master`. Vous pouvez vérifier cela dans GitHub et ajuster la commande en conséquence.
 
-### 4. Validation
+4. Validation
 Après avoir poussé, vous pourrez voir votre code sur GitHub en visitant votre repository en ligne.
 
 
@@ -603,36 +607,31 @@ Après avoir poussé, vous pourrez voir votre code sur GitHub en visitant votre 
 
 > Ces opérations sont essentielles pour gérer le code source et collaborer efficacement avec d'autres développeurs.
 
-
-
-
-
-
-
-
-
+## Github Pages
 
 **GitHub Pages** est un service de GitHub qui permet d’héberger des sites web directement à partir d'un dépôt GitHub. Il est souvent utilisé pour créer des sites personnels, des blogs ou des pages de documentation pour des projets open-source. Ces sites sont servis via l'URL `username.github.io` ou `username.github.io/repository`, et peuvent être configurés pour utiliser des noms de domaine personnalisés.
 
 Voici un aperçu de son fonctionnement et comment l'utiliser pour héberger votre site web.
 
 
-## 1. **Fonctionnement de GitHub Pages**
+1. **Fonctionnement de GitHub Pages**
 GitHub Pages fonctionne en récupérant des fichiers statiques (HTML, CSS, JavaScript) directement à partir d’un dépôt GitHub public ou privé, puis en les publiant sous forme d’un site web. Les utilisateurs peuvent héberger des pages pour eux-mêmes, des organisations ou des projets spécifiques.
 
 - **Sites utilisateur ou organisation** : Hébergés sous `username.github.io` (ou `organization.github.io`). Ce type de site utilise un dépôt spécifique nommé `username.github.io` ou `organization.github.io`.
 - **Sites de projet** : Hébergés sous `username.github.io/nom-du-repository`. Chaque dépôt GitHub peut avoir une page GitHub dédiée à un projet spécifique.
 
 
-## 2. **Créer un site GitHub Pages**
-### Étape 1 : Créer un dépôt
+2. **Créer un site GitHub Pages**
+
+Étape 1 : Créer un dépôt
+
 Pour créer un site avec GitHub Pages, commencez par créer un dépôt sur GitHub. Voici les deux cas possibles :
 
 - Pour un **site utilisateur ou organisation**, le dépôt doit obligatoirement être nommé `username.github.io`.
 - Pour un **site de projet**, vous pouvez nommer le dépôt comme vous le souhaitez.
 
 
-### Étape 2 : Ajouter des fichiers de site web
+Etape 2 : Ajouter des fichiers de site web
 Une fois le dépôt créé, ajoutez les fichiers de votre site web (HTML, CSS, JavaScript).
 
 Exemple de structure de fichiers :
@@ -642,9 +641,10 @@ style.css
 script.js
 ```
 
+Étape 3 : Configurer GitHub Pages
 
-### Étape 3 : Configurer GitHub Pages
 1. **Accédez aux paramètres du dépôt** :
+
    - Dans le dépôt GitHub, allez dans l'onglet `Settings`.
    
 2. **Activer GitHub Pages** :
@@ -658,19 +658,18 @@ script.js
    - Après avoir configuré la source, GitHub génère et héberge automatiquement le site.
 
 
-### Étape 4 : Accéder à votre site
+Étape 4 : Accéder à votre site
+
 Une fois que GitHub Pages a terminé le déploiement de votre site (ce qui prend généralement quelques minutes), vous pouvez y accéder via l'URL `https://username.github.io` pour un site utilisateur ou `https://username.github.io/nom-du-repository` pour un site de projet.
 
 
 
 
-## 1. **GitHub Student Developer Pack**
+## **GitHub Student Developer Pack**
 Le **GitHub Student Developer Pack** est une collection de logiciels et de services gratuits ou à prix réduit fournis par GitHub et ses partenaires, exclusivement pour les étudiants. Il inclut des offres pour des outils de développement, d'hébergement, d'analyse de code, d'apprentissage, et même des services de marketing ou de design.
 
+Principaux avantages du Pack :
 
-
-
-### Principaux avantages du Pack :
 - **Accès gratuit à GitHub Pro** : 
   - Avec GitHub Pro, les étudiants bénéficient de fonctionnalités avancées sur GitHub, telles que l’accès à des **dépôts privés illimités**, des **insights** pour leurs projets, et un **support avancé**.
   
@@ -698,8 +697,7 @@ Le **GitHub Student Developer Pack** est une collection de logiciels et de servi
 - **Autres outils** : Par exemple, **Namecheap** offre des domaines gratuits pour l'hébergement de sites web.
 
 
-
-### Exemples d'outils et services inclus :
+Exemples d'outils et services inclus :
 - **DigitalOcean** : 100$ de crédits pour l'hébergement cloud.
 - **Heroku** : Hébergement cloud gratuit avec fonctionnalités avancées.
 - **JetBrains** : Accès gratuit aux outils JetBrains, tels que PyCharm, IntelliJ, WebStorm, etc.
@@ -713,14 +711,14 @@ Le **GitHub Student Developer Pack** est une collection de logiciels et de servi
 
 
 
-## 2. **Accès à GitHub Pro**
+2. **Accès à GitHub Pro**
 Le programme permet aux étudiants de bénéficier d’un abonnement gratuit à **GitHub Pro**. Les fonctionnalités incluent :
 - **Dépôts privés illimités** : En tant qu'étudiant, vous pouvez créer autant de dépôts privés que vous le souhaitez pour travailler sur vos projets personnels ou universitaires.
 - **Outils de gestion de projet avancés** : Suivez vos tâches, gérez des équipes, et obtenez des statistiques sur vos contributions grâce aux outils GitHub Pro.
 - **Accès à GitHub Actions et Packages** : Utilisation de GitHub Actions pour automatiser vos workflows de CI/CD, et GitHub Packages pour héberger des packages privés.
 
 
-## 3. **Ressources d'apprentissage et de développement**
+3. **Ressources d'apprentissage et de développement**
 Le GitHub Student Developer Pack est un excellent moyen de **développer des compétences** en utilisant des outils de développement et des environnements de production professionnels. Voici quelques ressources d'apprentissage intégrées dans le Pack :
 
 - **Cours interactifs et certifications** : Grâce à des plateformes comme **Educative**, **Datacamp**, et **Codecademy**, les étudiants peuvent suivre des cours sur des sujets variés comme le développement web, les algorithmes, la science des données, etc.
@@ -728,36 +726,36 @@ Le GitHub Student Developer Pack est un excellent moyen de **développer des com
 - **Participation à des communautés open-source** : Les étudiants peuvent contribuer à des projets open-source directement via GitHub, développer leur portfolio et leur visibilité dans la communauté de développeurs.
 
 
-## 4. **Développement de portfolio professionnel**
+4. **Développement de portfolio professionnel**
 Un autre avantage majeur du programme GitHub pour les étudiants est la possibilité de développer et d’héberger un **portfolio professionnel** avec GitHub Pages. Cela permet aux étudiants de :
 - **Créer un site web personnel** pour montrer leurs projets.
 - **Mettre en avant des contributions open-source**.
 - **Partager des projets professionnels et académiques** avec des employeurs potentiels ou des mentors.
 
 
-## 5. **Accès aux outils de collaboration et de gestion**
+5. **Accès aux outils de collaboration et de gestion**
 Pour les projets d’équipe, GitHub facilite la collaboration à travers des outils comme **GitHub Classroom** et **GitHub Projects**. Ces outils permettent aux étudiants de travailler sur des projets de groupe, de suivre des tâches, de gérer le versioning de code, et d'intégrer des workflows CI/CD.
 
-### GitHub Classroom :
+GitHub Classroom :
 GitHub Classroom est particulièrement utile pour les enseignants et les étudiants dans le cadre de projets académiques. Il permet aux enseignants de créer des **devoirs basés sur des dépôts GitHub** et d'évaluer les projets des étudiants facilement.
 
 
-## 6. **Éligibilité et inscription**
-### Conditions d’éligibilité :
+6. **Éligibilité et inscription**
+Conditions d’éligibilité :
 Pour bénéficier de ces avantages, les étudiants doivent répondre à certaines conditions :
 - **Être inscrit dans un établissement d'enseignement** (université, école, etc.).
 - Fournir un **e-mail académique** valide ou une preuve d'inscription (comme une carte d'étudiant).
 
-### Comment s'inscrire :
-1. Rendez-vous sur la page du **GitHub Student Developer Pack** : [https://education.github.com/pack](https://education.github.com/pack).
-2. Cliquez sur "Get your Pack".
-3. Vérifiez votre statut étudiant en fournissant une **adresse e-mail académique** ou une **preuve d'inscription** (une photo de votre carte d'étudiant par exemple).
-4. Une fois validé, vous aurez accès aux outils et services inclus dans le Pack.
+Comment s'inscrire :
+	1. Rendez-vous sur la page du **GitHub Student Developer Pack** : [https://education.github.com/pack](https://education.github.com/pack).
+	2. Cliquez sur "Get your Pack".
+	3. Vérifiez votre statut étudiant en fournissant une **adresse e-mail académique** ou une **preuve d'inscription** (une photo de votre carte d'étudiant par exemple).
+	4. Une fois validé, vous aurez accès aux outils et services inclus dans le Pack.
 
 
 
 
-## 7. **Pourquoi utiliser GitHub Student Developer Pack ?**
+7. **Pourquoi utiliser GitHub Student Developer Pack ?**
 Le GitHub Student Developer Pack est une excellente opportunité pour :
 - **Acquérir des compétences techniques** en utilisant des outils professionnels.
 - **Créer un portfolio solide** en ligne pour attirer l'attention des employeurs.
@@ -767,15 +765,13 @@ Le GitHub Student Developer Pack est une excellente opportunité pour :
 Ce pack offre une **valeur considérable** aux étudiants, en rendant accessibles des outils et services normalement payants, tout en les aidant à développer des compétences pratiques et à s’immerger dans le monde du développement logiciel.
 
 
-
+## Scénarii
 
 
 Lorsque vous effectuez un **push** sur un dépôt GitHub, plusieurs scénarios peuvent survenir en fonction de l'état de votre dépôt local par rapport au dépôt distant. Voici les scénarios principaux, en fonction de si votre dépôt est **à jour**, **en avance** ou **en retard** par rapport au dépôt distant.
 
 
-
-
-### 1. **Scénario 1 : Votre dépôt local est à jour avec le dépôt distant**
+1. **Scénario 1 : Votre dépôt local est à jour avec le dépôt distant**
 Dans ce cas, les branches locales et distantes sont synchronisées, c'est-à-dire qu'elles contiennent les mêmes commits. Le `push` se déroule alors sans problème, car il n'y a pas de divergence entre le dépôt local et le dépôt distant.
 
 **Commande :**
@@ -784,13 +780,13 @@ git push origin <nom-branche>
 ```
 
 
-### 2. **Scénario 2 : Votre dépôt local est en avance sur le dépôt distant**
+2. **Scénario 2 : Votre dépôt local est en avance sur le dépôt distant**
 Cela signifie que vous avez effectué des **commits** localement, mais que ces commits n'existent pas encore sur le dépôt distant. Dans ce cas, votre dépôt local a de nouvelles modifications que le dépôt distant n'a pas.
 
-#### Cas où le dépôt distant n'a pas changé :
+Cas où le dépôt distant n'a pas changé :
 - **Résultat** : Le `push` est simple et fonctionne correctement. Vos nouveaux commits seront ajoutés au dépôt distant.
 
-#### Cas où le dépôt distant a changé :
+Cas où le dépôt distant a changé :
 - **Problème potentiel** : Si des changements ont été apportés au dépôt distant, il est possible que Git refuse le `push`, car il y aurait un **conflit** entre les deux versions (locale et distante).
 
 
@@ -809,19 +805,17 @@ git push origin <nom-branche>
 ```
 
 
-### 3. **Scénario 3 : Votre dépôt local est en retard par rapport au dépôt distant**
+3. **Scénario 3 : Votre dépôt local est en retard par rapport au dépôt distant**
 Votre dépôt local est "en retard" lorsqu'il manque des commits qui ont été ajoutés au dépôt distant par d'autres collaborateurs. Cela signifie que des modifications ont été faites sur le dépôt distant que vous n'avez pas encore récupérées.
 
-#### Cas où vous n'avez pas encore de nouveaux commits localement :
+Cas où vous n'avez pas encore de nouveaux commits localement :
 - **Solution** : Vous pouvez simplement faire un `pull` pour récupérer les commits distants.
 
 **Commande :**
 ```bash
 git pull origin <nom-branche>
 ```
-
-
-#### Cas où vous avez des commits locaux (en avance et en retard à la fois) :
+Cas où vous avez des commits locaux (en avance et en retard à la fois) :
 - **Problème** : Vous ne pouvez pas effectuer de `push` tant que vous n'avez pas intégré les modifications distantes dans votre historique de commits local.
 
 **Solution** : Faire un **pull avec rebase** pour intégrer les changements distants et placer vos commits locaux au-dessus.
@@ -833,30 +827,25 @@ git pull --rebase origin <nom-branche>
 git push origin <nom-branche>
 ```
 
-
-
-### 4. **Scénario 4 : Conflits lors du pull**  
+4. **Scénario 4 : Conflits lors du pull**  
 
 Lorsque vous tentez de faire un `git pull` (ou `git pull --rebase`), il peut y avoir des **conflits** si les mêmes fichiers ont été modifiés à la fois localement et sur le dépôt distant. Vous devrez résoudre ces conflits manuellement en choisissant quelles modifications garder.  
 
 **Étapes pour résoudre un conflit :**  
 
-1. Git marquera les fichiers en conflit.  
+	1. Git marquera les fichiers en conflit.  
 
-2. Ouvrez les fichiers pour voir les sections en conflit.  
+	2. Ouvrez les fichiers pour voir les sections en conflit.  
+	
+	3. Modifiez manuellement le fichier pour résoudre le conflit.  
 
-3. Modifiez manuellement le fichier pour résoudre le conflit.  
+	4. Ajoutez les fichiers résolus (`git add`).  
 
-4. Ajoutez les fichiers résolus (`git add`).  
+	5. Continuez le rebase ou le merge (`git rebase --continue` ou `git merge --continue`).  
 
-5. Continuez le rebase ou le merge (`git rebase --continue` ou `git merge --continue`).  
+	6. Poussez ensuite vos modifications (`git push`).  
 
-6. Poussez ensuite vos modifications (`git push`).  
-
-
-
-
-### 5. **Scénario 5 : Force Push**
+5. **Scénario 5 : Force Push**
 
 Si vous avez réécrit l'historique des commits locaux, par exemple avec un **rebase** ou un **reset**, vous devrez utiliser un **force push** pour remplacer l'historique distant avec votre nouvel historique local.  
 
@@ -870,7 +859,7 @@ git push --force origin <nom-branche>
 
 
 
-### Résumé :  
+Résumé :  
 
 - **Dépôt local à jour** : Le `push` est simple et réussi.  
 
