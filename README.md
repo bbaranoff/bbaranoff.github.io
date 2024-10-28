@@ -338,6 +338,15 @@ Tag Assistant est particulièrement utile pour les sites Jekyll sur GitHub Pages
 
 Pour configurer Google Tag Manager (GTM) sur un site Jekyll hébergé sur GitHub Pages, suivez ces étapes :
 
+![](assets/tag_assis.png)
+
+![](assets/tag_assis_1.png)
+
+![](assets/tag_assis_co.png)
+
+![](assets/tag_assis_co2.png)
+
+
 ### 1. Créer un compte et un conteneur Google Tag Manager
 
 1. Rendez-vous sur [Google Tag Manager](https://tagmanager.google.com/) et connectez-vous avec votre compte Google.
@@ -364,6 +373,9 @@ Pour installer GTM dans un site Jekyll, insérez le code dans les sections `<hea
    ```
 
    Remplacez `GTM-XXXXXXX` par votre identifiant de conteneur.
+
+![](assets/tag_manager.png)
+
 
 3. **Ajoutez le deuxième extrait de code dans le `<body>`** :
    Placez le deuxième code immédiatement après l'ouverture de la balise `<body>`.
@@ -395,6 +407,9 @@ Pour vous assurer que GTM est correctement configuré :
 1. Installez l’extension [Tag Assistant](https://chrome.google.com/webstore/detail/tag-assistant-legacy-by-go/glpanaoknnpdlnopknkgmdbnndkdgkdd) dans Chrome.
 2. Accédez à votre site et activez Tag Assistant pour voir si votre conteneur GTM est détecté.
 3. Vous devriez voir votre conteneur avec un indicateur vert si tout fonctionne correctement.
+
+![](assets/tag_manager_safe.png)
+
 
 ### 5. Ajouter des balises dans Google Tag Manager
 
