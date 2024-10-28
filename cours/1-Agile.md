@@ -757,85 +757,77 @@ Dans un projet agile, l'équipe peut utiliser cette équation pour :
 
 L'expression **« backlog = personne * temps »** illustre l'importance de la capacité de l'équipe et du temps disponible dans la gestion du backlog de produit. Elle aide les équipes à planifier de manière réaliste et à ajuster leurs priorités en fonction des ressources humaines et du temps, favorisant ainsi une gestion efficace du travail en cours. En tenant compte de ces facteurs, les équipes peuvent améliorer leur productivité et la qualité de leurs livrables.
 
-Pour illustrer l'application de la méthode **« backlog = personne * temps »** dans le développement d'un **site web statique**, prenons un exemple concret d’une petite équipe de projet chargée de créer un site web pour un événement. Nous allons décrire comment cette équipe utilise cette équation pour planifier et gérer son backlog.
+## Backlog (Exemple)
 
-## Illustration de la Méthode : Site Web Statique pour un Événement
+Pour illustrer l'expression **« backlog = personne * temps »** dans le contexte d'une méthode agile, prenons un exemple concret avec une équipe de développement travaillant sur un projet de création d'une application mobile. Nous allons décrire comment l'équipe utilise cette équation pour planifier et gérer son backlog.
+
+Illustration de la Méthode : Application Mobile
 
 Contexte
 
-Une équipe de trois personnes est chargée de créer un site web statique pour un **festival de musique**. Le site doit contenir des informations sur les artistes, le programme, les billets, et les contacts.
+Une équipe de développement est chargée de créer une application mobile pour la gestion des tâches. Le backlog comprend plusieurs fonctionnalités à développer, telles que :
+
+  - Inscription et authentification des utilisateurs
+  - Création de listes de tâches
+  - Notifications de rappels
+  - Intégration avec un calendrier
 
 1. **Composition de l’Équipe**
 
-L’équipe se compose de :
+L’équipe est composée de :
 
-- **1 Développeur Frontend** (capable de réaliser 5 points d’histoire par semaine)
-- **1 Designer** (capable de créer 3 maquettes par semaine)
-- **1 Responsable de Contenu** (capable de produire 4 sections de contenu par semaine)
+  - **2 Développeurs** (chacun capable de réaliser 8 points d’histoire par sprint)
+  - **1 Designer** (capable de produire 5 maquettes de fonctionnalités par sprint)
+  - **1 Chef de Projet** (qui gère le backlog et la coordination)
 
 2. **Temps Disponible**
 
-L’équipe planifie de travailler sur un **sprint de 1 semaine**. Supposons que :
+L’équipe planifie de travailler sur un **sprint de 2 semaines**. Supposons que :
 
-- Chaque membre de l’équipe travaille **40 heures** pendant la semaine.
-  
+  - Chaque développeur travaille **40 heures par semaine**.
+  - Le designer travaille également **40 heures par semaine**.
+  - Le Chef de Projet consacre **10 heures par semaine** à la gestion des réunions et à la planification.
+
 3. **Calcul de la Capacité**
 
-- **Capacité du Développeur Frontend** :
-  - 1 développeur × 5 points d’histoire par semaine = **5 points d’histoire par sprint**
+  - **Capacité des Développeurs** :
+    - 2 développeurs × 8 points d’histoire par développeur = **16 points d’histoire par sprint**
 
-- **Capacité du Designer** :
-  - 1 designer × 3 maquettes par sprint = **3 maquettes par sprint**
+  - **Capacité du Designer** :
+    - 1 designer × 5 maquettes par sprint = **5 maquettes par sprint**
 
-- **Capacité du Responsable de Contenu** :
-  - 1 responsable de contenu × 4 sections par sprint = **4 sections de contenu par sprint**
+4. **Planification du Sprint**
 
-4. **Total des Points d’Histoire dans le Backlog**
+L’équipe utilise le calcul de la capacité pour planifier le sprint. Au début du sprint, le backlog contient les éléments suivants :
 
-Pour le sprint, l’équipe a identifié les éléments suivants dans le backlog :
-
-	1. **User Story 1** : Maquette de la page d'accueil (3 points)
-	2. **User Story 2** : Section des artistes (4 points)
-	3. **User Story 3** : Section du programme (3 points)
-	4. **User Story 4** : Section des billets (5 points)
-	5. **User Story 5** : Section de contact (2 points)
+  1. **User Story 1** : Inscription des utilisateurs (5 points d’histoire)
+  2. **User Story 2** : Création de listes de tâches (8 points d’histoire)
+  3. **User Story 3** : Notifications de rappels (3 points d’histoire)
+  4. **User Story 4** : Intégration avec un calendrier (5 points d’histoire)
 
 5. **Total des Points d’Histoire dans le Backlog**
 
-- Total du backlog : 3 + 4 + 3 + 5 + 2 = **17 points d’histoire**
+  - Total du backlog : 5 + 8 + 3 + 5 = **21 points d’histoire**
 
 6. **Évaluation et Ajustement**
 
-Avec une capacité de :
+Avec une capacité de **16 points d’histoire**, l’équipe se rend compte qu’elle ne peut pas traiter toutes les User Stories dans ce sprint. Ainsi, elle doit prioriser :
 
-- **5 points d’histoire** pour le développeur frontend,
-- **3 maquettes** pour le designer,
-- **4 sections de contenu** pour le responsable de contenu.
+  - **User Story 1** (5 points) : Inscription des utilisateurs
+  - **User Story 2** (8 points) : Création de listes de tâches
+  - **User Story 3** (3 points) : Notifications de rappels
 
-L’équipe doit ajuster ses priorités, car le backlog total de **17 points** dépasse la capacité totale (5 + 3 + 4 = 12 points, en considérant que les points d’histoire du développeur et le travail du designer et du responsable de contenu ne se chevauchent pas).
+Cela donne un total de 16 points, ce qui correspond à la capacité de l’équipe. L’**User Story 4** (5 points) est mise de côté pour le prochain sprint.
 
-7. **Priorisation du Backlog**
-
-L’équipe décide de prioriser les éléments suivants pour ce sprint :
-
-	1. **User Story 1** : Maquette de la page d'accueil (3 points)
-	2. **User Story 2** : Section des artistes (4 points)
-	3. **User Story 5** : Section de contact (2 points)
-
-**Total** : 3 + 4 + 2 = **9 points d’histoire**
-
-Cela reste dans la capacité globale de l’équipe pour la semaine. 
-
-8. **Visualisation du Backlog**
+7. **Visualisation du Backlog**
 
 Le tableau Kanban de l’équipe pourrait ressembler à ceci pendant le sprint :
 
-| À faire                           | En cours                | Terminé                     |
-|-----------------------------------|------------------------|-----------------------------|
-| Maquette de la page d'accueil (3) | Section des artistes (4) | Section de contact (2)       |
-| Section du programme (3)          |                        |                             |
-| Section des billets (5)           |                        |                             |
+| À faire                         | En cours                | Terminé                     |
+|----------------------------------|------------------------|-----------------------------|
+| Inscription des utilisateurs (5) | Création de listes (8)  | Notifications de rappels (3) |
+| Intégration avec le calendrier (5) |                        |                             |
 
 Conclusion
 
-Cet exemple montre comment l'expression **« backlog = personne * temps »** peut être appliquée pour gérer le développement d'un site web statique. En évaluant la capacité de chaque membre de l'équipe et le temps disponible, l'équipe peut ajuster le backlog, prioriser les tâches, et s'assurer qu'elle reste productive tout en livrant un produit de qualité. Cela permet aussi de gérer efficacement les attentes des parties prenantes et d'optimiser le processus de développement.
+Cet exemple montre comment l'expression **« backlog = personne * temps »** peut être appliquée dans un contexte réel pour aider une équipe agile à planifier efficacement son travail. En évaluant les capacités des membres de l'équipe et le temps disponible, l'équipe peut ajuster le backlog, prioriser les tâches, et s'assurer qu'elle reste productive tout en maintenant la qualité des livrables. Cela permet également de mieux gérer les attentes des parties prenantes et d'optimiser le processus de développement.
