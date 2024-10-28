@@ -1,5 +1,34 @@
 # 2G IMSI Catcher
 
+**Radio-Telephony**
+
+- **Example of SFR:**
+
+**Article 1**
+
+– The French Radiotelephone Company ("Société Française de Radiotéléphonie") is authorized to use, in the 900 and 1800 MHz bands,
+the frequencies allocated to it in Article 2 of this decision to establish and operate a radio network open to the public in metropolitan
+France. For this, it complies with the provisions of the specifications located in appendix 2 of this decision.
+
+**Article 2**
+
+– The GSM channels allocated to the French Radiotelephone Company are,
+in accordance with the definitions in appendix 1:
+
+-   in the 900 MHz band, throughout mainland France: channels 75 to 124;
+-   in the 900 MHz band, only in very dense areas: channels 63 to 74;
+-   in the 1800 MHz band, throughout mainland France: channels 512 to
+525 and 647 to 751
+
+For others Operator (GSM)
+
+ Operator GSM900  | DCS1800
+Orange   1→62 | 527→646
+SFR  63-74 & 75-124 | 512→525 & 647→751
+Bouygues 975-1023 | 752-885
+
+Free = ? (Free didn’t invest much in 2G antenna since 2G will die in 2025 in France the use Orange roaming )
+
 (Fooling MS : Mobile Station, the 2G phone) The MS doesn’t ask authentication from BTS (Base Transceiver Station, the relay antenna).
 So what to do to intercept ? Be a BTS… and that’s all just spoof the public values of the BTS (mcc,mnc exemple 208,15 for FreeMobile 208,01
 for Orange, etc) and broadcast a stronger signal and it is done. How the implement a 2G BTS ? there are open sourced implementation on github.  
