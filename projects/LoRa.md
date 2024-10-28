@@ -1,6 +1,6 @@
-# **Lora :**
+# LoRa
 
-# **GPS tracker via LoraWAN**
+**GPS tracker via LoraWAN**
 
 [![UML](assets/uml.png)](assets/uml.png)
 
