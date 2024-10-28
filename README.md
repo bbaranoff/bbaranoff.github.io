@@ -152,6 +152,57 @@ Une fois le développement terminé, ouvrez le fichier `index.html` dans votre n
 - Intégrez des outils de référencement pour améliorer la visibilité du site.
 - Utilisez des frameworks CSS comme Bootstrap pour un design réactif.
 
-### Conclusion
+Pour ajouter le thème Jekyll *RTD* (Read the Docs) à votre site GitHub Pages, suivez ces étapes :
 
-Ce TP vous a guidé à travers le processus de création d’un site web statique pour un portfolio. Cela vous permet de mettre en valeur vos compétences, vos projets, et de vous familiariser avec les technologies web fondamentales. N'hésitez pas à explorer et à personnaliser votre site selon vos préférences !
+### 1. Créer un dépôt GitHub pour votre site
+
+Si vous n'avez pas encore de dépôt pour héberger votre site, créez un dépôt sur GitHub, idéalement nommé `<votre-utilisateur>.github.io`. Ce nom de dépôt est important car il détermine l’URL de votre site, qui sera accessible à l'adresse `https://<votre-utilisateur>.github.io`.
+
+### 2. Configurer Jekyll dans le dépôt
+
+Si Jekyll n'est pas encore configuré, commencez par installer Jekyll localement, ce qui vous permettra de tester les modifications avant de les publier. Sinon, assurez-vous d'avoir un fichier `Gemfile` à la racine de votre dépôt, avec la configuration suivante :
+
+```ruby
+source "https://rubygems.org"
+gem "jekyll"
+gem "jekyll-theme-rtd"
+```
+
+### 3. Configurer le thème dans `_config.yml`
+
+Dans le fichier `_config.yml` de votre dépôt, ajoutez le thème Jekyll RTD en modifiant ou en ajoutant l'entrée `theme` :
+
+```yaml
+theme: jekyll-theme-rtd
+```
+
+Ce fichier `_config.yml` peut également inclure d'autres options de configuration pour personnaliser le site, comme le titre du site, la description, etc.
+
+### 4. Installer les dépendances et tester localement
+
+Dans le terminal, exécutez les commandes suivantes pour installer les dépendances et tester votre site localement :
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+Cela lancera votre site en local, accessible à l'adresse `http://localhost:4000`, pour vérifier que le thème s'affiche correctement.
+
+### 5. Pousser le code sur GitHub
+
+Une fois les modifications testées, poussez le code vers votre dépôt GitHub :
+
+```bash
+git add .
+git commit -m "Ajout du thème Jekyll RTD"
+git push origin main
+```
+
+Après cela, GitHub Pages devrait automatiquement générer votre site en utilisant le thème *RTD*.
+
+### 6. Vérifier la publication
+
+Accédez à `https://<votre-utilisateur>.github.io` pour voir votre site en ligne avec le thème *RTD*. Le déploiement peut parfois prendre quelques minutes.
+
+Et voilà ! Votre site GitHub Pages utilise maintenant le thème *RTD*.
