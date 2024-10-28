@@ -8,7 +8,7 @@
 
 ![Git Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/512px-Git-logo.svg.png)
 
-## Fournisseur GIT :
+## Fournisseur Git
 
 Voici une brève description des principaux fournisseurs Git ainsi que leurs caractéristiques distinctives, ces fournisseurs se distinguent principalement par leurs niveaux d'intégration dans les workflows DevOps, leurs outils de CI/CD, et leurs écosystèmes (par exemple, GitHub avec sa communauté open source, GitLab avec ses pipelines DevOps intégrés, ou Bitbucket avec l'intégration de Jira).
 
@@ -240,7 +240,7 @@ Ces méthodes couvrent la plupart des besoins pour installer et utiliser Git sur
 
 Un dépôt Git (ou **repository** en anglais) est une structure utilisée par Git pour stocker l'historique des versions d'un projet, que ce soit du code source, des fichiers texte, ou tout autre type de fichier. Il s'agit d'une collection de fichiers, de leur historique de modifications, ainsi que de métadonnées utilisées par Git pour suivre ces modifications.  
 
-## Décomposition d'un dépôt Git :  
+## Décomposition d'un dépôt Git
 
 1. **Espace de travail (Working Directory)** : Il s'agit de la copie locale des fichiers du projet que vous modifiez directement sur votre machine.  
 
@@ -252,7 +252,7 @@ Un dépôt Git (ou **repository** en anglais) est une structure utilisée par Gi
 
 5. **Remotes** : Ce sont des dépôts distants (comme GitHub, GitLab ou Bitbucket), où vous pouvez synchroniser vos modifications avec d'autres utilisateurs. Un dépôt distant permet de collaborer avec d'autres développeurs en envoyant et en récupérant des modifications à partir d'un serveur.  
 
-## Fonctionnalités clés d'un dépôt Git :  
+## Fonctionnalités clés d'un dépôt Git
 
 - **Suivi des versions** : Git permet de suivre chaque changement apporté aux fichiers du projet, ce qui permet de revenir à des versions antérieures si nécessaire.  
 
@@ -262,7 +262,7 @@ Un dépôt Git (ou **repository** en anglais) est une structure utilisée par Gi
 
 En résumé, un dépôt Git est l'endroit où vous stockez et gérez l'historique des versions d'un projet.  
 
-## Choix du fournisseur de gestion de code GIT dans ce cours :  
+## Choix du fournisseur de gestion de code GIT dans ce cours
 
 ![Git + GitHub](https://api.updevcommunity.com/assets/18288git-338f.jpg)  
 
@@ -325,7 +325,7 @@ Si vous voulez commencer à utiliser Git en local avec votre compte GitHub, il e
 
 Voilà ! 🎉 Vous avez maintenant un compte GitHub, prêt à être utilisé pour vos projets.
 
-## Choisir une licence sur GitHub :
+## Choisir une licence sur GitHub
 
 ```tip
 GitHub propose plusieurs options pour la gestion des licences de vos projets, qui définissent comment les autres peuvent utiliser, modifier et distribuer votre code. Pour vous aider à choisir la licence adaptée à votre projet, GitHub propose un outil appelé **Choose a License** (Choisissez une licence), qui recommande des licences populaires selon le niveau d’ouverture que vous souhaitez.
@@ -389,7 +389,7 @@ Vous pouvez créer des titres en utilisant des `#`. Plus vous ajoutez de `#`, pl
 ### Titre de niveau 3  
 #### Titre de niveau 4  
 
-### 2. **Texte en gras et en italique**  
+2. **Texte en gras et en italique**  
 
 ```
 - **Gras** : Utilisez deux astérisques `**` ou deux tirets bas `__`.  
@@ -419,13 +419,13 @@ Listes ordonnées
 
 Utilisez des chiffres suivis d’un point.
 
-	1. Élément 1  
+1. Élément 1  
 
-	2. Élément 2  
+2. Élément 2  
 
-	   1. Sous-élément 2.1  
+   1. Sous-élément 2.1  
 
-	   2. Sous-élément 2.2  
+   2. Sous-élément 2.2  
   
 4. **Liens et images**  
 
@@ -575,7 +575,7 @@ Après avoir poussé, vous pourrez voir votre code sur GitHub en visitant votre 
 
 
 
-## Schéma logique de fonctionnement d'un dépot :  
+## Schéma logique de fonctionnement d'un dépot
 
 ![GitHub](https://www.ifourtechnolab.com/pics/All_about_Version_ControlGit.webp)  
 
@@ -666,6 +666,7 @@ Une fois que GitHub Pages a terminé le déploiement de votre site (ce qui prend
 
 
 ## **GitHub Student Developer Pack**
+
 Le **GitHub Student Developer Pack** est une collection de logiciels et de services gratuits ou à prix réduit fournis par GitHub et ses partenaires, exclusivement pour les étudiants. Il inclut des offres pour des outils de développement, d'hébergement, d'analyse de code, d'apprentissage, et même des services de marketing ou de design.
 
 Principaux avantages du Pack :
