@@ -4,10 +4,7 @@
 
 ## Hacking 2G BTS
 
-<figure>
-<img src="test3.png" alt="Attack Flow" />
-<figcaption aria-hidden="true">Attack Flow</figcaption>
-</figure>
+![](assets/test3.png)
 
 The UE has become an MS again and we know how to be a BTS !
 
