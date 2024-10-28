@@ -41,14 +41,13 @@ Les méthodes agiles sont des approches de gestion de projet et de développemen
    - Favorise la **communication et la simplicité**, en adaptant la rigueur des processus selon les besoins du projet.
    - Encouragement de la collaboration, tout en maintenant une certaine flexibilité dans l'application des processus agiles.
 
-![Feature Driven Development](https://fastercapital.com/i/Types-of-Agile-Methodology-for-Startups--Crystal-Methodology.webp)](https://fastercapital.com/topics/crystal-methodology.html)
+[![Feature Driven Development](https://fastercapital.com/i/Types-of-Agile-Methodology-for-Startups--Crystal-Methodology.webp)](https://fastercapital.com/topics/crystal-methodology.html)  
 
 6. **Feature-Driven Development (FDD)**
    - Méthode centrée sur le développement de **fonctionnalités spécifiques**.
    - Les projets sont divisés en **petites fonctionnalités** développées rapidement pour obtenir des livraisons fréquentes.
    - Idéal pour des projets nécessitant un cadre structuré et des développements incrémentaux.
-![DSDM](https://www.agilebusiness.org/static/d3d7af88-58c3-47d1-98c5802929052724/a103e813-b5a7-4453-917b52fba01e8e65/600x600_highestperformance__4a7c7e45a350/fba-transparent.png)
-[Source: DSDM.org](https://www.dsdm.org/)
+[![DSDM](https://www.agilebusiness.org/static/d3d7af88-58c3-47d1-98c5802929052724/a103e813-b5a7-4453-917b52fba01e8e65/600x600_highestperformance__4a7c7e45a350/fba-transparent.png)](https://www.dsdm.org/)
 
 
 7. **Disciplined Agile (DA)**
