@@ -1,9 +1,18 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VYSL22WMS1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+function loadScriptAsync(scriptSrc, callback) {
+    if (typeof callback !== 'function') {
+        throw new Error('Not a valid callback for async script load');
+    }
+    var script = document.createElement('script');
+    script.onload = callback;
+    script.src = scriptSrc;
+    document.head.appendChild(script);
+}
 
-  gtag('config', 'G-VYSL22WMS1');
-</script>
+/* This is the part where you call the above defined function and "calls back" your code which gets executed after the script has loaded */
+
+loadScriptAsync('https://www.googletagmanager.com/gtag/js?id=G-464931235', function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-464931235', { 'anonymize_ip': true });
+})
