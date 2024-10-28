@@ -1,8 +1,11 @@
 # LTE/NSA Redirection Attack
 
+![4G Attack Active](assets/redir_huang1.png)
+
+![4G Attack Active](assets/redir_huang2.png)
+
 [![4G Attack Active](assets/diagram1_2G_act2.png)](assets/diagram1_2G_act2.png)
 
-newpage
 
 [![4G Attack Active](assets/diagram1_2G_act3.png)](assets/diagram1_2G_act3.png)
 
