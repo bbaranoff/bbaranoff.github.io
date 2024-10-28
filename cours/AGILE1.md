@@ -8,8 +8,7 @@ Les méthodes agiles sont des approches de gestion de projet et de développemen
    - Rôles spécifiques : **Product Owner** (priorise les tâches), **Scrum Master** (facilite le processus) et **Équipe de développement**.
    - Réunions clés : **Daily Stand-up** (réunion quotidienne), **Sprint Planning**, **Sprint Review**, et **Sprint Retrospective**.
 
-![Scrum](https://www.scrum.org/uploads/2021/09/Framework_Scrum.png)
-[Source: Scrum.org](https://www.scrum.org/resources/what-is-scrum)
+[![Scrum](https://cdn.prod.website-files.com/638b3d0a5fd2fda2068f23dc/63999949e72d2578cc66566d_5e834a7cd7b9d5312c5a3d63_la-methode-scrum-le-scrum-master.png)](https://www.scrum.org/resources/what-is-scrum)
 
 
 2. **Kanban**
@@ -17,16 +16,14 @@ Les méthodes agiles sont des approches de gestion de projet et de développemen
    - Utilisation d'un **tableau Kanban** avec des colonnes représentant les étapes (ex. : À faire, En cours, Terminé).
    - Pas de sprints fixes : les équipes travaillent de manière fluide et font progresser les tâches selon leur disponibilité.
    - Idéal pour des projets sans planning rigide et avec un flux de travail continu.
-![Kanban](https://miro.medium.com/v2/resize:fit:1400/1*_9RKN8ZyA2kHdeW4U0ZfWg.png)
-[Source: Medium](https://medium.com/@andrewschott/kanban-agile-methodology-5ca8a38c7c94)
+[![Kanban](https://savoiragile.com/wp-content/uploads/2017/11/Sans-titre.png)](https://kissflow.com/project/agile/kanban-methodology/)
 
 
 3. **Extreme Programming (XP)**
    - Conçu pour les **développeurs logiciels**, XP met l’accent sur des pratiques techniques rigoureuses comme le **développement piloté par les tests (TDD)**, la **programmation en binôme** et les **révisions fréquentes du code**.
    - Livraisons fréquentes pour réduire les risques et obtenir des retours rapides des clients.
    - XP favorise une forte collaboration avec le client et des ajustements fréquents en fonction de ses besoins.
-![Extreme Programming](https://cdn-images-1.medium.com/max/1200/1*1t1vZ__qAYuUe2rsO7cRMQ.jpeg)
-[Source: Medium](https://medium.com/@jasonfarrell/the-three-rules-of-extreme-programming-9ab0e6f6b80a)
+[![Extreme Programming](https://www.synergeek.fr/wp-content/uploads/2011/02/Extreme-Programming-381x330.gif)](https://www.planzone.fr/blog/quest-ce-que-la-methodologie-extreme-programming)
 
 
 4. **Lean**
@@ -34,8 +31,7 @@ Les méthodes agiles sont des approches de gestion de projet et de développemen
    - Mise en œuvre d'un flux de travail qui réduit les étapes inutiles et se concentre sur les activités à forte valeur ajoutée.
    - **Optimisation continue** et amélioration constante des processus.
    - Souvent associée à Kanban dans la gestion de projet.
-![Lean](https://miro.medium.com/v2/resize:fit:1000/format:webp/1*cW_L7IuP8WwVpBuLU93EBg.png)
-[Source: Medium](https://medium.com/@tom.peters/the-lean-startup-30176a5f4095)
+[![Lean](https://www.my-clic.fr/wp-content/uploads/2023/06/lean-management.png)](https://www.my-clic.fr/guide-complet-sur-le-lean-management/)
 
 
 5. **Crystal**
@@ -43,14 +39,13 @@ Les méthodes agiles sont des approches de gestion de projet et de développemen
    - Favorise la **communication et la simplicité**, en adaptant la rigueur des processus selon les besoins du projet.
    - Encouragement de la collaboration, tout en maintenant une certaine flexibilité dans l'application des processus agiles.
 
-![Feature Driven Development](https://www.agilealliance.org/wp-content/uploads/2019/06/Feature-Driven-Development-FDD.png)
-[Source: Agile Alliance](https://www.agilealliance.org/agile101/feature-driven-development-fdd/)
+![Feature Driven Development](https://fastercapital.com/i/Types-of-Agile-Methodology-for-Startups--Crystal-Methodology.webp)](https://fastercapital.com/topics/crystal-methodology.html)
 
 6. **Feature-Driven Development (FDD)**
    - Méthode centrée sur le développement de **fonctionnalités spécifiques**.
    - Les projets sont divisés en **petites fonctionnalités** développées rapidement pour obtenir des livraisons fréquentes.
    - Idéal pour des projets nécessitant un cadre structuré et des développements incrémentaux.
-![DSDM](https://www.dsdm.org/wp-content/uploads/2021/03/dsdm-ice-10-steps.png)
+![DSDM](https://www.agilebusiness.org/static/d3d7af88-58c3-47d1-98c5802929052724/a103e813-b5a7-4453-917b52fba01e8e65/600x600_highestperformance__4a7c7e45a350/fba-transparent.png)
 [Source: DSDM.org](https://www.dsdm.org/)
 
 
@@ -68,7 +63,7 @@ Les méthodes agiles sont des approches de gestion de projet et de développemen
    - Facilite la coordination entre différentes équipes Scrum ou Kanban, pour des projets complexes et à grande échelle.
 Voici un lien vers une image illustrant la méthode **SAFe (Scaled Agile Framework)**, ainsi que des informations sur la source :
 
-![SAFe Framework](https://www.scaledagileframework.com/wp-content/uploads/2021/03/SAFe-5.0-Overview-Page-Image.png)
+![SAFe Framework](https://scaledagileframework.com/wp-content/uploads/2024/10/SAFe_6.0_Big_Picture_web-2.jpg)
 [Source: Scaled Agile Framework](https://www.scaledagileframework.com/)
 
 ## Principes
