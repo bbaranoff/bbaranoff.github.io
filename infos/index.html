@@ -8,16 +8,42 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<div class="vd_box">
-<div class="test">
-  <strong>IP:</strong>
-  <div id="vd_ip"><div class="vd_loader"></div>  </div>
-</div>
-</div>
+<center>
+  <h1>Visitor Information</h1>
+  <br>
+  <table class="container">
+    <thead>
+      <tr>
+        <th>IP Address</th>
+        <td data-ip></td>
+      </tr>
+      <tr>
+        <th>City</th>
+        <td data-city></td>
+      </tr>
+      <tr>
+        <th>Region</th>
+        <td data-region></td>
+      </tr>
+      <tr>
+        <th>Country</th>
+        <td data-country></td>
+      </tr>
+      <tr>
+        <th>Location</th>
+        <td data-loc></td>
+      </tr>
+      <tr>
+        <th>ISP</th>
+        <td data-org></td>
+      </tr>
+    </thead>
+    <tbody id="output">
+    </tbody>
+  </table>
+</center>
 <!-- partial -->
-  <script  src="./script.js"></script>
-<!-- partial:index.partial.html -->
-<link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+  <script src='https://jsgetip.appspot.com'></script><script  src="./script.js"></script>
 
 
 <script
@@ -26,7 +52,6 @@
   crossorigin="anonymous"></script>
 <main class="prompt">
 <div class="test">
-  <p><script type="text/javascript">document.write(navigator.userAgent);</script></p>
   <p>Wake up Neo</p>
   <p>The Matrix has you...</p>
   <p>Knock Knock Neo !</p>
