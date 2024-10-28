@@ -206,3 +206,74 @@ Après cela, GitHub Pages devrait automatiquement générer votre site en utilis
 Accédez à `https://<votre-utilisateur>.github.io` pour voir votre site en ligne avec le thème *RTD*. Le déploiement peut parfois prendre quelques minutes.
 
 Et voilà ! Votre site GitHub Pages utilise maintenant le thème *RTD*.
+
+Pour ajouter une bannière de consentement aux cookies sur un site Jekyll (comme pour un site GitHub Pages), vous pouvez intégrer une bibliothèque de consentement aux cookies (comme *CookieConsent* de Osano) ou créer une bannière personnalisée en HTML, CSS et JavaScript.
+
+Voici comment procéder :
+
+### Option 1 : Utiliser une bibliothèque existante (CookieConsent)
+
+1. **Ajouter le code JavaScript** : Ajoutez le script *CookieConsent* dans le fichier `_includes/head.html` (ou directement dans le fichier `default.html` du dossier `_layouts` si vous n’utilisez pas de fichier `head.html` séparé).
+
+    ```html
+    <!-- CookieConsent JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+    <script>
+      window.addEventListener("load", function() {
+        window.cookieconsent.initialise({
+          palette: {
+            popup: { background: "#000" },
+            button: { background: "#f1d600" }
+          },
+          theme: "classic",
+          position: "bottom",
+          content: {
+            message: "Ce site utilise des cookies pour améliorer votre expérience.",
+            dismiss: "Accepter",
+            link: "En savoir plus",
+            href: "/politique-de-confidentialite"  // Lien vers votre page de politique de confidentialité
+          }
+        });
+      });
+    </script>
+    ```
+
+2. **Personnaliser le texte et le style** : Dans la configuration du script, vous pouvez ajuster les couleurs et le texte de la bannière en modifiant les options `palette`, `content`, et `position`.
+
+3. **Créer une page de politique de confidentialité** : Créez un fichier `politique-de-confidentialite.md` à la racine de votre projet pour inclure les détails de la politique de cookies. Ajoutez un lien vers cette page dans la bannière.
+
+### Option 2 : Créer une bannière de cookies personnalisée
+
+1. **Ajouter le HTML de la bannière** : Insérez le code HTML suivant dans le fichier `default.html` (ou dans `_includes/footer.html` si vous souhaitez le charger en bas de page) :
+
+    ```html
+    <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; width: 100%; background: #333; color: #fff; padding: 1em; text-align: center;">
+      <p>Ce site utilise des cookies pour améliorer votre expérience. <a href="/politique-de-confidentialite" style="color: #f1d600;">En savoir plus</a>.</p>
+      <button id="accept-cookies" style="background-color: #f1d600; border: none; padding: 0.5em 1em; cursor: pointer;">Accepter</button>
+    </div>
+    ```
+
+2. **Ajouter le JavaScript pour afficher et gérer la bannière** : Dans le même fichier ou dans un fichier JavaScript externe, ajoutez ce script :
+
+    ```javascript
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (!localStorage.getItem("cookiesAccepted")) {
+          document.getElementById("cookie-banner").style.display = "block";
+        }
+
+        document.getElementById("accept-cookies").onclick = function() {
+          localStorage.setItem("cookiesAccepted", "true");
+          document.getElementById("cookie-banner").style.display = "none";
+        };
+      });
+    </script>
+    ```
+
+3. **Ajouter une page de politique de confidentialité** : Comme dans la première option, créez une page de politique de confidentialité pour donner aux utilisateurs des informations détaillées sur l’utilisation des cookies.
+
+4. **Styliser la bannière** : Ajoutez vos propres styles CSS pour personnaliser la bannière en fonction du design de votre site.
+
+Ces options vous permettent de mettre en place une bannière de consentement aux cookies simple et efficace pour votre site Jekyll.
+
