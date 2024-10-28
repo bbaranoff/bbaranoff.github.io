@@ -302,8 +302,11 @@ Pour connecter une balise *gtag* (Google Analytics) à votre site Jekyll, suivez
    - Après avoir ajouté ce code, poussez vos modifications sur GitHub pour les déployer sur GitHub Pages.
    - Pour vérifier que la balise fonctionne, rendez-vous dans votre tableau de bord Google Analytics, sous "Temps réel", puis ouvrez votre site pour voir si les données de visite sont enregistrées.
 
+### Note
 
-4. **Styliser la bannière** : Ajoutez vos propres styles CSS pour personnaliser la bannière en fonction du design de votre site.
+Vous pouvez également créer un fichier `_includes/analytics.html` pour contenir le code *gtag* et inclure ce fichier dans le `<head>` avec `{% include analytics.html %}`, ce qui permet de centraliser les scripts de suivi pour une gestion plus simple.
+
+5. **Styliser la bannière** : Ajoutez vos propres styles CSS pour personnaliser la bannière en fonction du design de votre site.
 
 Ces options vous permettent de mettre en place une bannière de consentement aux cookies simple et efficace pour votre site Jekyll.
 
