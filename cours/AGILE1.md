@@ -680,3 +680,55 @@ DA est particulièrement utile dans les contextes suivants :
 En Résumé
 
 La méthode Disciplined Agile est un cadre complet et adaptable, offrant une grande flexibilité dans l’adoption des pratiques agiles. Sa **structure multi-couche** permet aux organisations de choisir des pratiques adaptées à leurs besoins spécifiques, en intégrant les meilleures pratiques d’Agile, Lean, et autres méthodologies. Bien que complexe à mettre en place, DA offre une puissante solution pour les entreprises qui recherchent une agilité à grande échelle et un processus d’amélioration continue structuré.
+
+## Backlog ?
+
+L’expression **« backlog = personne * temps »** est souvent utilisée dans le contexte de la gestion de projets agiles pour décrire le concept de backlog de produit et comment le travail est évalué en termes de capacité des ressources humaines et du temps disponible. Décomposons cette expression pour mieux comprendre ce qu’elle signifie.
+
+1. **Qu'est-ce qu'un Backlog ?**
+
+Un **backlog** est une liste priorisée de tâches, fonctionnalités, améliorations ou corrections qui doivent être réalisées dans un projet. Dans le contexte agile, le backlog de produit est un élément essentiel qui contient :
+
+- **User Stories** : Des descriptions des fonctionnalités du point de vue de l'utilisateur.
+- **Tâches techniques** : Des éléments nécessaires à la maintenance ou à l'amélioration de l'infrastructure technique.
+- **Bugs** : Des corrections à apporter pour améliorer la qualité du produit.
+  
+Le backlog est un outil vivant qui évolue au fur et à mesure que le projet progresse, des nouvelles idées sont ajoutées et des éléments existants sont mis à jour ou retirés.
+
+2. **Décomposition de l'Équation : « Backlog = Personne * Temps »**
+
+#a. **Personne**
+
+Le terme **« personne »** fait référence aux membres de l’équipe qui travaillent sur le backlog. Chaque personne dans l’équipe a une capacité et des compétences spécifiques qui influencent la manière dont les tâches peuvent être abordées. Par exemple :
+
+- Un développeur peut avoir une capacité à réaliser un certain nombre de **points d'histoire** (une unité de mesure du travail) dans un sprint.
+- Un designer peut être capable de créer un certain nombre de maquettes ou de prototypes dans un laps de temps donné.
+
+#b. **Temps**
+
+Le terme **« temps »** fait référence à la durée disponible pour travailler sur le backlog. Cela peut être mesuré en :
+
+- **Sprints** : Dans une méthode agile comme Scrum, un sprint est une période de temps fixe (généralement de deux à quatre semaines) durant laquelle l'équipe s'engage à accomplir une partie du backlog.
+- **Jours ou heures** : Cela peut aussi être évalué en fonction de la durée totale disponible pour travailler sur les tâches, tenant compte des vacances, des jours de congé, etc.
+
+3. **Interprétation de l'Équation**
+
+- **Capacité de l'Équipe** : L'équation met en lumière que la quantité de travail (backlog) qui peut être réalisée dépend directement de la taille de l'équipe (le nombre de personnes disponibles) et du temps qu'elles peuvent consacrer à ce travail. Par exemple, si une équipe de cinq personnes travaille pendant un sprint de deux semaines, elle aura une certaine capacité de livraison.
+
+- **Planification et Estimation** : En utilisant cette équation, les équipes peuvent estimer combien de travail elles peuvent accomplir dans un sprint donné. Si elles savent qu'une personne peut gérer 10 points d'histoire dans une semaine, alors une équipe de 5 personnes pourrait théoriquement accomplir 50 points d'histoire en une semaine.
+
+- **Gestion du Backlog** : La capacité de l'équipe et le temps disponible aident à gérer le backlog. Si le backlog est trop chargé et que la capacité de l'équipe est insuffisante (peut-être en raison de vacances ou d'absences), cela peut créer un goulot d'étranglement. Les équipes doivent ajuster le backlog en fonction de leur capacité réelle.
+
+4. **Utilisation Pratique dans un Projet Agile**
+
+Dans un projet agile, l'équipe peut utiliser cette équation pour :
+
+- **Évaluer la capacité** : Avant de planifier un sprint, l’équipe peut calculer sa capacité en fonction du nombre de membres et du temps disponible. Cela aide à décider combien d'éléments du backlog peuvent être sélectionnés pour le sprint.
+
+- **Prioriser le backlog** : Comprendre la capacité de l’équipe permet également de prioriser le backlog en fonction des éléments qui peuvent être réalisés dans un délai donné.
+
+- **Ajuster les attentes** : Si une équipe constate qu'elle ne peut pas traiter le backlog à la vitesse souhaitée, elle peut ajuster ses attentes, revoir les priorités, ou même ajouter des ressources supplémentaires si nécessaire.
+
+5. **Conclusion**
+
+L'expression **« backlog = personne * temps »** illustre l'importance de la capacité de l'équipe et du temps disponible dans la gestion du backlog de produit. Elle aide les équipes à planifier de manière réaliste et à ajuster leurs priorités en fonction des ressources humaines et du temps, favorisant ainsi une gestion efficace du travail en cours. En tenant compte de ces facteurs, les équipes peuvent améliorer leur productivité et la qualité de leurs livrables.
