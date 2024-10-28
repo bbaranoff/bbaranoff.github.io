@@ -57,7 +57,9 @@ Estimation des Points d'Histoire
 - **3 points :** Tâche plus complexe nécessitant des recherches (4-6 heures).
 - **5 points :** Tâche très complexe ou impliquant plusieurs sous-tâches (7 heures et plus).
 
-## Calculer les points d'histoire pour cet exemple (justifier)
+## Calculer les points d'histoire pour cet exemple (justifier)  
 
-## comment organiseriez vous les Sprints
+## Comment organiseriez vous les Sprints ?  
+
+
 
