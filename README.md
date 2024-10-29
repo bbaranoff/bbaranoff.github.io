@@ -213,7 +213,7 @@ Voici comment procéder :
 
 ### Option 1 : Utiliser une bibliothèque existante (CookieConsent)
 
-1. **Ajouter le code JavaScript** : Ajoutez le script *CookieConsent* dans le fichier `_includes/head.html` (ou directement dans le fichier `default.html` du dossier `_layouts` si vous n’utilisez pas de fichier `head.html` séparé).
+1. **Ajouter le code JavaScript** : Ajoutez le script *CookieConsent* dans le fichier _includes/head.html (ou directement dans le fichier default.html` du dossier `_layouts` si vous n’utilisez pas de fichier `head.html` séparé).
 
     ```html
     <!-- CookieConsent JavaScript -->
