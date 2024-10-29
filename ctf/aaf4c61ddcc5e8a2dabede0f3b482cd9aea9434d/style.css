@@ -1,0 +1,369 @@
+body {
+  width: 100vw;
+  height: 100%;
+}
+
+.background {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #1b2b34;
+  z-height: 1;
+}
+
+.background .grid-lines .horizontal {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.background .grid-lines .horizontal .line {
+  width: 100vw;
+  height: 1px;
+  background: rgba(99, 107, 110, 0.4);
+  margin-top: 30px;
+}
+
+.background .grid-lines .vertical {
+  position: fixed;
+  top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.background .grid-lines .vertical .line {
+  display: inline-block;
+  width: 1px;
+  height: 100vh;
+  background: rgba(99, 107, 110, 0.4);
+  margin-left: 30px;
+}
+
+.container {
+  position: absolute;
+  top: 0px;
+  z-height: 2;
+  height: 100%;
+  width: 100vw;
+}
+
+.container h1 {
+  position: absolute;
+  top: 10px;
+  right: 3%;
+  opacity: 0;
+  font-family: "Jura", open-sans;
+  font-size: 2.5em;
+  color: lightcyan;
+  font-weight: 500;
+  -webkit-animation: diagram-animate 700ms forwards linear;
+  animation: diagram-animate 700ms forwards linear;
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+}
+
+.container h3 {
+  position: absolute;
+  top: 90px;
+  right: 2%;
+  font-family: "Jura";
+  font-size: 1.1em;
+  color: #c6c6c6;
+  font-weight: 100;
+  opacity: 0;
+  width: 500px;
+  -webkit-animation: diagram-animate 700ms forwards linear;
+  animation: diagram-animate 700ms forwards linear;
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+}
+
+.container .message {
+  opacity: 0;
+  position: absolute;
+  top: 45%;
+  right: 3%;
+  font-family: "Jura";
+  font-weight: 100;
+  width: 30%;
+  color: lightcyan;
+  font-size: 1.05rem;
+  background: darkslategray;
+  padding: 5px;
+  -webkit-animation: diagram-animate 700ms forwards linear;
+  animation: diagram-animate 700ms forwards linear;
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+}
+
+.container .diagram svg {
+  opacity: 0;
+  -webkit-animation: diagram-animate 3000ms forwards linear;
+  animation: diagram-animate 3000ms forwards linear;
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+  margin-left: -10%;
+}
+
+.container .diagram svg path.proton {
+  fill: lightgray !important;
+}
+
+.container .diagram svg path.ion {
+  fill: #8e8c8c !important;
+}
+
+.container .diagram svg path.neutrons {
+  fill: #47cf73 !important;
+}
+
+.container .diagram svg path.antiproton {
+  fill: #ab5c77 !important;
+}
+
+.container .diagram svg path.neutrinos {
+  fill: #52d8d3 !important;
+}
+
+.container .diagram svg path.electron {
+  fill: #c0b483 !important;
+}
+
+.container .diagram svg path {
+  stroke-dasharray: 74 !important;
+  stroke-dashoffset: -74 !important;
+  -webkit-animation: path-animation 2s forwards;
+          animation: path-animation 2s forwards;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.container .diagram svg path.lhc {
+  stroke-dasharray: 340 !important;
+  stroke-dashoffset: -340 !important;
+  -webkit-animation: path-animation 2s forwards;
+          animation: path-animation 2s forwards;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.container .diagram svg path.sps {
+  stroke-dasharray: 172 !important;
+  stroke-dashoffset: -172 !important;
+  -webkit-animation: path-animation 2s forwards;
+          animation: path-animation 2s forwards;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.container .diagram svg path#path4501 {
+  stroke-dasharray: 93 !important;
+  stroke-dashoffset: -93 !important;
+  -webkit-animation: path-animation 2s forwards;
+          animation: path-animation 2s forwards;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.container .diagram svg .ps {
+  stroke-dasharray: 80 !important;
+  stroke-dashoffset: -80 !important;
+  -webkit-animation: path-animation 2s forwards;
+          animation: path-animation 2s forwards;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+.container .legend {
+  display: inline-block;
+  position: absolute;
+  bottom: 5%;
+  right: 0%;
+  list-style: none;
+  color: cadetblue;
+  font-family: "Jura", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-animation: diagram-animate 700ms forwards linear;
+  animation: diagram-animate 700ms forwards linear;
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+}
+
+.container .particleLegend {
+  position: absolute;
+  margin-bottom: 1%;
+  left: 50%;
+  right: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  -webkit-animation: diagram-animate 700ms forwards linear;
+  animation: diagram-animate 700ms forwards linear;
+  -webkit-animation-delay: 900ms;
+  animation-delay: 900ms;
+}
+
+.container .particleLegend td .particleCircle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.container .particleLegend td #one {
+  background: lightgray;
+}
+
+.container .particleLegend td #two {
+  background: darkgray;
+}
+
+.container .particleLegend td #three {
+  background: #47cf73;
+}
+
+.container .particleLegend td #four {
+  background: #ab5c77;
+}
+
+.container .particleLegend td #five {
+  background: #52d8d3;
+}
+
+.container .particleLegend td #six {
+  background: #c0b483;
+}
+
+.container .particleLegend td svg {
+  padding-top: 5px;
+}
+
+.container .particleLegend :nth-child(even) {
+  color: cadetblue;
+  font-family: "Jura", sans-serif;
+}
+
+.bg-reveal {
+  display: block;
+  -webkit-animation: bgAnimation 500ms linear forwards;
+  animation: bgAnimation 500ms linear forwards;
+}
+
+.lhcS {
+  color: pink;
+}
+
+.lhcR {
+  stroke: pink !important;
+}
+
+.spsS {
+  color: palegoldenrod;
+}
+
+.spsR {
+  stroke: palegoldenrod !important;
+}
+
+.psS {
+  color: darksalmon;
+}
+
+.psR {
+  stroke: darksalmon !important;
+}
+
+.adS {
+  color: aquamarine;
+}
+
+.adR {
+  stroke: aquamarine !important;
+}
+
+.ctfS {
+  color: darkkhaki;
+}
+
+.ctfR {
+  stroke: darkkhaki !important;
+}
+
+.cngsS {
+  color: ivory;
+}
+
+.cngsR {
+  stroke: ivory !important;
+}
+
+.isoS {
+  color: palegreen;
+}
+
+.isoR {
+  stroke: palegreen !important;
+}
+
+.leirS {
+  color: peru;
+}
+
+.leirR {
+  stroke: peru !important;
+}
+
+.linacS {
+  color: palevioletred;
+}
+
+.linacR {
+  stroke: palevioletred !important;
+}
+
+.ntofS {
+  color: plum;
+}
+
+.ntofR {
+  stroke: plum !important;
+}
+
+@-webkit-keyframes bgAnimation {
+  0% {
+    transform: scaleX(0);
+  }
+}
+@keyframes bgAnimation {
+  0% {
+    transform: scaleX(0);
+  }
+}
+@-webkit-keyframes diagram-animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes diagram-animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes path-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes path-animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
