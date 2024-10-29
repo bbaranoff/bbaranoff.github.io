@@ -414,3 +414,5 @@ Pour vous assurer que GTM est correctement configuré :
 ### 5. Ajouter des balises dans Google Tag Manager
 
 Maintenant que GTM est installé, vous pouvez ajouter des balises (comme Google Analytics, Facebook Pixel, ou des événements de conversion) directement dans le tableau de bord GTM sans avoir à modifier le code de votre site.
+
+![image](assets/analytics.png)
