@@ -1,3 +1,4 @@
 # Projet VCOD IUT de Carcassonne :
 
-Mise en place d'un portfolio professionnel
+Mise en place d'un portfolio professionnel.
+
