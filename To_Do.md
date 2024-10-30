@@ -1,5 +1,7 @@
 # To Do : Build the portfolio
 
+![](https://raw.githubusercontent.com/bbaranoff/bbaranoff.github.io/refs/heads/main/assets/output1.gif)
+
 Créer un site web statique pour un portfolio est un projet passionnant qui permet de mettre en valeur vos compétences et réalisations. Voici un plan de travail (TP) détaillé pour vous guider à travers le processus, depuis la conception jusqu'à la mise en ligne.
 
 ### Objectifs du TP
