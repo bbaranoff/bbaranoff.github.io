@@ -2,16 +2,11 @@
 
 ```mermaid
 graph LR
-    Visiteur -->|Consulter le portfolio| Portfolio
-    Portfolio -->|Consulter la bio| Bio
-    Portfolio -->|Télécharger le CV| CV
-    Portfolio -->|Explorer les projets| Projets
-
-    classDef acteur fill:#f9f,stroke:#333,stroke-width:2px;
-    class Visiteur acteur;
-    class Projets, CV, Bio acteur;
+    Visiteur[Visiteur] -->|Consulter le portfolio| Portfolio[Portfolio]
+    Portfolio -->|Consulter la bio| Bio[Bio]
+    Portfolio -->|Télécharger le CV| CV[CV]
+    Portfolio -->|Explorer les projets| Projets[Projets]
 ```
-
 ### 2. **Diagramme de classes (Class Diagram)**
 
 ```mermaid
@@ -75,19 +70,6 @@ stateDiagram-v2
         Non --> AfficherErreur
     }
 ```
-
-### 5. **Diagramme de composants (Component Diagram)**
-
-```mermaid
-graph LR
-    A[Serveur Web] --> B[Site Jekyll (HTML/CSS)]
-    B --> C[Composants JS (Formulaires, Animations)]
-    C --> D[Liens externes (GitHub, LinkedIn, etc.)]
-    
-    A[Serveur Web] -->|hébergé sur GitHub Pages| D
-```
-
----
 
 ### Explication des Diagrammes :
 
