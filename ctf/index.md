@@ -1,4 +1,4 @@
-# Password protection for static pages
+# CTF
 
 Very simple password protection to static pages or whole websites with no server configuration required: you ca use Dropbox, Amazon S3 or any generic hosting service to host a private, password protected site.
 
