@@ -1,3 +1,1 @@
-# Projet VCOD IUT de Carcassonne :
-
-
+# Projet VCOD IUT de Carcassonne
