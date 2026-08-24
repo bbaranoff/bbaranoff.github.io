@@ -1,63 +1,35 @@
-<div id="gsm-intro" role="presentation">
+<div id="gsm-intro" role="button" tabindex="0" aria-label="Entrer sur le site">
   <iframe class="gi-wall" src="{{ site.baseurl }}/exemples/gsm-lab-wallpaper.html" title="GSM Lab" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
-  <iframe class="gi-glitch" src="{{ site.baseurl }}/infos/" title="glitch" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
-  <div class="gi-fx"></div>
-  <div class="gi-flash"></div>
-  <div class="gi-skip">cliquer pour passer &#9654;</div>
+  <div class="gi-enter">cliquer pour entrer &#9654;</div>
 </div>
 <noscript><style>#gsm-intro{display:none!important}</style></noscript>
 <style>
-#gsm-intro{position:fixed;inset:0;z-index:2147483647;background:#0c0e1a;overflow:hidden;opacity:1;transition:opacity .6s ease}
+#gsm-intro{position:fixed;inset:0;z-index:2147483647;background:#0c0e1a;overflow:hidden;opacity:1;transition:opacity .55s ease;cursor:pointer}
 #gsm-intro.gi-out{opacity:0;pointer-events:none}
-#gsm-intro iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#0c0e1a}
-#gsm-intro .gi-wall{opacity:1;transition:opacity .14s linear}
-#gsm-intro .gi-glitch{opacity:0}
-#gsm-intro.gi-2 .gi-wall{opacity:0}
-#gsm-intro.gi-2 .gi-glitch{opacity:1;animation:gi-jit .22s steps(2,end) infinite}
-@keyframes gi-jit{0%{transform:translate(0,0)}25%{transform:translate(-2px,1px)}50%{transform:translate(2px,-1px)}75%{transform:translate(-1px,-1px)}100%{transform:translate(0,0)}}
-#gsm-intro .gi-fx{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .2s}
-#gsm-intro.gi-2 .gi-fx{opacity:1}
-#gsm-intro .gi-fx::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.30) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
-#gsm-intro .gi-fx::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,0,80,.14),transparent 40%,transparent 60%,rgba(0,200,255,.14));mix-blend-mode:screen;animation:gi-rgb .5s steps(3) infinite}
-@keyframes gi-rgb{0%{transform:translateX(0)}50%{transform:translateX(3px)}100%{transform:translateX(-3px)}}
-#gsm-intro .gi-flash{position:absolute;inset:0;background:#eaf6ff;opacity:0;pointer-events:none}
-#gsm-intro.gi-flash-on .gi-flash{animation:gi-flash .34s ease-out}
-@keyframes gi-flash{0%{opacity:.9}100%{opacity:0}}
-#gsm-intro .gi-skip{position:absolute;bottom:16px;right:20px;color:#8b90b5;font:600 11px/1 ui-monospace,Menlo,monospace;letter-spacing:.22em;opacity:.6;z-index:3}
+#gsm-intro .gi-wall{position:absolute;inset:0;width:100%;height:100%;border:0;background:#0c0e1a;pointer-events:none}
+#gsm-intro .gi-enter{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#8b90b5;font:600 12px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.28em;text-transform:uppercase;opacity:.7;animation:gi-pulse 1.8s ease-in-out infinite;pointer-events:none}
+@keyframes gi-pulse{0%,100%{opacity:.35}50%{opacity:.85}}
 html.gi-lock,html.gi-lock body{overflow:hidden!important}
-@media (prefers-reduced-motion: reduce){#gsm-intro .gi-glitch,#gsm-intro .gi-fx::after{animation:none}}
 </style>
 <script>
 (function(){
   var el=document.getElementById('gsm-intro'); if(!el) return;
   function kill(){ if(el&&el.parentNode) el.parentNode.removeChild(el); }
-  // ne jamais rejouer l'intro à l'intérieur d'un iframe (évite la récursion)
+  // pas d'intro à l'intérieur d'un iframe (évite la récursion)
   if(window.top!==window.self){ kill(); return; }
   var seen=null; try{ seen=sessionStorage.getItem('gsmIntroSeen'); }catch(e){}
   if(seen){ kill(); return; }
   document.documentElement.classList.add('gi-lock');
-  var done=false, t1, t2;
-  function finish(){
+  var done=false;
+  // un clic (ou une touche) N'IMPORTE OÙ -> on entre sur le site
+  function enter(){
     if(done) return; done=true;
     try{ sessionStorage.setItem('gsmIntroSeen','1'); }catch(e){}
     el.classList.add('gi-out');
     document.documentElement.classList.remove('gi-lock');
-    setTimeout(kill, 700);
+    setTimeout(kill, 650);
   }
-  // bascule vers la phase glitch (flash + infos), puis 2 s avant l'atterrissage
-  function toGlitch(){
-    if(done || el.classList.contains('gi-2')) return;
-    if(t1) clearTimeout(t1);
-    el.classList.add('gi-flash-on','gi-2');
-    if(t2) clearTimeout(t2);
-    t2=setTimeout(finish, 2000);
-  }
-  // déroulé auto : 3 s wallpaper -> glitch -> 2 s -> site
-  t1=setTimeout(toGlitch, 3000);
-  t2=setTimeout(finish, 5000);
-  // un clic (ou une touche) saute TOUT : les 3 s de wallpaper ET le glitch -> site
-  function skipAll(){ if(done) return; if(t1) clearTimeout(t1); if(t2) clearTimeout(t2); finish(); }
-  el.addEventListener('click', skipAll);
-  document.addEventListener('keydown', skipAll);
+  el.addEventListener('click', enter);
+  document.addEventListener('keydown', enter);
 })();
 </script>
