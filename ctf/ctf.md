@@ -8,8 +8,8 @@ The final structure will be:
 
 ```
 - https://bbaranoff.github.io/ctf/
-- /this-is-a-hash/      <-- the SHA1 hash of your password
-  - /index.html      <-- your original index document
+- https://bbaranoff.github.io/ctf/this-is-a-hash/      <-- the SHA1 hash of your password
+- https://bbaranoff.github.io/ctf/this-is-a-hash/index.html      <-- your original index document
 ```
 
 
