@@ -1,114 +1,69 @@
-# Projects
+# Projets
 
+```tip
 
-00:00:57,265 --> 00:00:58,975
-- Seq, I'm in.
-- Captain.
+Projets de cybersécurité en **radio logicielle** (SDR) — réseaux mobiles 2G→5G,
+cryptanalyse et radio bas-débit. Le code vit sur
+[github.com/bbaranoff](https://github.com/bbaranoff) ; la théorie est traitée dans
+les [cours](../cours/).
 
-00:00:59,058 --> 00:01:00,310
-- You were right.
+```
 
-00:01:00,393 --> 00:01:01,811
-- The skylight was a window pane.
+## Les projets
 
-00:01:01,895 --> 00:01:03,396
-- I've got serious interference.
+### 📡 Télécom & SDR
 
-00:01:03,480 --> 00:01:04,814
-- Weird. It's some kind of Modal.
+| Projet | En bref |
+|--------|---------|
+| [2G IMSI Catcher](1-IMSI_Catcher.md) | Monter une fausse BTS Osmocom et capturer les IMSI. Théorie et lab complet : [cours Télécom](../cours/telco/). |
+| [Redirection LTE/5G-NSA → 2G](3-Redirect.md) | Forcer une victime d'un réseau moderne vers une couche GSM/EDGE non sûre. *Travail cité en recherche académique.* |
+| [Impersonation](4-Impersonnate.md) | Usurper un abonné sur le réseau, avec Osmocom. |
 
-00:01:04,898 --> 00:01:06,691
-- Looks like old code.
+### 🔓 Cryptanalyse
 
-00:01:06,775 --> 00:01:08,151
-- It feels really familiar.
+| Projet | En bref |
+|--------|---------|
+| [Casser A5/1](2-Encryption.md) | Récupérer le **Kc** d'une session GSM chiffrée. Méthode détaillée dans le cours [Casser A5/1](../cours/telco/4-A5-1-cracking.md). |
 
-00:01:08,234 --> 00:01:09,986
-- Drop a pin. I'll signal for backup.
+### 📻 Radio
 
-00:01:10,069 --> 00:01:11,738
-- I'm gonna check it out.
-- -Bugs?
+| Projet | En bref |
+|--------|---------|
+| [LoRa](5-LoRa.md) | LoRaWAN / The Things Network : passerelle, end-device, remontée de données. |
+| [ADS-B](6-Adsb.md) | Réception et décodage des trames avions ADS-B en SDR. |
+| [APOGÉ](7-Apogee.md) | Agriculture de précision : capteurs, LoRa et gestion de l'eau/pesticides. |
 
-00:01:11,821 --> 00:01:13,031
-- If the general finds out we've been fishing...
+### ➕ Catalogue complet
 
-00:01:13,114 --> 00:01:14,783
-- A quick peek can't hurt.
+**[Projets divers](8-Divers.md)** — l'ensemble de mes dépôts publics, classés en
+**Télécom**, **Cryptanalyse**, **IA** et **Radio**, avec les projets épinglés du
+profil GitHub.
 
-00:01:14,866 --> 00:01:16,159
-- Did you hear that?
+## Panorama des protocoles radio
 
-00:01:16,242 --> 00:01:17,619
-- Shit. I think our signal was traced.
+Un protocole, au sens informatique, est « un ensemble de règles régissant l'échange
+ou la transmission de données entre appareils » ([Oxford](https://www.oed.com/)). Le
+but : faire voyager une information de A vers B (et souvent retour), sous
+contraintes — énergie, portée, débit utile, **sécurité**, latence et taux d'erreur.
 
-00:01:17,702 --> 00:01:19,829
-- Bugs, this feels like a trap.
+| Protocole | Usage principal |
+|-----------|-----------------|
+| RFID | Traçabilité / échange d'information statique |
+| NFC | Opérations bancaires / échange d'information statique |
+| GSM · GPRS · EDGE | Appels / SMS / Internet |
+| UMTS · HSPA · HSPA+ | Appels / SMS / Internet |
+| LTE · LTE-Advanced | Appels / SMS / Internet / IoT |
+| 5G SA · NSA | Appels / SMS / Internet / IoT |
+| Wi-Fi | Internet / LAN / appels (VoWiFi) |
+| Bluetooth | Échange de données / appairage |
+| LoRa · SigFox | Échange de données / IoT |
+| GPS · Galileo | Géolocalisation |
 
-00:01:19,913 --> 00:01:21,039
-- Bugs!
+```note
 
-**Radio-Frequencies Protocols :**
+Le détail des couches GSM (trame TDMA, bursts, canaux logiques, procédure
+d'attachement) et le plan de fréquences des opérateurs sont traités dans le cours
+[GSM étape par étape](../cours/telco/3-GSM-etape-par-etape.md). Tables arc-en-ciel
+A5/1 : [infocon.org](https://infocon.org/rainbow%20tables/A51/).
 
-A protocol is for computing (quoted from Oxford langage):  
-
-> " A set of rules governing the exchange or transmission of data between devices." ![Oxford Langage](https://www.oed.com/)
-
-The goal like it is said is to make travel information from A-\>B, and (maybe) then B-\>A etcaetera. This information has a weight and it has to move so : energy is spent, at least F(A-\>B). Another goals came obviously from the first depending on
-the case of use : spending the less energy possible, have the maximum range, transmit the most data possible, have the best yield, and be the most secure possible (I mean by that, that it can’t be understood by a
-machine or an human on an undesired endpoint in a reasonable time at least at the time of conception and from the projected advances in technology), there are also another important points the latency, and
-the errors between the message sent and received. We will begin by enumerate some radio protocols, begin by saying their purpose. Then we
-gonna try to classify theses protocols by energy, data (raw and useful payload), power, range, frequencies and yield, security, latency, and
-error.
-
-**List (non-exhaustive) of Protocols**
-
-Protocol | Purpose
-RFID | Traceabitlity / Static Information Exchange
-NFC | Bank Operations / Static Information Exchange
-GSM/GPRS*/EDGE* | Calls / SMS / Internet
-UMTS/HSPA/HSPA_advanced | Calls / SMS / Internet
-LTE/LTE_Advanced|Calls / SMS / Internet / IoT 
-5G SA/NSA   | Calls / SMS / Internet / IoT 
-Wifi| Internet / LAN / Calls (VoWifi)
-Bluetooth   | Data exchange / Pairing devices
-LoRa/SigFox | Data exchange / IoT
-GPS/Galileo | Geolocalization
-
-
-**Radio-Telephony**
-
-- **Example of SFR:**
-
-**Article 1**
-
-– The French Radiotelephone Company ("Société Française de Radiotéléphonie") is authorized to use, in the 900 and 1800 MHz bands,
-the frequencies allocated to it in Article 2 of this decision to establish and operate a radio network open to the public in metropolitan
-France. For this, it complies with the provisions of the specifications located in appendix 2 of this decision.
-
-**Article 2**
-
-– The GSM channels allocated to the French Radiotelephone Company are,
-in accordance with the definitions in appendix 1:
-
--   in the 900 MHz band, throughout mainland France: channels 75 to 124;
--   in the 900 MHz band, only in very dense areas: channels 63 to 74;
--   in the 1800 MHz band, throughout mainland France: channels 512 to
-525 and 647 to 751
-
-For others Operator (GSM)
-
- Operator GSM900  | DCS1800
-Orange   1→62 | 527→646
-SFR  63-74 & 75-124 | 512→525 & 647→751
-Bouygues 975-1023 | 752-885
-
-Free = ? (Free didn’t invest much in 2G antenna since 2G will die in 2025 in France the use Orange roaming )
-
-
-# **A5/1 Cracking**
-
-Download the tables :
-
-[a51_tables](assets/https://infocon.org/rainbow%20tables/A51/)
-
+```
