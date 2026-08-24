@@ -1,8 +1,8 @@
 <div id="gsm-intro" aria-label="Intro d'accueil">
   <iframe class="gi-frame gi-wall" src="{{ site.baseurl }}/exemples/gsm-lab-wallpaper.html" title="GSM Lab" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
-  <img class="gi-frame gi-art" src="{{ site.baseurl }}/exemples/telecom-patchwork.gif" alt="Télécoms patchwork" />
-  <div class="gi-catch" title="cliquer pour continuer"></div>
-  <button type="button" class="gi-skip" aria-label="Passer l'intro et entrer sur le site">Entrer sur le site &#9654;</button>
+  <img class="gi-frame gi-art" src="{{ site.baseurl }}/exemples/telecom-patchwork.gif" alt="Telecoms patchwork" />
+  <div class="gi-catch"></div>
+  <button type="button" class="gi-skip">Entrer sur le site &#9654;</button>
   <div class="gi-enter"><span class="gi-hint">cliquer pour continuer</span> &#9654;</div>
 </div>
 <noscript><style>#gsm-intro{display:none!important}</style></noscript>
@@ -14,16 +14,12 @@
 #gsm-intro .gi-art{object-fit:cover}
 #gsm-intro.gi-2 .gi-wall{opacity:0}
 #gsm-intro.gi-2 .gi-art{opacity:1}
-/* couche qui capte le clic partout (au-dessus des iframes) */
 #gsm-intro .gi-catch{position:absolute;inset:0;z-index:2;cursor:pointer}
-/* bouton skip -> atterrit direct sur le site */
 #gsm-intro .gi-skip{position:absolute;top:18px;right:18px;z-index:3;cursor:pointer;
   font:700 13px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.16em;text-transform:uppercase;
   color:#08131a;background:#33e1d0;border:1px solid #7ff0e4;
-  padding:12px 18px;border-radius:11px;box-shadow:0 8px 26px rgba(51,225,208,.45),0 0 0 4px rgba(51,225,208,.12);
-  transition:transform .12s ease,box-shadow .15s,background .15s;animation:gi-skip-pop 2.2s ease-in-out infinite}
-#gsm-intro .gi-skip:hover{background:#5cf0e2;transform:translateY(-1px);box-shadow:0 10px 30px rgba(51,225,208,.6),0 0 0 5px rgba(51,225,208,.18)}
-@keyframes gi-skip-pop{0%,100%{box-shadow:0 8px 26px rgba(51,225,208,.35),0 0 0 4px rgba(51,225,208,.10)}50%{box-shadow:0 8px 30px rgba(51,225,208,.6),0 0 0 7px rgba(51,225,208,.20)}}
+  padding:12px 18px;border-radius:11px;box-shadow:0 8px 26px rgba(51,225,208,.45),0 0 0 4px rgba(51,225,208,.12)}
+#gsm-intro .gi-skip:hover{background:#5cf0e2}
 #gsm-intro .gi-enter{position:absolute;bottom:18px;left:0;right:0;text-align:center;z-index:3;pointer-events:none;
   color:#9aa0c8;font:600 12px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.26em;text-transform:uppercase;
   opacity:.7;animation:gi-pulse 1.8s ease-in-out infinite}
@@ -33,34 +29,42 @@ html.gi-lock,html.gi-lock body{overflow:hidden!important}
 </style>
 <script>
 (function(){
-  var el=document.getElementById('gsm-intro'); if(!el) return;
-  function kill(){ if(el&&el.parentNode) el.parentNode.removeChild(el); }
-  if(window.top!==window.self){ kill(); return; }         // pas d'intro dans un iframe
+  var el=document.getElementById('gsm-intro'); if(!el){ return; }
+  function kill(){ if(el&&el.parentNode){ el.parentNode.removeChild(el); } }
+  if(window.top!==window.self){ kill(); return; }
   var seen=null; try{ seen=sessionStorage.getItem('gsmIntroSeen'); }catch(e){}
   if(seen){ kill(); return; }
-  document.documentElement.classList.add('gi-lock');
+  try{ document.documentElement.classList.add('gi-lock'); }catch(e){}
   var done=false;
+  function cleanup(){
+    document.removeEventListener('click', onClick, true);
+    document.removeEventListener('keydown', onKey, true);
+  }
   function finish(){
-    if(done) return; done=true;
+    if(done){ return; } done=true;
     try{ sessionStorage.setItem('gsmIntroSeen','1'); }catch(e){}
+    cleanup();
     el.classList.add('gi-out');
-    document.documentElement.classList.remove('gi-lock');
+    try{ document.documentElement.classList.remove('gi-lock'); }catch(e){}
     setTimeout(kill, 620);
   }
-  // clic 1 : GSM Lab -> patchwork ; clic 2 : patchwork -> site
   function advance(){
-    if(done) return;
-    if(!el.classList.contains('gi-2')) el.classList.add('gi-2');
-    else finish();
+    if(done){ return; }
+    if(!el.classList.contains('gi-2')){ el.classList.add('gi-2'); }
+    else { finish(); }
   }
-  var catcher=el.querySelector('.gi-catch');
-  var skip=el.querySelector('.gi-skip');
-  catcher.addEventListener('click', advance);
-  skip.addEventListener('click', function(ev){ ev.stopPropagation(); finish(); });   // skip -> landing direct
-  document.addEventListener('keydown', function(ev){
-    if(done) return;
-    if(ev.key==='Escape') finish();   // Échap -> site
-    else advance();                    // toute autre touche -> écran suivant
-  });
+  function onClick(ev){
+    if(done){ return; }
+    var t=ev.target;
+    try{ ev.preventDefault(); ev.stopPropagation(); }catch(e){}
+    if(t && t.closest && t.closest('.gi-skip')){ finish(); }
+    else { advance(); }
+  }
+  function onKey(ev){
+    if(done){ return; }
+    if(ev.key==='Escape'){ finish(); } else { advance(); }
+  }
+  document.addEventListener('click', onClick, true);
+  document.addEventListener('keydown', onKey, true);
 })();
 </script>

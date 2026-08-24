@@ -17,6 +17,8 @@ google_analytics: G-VYSL22WMS1
 
 exclude:
   - .bash
+  - .bundle
+  - vendor
   - .github
   - .vscode
   - .yarn
