@@ -15,6 +15,91 @@ Ce cours suit la séquence réelle mesurée sur le banc `shunt_legit` du 2026-08
 
 ```
 
+<div class="gsmviz">
+<style>
+.gsmviz{--gv-bg0:#0c0e1a;--gv-bg1:#151a34;--gv-panel:#181d38;--gv-panel2:#212748;--gv-ink:#eef1ff;--gv-mut:#9aa0c8;--gv-mut2:#6f76a6;--gv-line:rgba(255,255,255,.09);--gv-cyan:#33e1d0;--gv-violet:#8b7cff;--gv-pink:#ff5d84;--gv-amber:#f5b74a;--gv-green:#5ce6a1;--gv-mono:ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace;
+  margin:26px 0 32px;padding:clamp(18px,2.6vw,30px);border-radius:20px;color:var(--gv-ink);
+  background:radial-gradient(900px 480px at 88% -20%,rgba(139,124,255,.18),transparent 60%),radial-gradient(760px 420px at 4% 120%,rgba(51,225,208,.14),transparent 60%),linear-gradient(160deg,var(--gv-bg0),var(--gv-bg1));
+  border:1px solid var(--gv-line);box-shadow:0 30px 90px -44px rgba(0,0,0,.75),inset 0 1px 0 rgba(255,255,255,.05);position:relative;overflow:hidden}
+.gsmviz::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;background-image:linear-gradient(var(--gv-line) 1px,transparent 1px),linear-gradient(90deg,var(--gv-line) 1px,transparent 1px);background-size:38px 38px;mask:radial-gradient(120% 120% at 50% 0,#000 28%,transparent 76%)}
+.gsmviz *{box-sizing:border-box}
+.gsmviz .gv-head{display:flex;align-items:center;gap:12px;position:relative;margin-bottom:6px}
+.gsmviz .gv-dot{width:11px;height:11px;border-radius:50%;background:var(--gv-cyan);box-shadow:0 0 18px var(--gv-cyan)}
+.gsmviz .gv-eyebrow{font:600 10px/1 var(--gv-mono);letter-spacing:.3em;text-transform:uppercase;color:var(--gv-mut)}
+.gsmviz .gv-title{font:800 clamp(20px,3.4vw,30px)/1.05 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;letter-spacing:-.02em;margin:6px 0 2px;position:relative}
+.gsmviz .gv-title b{background:linear-gradient(92deg,var(--gv-cyan),var(--gv-violet) 60%,var(--gv-pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.gsmviz .gv-sub{color:var(--gv-mut);font:500 13px/1.5 -apple-system,sans-serif;max-width:70ch;position:relative}
+.gsmviz .gv-bread{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:20px 0 6px;position:relative}
+.gsmviz .gv-pill{font:600 10px/1 var(--gv-mono);letter-spacing:.05em;color:var(--gv-mut);border:1px solid var(--gv-line);background:rgba(255,255,255,.02);border-radius:8px;padding:8px 11px;white-space:nowrap}
+.gsmviz .gv-pill b{color:var(--gv-ink)}
+.gsmviz .gv-pill.on{color:var(--gv-cyan);border-color:rgba(51,225,208,.4)}
+.gsmviz .gv-arr{color:var(--gv-mut2);font:700 12px/1 var(--gv-mono)}
+.gsmviz .gv-sec{margin-top:22px;position:relative}
+.gsmviz .gv-lab{font:600 10px/1 var(--gv-mono);letter-spacing:.22em;text-transform:uppercase;color:var(--gv-mut);margin-bottom:11px}
+.gsmviz .gv-frame{display:grid;grid-template-columns:repeat(8,1fr);gap:6px}
+.gsmviz .gv-ts{border-radius:9px;padding:12px 6px 10px;text-align:center;background:linear-gradient(180deg,var(--gv-panel2),var(--gv-panel));border:1px solid var(--gv-line);transition:transform .18s}
+.gsmviz .gv-ts:hover{transform:translateY(-3px)}
+.gsmviz .gv-ts .n{font:700 12px/1 var(--gv-mono);color:var(--gv-mut)}
+.gsmviz .gv-ts .t{font:600 8px/1.3 var(--gv-mono);color:var(--gv-mut2);margin-top:6px;letter-spacing:.04em}
+.gsmviz .gv-ts.act{background:linear-gradient(180deg,rgba(139,124,255,.34),rgba(51,225,208,.10));border-color:rgba(139,124,255,.55)}
+.gsmviz .gv-ts.act .n{color:var(--gv-ink)}.gsmviz .gv-ts.act .t{color:var(--gv-cyan)}
+.gsmviz .gv-axis{display:flex;justify-content:space-between;color:var(--gv-mut2);font:500 10px/1 var(--gv-mono);margin-top:9px}
+.gsmviz .gv-burst{display:flex;height:54px;border-radius:9px;overflow:hidden;border:1px solid var(--gv-line)}
+.gsmviz .gv-seg{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font:700 10px/1 var(--gv-mono);color:#0c0e1a;min-width:0;padding:2px;text-align:center}
+.gsmviz .gv-seg small{font:600 8px/1 var(--gv-mono);opacity:.72}
+.gsmviz .gv-seg.tail{background:#3a4170;color:var(--gv-mut)}
+.gsmviz .gv-seg.data{background:linear-gradient(180deg,var(--gv-cyan),#1fb9ab)}
+.gsmviz .gv-seg.steal{background:var(--gv-pink)}
+.gsmviz .gv-seg.train{background:linear-gradient(180deg,var(--gv-violet),#6a5bff);color:#fff}
+.gsmviz .gv-seg.guard{background:repeating-linear-gradient(45deg,#2a2f52,#2a2f52 6px,#232848 6px,#232848 12px);color:var(--gv-mut)}
+.gsmviz .gv-cap{color:var(--gv-mut2);font:500 11px/1.5 var(--gv-mono);margin-top:10px}
+.gsmviz .gv-cap b{color:var(--gv-pink)}
+@media(max-width:620px){.gsmviz .gv-frame{grid-template-columns:repeat(4,1fr)}.gsmviz .gv-ts .t{display:none}.gsmviz .gv-seg small{display:none}.gsmviz .gv-seg{font-size:8px}}
+</style>
+<div class="gv-head"><span class="gv-dot"></span><span class="gv-eyebrow">Interface Um · couche physique</span></div>
+<div class="gv-title">GSM <b>Timeslots &amp; Bursts</b></div>
+<div class="gv-sub">Le temps est découpé en trames TDMA de 8 slots ; chaque slot porte un burst de 156,25 bits. C'est le terrain de jeu partagé par l'ARM et le DSP du baseband Calypso.</div>
+
+<div class="gv-bread">
+  <span class="gv-pill">Hyperframe <b>2 715 648</b></span><span class="gv-arr">›</span>
+  <span class="gv-pill">Superframe <b>1326</b></span><span class="gv-arr">›</span>
+  <span class="gv-pill">Multitrame <b>51 / 26</b></span><span class="gv-arr">›</span>
+  <span class="gv-pill on">Trame TDMA <b>8 slots</b></span><span class="gv-arr">›</span>
+  <span class="gv-pill">Timeslot <b>577 µs</b></span><span class="gv-arr">›</span>
+  <span class="gv-pill">Burst <b>156,25 bits</b></span>
+</div>
+
+<div class="gv-sec">
+  <div class="gv-lab">Trame TDMA · 8 timeslots · 4,615 ms</div>
+  <div class="gv-frame">
+    <div class="gv-ts act"><div class="n">TS0</div><div class="t">FCCH·SCH·BCCH</div></div>
+    <div class="gv-ts"><div class="n">TS1</div><div class="t">SDCCH</div></div>
+    <div class="gv-ts"><div class="n">TS2</div><div class="t">TCH/F</div></div>
+    <div class="gv-ts"><div class="n">TS3</div><div class="t">TCH/F</div></div>
+    <div class="gv-ts"><div class="n">TS4</div><div class="t">TCH/F</div></div>
+    <div class="gv-ts"><div class="n">TS5</div><div class="t">TCH/F</div></div>
+    <div class="gv-ts"><div class="n">TS6</div><div class="t">TCH/F</div></div>
+    <div class="gv-ts"><div class="n">TS7</div><div class="t">PDCH</div></div>
+  </div>
+  <div class="gv-axis"><span>0 µs</span><span>1 burst = 577 µs</span><span>4615 µs</span></div>
+</div>
+
+<div class="gv-sec">
+  <div class="gv-lab">Normal Burst · 156,25 bits</div>
+  <div class="gv-burst">
+    <div class="gv-seg tail" style="flex:3">3<small>tail</small></div>
+    <div class="gv-seg data" style="flex:57">57<small>data</small></div>
+    <div class="gv-seg steal" style="flex:1"></div>
+    <div class="gv-seg train" style="flex:26">26<small>training</small></div>
+    <div class="gv-seg steal" style="flex:1"></div>
+    <div class="gv-seg data" style="flex:57">57<small>data</small></div>
+    <div class="gv-seg tail" style="flex:3">3<small>tail</small></div>
+    <div class="gv-seg guard" style="flex:8.25">8.25<small>guard</small></div>
+  </div>
+  <div class="gv-cap">tail 3 · data 57 · <b>stealing 1</b> · midamble 26 · <b>stealing 1</b> · data 57 · tail 3 · guard 8,25 — le <b>FCCH</b> (étape 1) est un burst de zéros ; le <b>SCH</b> (étape 2) porte le BSIC dans son midamble.</div>
+</div>
+</div>
+
 ## La chaîne complète, d'un coup d'œil
 
 ```mermaid

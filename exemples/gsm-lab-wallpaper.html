@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GSM Lab — Wallpaper</title>
+<style>
+  :root{
+    --bg0:#0c0e1a; --bg1:#141830; --panel:#181d38; --panel2:#1f2547;
+    --ink:#eef1ff; --muted:#9aa0c8; --line:rgba(255,255,255,.08);
+    --cyan:#33e1d0; --violet:#8b7cff; --amber:#f5b74a; --pink:#ff5d84; --green:#5ce6a1;
+    --mono:"SFMono-Regular",ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    font-family:var(--sans); color:var(--ink);
+    background:
+      radial-gradient(1200px 700px at 82% -10%, rgba(139,124,255,.16), transparent 60%),
+      radial-gradient(1000px 620px at 8% 108%, rgba(51,225,208,.14), transparent 60%),
+      linear-gradient(160deg, var(--bg0), var(--bg1));
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    padding:clamp(16px,4vw,56px); overflow-x:hidden;
+  }
+  .poster{
+    width:min(1100px,100%); background:linear-gradient(180deg,rgba(24,29,56,.72),rgba(16,20,42,.72));
+    border:1px solid var(--line); border-radius:26px; padding:clamp(22px,3.4vw,46px);
+    box-shadow:0 40px 120px -40px rgba(0,0,0,.75), inset 0 1px 0 rgba(255,255,255,.05);
+    backdrop-filter:blur(6px); position:relative; overflow:hidden;
+  }
+  /* faint grid */
+  .poster::before{
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:42px 42px; mask:radial-gradient(120% 120% at 50% 0,#000 30%,transparent 78%);
+  }
+  .top{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; position:relative}
+  .brand{display:flex; align-items:center; gap:14px}
+  .dot{width:14px;height:14px;border-radius:50%;background:var(--cyan);box-shadow:0 0 22px var(--cyan);animation:pulse 2.6s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:.55;transform:scale(.85)}50%{opacity:1;transform:scale(1.15)}}
+  .eyebrow{font:600 11px/1 var(--mono); letter-spacing:.32em; color:var(--muted); text-transform:uppercase}
+  .chip{font:600 11px/1 var(--mono); letter-spacing:.12em; color:var(--cyan);
+    border:1px solid rgba(51,225,208,.35); border-radius:999px; padding:8px 12px; white-space:nowrap}
+  h1{font-size:clamp(40px,8vw,88px); line-height:.94; letter-spacing:-.03em; margin:22px 0 6px; font-weight:800}
+  h1 .g{background:linear-gradient(92deg,var(--cyan),var(--violet) 55%,var(--pink)); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .sub{color:var(--muted); font-size:clamp(14px,2.1vw,19px); max-width:60ch}
+  .sub b{color:var(--ink); font-weight:600}
+
+  /* ---- TDMA frame ribbon ---- */
+  .fig{margin:30px 0 6px; position:relative}
+  .fig h2{font:600 11px/1 var(--mono); letter-spacing:.24em; color:var(--muted); text-transform:uppercase; margin-bottom:12px}
+  .frame{display:grid; grid-template-columns:repeat(8,1fr); gap:6px}
+  .ts{position:relative; border-radius:10px; padding:14px 8px 12px; text-align:center;
+    background:linear-gradient(180deg,var(--panel2),var(--panel)); border:1px solid var(--line);
+    transition:transform .2s}
+  .ts:hover{transform:translateY(-3px)}
+  .ts .n{font:700 13px/1 var(--mono); color:var(--muted)}
+  .ts .t{font:600 9px/1.3 var(--mono); color:#6f76a6; margin-top:7px; letter-spacing:.06em}
+  .ts.act{background:linear-gradient(180deg,rgba(139,124,255,.34),rgba(51,225,208,.10)); border-color:rgba(139,124,255,.55)}
+  .ts.act .n{color:var(--ink)} .ts.act .t{color:var(--cyan)}
+  .axis{display:flex; justify-content:space-between; color:#6f76a6; font:500 10px/1 var(--mono); margin-top:9px; letter-spacing:.05em}
+
+  /* ---- Normal burst anatomy ---- */
+  .burst{display:flex; height:56px; border-radius:10px; overflow:hidden; border:1px solid var(--line)}
+  .seg{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px; color:#0c0e1a;
+    font:700 10px/1 var(--mono); min-width:0; padding:2px}
+  .seg small{font:600 9px/1 var(--mono); opacity:.72}
+  .seg.tail{background:#3a4170; color:var(--muted)}
+  .seg.data{background:linear-gradient(180deg,var(--cyan),#1fb9ab)}
+  .seg.steal{background:var(--pink)}
+  .seg.train{background:linear-gradient(180deg,var(--violet),#6a5bff); color:#fff}
+  .seg.guard{background:repeating-linear-gradient(45deg,#2a2f52,#2a2f52 6px,#232848 6px,#232848 12px); color:var(--muted)}
+  .caption{color:#6f76a6; font:500 11px/1.5 var(--mono); margin-top:10px}
+
+  /* ---- signal strip ---- */
+  .wave{width:100%; height:60px; margin-top:26px; display:block}
+
+  .foot{display:flex; justify-content:space-between; align-items:center; gap:16px; margin-top:30px;
+    border-top:1px solid var(--line); padding-top:18px; flex-wrap:wrap}
+  .tags{display:flex; gap:8px; flex-wrap:wrap}
+  .tag{font:600 10px/1 var(--mono); letter-spacing:.08em; color:var(--muted);
+    border:1px solid var(--line); border-radius:7px; padding:7px 10px}
+  .tag.on{color:var(--green); border-color:rgba(92,230,161,.4)}
+  .url{font:600 12px/1 var(--mono); color:var(--muted)}
+  .url b{color:var(--cyan)}
+  @media(max-width:620px){
+    .frame{grid-template-columns:repeat(4,1fr)}
+    .seg{font-size:8px} .seg small{display:none}
+    .ts .t{display:none}
+  }
+</style>
+</head>
+<body>
+  <main class="poster">
+    <div class="top">
+      <div class="brand"><span class="dot"></span><span class="eyebrow">Software Defined Radio · Um Interface</span></div>
+      <span class="chip">ARFCN 514 · DCS 1800</span>
+    </div>
+
+    <h1><span class="g">GSM&nbsp;LAB</span></h1>
+    <p class="sub">Un réseau 2G complet, <b>sans matériel</b> — baseband <b>Calypso</b> émulé,
+      cœur <b>Osmocom</b>, de la synchro radio à l'appel voix chiffré en <b>A5/1</b>.</p>
+
+    <section class="fig">
+      <h2>Trame TDMA · 8 timeslots · 4,615 ms</h2>
+      <div class="frame">
+        <div class="ts act"><div class="n">TS0</div><div class="t">FCCH·SCH·BCCH</div></div>
+        <div class="ts"><div class="n">TS1</div><div class="t">SDCCH</div></div>
+        <div class="ts"><div class="n">TS2</div><div class="t">TCH/F</div></div>
+        <div class="ts"><div class="n">TS3</div><div class="t">TCH/F</div></div>
+        <div class="ts"><div class="n">TS4</div><div class="t">TCH/F</div></div>
+        <div class="ts"><div class="n">TS5</div><div class="t">TCH/F</div></div>
+        <div class="ts"><div class="n">TS6</div><div class="t">TCH/F</div></div>
+        <div class="ts"><div class="n">TS7</div><div class="t">PDCH</div></div>
+      </div>
+      <div class="axis"><span>0 µs</span><span>1 burst = 577 µs</span><span>4615 µs</span></div>
+    </section>
+
+    <section class="fig">
+      <h2>Normal Burst · 156,25 bits</h2>
+      <div class="burst">
+        <div class="seg tail"  style="flex:3">3<small>tail</small></div>
+        <div class="seg data"  style="flex:57">57<small>data</small></div>
+        <div class="seg steal" style="flex:1"></div>
+        <div class="seg train" style="flex:26">26<small>training</small></div>
+        <div class="seg steal" style="flex:1"></div>
+        <div class="seg data"  style="flex:57">57<small>data</small></div>
+        <div class="seg tail"  style="flex:3">3<small>tail</small></div>
+        <div class="seg guard" style="flex:8.25">8.25<small>guard</small></div>
+      </div>
+      <p class="caption">tail 3 · data 57 · <span style="color:var(--pink)">stealing 1</span> · midamble 26 · <span style="color:var(--pink)">stealing 1</span> · data 57 · tail 3 · guard 8,25</p>
+    </section>
+
+    <svg class="wave" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="wg" x1="0" x2="1"><stop offset="0" stop-color="#33e1d0"/><stop offset="1" stop-color="#8b7cff"/></linearGradient>
+      </defs>
+      <path d="M0,30 Q25,4 50,30 T100,30 T150,30 T200,30 T250,30 T300,30 T350,30 T400,30 T450,30 T500,30 T550,30 T600,30 T650,30 T700,30 T750,30 T800,30 T850,30 T900,30 T950,30 T1000,30"
+            fill="none" stroke="url(#wg)" stroke-width="2.5" opacity=".9"/>
+    </svg>
+
+    <footer class="foot">
+      <div class="tags">
+        <span class="tag">IMSI 001-01</span>
+        <span class="tag on">A5/1 ✓</span>
+        <span class="tag on">COMP128v1 ✓</span>
+        <span class="tag">TMSI</span>
+        <span class="tag on">TCH/F · GAPK fr</span>
+      </div>
+      <div class="url"><b>bbaranoff</b>.github.io</div>
+    </footer>
+  </main>
+</body>
+</html>

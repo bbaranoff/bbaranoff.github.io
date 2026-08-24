@@ -14,6 +14,7 @@ Software Defined Radio*. Site Jekyll (thème read-the-docs) publié sur GitHub P
   - [GSM étape par étape](cours/9-GSM-etape-par-etape.md)
   - [Casser A5/1](cours/10-A5-1-cracking.md) (`a51_tools`)
 - **[Projets](projects/)** — IMSI catcher, chiffrement, redirection LTE→2G, LoRa, ADS-B…
+- **[Exemples](exemples/)** — maquettes / wallpapers HTML autonomes (ex. [GSM Lab Wallpaper](exemples/gsm-lab-wallpaper.html)).
 - **[Archives](archives/)** — documents de référence.
 
 ## Développement local
