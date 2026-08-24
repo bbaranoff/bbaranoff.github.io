@@ -9,10 +9,10 @@ Software Defined Radio*. Site Jekyll (thème read-the-docs) publié sur GitHub P
 - **[Accueil](index.md)** — profil, expérience, contributions open-source et
   citations académiques.
 - **[Cours](cours/)** — génie logiciel (Agile, UML, Git) **et** télécom/SDR :
-  - [Lab GSM multi-opérateur](cours/7-Lab-GSM-multiPLMN.md) (`osmo_egprs`)
-  - [Émulation du baseband Calypso](cours/8-QEMU-Calypso.md) (`qemu-calypso`)
-  - [GSM étape par étape](cours/9-GSM-etape-par-etape.md)
-  - [Casser A5/1](cours/10-A5-1-cracking.md) (`a51_tools`)
+  - [Lab GSM multi-opérateur](cours/telco/1-Lab-GSM-multiPLMN.md) (`osmo_egprs`)
+  - [Émulation du baseband Calypso](cours/telco/2-QEMU-Calypso.md) (`qemu-calypso`)
+  - [GSM étape par étape](cours/telco/3-GSM-etape-par-etape.md)
+  - [Casser A5/1](cours/telco/4-A5-1-cracking.md) (`a51_tools`)
 - **[Projets](projects/)** — IMSI catcher, chiffrement, redirection LTE→2G, LoRa, ADS-B…
 - **[Exemples](exemples/)** — maquettes / wallpapers HTML autonomes (ex. [GSM Lab Wallpaper](exemples/gsm-lab-wallpaper.html)).
 - **[Archives](archives/)** — documents de référence.

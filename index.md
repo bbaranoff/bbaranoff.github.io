@@ -20,7 +20,7 @@ Deux projets open-source qui, ensemble, montent **un réseau GSM complet** et **
 
 ```
 
-👉 **Cours associés :** [Lab GSM multi-opérateur](cours/7-Lab-GSM-multiPLMN.md) · [Émulation du baseband Calypso](cours/8-QEMU-Calypso.md) · [GSM étape par étape](cours/9-GSM-etape-par-etape.md) · [Casser A5/1](cours/10-A5-1-cracking.md)
+👉 **Cours associés :** [Lab GSM multi-opérateur](cours/telco/1-Lab-GSM-multiPLMN.md) · [Émulation du baseband Calypso](cours/telco/2-QEMU-Calypso.md) · [GSM étape par étape](cours/telco/3-GSM-etape-par-etape.md) · [Casser A5/1](cours/telco/4-A5-1-cracking.md)
 
 
 ## Profile information
