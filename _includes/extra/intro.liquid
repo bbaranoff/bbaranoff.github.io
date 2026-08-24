@@ -55,13 +55,9 @@ html.gi-lock,html.gi-lock body{overflow:hidden!important}
   // déroulé auto : 3 s wallpaper -> glitch -> 2 s -> site
   t1=setTimeout(toGlitch, 3000);
   t2=setTimeout(finish, 5000);
-  // un clic (ou une touche) fait AVANCER d'une phase : saute les 3 s, puis saute le glitch
-  function advance(){
-    if(done) return;
-    if(!el.classList.contains('gi-2')) toGlitch();
-    else { if(t2) clearTimeout(t2); finish(); }
-  }
-  el.addEventListener('click', advance);
-  document.addEventListener('keydown', advance);
+  // un clic (ou une touche) saute TOUT : les 3 s de wallpaper ET le glitch -> site
+  function skipAll(){ if(done) return; if(t1) clearTimeout(t1); if(t2) clearTimeout(t2); finish(); }
+  el.addEventListener('click', skipAll);
+  document.addEventListener('keydown', skipAll);
 })();
 </script>
