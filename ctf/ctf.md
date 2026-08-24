@@ -7,10 +7,9 @@
 The final structure will be:
 
 ```
-- index.html
-- background.jpg
-- this-is-a-hash      <-- the SHA1 hash of your password
-  \ - index.html      <-- your original index document
+- https://bbaranoff.github.io/ctf/
+- /this-is-a-hash/      <-- the SHA1 hash of your password
+  - /index.html      <-- your original index document
 ```
 
 
