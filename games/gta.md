@@ -1,3 +1,0 @@
-# GTA
-
-![](gta.html)

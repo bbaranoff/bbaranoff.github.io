@@ -1,3 +1,0 @@
-# Diablo
-
-![](diablo.html)
