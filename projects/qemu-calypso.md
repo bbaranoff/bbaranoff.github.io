@@ -118,6 +118,10 @@ grep    'FBDET-WR .*0x0000 -> 0x0001' /tmp/calypso/logs/qemu.log | \
   grep -oE 'PC=0x[0-9a-f]+' | sort -u                              # PC=0x79e4
 ```
 
+**🎥 PoC — qemu-calypso**
+
+<iframe src="https://www.youtube.com/embed/gwXdmwdqZqs" title="PoC qemu-calypso" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
 ## Aller plus loin
 
 - **[Cours — Émulation du baseband Calypso](../cours/telco/2-QEMU-Calypso.md)** :

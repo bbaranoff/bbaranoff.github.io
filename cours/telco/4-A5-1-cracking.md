@@ -262,6 +262,16 @@ la **signature COMP128v1** se lit dans les octets de poids faible du Kc (voir
 ---
 
 ## Automatiser : `a51_tools`
+**🎥 PoC — A5/1 de bout en bout**
+
+<iframe src="https://www.youtube.com/embed/GOt0Hav3Np8" title="PoC" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
+<iframe src="https://www.youtube.com/embed/WWdUX66lsnU" title="PoC" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
+<iframe src="https://www.youtube.com/embed/s13TDfBw5v4" title="PoC" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
+---
+
 
 Tout le manuel ci-dessus, de bout en bout depuis le `.cfile` (chaîne **gr-gsm**) :
 

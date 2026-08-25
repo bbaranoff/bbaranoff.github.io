@@ -70,6 +70,11 @@ python tea1_opencl_crack.py 1 110 30 06 1 0 0BE7FE9AE1EA459F866919C9E2EA1E11A77A
 
 # DST80 — reversing & brute-force (OpenCL)
 
+**🎥 PoC — TEA1**
+
+<iframe src="https://www.youtube.com/embed/39nY4-2f3ts" title="PoC" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
+
 Récupération des clés **TI DST80** (*Digital Signature Transponder* — immobiliseurs
 et clés mains-libres automobile / RFID) via **OpenCL**. Démontre comment des
 faiblesses d'architecture et des **constantes constructeur** ramènent la marge
@@ -177,3 +182,9 @@ constantes connus, puis confirmez que le script retrouve **exactement** ces
 constantes.
 
 ```
+
+
+**🎥 PoC — DST80**
+
+<iframe src="https://www.youtube.com/embed/aXoWpTccLAk" title="PoC" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
