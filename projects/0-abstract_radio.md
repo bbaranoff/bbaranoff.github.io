@@ -129,7 +129,7 @@ de télécommande.
 Surveillance aéronautique diffusée en clair à 1090 MHz, **ni authentifiée ni
 chiffrée** : n'importe quel SDR la reçoit, et l'absence d'authentification rend
 l'**injection d'aéronefs fantômes** possible en principe.
-→ [ADS-B (projet)](6-Adsb.md) ·
+→ [ADS-B (projet)](radio_stuff.md) ·
 [`flightaware/dump1090`](https://github.com/flightaware/dump1090)
 
 ### HackRF — spectrum painting
@@ -146,7 +146,7 @@ Réseau bas-débit longue portée (LPWAN) pour l'IoT, diffusé sur bandes ISM
 (868 MHz en Europe) et reçu par n'importe quel SDR. La sécurité repose entièrement
 sur les clés **LoRaWAN** (AppKey / NwkKey) : une provision faible, ou le mode ABP,
 ouvre au **rejeu** et à l'**usurpation de nœud**.
-→ [LoRa (projet)](5-LoRa.md) · [`lora`](https://github.com/bbaranoff/lora) ·
+→ [LoRa (projet)](radio_stuff.md) · [`lora`](https://github.com/bbaranoff/lora) ·
 [`ttn-gps`](https://github.com/bbaranoff/ttn-gps)
 
 ---

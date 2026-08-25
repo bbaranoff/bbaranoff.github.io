@@ -1,5 +1,13 @@
 # Projets
 
+## [Projets]() — Télécommunications
+
+| # | Module |
+|---|--------|
+| 1 | [Radio Stuff](radio_stuff.md) |
+| 2 | [Telco Stuff](telco.md) |
+
+
 ```tip
 
 Catalogue unifié de mes projets de cybersécurité en **radio logicielle** (SDR) —
@@ -13,7 +21,6 @@ pages détaillées et dépôts, mélangés par domaine. Vue d'ensemble des attaq
 
 | Projet / dépôt | Description |
 |----------------|-------------|
-| [**2G IMSI Catcher**](1-IMSI_Catcher.md) | Fausse BTS Osmocom, capture d'IMSI — le 2G n'authentifie pas le réseau. Théorie & lab : [cours Télécom](../cours/telco/). |
 | [osmo_egprs](https://github.com/bbaranoff/osmo_egprs) | Réseau GSM **multi-opérateur** interconnecté en SS7/IP, conteneurisé (« un DHCP pour SS7 »). → [cours](../cours/telco/1-Lab-GSM-multiPLMN.md) |
 | [srsran_4G_RTE](https://github.com/bbaranoff/srsran_4G_RTE) | « IMSI catcher reloaded », sur srsRAN_4G. |
 | [telco_install_sh](https://github.com/bbaranoff/telco_install_sh) | Scripts d'installation d'un *network-in-the-box* 2G complet. |
@@ -21,8 +28,8 @@ pages détaillées et dépôts, mélangés par domaine. Vue d'ensemble des attaq
 | [osmocombb-ansible](https://github.com/bbaranoff/osmocombb-ansible) | Automatisation **Ansible** d'OsmocomBB / CalypsoBTS. |
 | [OpBTS-LimeMini](https://github.com/bbaranoff/OpBTS-LimeMini) | OpenBTS-UMTS patché pour **LimeSDR Mini**. |
 | [calypsogprs](https://github.com/bbaranoff/calypsogprs) | Fichiers **GPRS** pour CalypsoBTS. |
-| [**Impersonation**](4-Impersonnate.md) · [HeArTbReAkEr](https://github.com/bbaranoff/HeArTbReAkEr) | Usurpation d'abonné sur le réseau (Osmocom, Docker). |
-| [**Redirection LTE/5G-NSA → 2G**](3-Redirect.md) | Forcer une victime d'un réseau moderne vers GSM/EDGE. *Cité en recherche académique.* |
+| [**Impersonation**](telco.md) · [HeArTbReAkEr](https://github.com/bbaranoff/HeArTbReAkEr) | Usurpation d'abonné sur le réseau (Osmocom, Docker). |
+| [**Redirection LTE/5G-NSA → 2G**](telco.md) | Forcer une victime d'un réseau moderne vers GSM/EDGE. *Cité en recherche académique.* |
 | [NSA_LTE_redirect_to_EDGE](https://github.com/bbaranoff/NSA_LTE_redirect_to_EDGE) | Environnement SDR **complet** LTE(4G) → EDGE(2G) via Osmocom + srsRAN_4G patché, conteneurisé. |
 | [redirect0r](https://github.com/bbaranoff/redirect0r) | Redirection LTE/5G-NSA → EDGE/GSM en `docker compose`. |
 | [redir5Gted2Gsm](https://github.com/bbaranoff/redir5Gted2Gsm) | Redirection 5G-NSA → GSM (base srsRAN). |
@@ -37,7 +44,7 @@ pages détaillées et dépôts, mélangés par domaine. Vue d'ensemble des attaq
 
 | Projet / dépôt | Description |
 |----------------|-------------|
-| [**Casser A5/1**](2-Encryption.md) | Récupérer le **Kc** d'une session GSM chiffrée. Méthode : [cours](../cours/telco/4-A5-1-cracking.md). |
+| [**Casser A5/1**](../cours/telco/4-A5-1-cracking.md) | Récupérer le **Kc** d'une session GSM chiffrée par attaque à plaintext connu + tables arc-en-ciel (Kraken/deka). |
 | [a51_tools](https://github.com/bbaranoff/a51_tools) | Attaque **A5/1** à plaintext connu + tables arc-en-ciel (Kraken/deka). |
 | [A53](https://github.com/bbaranoff/A53) | Cracker **A5/3** (KASUMI) accéléré **CUDA** — bench 2³² clés, table coût/temps. |
 | [tea1-cracker](https://github.com/bbaranoff/tea1-cracker) | Brute-force **OpenCL** de la clé **TEA1** (TETRA) : espace de 32 bits épuisé par KPA. |
@@ -48,10 +55,9 @@ pages détaillées et dépôts, mélangés par domaine. Vue d'ensemble des attaq
 
 | Projet / dépôt | Description |
 |----------------|-------------|
-| [**LoRa**](5-LoRa.md) · [lora](https://github.com/bbaranoff/lora) | LoRaWAN de bout en bout ; automatisation d'install **ChirpStack + ThingsBoard**. |
+| [**LoRa**](radio_stuff.md) · [lora](https://github.com/bbaranoff/lora) | LoRaWAN de bout en bout ; automatisation d'install **ChirpStack + ThingsBoard**. |
 | [ttn-gps](https://github.com/bbaranoff/ttn-gps) | Traqueur **GPS** via LoRaWAN / The Things Network. |
-| [**ADS-B**](6-Adsb.md) | Réception et décodage des trames avions ADS-B en SDR. |
-| [**APOGÉ**](7-Apogee.md) | Agriculture de précision : capteurs, LoRa, gestion de l'eau/pesticides. |
+| [**ADS-B**](radio_stuff.md) | Réception et décodage des trames avions ADS-B en SDR. |
 | [software-defined-radio](https://github.com/bbaranoff/software-defined-radio) | Code source de [software-defined-radio.com](https://software-defined-radio.com). |
 | [scripts-rPi](https://github.com/bbaranoff/scripts-rPi) | Scripts SDR pour Raspberry Pi. |
 
