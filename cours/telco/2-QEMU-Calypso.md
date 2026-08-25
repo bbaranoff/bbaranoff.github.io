@@ -57,6 +57,10 @@ test qui distingue « j'émule la plateforme » de « j'ai fait marcher *ce* bin
 
 ---
 
+**🎥 PoC — qemu-calypso**
+
+<iframe src="https://www.youtube.com/embed/gwXdmwdqZqs" title="PoC qemu-calypso" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
 ## 1. Les deux familles de modes
 
 C'est le concept central. Un mode répond à une seule question : **qui fait quoi ?**

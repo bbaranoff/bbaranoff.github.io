@@ -13,6 +13,10 @@ radio n'est nécessaire.
 
 ```
 
+**🎥 PoC — osmo_egprs**
+
+<iframe src="https://www.youtube.com/embed/wDtq5AQ6RM8" title="PoC" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
 ## Objectifs pédagogiques
 
 - Comprendre l'architecture d'un **PLMN** (Public Land Mobile Network) 2G.

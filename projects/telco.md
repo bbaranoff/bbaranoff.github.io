@@ -74,6 +74,17 @@ Le cœur de la redirection — injecter la cible GERAN dans le message RRC :
 
 *…et ça marche.*
 
+**🎥 PoC — redirection**
+
+<iframe src="https://www.youtube.com/embed/o_UBszip8LA" title="PoC" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
+<iframe src="https://www.youtube.com/embed/VJNy2I-ZTfs" title="PoC" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
+<iframe src="https://www.youtube.com/embed/3cZM96enpFw" title="PoC" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
+<iframe src="https://www.youtube.com/embed/Zn2KkymDGe0" title="PoC" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
+
 [![diagramme 2G](assets/diagram1_2G_act2.png)](assets/diagram1_2G_act2.png)
 [![diagramme 2G](assets/diagram1_2G_act3.png)](assets/diagram1_2G_act3.png)
 
@@ -108,6 +119,11 @@ Voir aussi la [vue d'ensemble des attaques radio](0-abstract_radio.md) et le cou
 > MITM** entre le vrai réseau et le vrai téléphone, qui transfère le défi
 > d'authentification et le **Kc**.
 > Projet : [HeArTbReAkEr](https://github.com/bbaranoff/HeArTbReAkEr).
+
+**🎥 PoC — impersonation (Kc connu)**
+
+<iframe src="https://www.youtube.com/embed/LPRLLKoSKKY" title="PoC" width="560" height="315" style="width:min(560px,100%);aspect-ratio:16/9;height:auto;border:0;border-radius:10px;margin:.4rem 0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+
 
 ```danger
 
