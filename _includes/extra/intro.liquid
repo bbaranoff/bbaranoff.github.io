@@ -1,30 +1,25 @@
 <div id="gsm-intro" aria-label="Intro d'accueil">
   <iframe class="gi-frame gi-wall" src="{{ site.baseurl }}/exemples/gsm-lab-wallpaper.html" title="GSM Lab" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
   <img class="gi-frame gi-art" src="{{ site.baseurl }}/exemples/telecom-patchwork.gif" alt="Telecoms patchwork" />
-  <div class="gi-catch"></div>
-  <button type="button" class="gi-skip">Entrer sur le site &#9654;</button>
-  <div class="gi-enter"><span class="gi-hint">cliquer pour continuer</span> &#9654;</div>
+  <button type="button" class="gi-skip">Entrer &#9654;</button>
+  <div class="gi-enter">l'accueil s'ouvre… · cliquer pour passer</div>
 </div>
 <noscript><style>#gsm-intro{display:none!important}</style></noscript>
 <style>
-#gsm-intro{position:fixed;inset:0;z-index:2147483647;background:#161826;overflow:hidden;opacity:1;transition:opacity .5s ease}
+#gsm-intro{position:fixed;inset:0;z-index:2147483647;background:#161826;overflow:hidden;opacity:1;transition:opacity .5s ease;cursor:pointer}
 #gsm-intro.gi-out{opacity:0;pointer-events:none}
-#gsm-intro .gi-frame{position:absolute;inset:0;width:100%;height:100%;border:0;background:#161826;pointer-events:none;opacity:0;transition:opacity .3s ease;z-index:1}
+#gsm-intro .gi-frame{position:absolute;inset:0;width:100%;height:100%;border:0;background:#161826;pointer-events:none;opacity:0;transition:opacity .35s ease;z-index:1}
 #gsm-intro .gi-wall{opacity:1}
 #gsm-intro .gi-art{object-fit:cover}
 #gsm-intro.gi-2 .gi-wall{opacity:0}
 #gsm-intro.gi-2 .gi-art{opacity:1}
-#gsm-intro .gi-catch{position:absolute;inset:0;z-index:2;cursor:pointer}
 #gsm-intro .gi-skip{position:absolute;top:18px;right:18px;z-index:3;cursor:pointer;
   font:700 13px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.16em;text-transform:uppercase;
   color:#08131a;background:#33e1d0;border:1px solid #7ff0e4;
-  padding:12px 18px;border-radius:11px;box-shadow:0 8px 26px rgba(51,225,208,.45),0 0 0 4px rgba(51,225,208,.12)}
+  padding:12px 18px;border-radius:11px;box-shadow:0 8px 26px rgba(51,225,208,.45)}
 #gsm-intro .gi-skip:hover{background:#5cf0e2}
 #gsm-intro .gi-enter{position:absolute;bottom:18px;left:0;right:0;text-align:center;z-index:3;pointer-events:none;
-  color:#9aa0c8;font:600 12px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.26em;text-transform:uppercase;
-  opacity:.7;animation:gi-pulse 1.8s ease-in-out infinite}
-#gsm-intro.gi-2 .gi-hint::after{content:" (2/2)"}
-@keyframes gi-pulse{0%,100%{opacity:.35}50%{opacity:.85}}
+  color:#9aa0c8;font:600 12px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.22em;text-transform:uppercase;opacity:.6}
 html.gi-lock,html.gi-lock body{overflow:hidden!important}
 </style>
 <script>
@@ -35,10 +30,11 @@ html.gi-lock,html.gi-lock body{overflow:hidden!important}
   var seen=null; try{ seen=sessionStorage.getItem('gsmIntroSeen'); }catch(e){}
   if(seen){ kill(); return; }
   try{ document.documentElement.classList.add('gi-lock'); }catch(e){}
-  var done=false;
+  var done=false, t1, t2;
   function cleanup(){
-    document.removeEventListener('click', onClick, true);
-    document.removeEventListener('keydown', onKey, true);
+    if(t1){ clearTimeout(t1); } if(t2){ clearTimeout(t2); }
+    document.removeEventListener('click', skip, true);
+    document.removeEventListener('keydown', skip, true);
   }
   function finish(){
     if(done){ return; } done=true;
@@ -48,23 +44,12 @@ html.gi-lock,html.gi-lock body{overflow:hidden!important}
     try{ document.documentElement.classList.remove('gi-lock'); }catch(e){}
     setTimeout(kill, 620);
   }
-  function advance(){
-    if(done){ return; }
-    if(!el.classList.contains('gi-2')){ el.classList.add('gi-2'); }
-    else { finish(); }
-  }
-  function onClick(ev){
-    if(done){ return; }
-    var t=ev.target;
-    try{ ev.preventDefault(); ev.stopPropagation(); }catch(e){}
-    if(t && t.closest && t.closest('.gi-skip')){ finish(); }
-    else { advance(); }
-  }
-  function onKey(ev){
-    if(done){ return; }
-    if(ev.key==='Escape'){ finish(); } else { advance(); }
-  }
-  document.addEventListener('click', onClick, true);
-  document.addEventListener('keydown', onKey, true);
+  function skip(){ finish(); }
+  /* déroulé AUTOMATIQUE (non bloquant) : wallpaper → gif → site */
+  t1=setTimeout(function(){ if(!done){ el.classList.add('gi-2'); } }, 2200);
+  t2=setTimeout(finish, 4600);
+  /* clic ou touche n'importe où : entrer tout de suite */
+  document.addEventListener('click', skip, true);
+  document.addEventListener('keydown', skip, true);
 })();
 </script>
