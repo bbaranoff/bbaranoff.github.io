@@ -1,13 +1,14 @@
 # Projets
 
-## [Projets]() — Télécommunications
+## Les projets
 
-| # | Module |
-|---|--------|
-| 1 | [Radio Stuff](radio_stuff.md) |
-| 2 | [Telco Stuff](telco.md) |
-| 3 | [Cryptanalyse (TEA1 · DST80)](cryptanalyse.md) |
-| 4 | [QEMU-Calypso](qemu-calypso.md) |
+| Projet | Description |
+|--------|-------------|
+| [🛰️ Abstract radio](0-abstract_radio.md) | Panorama des attaques radio — IMSI catcher, A5/1, redirection, TEA1, DST80, ADS-B… |
+| [📡 Telco Stuff](telco.md) | Redirection LTE/5G-NSA → 2G · impersonation d'abonné (relais d'authentification) |
+| [📻 Radio Stuff](radio_stuff.md) | Traqueur GPS **LoRaWAN** · réception **ADS-B** |
+| [🔓 Cryptanalyse](cryptanalyse.md) | **TEA1** (TETRA) · **DST80** (clés auto) — brute-force GPU / OpenCL |
+| [📟 QEMU-Calypso](qemu-calypso.md) | Émulation du **baseband GSM TI Calypso** (ARM + DSP) |
 
 
 ```tip
