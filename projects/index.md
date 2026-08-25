@@ -6,6 +6,8 @@
 |---|--------|
 | 1 | [Radio Stuff](radio_stuff.md) |
 | 2 | [Telco Stuff](telco.md) |
+| 3 | [Cryptanalyse (TEA1 · DST80)](cryptanalyse.md) |
+| 4 | [QEMU-Calypso](qemu-calypso.md) |
 
 
 ```tip
@@ -22,6 +24,7 @@ pages détaillées et dépôts, mélangés par domaine. Vue d'ensemble des attaq
 | Projet / dépôt | Description |
 |----------------|-------------|
 | [osmo_egprs](https://github.com/bbaranoff/osmo_egprs) | Réseau GSM **multi-opérateur** interconnecté en SS7/IP, conteneurisé (« un DHCP pour SS7 »). → [cours](../cours/telco/1-Lab-GSM-multiPLMN.md) |
+| [**QEMU-Calypso**](qemu-calypso.md) | Émulation du baseband **TI Calypso** : ARM (osmocom-bb non patché) + DSP C54x. → [cours](../cours/telco/2-QEMU-Calypso.md) |
 | [srsran_4G_RTE](https://github.com/bbaranoff/srsran_4G_RTE) | « IMSI catcher reloaded », sur srsRAN_4G. |
 | [telco_install_sh](https://github.com/bbaranoff/telco_install_sh) | Scripts d'installation d'un *network-in-the-box* 2G complet. |
 | [osmo-GUI](https://github.com/bbaranoff/osmo-GUI) | Front-end web (node.js / socket.io) pour un Osmocom *Network-in-the-Box*. |
@@ -47,8 +50,8 @@ pages détaillées et dépôts, mélangés par domaine. Vue d'ensemble des attaq
 | [**Casser A5/1**](../cours/telco/4-A5-1-cracking.md) | Récupérer le **Kc** d'une session GSM chiffrée par attaque à plaintext connu + tables arc-en-ciel (Kraken/deka). |
 | [a51_tools](https://github.com/bbaranoff/a51_tools) | Attaque **A5/1** à plaintext connu + tables arc-en-ciel (Kraken/deka). |
 | [A53](https://github.com/bbaranoff/A53) | Cracker **A5/3** (KASUMI) accéléré **CUDA** — bench 2³² clés, table coût/temps. |
-| [tea1-cracker](https://github.com/bbaranoff/tea1-cracker) | Brute-force **OpenCL** de la clé **TEA1** (TETRA) : espace de 32 bits épuisé par KPA. |
-| [dst80_reversing](https://github.com/bbaranoff/dst80_reversing) | Suite OpenCL de récupération de clés **TI DST80** — le 80 bits ramené à un brute-force pratique (ex-[dst80](https://github.com/bbaranoff/dst80)). |
+| [**TEA1**](cryptanalyse.md) · [tea1-cracker](https://github.com/bbaranoff/tea1-cracker) | Brute-force **OpenCL** de la clé **TEA1** (TETRA) : espace de 32 bits épuisé par KPA. |
+| [**DST80**](cryptanalyse.md) · [dst80_reversing](https://github.com/bbaranoff/dst80_reversing) | Suite OpenCL de récupération de clés **TI DST80** — le 80 bits ramené à un brute-force pratique (ex-[dst80](https://github.com/bbaranoff/dst80)). |
 | [testa3a8](https://github.com/bbaranoff/testa3a8) | Bancs de test des algos **A3/A8** (COMP128). |
 
 ## 📻 Radio & SDR
