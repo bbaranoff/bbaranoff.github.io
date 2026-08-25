@@ -171,5 +171,46 @@ Sur [mydevices.com](https://mydevices.com/), créer un compte Cayenne, sélectio
 [`lora`](https://github.com/bbaranoff/lora) (install ChirpStack + ThingsBoard) ·
 [`libgps`](https://github.com/bbaranoff/libgps).
 
-# **ADSB**
+# ADS-B — recevoir les avions
 
+> **ADS-B** (Automatic Dependent Surveillance–Broadcast) : chaque avion **diffuse
+> en clair** sa position à **1090 MHz**, sans authentification ni chiffrement. Un
+> simple SDR suffit pour tout recevoir — et la même ouverture rend, en principe,
+> l'**injection d'aéronefs fantômes** possible.
+
+[![Avion](assets/avion.png)](assets/avion.png)
+
+## Recevoir
+
+Avec une **RTL-SDR** (~10 €) et **dump1090** :
+
+```bash
+# décodage Mode S / ADS-B + carte temps réel (http://localhost:8080)
+dump1090 --interactive --net
+# antenne accordée 1090 MHz ; un filtre SAW améliore nettement la portée
+```
+
+```mermaid
+flowchart LR
+    A["Avions"] -->|"1090 MHz (en clair)"| SDR["RTL-SDR"]
+    SDR --> D["dump1090"]
+    D --> M["carte temps réel"]
+```
+
+Les trames décodées livrent l'**ICAO** (identifiant 24 bits), l'indicatif,
+l'altitude, la vitesse, le cap et la **position** (encodée en CPR) — tracés en
+direct sur une carte, à la manière d'un Flightradar maison.
+
+## Le point de sécurité
+
+L'ADS-B remplace peu à peu le radar secondaire, mais **rien n'authentifie**
+l'émetteur :
+
+- **écoute** passive triviale (surveillance du ciel local sans aucun accès) ;
+- **spoofing** — injecter des trames d'aéronefs inexistants est réalisable avec un
+  SDR émetteur ; à ne démontrer qu'en **laboratoire / bande de test**, jamais sur
+  l'air réel.
+
+→ Outils : [`dump1090`](https://github.com/flightaware/dump1090) ·
+[software-defined-radio](https://github.com/bbaranoff/software-defined-radio). Vue
+d'ensemble : [Abstract radio](0-abstract_radio.md).
