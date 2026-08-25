@@ -30,31 +30,36 @@ flowchart TD
     A --> A3["DST80 · clés auto"]
     S --> S1["ADS-B"]
     S --> S2["HackRF · spectrum painting"]
+    S --> S3["LoRa / LPWAN"]
 ```
 
 ---
 
 ## Réseaux cellulaires — identité & interception
 
-### IMSI catcher (2G)
+Deux leviers complémentaires pour exposer puis intercepter un abonné : **capter son
+identité** (IMSI catcher) et **le forcer à redescendre** vers une couche vulnérable
+(redirection TAU Reject / CSFB, y compris depuis la 5G-NSA).
 
-Fausse station de base exploitant l'**authentification unilatérale** du GSM : le
-mobile s'accroche à la cellule au signal le plus fort **sans vérifier** le réseau.
-En diffusant les valeurs publiques d'un opérateur (MCC/MNC) avec une puissance
-supérieure, la fausse BTS provoque la divulgation de l'**IMSI/IMEI** et peut
-forcer un downgrade ou l'interception.
+**Capter l'identité — IMSI catcher (2G).** Fausse station de base exploitant
+l'**authentification unilatérale** du GSM : le mobile s'accroche à la cellule au
+signal le plus fort **sans vérifier** le réseau. En diffusant les valeurs publiques
+d'un opérateur (MCC/MNC) avec une puissance supérieure, la fausse BTS provoque la
+divulgation de l'**IMSI/IMEI** et peut forcer un downgrade ou l'interception.
 → [`osmo_egprs`](https://github.com/bbaranoff/osmo_egprs) ·
 [`srsran_4G_RTE`](https://github.com/bbaranoff/srsran_4G_RTE) ·
 [`telco_install_sh`](https://github.com/bbaranoff/telco_install_sh)
 
-### Redirection — TAU Reject / CSFB
-
-Downgrade d'un réseau moderne vers une couche plus faible. En LTE/5G-NSA, les
-messages RRC/NAS **antérieurs à l'authentification** ne sont pas protégés en
-intégrité : un faux eNB peut émettre une redirection (`RRCConnectionRelease` avec
-`redirectedCarrierInfo`) ou un **TAU Reject** poussant l'UE vers la 2G/3G. Le
-**CSFB** (repli circuit-switched pour la voix) offre un levier analogue en
-ramenant l'UE sur GSM, où l'interception (IMSI catcher, A5/1) redevient possible.
+**Forcer le downgrade — redirection TAU Reject / CSFB.** Ramener un abonné d'un
+réseau moderne vers une couche plus faible pour le rendre interceptable. En
+LTE/5G-NSA, les messages RRC/NAS **antérieurs à l'authentification** ne sont pas
+protégés en intégrité : un faux eNB peut émettre une redirection
+(`RRCConnectionRelease` avec `redirectedCarrierInfo`) ou un **TAU Reject** poussant
+l'UE vers la 2G/3G ; le **CSFB** (repli circuit-switched pour la voix) offre un
+levier analogue en ramenant l'UE sur GSM. C'est le point de jonction avec l'IMSI
+catcher : la redirection **crée les conditions** (retour en 2G, sans
+authentification réseau) que l'IMSI catcher et le cassage **A5/1** exploitent
+ensuite — les deux leviers se complètent en une seule chaîne d'interception.
 → [`LTE-Redirection_Attack`](https://github.com/bbaranoff/LTE-Redirection_Attack) ·
 [`redir5Gted2Gsm`](https://github.com/bbaranoff/redir5Gted2Gsm) ·
 [`redirect0r`](https://github.com/bbaranoff/redirect0r) ·
@@ -135,6 +140,15 @@ démonstration d'émission large bande arbitraire.
 → [`greatscottgadgets/hackrf`](https://github.com/greatscottgadgets/hackrf) ·
 [`portapack-mayhem/mayhem-firmware`](https://github.com/portapack-mayhem/mayhem-firmware)
 
+### LoRa / LPWAN
+
+Réseau bas-débit longue portée (LPWAN) pour l'IoT, diffusé sur bandes ISM
+(868 MHz en Europe) et reçu par n'importe quel SDR. La sécurité repose entièrement
+sur les clés **LoRaWAN** (AppKey / NwkKey) : une provision faible, ou le mode ABP,
+ouvre au **rejeu** et à l'**usurpation de nœud**.
+→ [LoRa (projet)](5-LoRa.md) · [`lora`](https://github.com/bbaranoff/lora) ·
+[`ttn-gps`](https://github.com/bbaranoff/ttn-gps)
+
 ---
 
 ## Références GitHub
@@ -151,6 +165,7 @@ démonstration d'émission large bande arbitraire.
 | Mifare Classic / Crypto1 | [nfc-tools/mfoc](https://github.com/nfc-tools/mfoc) · [nfc-tools/mfcuk](https://github.com/nfc-tools/mfcuk) |
 | ADS-B | [flightaware/dump1090](https://github.com/flightaware/dump1090) |
 | HackRF painting | [greatscottgadgets/hackrf](https://github.com/greatscottgadgets/hackrf) · [portapack-mayhem/mayhem-firmware](https://github.com/portapack-mayhem/mayhem-firmware) |
+| LoRa / LPWAN | [lora](https://github.com/bbaranoff/lora) · [ttn-gps](https://github.com/bbaranoff/ttn-gps) |
 
 ---
 
