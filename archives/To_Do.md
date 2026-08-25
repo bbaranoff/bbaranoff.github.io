@@ -340,13 +340,13 @@ Tag Assistant est particulièrement utile pour les sites Jekyll sur GitHub Pages
 
 Pour configurer Google Tag Manager (GTM) sur un site Jekyll hébergé sur GitHub Pages, suivez ces étapes :
 
-![](assets/tag_assis.png)
+![](../assets/tag_assis.png)
 
-![](assets/tag_assis_1.png)
+![](../assets/tag_assis_1.png)
 
-![](assets/tag_assis_co.png)
+![](../assets/tag_assis_co.png)
 
-![](assets/tag_assis_co2.png)
+![](../assets/tag_assis_co2.png)
 
 
 ### 1. Créer un compte et un conteneur Google Tag Manager
@@ -376,7 +376,7 @@ Pour installer GTM dans un site Jekyll, insérez le code dans les sections `<hea
 
    Remplacez `GTM-XXXXXXX` par votre identifiant de conteneur.
 
-![](assets/tag_manager.png)
+![](../assets/tag_manager.png)
 
 
 3. **Ajoutez le deuxième extrait de code dans le `<body>`** :
@@ -410,14 +410,14 @@ Pour vous assurer que GTM est correctement configuré :
 2. Accédez à votre site et activez Tag Assistant pour voir si votre conteneur GTM est détecté.
 3. Vous devriez voir votre conteneur avec un indicateur vert si tout fonctionne correctement.
 
-![](assets/tag_manager_safe.png)
+![](../assets/tag_manager_safe.png)
 
 
 ### 5. Ajouter des balises dans Google Tag Manager
 
 Maintenant que GTM est installé, vous pouvez ajouter des balises (comme Google Analytics, Facebook Pixel, ou des événements de conversion) directement dans le tableau de bord GTM sans avoir à modifier le code de votre site.
 
-![image](assets/analytics.png)
+![image](../assets/analytics.png)
 # CTF
 
 Very simple password protection to static pages or whole websites with no server configuration required: you ca use Dropbox, Amazon S3 or any generic hosting service to host a private, password protected site.
