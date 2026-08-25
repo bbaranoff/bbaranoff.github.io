@@ -6,224 +6,133 @@ The quieter you become, the more you are able to hear
 
 ```
 
-> Mon parcours, mon expérience et l'ensemble de mes contributions open-source.
-> Le labo et les cours sont sur la [page d'accueil](index.md).
+> Parcours, expérience et l'ensemble de mes contributions open-source. Le labo et
+> les cours sont sur la [page d'accueil](index.md).
 
-## Profile information
-    
-name | Bastien Baranoff
-tagline | Cybersecurity in Software Defined Radio
-email | bastienbaranoff@gmail.com
-timezone | Paris/France
-website | https://bbaranoff.github.io/
-linkedin | Bastien Baranoff
-github | bbaranoff
-twitter | '@bastienbaranoff'
-    
-## Languages:
+## Profile
 
-```note
+| | |
+|---|---|
+| **Name** | Bastien Baranoff |
+| **Focus** | Cybersecurity in Software Defined Radio |
+| **Location** | Paris, France |
+| **Email** | [bastienbaranoff@gmail.com](mailto:bastienbaranoff@gmail.com) |
+| **GitHub** | [bbaranoff](https://github.com/bbaranoff) |
+| **LinkedIn** | Bastien Baranoff |
+| **Website** | [bbaranoff.github.io](https://bbaranoff.github.io/) |
 
-French: Native |  English: Professional
+## Languages
 
-```
+French — native · English — professional.
 
+## Career
 
-## Career Profile:
+Physics → Electronics → Computer → Embedded → **Software Defined Radio**.
 
-```warning
+## Education
 
-Physics -> Electronics -> Computer -> Embedded -> Software Defined Radio
-
-```
-
-
-
-
-## Education:
-
-|
-degree |  MSc in Electronics Computers 
-university | University of Perpignan via Domitia
-time | 2011 - 2013
-
-|
-degree | Licence In Computer Science
-university | University of Perpignan via Domitia
-time | 2020-2021
+| Degree | Institution | Years |
+|--------|-------------|-------|
+| MSc, Electronics & Computers | University of Perpignan via Domitia | 2011–2013 |
+| BSc, Computer Science | University of Perpignan via Domitia | 2020–2021 |
 
 ## Experience
 
-- CyberSecurity Research
-  - time: 2024
-  - company: Penthertz
+| Role | Organization | Year | Notes |
+|------|--------------|------|-------|
+| Cybersecurity Research | Penthertz | 2024 | |
+| Lecturer | University of Perpignan via Domitia | 2024 | |
+| Developer | PROMES-CNRS | 2021 | LoRa(WAN) connection testing |
+| Developer | Tata Advanced Systems | 2020 | Mobile security assessment |
+| Teacher | Lycée Déodat de Séverac | 2017 | Éducation nationale |
+| Electrical Engineering | PROMES-CNRS | 2013 | Junior research |
 
-- Lecturer
-  - time: 2024
-  - company: University of Perpignan via Domitia
+## Employers
 
-- Developer
-  - time: 2021
-  - company: PROMES-CNRS
-  - details: LoRa(WAN) connection testing
+<a href="https://www.tataadvancedsystems.com/"><img src="assets/tata.png" alt="Tata Advanced Systems" width="200"></a>
+<a href="https://www.promes.cnrs.fr/"><img src="assets/cropped-PROMES-LONG-petit-pour-web.jpg" alt="PROMES-CNRS" width="200"></a>
+<a href="https://penthertz.com/"><img src="assets/Penthertz_logo.png" alt="Penthertz" width="200"></a>
+<a href="https://univ-perp.fr/"><img src="assets/upvd.png" alt="University of Perpignan" width="200"></a>
 
-- Developer
-  - time: 2020
-  - company: Tata Advanced System Limited
-  - details: Mobile Security Assessment
+## Featured
 
-- Teacher
-  - time: 2017
-  - company: Lycée Déodat de Séverac
+- **MyriadRF** — [OTA OpenBSC setup, 80 Msps from a LimeSDR Mini, a satellite hunt & more](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/) (×2).
+- **X / Twitter** — [a clip in action](https://x.com/i/status/1763577169865826734).
 
-- Electrical Engineering
-  - time: 2013
-  - company: PROMES-CNRS
-  - details: Junior Research
+## Cited in academic research
 
-### Developer  
+**M. Gronau, A. Bysewski, K. Kobierzyński, A. Trzebiatowski, J. Filipiak**,
+*"Evaluation of 4G-LTE security and realization of a test stand for redirection
+attack"*, **Gdańsk University of Technology**, Dept. of Radio Communication Systems
+and Networks, 2021 — the team used my published Docker image and tooling for the LTE
+redirection attack, citing my GitHub as reference **[29]**.
+[Project page](https://projektgrupowy.eti.pg.gda.pl/editions/16/projects/4170/presentations/109).
 
-<a href="https://www.tataadvancedsystems.com/"><img src="https://github.com/bbaranoff/bbaranoff.github.io/blob/main/assets/tata.png?raw=true" style="display: center" alt="drawing0" width="360"></a> 
+Technical write-up — **Osmocom Forum** :
+[Porting QEMU to Layer1 highram ELF in a no-RF Osmocom Network-in-the-Box](https://discourse.osmocom.org/t/porting-qemu-to-layer1-highram-elf-in-a-no-rf-osmocom-network-in-the-box-environment/).
 
-### Junior Researcher 
-  
-<a href="https://www.promes.cnrs.fr/"><img src="https://github.com/bbaranoff/bbaranoff.github.io/blob/main/assets/cropped-PROMES-LONG-petit-pour-web.jpg?raw=true" style="display: center" alt="drawing1" width="360"></a>
+## Open-source contributions
 
-### CyberSecurity Analyst  
-  
-<a href="https://penthertz.com/"><img src="https://github.com/bbaranoff/bbaranoff.github.io/blob/main/assets/Penthertz_logo.png?raw=true" style="display: center" alt="drawing2" width="360"></a>    
-  
-### Lecturer  
-  
-<a href="https://univ-perp.fr/"><img src="https://github.com/bbaranoff/bbaranoff.github.io/blob/main/assets/upvd.png?raw=true" width="360"></a>  
-  
-### Teacher (Éducation nationale)  
-  
-<a href="https://www.education.gouv.fr/"><img src="https://bigbluebutton.org/wp-content/uploads/2022/11/france-copy.jpg"  alt="drawing2" width="360"></a>
+A selection of my public repositories, grouped by field. Full list on
+[github.com/bbaranoff](https://github.com/bbaranoff) — projects détaillés dans la
+[section Projets](projects/).
 
+### 📡 LTE / 5G — downgrade & redirection
 
+| Project | Description |
+|---------|-------------|
+| [LTE-Redirection_Attack](https://github.com/bbaranoff/LTE-Redirection_Attack) | Force a target UE onto an unsafe network (cited in academic research above). |
+| [openlte](https://github.com/bbaranoff/openlte) | OpenLTE stack used as a base for redirection research. |
+| [srslte_to_gsm](https://github.com/bbaranoff/srslte_to_gsm) | Downgrade path from srsLTE-based LTE to GSM. |
+| [openLTE2GSM](https://github.com/bbaranoff/openLTE2GSM) | LTE → GSM redirection workflow. |
+| [redir5Gted2Gsm](https://github.com/bbaranoff/redir5Gted2Gsm) | Redirect from 5G-NSA down to GSM. |
+| [redirect0r](https://github.com/bbaranoff/redirect0r) | Dockerized redirection LTE/5G-NSA → EDGE/GSM. |
+| [NSA_LTE_redirect_to_EDGE](https://github.com/bbaranoff/NSA_LTE_redirect_to_EDGE) | Full 5G-NSA → EDGE workflow. |
+| [LTE-Cell-ScannerBladeRF2](https://github.com/bbaranoff/LTE-Cell-ScannerBladeRF2) | LTE cell scanner for BladeRF 2.0. |
 
+### 📶 2G / GSM — Osmocom, BTS & baseband
 
+| Project | Description |
+|---------|-------------|
+| [qemu-calypso](https://github.com/bbaranoff/qemu-calypso) | QEMU emulation of the TI Calypso baseband (ARM + DSP). |
+| [osmo_egprs](https://github.com/bbaranoff/osmo_egprs) | Multi-operator GSM network over SS7/IP, containerized. |
+| [telco_install_sh](https://github.com/bbaranoff/telco_install_sh) | One-shot install scripts for a full 2G network-in-the-box. |
+| [srsran_4G_RTE](https://github.com/bbaranoff/srsran_4G_RTE) | IMSI catcher, reloaded. |
+| [osmo-GUI](https://github.com/bbaranoff/osmo-GUI) | Web front-end for an Osmocom network-in-the-box. |
+| [osmocombb-ansible](https://github.com/bbaranoff/osmocombb-ansible) | Ansible automation for OsmocomBB / CalypsoBTS. |
+| [HeArTbReAkEr](https://github.com/bbaranoff/HeArTbReAkEr) | Subscriber impersonation with Osmocom. |
+| [calypsogprs](https://github.com/bbaranoff/calypsogprs) | GPRS support files for CalypsoBTS. |
+| [OpBTS-LimeMini](https://github.com/bbaranoff/OpBTS-LimeMini) | OpenBTS on a LimeSDR Mini. |
 
+### 🔐 Cryptanalysis
 
-## Quoted :
+| Project | Description |
+|---------|-------------|
+| [a51_tools](https://github.com/bbaranoff/a51_tools) | A5/1 known-plaintext attack + rainbow tables (Kraken/deka). |
+| [A53](https://github.com/bbaranoff/A53) | CUDA-accelerated A5/3 (KASUMI) cracker. |
+| [tea1-cracker](https://github.com/bbaranoff/tea1-cracker) | OpenCL brute-force of the TETRA TEA1 cipher. |
+| [dst80_reversing](https://github.com/bbaranoff/dst80_reversing) | Reversing the DST80 automotive keyless cipher (ex-[dst80](https://github.com/bbaranoff/dst80)). |
 
-Second Time :  
+### 🐞 Vulnerability research
 
-[![](assets/myriad.png)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
+| Project | Description |
+|---------|-------------|
+| [CVE-2022-0847](https://github.com/bbaranoff/CVE-2022-0847) | "Dirty Pipe" Linux local privilege escalation PoC. |
+| [CVE-2023-4863](https://github.com/bbaranoff/CVE-2023-4863) | libwebp heap buffer overflow PoC. |
+| [brute_ubuntu_lpe](https://github.com/bbaranoff/brute_ubuntu_lpe) | Ubuntu local privilege escalation brute forcing. |
 
-First TIme :  
+### ☎️ Signaling & fraud
 
-[![image](assets/myriad2.png)](https://myriadrf.org/news/ota-openbsc-setup-scripts-80msps-from-a-limesdr-mini-a-satellite-hunt-and-more/)
+| Project | Description |
+|---------|-------------|
+| [callerid_spoofing](https://github.com/bbaranoff/callerid_spoofing) | Methodology to spoof caller ID. |
+| [2RFA](https://github.com/bbaranoff/2RFA) | Catching 2FA codes over RF (PoC). |
 
+### 🛰️ SDR, IoT & misc
 
-
-
-
-## Cited in Academic Research
-
-```note
-
-My open-source work on LTE redirection attacks is referenced in peer-reviewed academic research.
-
-```
-
-**M. Gronau, A. Bysewski, K. Kobierzyński, A. Trzebiatowski, J. Filipiak**, *"Evaluation of 4G-LTE security and realization of a test stand for redirection attack"*, Gdańsk University of Technology (Politechnika Gdańska), Department of Radio Communication Systems and Networks, 2021.
-
-> The team built a 4G-LTE simulation test stand and used my published Docker image and tooling to carry out the LTE redirection attack, citing my GitHub as reference **[29]**.
-
-[Project page](https://projektgrupowy.eti.pg.gda.pl/editions/16/projects/4170/presentations/109) — supervised by Dr. Eng. Piotr Rajchowski.
-
-### Community & Technical Write-ups
-
-- **Osmocom Forum** — [Porting QEMU to Layer1 highram ELF in a no-RF Osmocom Network-in-the-Box environment](https://discourse.osmocom.org/t/porting-qemu-to-layer1-highram-elf-in-a-no-rf-osmocom-network-in-the-box-environment/) — running the Calypso Layer 1 firmware under QEMU emulation, with no RF hardware, inside an Osmocom network-in-the-box. Related work: [qemu-calypso](https://github.com/bbaranoff/qemu-calypso).
-
-
-## Stuff
-
-[![](https://github.com/bbaranoff/bbaranoff.github.io/blob/main/assets/output.gif?raw=true)](https://x.com/i/status/1763577169865826734)
-
-
-## Projects:
-
-
-```danger
-
-Curious about A5/1 in the 2010s I searched around the internet and found a lot of interesting resources
-
-```
-
-
-## Open-Source Contributions
-
-```tip
-
-A selection of my public repositories, grouped by field. Full list on [github.com/bbaranoff](https://github.com/bbaranoff).
-
-```
-
-### 📡 LTE / 5G — Downgrade & Redirection Attacks
-
-Forcing a target UE from a modern network down to an insecure GSM/EDGE layer.
-
-| Project | ★ | Description |
-| --- | --- | --- |
-| [LTE-Redirection_Attack](https://github.com/bbaranoff/LTE-Redirection_Attack) | 33 | Force a target victim onto an unsafe network (the tool cited in academic research above). |
-| [openlte](https://github.com/bbaranoff/openlte) | 18 | OpenLTE stack used as a base for redirection research. |
-| [srslte_to_gsm](https://github.com/bbaranoff/srslte_to_gsm) | 11 | Downgrade path from srsLTE-based LTE to GSM. |
-| [openLTE2GSM](https://github.com/bbaranoff/openLTE2GSM) | 8 | LTE → GSM redirection workflow. |
-| [redir5Gted2Gsm](https://github.com/bbaranoff/redir5Gted2Gsm) | 7 | Redirect from 5G-NSA down to GSM. |
-| [redirect0r](https://github.com/bbaranoff/redirect0r) | 4 | Dockerized redirection attack LTE/5G-NSA → EDGE/GSM. |
-| [NSA_LTE_redirect_to_EDGE](https://github.com/bbaranoff/NSA_LTE_redirect_to_EDGE) | 4 | The long-awaited full 5G-NSA → EDGE workflow. |
-| [LTE-Cell-ScannerBladeRF2](https://github.com/bbaranoff/LTE-Cell-ScannerBladeRF2) | 3 | LTE cell scanner for BladeRF 2.0. |
-
-### 📶 2G / GSM — Osmocom, BTS & IMSI Catchers
-
-Standing up rogue base stations and Calypso-based mobile stations.
-
-| Project | ★ | Description |
-| --- | --- | --- |
-| [telco_install_sh](https://github.com/bbaranoff/telco_install_sh) | 19 | One-shot install scripts for a full 2G network-in-the-box. |
-| [srsran_4G_RTE](https://github.com/bbaranoff/srsran_4G_RTE) | 11 | IMSI catcher, reloaded. |
-| [osmo-GUI](https://github.com/bbaranoff/osmo-GUI) | 9 | Graphical front-end for Osmocom and `osmocon` scripting. |
-| [osmocombb-ansible](https://github.com/bbaranoff/osmocombb-ansible) | 7 | Ansible automation for OsmocomBB / CalypsoBTS. |
-| [HeArTbReAkEr](https://github.com/bbaranoff/HeArTbReAkEr) | 6 | Exploration of subscriber impersonation with Osmocom. |
-| [calypsogprs](https://github.com/bbaranoff/calypsogprs) | 5 | GPRS support files for CalypsoBTS. |
-| [osmo_egprs](https://github.com/bbaranoff/osmo_egprs) | 5 | EGPRS on Osmocom. |
-| [OpBTS-LimeMini](https://github.com/bbaranoff/OpBTS-LimeMini) | 4 | OpenBTS on a LimeSDR Mini. |
-| [qemu-calypso](https://github.com/bbaranoff/qemu-calypso) | 4 | QEMU emulation of the Calypso baseband ("Calypso Machine" test). |
-
-### 🔐 Cryptography & Cracking
-
-| Project | ★ | Description |
-| --- | --- | --- |
-| [A53](https://github.com/bbaranoff/A53) | — | CUDA-accelerated A5/3 cracker. |
-| [a51_tools](https://github.com/bbaranoff/a51_tools) | — | Tooling around A5/1 rainbow tables. |
-| [dst80](https://github.com/bbaranoff/dst80) / [dst80_reversing](https://github.com/bbaranoff/dst80_reversing) | 3 | Reversing the DST80 automotive keyless cipher. |
-| [tea1-cracker](https://github.com/bbaranoff/tea1-cracker) | — | Experiments against the TETRA TEA1 cipher. |
-
-### 🐞 Vulnerability Research & Exploits
-
-| Project | ★ | Description |
-| --- | --- | --- |
-| [CVE-2022-0847](https://github.com/bbaranoff/CVE-2022-0847) | 50 | "Dirty Pipe" Linux local privilege escalation PoC. |
-| [CVE-2023-4863](https://github.com/bbaranoff/CVE-2023-4863) | 6 | libwebp heap buffer overflow PoC. |
-| [brute_ubuntu_lpe](https://github.com/bbaranoff/brute_ubuntu_lpe) | — | Ubuntu local-privilege-escalation brute forcing. |
-
-### ☎️ Signaling & Fraud
-
-| Project | ★ | Description |
-| --- | --- | --- |
-| [callerid_spoofing](https://github.com/bbaranoff/callerid_spoofing) | 10 | Methodology to spoof caller ID. |
-| [2RFA](https://github.com/bbaranoff/2RFA) | 1 | Proof of concept for catching 2FA codes over RF. |
-
-### 🛰️ SDR, IoT & Misc
-
-| Project | ★ | Description |
-| --- | --- | --- |
-| [software-defined-radio](https://github.com/bbaranoff/software-defined-radio) | 1 | General SDR utilities. |
-| [ttn-gps](https://github.com/bbaranoff/ttn-gps) | 2 | LoRaWAN / The Things Network GPS tracker. |
-| [llm-bridge](https://github.com/bbaranoff/llm-bridge) | — | Bridge between telco tooling and a local LLM (Ollama). |
-| [telco_story](https://github.com/bbaranoff/telco_story) | 3 | A written story of the telecommunications journey. |
-
-
+| Project | Description |
+|---------|-------------|
+| [software-defined-radio](https://github.com/bbaranoff/software-defined-radio) | Source of software-defined-radio.com. |
+| [ttn-gps](https://github.com/bbaranoff/ttn-gps) | LoRaWAN / The Things Network GPS tracker. |
+| [llm-bridge](https://github.com/bbaranoff/llm-bridge) | Bridge between telco tooling and a local LLM (Ollama). |
+| [telco_story](https://github.com/bbaranoff/telco_story) | A written story of the telecommunications journey. |
